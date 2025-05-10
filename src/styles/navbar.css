@@ -1,0 +1,40 @@
+.navbar{
+    width: 100%;
+    height: 90px;
+    background: linear-gradient(90deg, #213543, #2d414d);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.navbar .nav-link {
+    color: #fff !important;           /* force white text */
+    padding: 0.75rem 1.25rem;         /* a bit more breathing room */
+    font-weight: 500;                 /* medium weight */
+    transition: color 0.2s ease-in;
+  }
+  
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+    color: #26a111a2 !important;        /* a bright accent on hover */
+}
+
+.navbar-brand img {
+    border-radius: 4px;
+    transition: transform 0.3s ease;
+  }
+.navbar-brand img:hover {
+    transform: scale(1.05);
+}
+
+.navbar-toggler {
+    border-color: rgba(255,255,255,0.6);
+  }
+  
+.navbar-toggler-icon {
+    filter: invert(1); /* turn the default dark icon white */
+}
+
+.navbar .nav-link.active {
+    position: relative;
+  }
+
+

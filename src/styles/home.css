@@ -1,0 +1,108 @@
+.first-row {
+    text-align: left;
+    font-weight: bold;
+}
+
+.para1 {
+    text-align: left;
+}
+
+.para-big {
+    text-align: left;
+}
+
+.contact-us {
+    text-align: left;
+    font-weight: bold;
+}
+
+/* Existing CSS styles */
+
+/* Snap Scroll Container */
+.snap-scroll-container {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    position: relative;
+  }
+  
+  /* Each hero slide */
+  .hero-slide {
+    height: 100vh;
+    scroll-snap-align: start;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+  }
+  
+  /* Hero content styling */
+  .hero-content {
+    z-index: 2;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .hero-content p {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Navigation dots */
+  .hero-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  
+  .hero-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    margin: 0 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .hero-dot.active {
+    background: #FFFFFF;
+    transform: scale(1.3);
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    .hero-content h1 {
+      font-size: 2.5rem;
+    }
+    
+    .hero-content p {
+      font-size: 1.2rem;
+    }
+  }
+  
+  /* Optional: Adding a smooth transition between slides */
+  .hero-slide {
+    transition: opacity 0.3s ease;
+  }
+  
+  /* Fix for iOS Safari scrolling */
+  @supports (-webkit-touch-callout: none) {
+    .snap-scroll-container {
+      -webkit-overflow-scrolling: touch;
+    }
+  }
