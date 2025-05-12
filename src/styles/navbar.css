@@ -26,7 +26,7 @@
 }
 
 .navbar-toggler {
-    border-color: rgba(255,255,255,0.6);
+    border-color: rgba(255, 255, 255, 0.6);
   }
   
 .navbar-toggler-icon {
@@ -38,3 +38,8 @@
   }
 
 
+.navbar .dropdown-item:hover,
+.navbar .dropdown-item:focus {
+    background-color: #00C853 !important;
+    color: #fff !important;
+  }

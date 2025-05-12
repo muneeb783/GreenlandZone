@@ -16,6 +16,66 @@
     font-weight: bold;
 }
 
+.footer-section {
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    width: 100vw;
+    margin-bottom: -15vw;
+}
+
+.footer-section {
+    background-color: #213543;
+    color: #fff;
+}
+
+.footer-text {
+    text-align: left;
+}
+
+.footer-text-2 {
+    padding-left: 0cm;
+}
+
+.social-buttons .social-btn {
+    display: inline-flex;              /* center the icon */
+    align-items: center;
+    justify-content: center;
+    width: 40px;                       /* adjust to taste */
+    height: 40px;
+    margin-right: 1rem;                /* space between buttons */
+    border-radius: 50%;
+    background-color: transparent;         /* box color */
+    transition: background-color 0.3s; /* if you ever want to animate bg */
+  }
+  
+  /* Make your SVG inherit currentColor */
+  .social-buttons .social-btn svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+    color: #FFFFFF;                    /* default icon color */
+    transition: color 0.3s ease;       /* animate icon color */
+  }
+  
+  /* On hover, only the icon (i.e. SVG) changes color */
+  .social-buttons .social-btn.twitter:hover svg {
+    color: #1DA1F2;                    /* your hover color (e.g. Twitter blue) */
+  }
+
+  .social-buttons .social-btn.facebook:hover svg {
+    color: #1DA1F2;                    /* your hover color (e.g. Twitter blue) */
+  }
+
+  .social-buttons .social-btn.linkedin:hover svg {
+    color: #1DA1F2;                    /* your hover color (e.g. Twitter blue) */
+  }
+
+  .social-buttons .social-btn.youtube:hover svg {
+    color: #FF0000;                    /* your hover color (e.g. Twitter blue) */
+  }
 /* Existing CSS styles */
 
 /* Snap Scroll Container */
