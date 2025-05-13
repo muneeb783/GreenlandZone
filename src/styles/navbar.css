@@ -10,7 +10,11 @@
     padding: 0.75rem 1.25rem;         /* a bit more breathing room */
     font-weight: 500;                 /* medium weight */
     transition: color 0.2s ease-in;
-  }
+}
+
+.pr-10 {
+    padding-right: 5.5rem !important;
+}
   
 .navbar .nav-link:hover,
 .navbar .nav-link:focus {
@@ -37,9 +41,22 @@
     position: relative;
   }
 
+.navbar .dropdown-menu {
+    background-color: #00C853; /* or whatever your menu BG is */
+}
+
+.navbar .dropdown-item {
+    transition:
+      background-color 0.25s ease,
+      transform       0.25s ease,
+      padding-left    0.25s ease;
+}
+  
 
 .navbar .dropdown-item:hover,
 .navbar .dropdown-item:focus {
-    background-color: #00C853 !important;
+    background-color: #08883d !important;
     color: #fff !important;
+    transform: translateX(4px);
+    padding-left: 1.5rem;
   }

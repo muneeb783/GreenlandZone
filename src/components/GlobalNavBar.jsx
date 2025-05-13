@@ -6,7 +6,7 @@ import '../styles/navbar.css'
 export default function GlobalNavBar() {
   return (
     <Navbar className="navbar" bg="light" expand="lg" fixed="top">
-      <Container fluid>
+      <Container fluid className='pr-10'>
         <Navbar.Brand as={Link} to="/">
           <img
             src={logo}
@@ -26,7 +26,33 @@ export default function GlobalNavBar() {
               <NavDropdown.Item as={Link} to="/products/feeding">
                 Feeding Solutions
               </NavDropdown.Item>
-              {/* …add the rest of your product links here… */}
+              <NavDropdown.Item>
+                Forage and hay making Solutions
+              </NavDropdown.Item>
+              <NavDropdown.Item>
+                Silage Making Solutions
+              </NavDropdown.Item>
+              <NavDropdown.Item>
+                Milking Solutions
+              </NavDropdown.Item>
+              <NavDropdown.Item>
+                Farm Biosecurity Solutions
+              </NavDropdown.Item>
+              <NavDropdown.Item>
+                Milk Hygiene Solutions
+              </NavDropdown.Item>
+              <NavDropdown.Item>
+                Teat and Udder Health Solutions
+              </NavDropdown.Item>
+              <NavDropdown.Item>
+                Calf Health Solutions
+              </NavDropdown.Item>
+              <NavDropdown.Item>
+                Sensetime Cow Monitoring System
+              </NavDropdown.Item>
+              <NavDropdown.Item>
+                Feed Additives
+              </NavDropdown.Item>
             </NavDropdown>
             <Nav.Link as={Link} to="/contact">Contact Us</Nav.Link>
           </Nav>

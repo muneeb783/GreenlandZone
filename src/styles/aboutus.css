@@ -1,0 +1,18 @@
+.header-1 {
+    text-align: left !important;
+    font-weight: bold;
+}
+
+.leader-text {
+    text-align: left;
+}
+
+.leader-image {
+    width: 300px;
+    height: 3000px;
+    object-fit: cover;
+}
+
+.leader-name {
+    text-align: left;
+}
