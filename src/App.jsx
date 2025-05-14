@@ -4,6 +4,7 @@ import GlobalNavBar from './components/GlobalNavBar'
 import Home from './pages/Home'
 import AboutUs from './pages/AboutUs'
 import Footer from './pages/Footer'
+import ContactUS from './pages/ContactUs'
 
 export default function App() {
   return (
@@ -12,6 +13,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path='/about' element={<AboutUs />} />
+        <Route path='/contact' element={<ContactUS />} />
       </Routes>
 
       <Footer />

@@ -40,7 +40,7 @@ export default function AboutUs() {
     return (
         <>
         <div className='about-page'>
-            <Container fluid>
+            <Container fluid className='header-1'>
                 <h1 className='heaer-1 text-start'>
                     MESSSAGE FROM THE LEADERSHIP
                 </h1>
