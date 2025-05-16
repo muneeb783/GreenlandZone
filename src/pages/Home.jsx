@@ -1,9 +1,9 @@
 import { Container, Row, Col, Button, Card, Form } from 'react-bootstrap';
 import { useEffect, useRef, useState } from 'react';
-import { FaTwitter, FaFacebookF, FaYoutube, FaLinkedinIn } from 'react-icons/fa'
 import heroBg from '../assets/react.svg'; // First hero image
 import '../styles/home.css';
 import logo from '../assets/logo.png';
+import ProductsSection from '../components/Products';
 
 export default function Home() {
   const [activeSlide, setActiveSlide] = useState(0);
@@ -143,7 +143,7 @@ export default function Home() {
         </Container>
       </div>
       {/* Products Preview */}
-      <Container className="pb-5">
+      {/* <Container className="pb-5">
         <h2 className="mb-4">Our Products</h2>
         <Row xs={1} md={3} className="g-4">
           {[
@@ -157,13 +157,13 @@ export default function Home() {
                 <Card.Img variant="top" src={p.img} />
                 <Card.Body>
                   <Card.Title>{p.title}</Card.Title>
-                  <Button variant="primary" href={p.link}>Learn More</Button>
                 </Card.Body>
               </Card>
             </Col>
           ))}
         </Row>
-      </Container>
+      </Container> */}
+      <ProductsSection/>
       <div>
       <Container className="py-5">
         <Row>

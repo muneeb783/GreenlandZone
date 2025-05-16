@@ -2,6 +2,8 @@
     background-color: #f7fafc;
     min-height: 100vh;
     min-width: 150vh;
+    padding-top: 4rem;
+    width: 110%;
   }
   
   /* Left side typography */
@@ -17,14 +19,24 @@
   
   /* The little “Mail us at” card */
   .contact-info-card {
-    max-width: 360px;
+    max-width: 500px;
     border: none;
     border-radius: 0.5rem;
     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    margin-bottom: 1.5rem;
   }
   .contact-info-card .text-primary {
     color: #00C853;
-  }
+    border: none;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+.contact-info-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
   
   /* Right side form wrapper */
   .contact-form-container {
@@ -33,6 +45,8 @@
     padding: 2rem;
     width: 100%;
     max-width: 1000px;
+    max-height: 1000px;
+    margin-top: 6rem;
     box-shadow: 0 4px 20px rgba(0,0,0,0.1);
     position: relative;
   }
@@ -71,4 +85,12 @@
   .contact-form-container .btn-light:hover {
     background-color: #f0f0f0;
   }
+
+  .contact-info-stack {
+    max-width: 500px;
+  }
+
+.card-text {
+    text-align: center !important;
+}
   

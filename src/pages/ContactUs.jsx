@@ -1,6 +1,7 @@
 import React from 'react'
 import { Container, Row, Col, Card, Form, Button } from 'react-bootstrap'
-import { FaEnvelope } from 'react-icons/fa'
+import { Stack } from 'react-bootstrap';
+import { FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
 import '../styles/contactus.css'
 
 export default function ContactUs() {
@@ -10,48 +11,54 @@ export default function ContactUs() {
         <Row className="gx-5">
           {/* Left side: heading + mail card */}
           <Col md={6} className="d-flex flex-column justify-content-center">
-            <h1 className="contact-title">
-              Let’s chat.<br/>
-            </h1>
+            <h1 className="contact-title">Let’s chat.</h1>
             <p className="contact-subtitle">Let’s create something together</p>
-            
-            <Card className="contact-info-card">
-              <Card.Body className="d-flex align-items-center">
-                <FaEnvelope size={24} className="me-3 text-primary" />
-                <div>
-                  <small className="text-muted">Mail us at</small>
-                  <br/>
-                  <a href="mailto:contact@greenlandzone.com" className="fw-bold">
-                    contact@greenlandzone.com
-                  </a>
-                </div>
-              </Card.Body>
-            </Card>
-            <Card className="contact-info-card">
-              <Card.Body className="d-flex align-items-center">
-                <FaEnvelope size={24} className="me-3 text-primary" />
-                <div>
-                  <small className="text-muted">Mail us at</small>
-                  <br/>
-                  <a href="mailto:contact@greenlandzone.com" className="fw-bold">
-                    contact@greenlandzone.com
-                  </a>
-                </div>
-              </Card.Body>
-            </Card>
 
-            <Card className="contact-info-card">
-              <Card.Body className="d-flex align-items-center">
-                <FaEnvelope size={24} className="me-3 text-primary" />
-                <div>
-                  <small className="text-muted">Mail us at</small>
-                  <br/>
-                  <a href="mailto:contact@greenlandzone.com" className="fw-bold">
-                    contact@greenlandzone.com
-                  </a>
-                </div>
-              </Card.Body>
-            </Card>
+            <Stack gap={4} className="contact-info-stack">
+              <Card className="contact-info-card">
+                <Card.Body className="d-flex">
+                  <FaPhone className="card-icon" />
+                  <div>
+                    <small>Contact Us</small>
+                    <p>Landline: 0303 1114647</p>
+                    <p>Hotline: 0303 8847336</p>
+                  </div>
+                </Card.Body>
+              </Card>
+
+              <Card className="contact-info-card">
+                <Card.Body>
+                  <FaMapMarkerAlt className="card-icon" />
+                  <div>
+                    <small className='card-text'>Head Office</small>
+                    <p className='card-text'>783 Quaid Block, Bahria Town, Lahore</p>
+                    <p className='card-text'>Phone: 0345 8432667</p>
+                  </div>
+                </Card.Body>
+              </Card>
+
+              <Card className="contact-info-card">
+                <Card.Body className="d-flex">
+                  <FaMapMarkerAlt className="card-icon" />
+                  <div>
+                    <small className='card-text'>Site Office</small>
+                    <p className='card-text'>55-5I, 2km Okara Toll Plaza, Main GT Road, Sahiwal</p>
+                    <p>Phone: 0300 9692667</p>
+                  </div>
+                </Card.Body>
+              </Card>
+
+              <Card className="contact-info-card">
+                <Card.Body className="card-text d-flex">
+                  <FaMapMarkerAlt className="card-icon" />
+                  <div>
+                    <small>UK Office</small>
+                    <p>158 Weyhouse, 15 Church Street Weybridge Surrey, KT13 8NA United Kingdom</p>
+                    <p>Call: +44 7796 448679</p>
+                  </div>
+                </Card.Body>
+              </Card>
+            </Stack>
           </Col>
 
           {/* Right side: form */}
