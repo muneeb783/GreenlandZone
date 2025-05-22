@@ -28,7 +28,7 @@ const DairyFarmingSol = () => {
     },
     {
       id: 3,
-      name: "Milking Parlors",
+      name: "Automatic Manure Scrapper",
       description: "Efficient milking systems for dairy farms",
       features: [
         "Automatic cluster removal",
@@ -39,7 +39,7 @@ const DairyFarmingSol = () => {
     },
     {
       id: 4,
-      name: "Feeding Systems",
+      name: "Cooling Fans",
       description: "Automated feed delivery systems",
       features: [
         "Customizable feeding schedules",
@@ -47,6 +47,48 @@ const DairyFarmingSol = () => {
         "Ensures consistent nutrition"
       ],
       image: "/api/placeholder/600/400"
+    },
+    {
+        id: 5,
+        name: "Cow Comfort Mat",
+        description: "Cow mats",
+        features: [
+          "Very easy to clean, gives comforts to animals",
+          "Reduces labor for filling of sand and then cleaning from drains"
+        ],
+        image: "/api/placeholder/600/400"
+    },
+
+    {
+        id: 6,
+        name: "Automatic Cow Brush",
+        description: "Used to massage the cows",
+        features: [
+          "Increases blood circulation",
+          "Increases milk yield",
+          "Increases skin shining by increasing blood circulation to skin"
+        ],
+        image: "/api/placeholder/600/400"
+    },
+    {
+        id: 7,
+        name: "Hydraulic Cattle Crush",
+        description: "Hydraulic Cattle Crush",
+        features: [
+          "Used to hold animal for medication, surgery, and inseminations",
+          "Can be operated easily using hydraulic system"
+        ],
+        image: "/api/placeholder/600/400"
+    },
+    {
+        id: 8,
+        name: "Calf Hutch",
+        description: "Calf Hutch",
+        features: [
+          "Used for calf care in the first two months of age",
+          "Ensure calf health by individual feeding and avoid contamination"
+        ],
+        image: "/api/placeholder/600/400"
     }
   ];
 
@@ -67,7 +109,7 @@ const DairyFarmingSol = () => {
       </header>
 
       {/* Product Filter */}
-      <div className="container">
+      <div className="container-fluid px-4">
         <div className="filter-section">
           <h2 className="section-title">Our Product Solutions</h2>
           <div className="filter-buttons">
@@ -93,10 +135,12 @@ const DairyFarmingSol = () => {
         </div>
 
         {/* Product Grid */}
-        <div className="products-grid">
-          {filteredProducts.map(product => (
-            <ProductCard key={product.id} product={product} />
-          ))}
+        <div className='container dairy-products-container'>
+            <div className="products-grid">
+            {filteredProducts.map(product => (
+                <ProductCard key={product.id} product={product} />
+            ))}
+            </div>
         </div>
       </div>
     </div>
@@ -129,11 +173,6 @@ const ProductCard = ({ product }) => {
             </li>
           ))}
         </ul>
-        <div className="button-container">
-          <button className="learn-more-button">
-            Learn More
-          </button>
-        </div>
       </div>
     </div>
   );
