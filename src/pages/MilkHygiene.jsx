@@ -1,9 +1,8 @@
-
 import { useState} from 'react';
 import {Link} from 'react-router-dom';
-import '../styles/dairyfarmingsol.css'
+import '../styles/farmbiosec.css'
 
-const DairyFarmingSol = () => {
+const MilkHygiene = () => {
   // Sample product data - replace with your actual products
   const products = [
     {
@@ -239,4 +238,4 @@ const ProductCard = ({ product }) => {
   );
 };
 
-export default DairyFarmingSol;
+export default MilkHygiene;

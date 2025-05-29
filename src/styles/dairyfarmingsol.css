@@ -52,7 +52,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   flex-wrap: wrap;
   gap: 1rem;
   padding: 2rem 1rem 1rem 1rem;
@@ -97,7 +97,7 @@ body {
 .products-grid {
   display: grid;
   grid-template-columns: 1fr;
-  column-gap: 3rem;
+  gap: 3rem;
   padding: 0 0rem 2rem 0rem;
 }
 
@@ -126,7 +126,8 @@ body {
   background-color: white;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   height: 100%;
-  margin-right: 4rem;
+  animation: fadeIn 0.3s ease-in-out;
+  margin-right: 3rem;
 }
 
 .product-image-container {

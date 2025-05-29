@@ -1,95 +1,51 @@
-
 import { useState} from 'react';
 import {Link} from 'react-router-dom';
-import '../styles/dairyfarmingsol.css'
+import '../styles/foragesol.css'
 
-const DairyFarmingSol = () => {
+const ForageSol = () => {
   // Sample product data - replace with your actual products
   const products = [
     {
       id: 1,
-      name: "Cow Cubicles",
-      description: "Cubicles are animal rest areas",
+      name: "Forage Harvester For Grass",
+      description: "Forage Harvester For Grass",
       features: [
-        "Hot dip galvanized pipes with",
-        "Proper angle required for",
-        "Animal comfort"
+        "Cuts all kind of grasses(Lucern, Rai grass, Rhode grass, Jodal)",
+        "Adjustable chop size",
+        "Note: 40 HP tractor required"
       ],
       image: "/api/placeholder/600/400"
     },
     {
       id: 2,
-      name: "Cow Head Lock",
-      description: "Easy animals handling without any health hazard.",
+      name: "Drum Movers",
+      description: "Drum Movers",
       features: [
-        "Hot dip galvanized with top",
-        "Covering of plastic for less noice."
+        "It is used to cut grasses like Barseem, Lucern and Rhodes grass",
+        "Note: 40 HP tractor required"
       ],
       image: "/api/placeholder/600/400"
     },
     {
       id: 3,
-      name: "Automatic Manure Scrapper",
-      description: "Efficient milking systems for dairy farms",
+      name: "Hay Wheel Rakes",
+      description: "Hay Wheel Rakes",
       features: [
-        "Automatic cluster removal",
-        "Stainless steel construction",
-        "Easy to clean and maintain"
+        "It is economical speedy dry hay collector",
+        "Easily attachable with different tractors with minor adjustments"
       ],
       image: "/api/placeholder/600/400"
     },
     {
       id: 4,
-      name: "Cooling Fans",
-      description: "Automated feed delivery systems",
+      name: "Rotray Tedder",
+      description: "Rotray Tedder",
       features: [
-        "Customizable feeding schedules",
-        "Reduces labor costs",
-        "Ensures consistent nutrition"
+        "It spreads mown fodder for rapid drying",
+        "Preserving its nutrition hence allowing multiple harvests",
+        "Fuel efficient, easy maintenance and mobility"
       ],
       image: "/api/placeholder/600/400"
-    },
-    {
-        id: 5,
-        name: "Cow Comfort Mat",
-        description: "Cow mats",
-        features: [
-          "Very easy to clean, gives comforts to animals",
-          "Reduces labor for filling of sand and then cleaning from drains"
-        ],
-        image: "/api/placeholder/600/400"
-    },
-
-    {
-        id: 6,
-        name: "Automatic Cow Brush",
-        description: "Used to massage the cows",
-        features: [
-          "Increases blood circulation",
-          "Increases milk yield",
-          "Increases skin shining by increasing blood circulation to skin"
-        ],
-        image: "/api/placeholder/600/400"
-    },
-    {
-        id: 7,
-        name: "Hydraulic Cattle Crush",
-        description: "Hydraulic Cattle Crush",
-        features: [
-          "Used to hold animal for medication, surgery, and inseminations",
-          "Can be operated easily using hydraulic system"
-        ],
-        image: "/api/placeholder/600/400"
-    },
-    {
-        id: 8,
-        name: "Calf Hutch",
-        description: "Calf Hutch",
-        features: [
-          "Used for calf care in the first two months of age",
-          "Ensure calf health by individual feeding and avoid contamination"
-        ],
-        image: "/api/placeholder/600/400"
     }
   ];
 
@@ -239,4 +195,4 @@ const ProductCard = ({ product }) => {
   );
 };
 
-export default DairyFarmingSol;
+export default ForageSol;

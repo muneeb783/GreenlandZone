@@ -1,93 +1,63 @@
-
 import { useState} from 'react';
 import {Link} from 'react-router-dom';
-import '../styles/dairyfarmingsol.css'
+import '../styles/silage.css'
 
-const DairyFarmingSol = () => {
+const Silage = () => {
   // Sample product data - replace with your actual products
   const products = [
     {
       id: 1,
-      name: "Cow Cubicles",
-      description: "Cubicles are animal rest areas",
+      name: "Silage Packing Machine",
+      description: "Silage Packing Machine",
       features: [
-        "Hot dip galvanized pipes with",
-        "Proper angle required for",
-        "Animal comfort"
+        "It is used to fill, press and pack silage into 25-50kg bags",
+        " It is cost effective as bags are much cheaper than silage film"
       ],
       image: "/api/placeholder/600/400"
     },
     {
       id: 2,
-      name: "Cow Head Lock",
-      description: "Easy animals handling without any health hazard.",
+      name: "Row Independent Forage Harvester",
+      description: "Row Independent Forage Harvester",
       features: [
-        "Hot dip galvanized with top",
-        "Covering of plastic for less noice."
+        "Used for crops both with rows and without rows",
+        "Chop size is adjustable",
+        "Note: 85HP is required for this machine"
       ],
       image: "/api/placeholder/600/400"
     },
     {
       id: 3,
-      name: "Automatic Manure Scrapper",
-      description: "Efficient milking systems for dairy farms",
+      name: "Single Row Forage Harvester",
+      description: "Single Row Forage Harvester",
       features: [
-        "Automatic cluster removal",
-        "Stainless steel construction",
-        "Easy to clean and maintain"
+        "Used in field for cutting and harvesting",
+        "Chop size is adjustable",
+        "Note: 40 HP tractor is required for this machine" //"12 corn cracker - still to be checked"
       ],
       image: "/api/placeholder/600/400"
     },
     {
       id: 4,
-      name: "Cooling Fans",
-      description: "Automated feed delivery systems",
+      name: "Silage Wrapping Film",
+      description: "Silage Wrapping Film",
       features: [
-        "Customizable feeding schedules",
-        "Reduces labor costs",
-        "Ensures consistent nutrition"
+        "Premium quality imported film",
+        "Available in all sizes and colors"
       ],
       image: "/api/placeholder/600/400"
     },
     {
         id: 5,
-        name: "Cow Comfort Mat",
-        description: "Cow mats",
+        name: "Small Silage Baler and Wrapper",
+        description: "Small Silage Baler and Wrapper",
         features: [
-          "Very easy to clean, gives comforts to animals",
-          "Reduces labor for filling of sand and then cleaning from drains"
-        ],
-        image: "/api/placeholder/600/400"
-    },
-
-    {
-        id: 6,
-        name: "Automatic Cow Brush",
-        description: "Used to massage the cows",
-        features: [
-          "Increases blood circulation",
-          "Increases milk yield",
-          "Increases skin shining by increasing blood circulation to skin"
-        ],
-        image: "/api/placeholder/600/400"
-    },
-    {
-        id: 7,
-        name: "Hydraulic Cattle Crush",
-        description: "Hydraulic Cattle Crush",
-        features: [
-          "Used to hold animal for medication, surgery, and inseminations",
-          "Can be operated easily using hydraulic system"
-        ],
-        image: "/api/placeholder/600/400"
-    },
-    {
-        id: 8,
-        name: "Calf Hutch",
-        description: "Calf Hutch",
-        features: [
-          "Used for calf care in the first two months of age",
-          "Ensure calf health by individual feeding and avoid contamination"
+          "Fully automatic machine with ABB motors and Siemens PLC system",
+          "Wrapping table is equipped with invertor system",
+          "Smooth wrapping & less breakdown of wrapping table",
+          "Adjustable baler chamber",
+          "Provides bale size from 60kg - 100kg",
+          "Less manpower required"
         ],
         image: "/api/placeholder/600/400"
     }
@@ -239,4 +209,4 @@ const ProductCard = ({ product }) => {
   );
 };
 
-export default DairyFarmingSol;
+export default Silage;

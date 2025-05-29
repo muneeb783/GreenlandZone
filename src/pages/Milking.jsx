@@ -1,95 +1,127 @@
-
 import { useState} from 'react';
 import {Link} from 'react-router-dom';
-import '../styles/dairyfarmingsol.css'
+import '../styles/milking.css'
 
-const DairyFarmingSol = () => {
+const Milking = () => {
   // Sample product data - replace with your actual products
   const products = [
     {
       id: 1,
-      name: "Cow Cubicles",
-      description: "Cubicles are animal rest areas",
+      name: "Mobile Milking Machine",
+      description: "Mobile Milking Machine",
       features: [
-        "Hot dip galvanized pipes with",
-        "Proper angle required for",
-        "Animal comfort"
+        "Electronic Pulsator",
+        "Oil type vacuum pump with wo years warranty",
+        "Stainless steel bucket (40 Kg) with cut off system",
+        "Can milk 16-20 animals / hour"
       ],
       image: "/api/placeholder/600/400"
     },
     {
       id: 2,
-      name: "Cow Head Lock",
-      description: "Easy animals handling without any health hazard.",
+      name: "Rooster Group",
+      description: "Rooster Group",
       features: [
-        "Hot dip galvanized with top",
-        "Covering of plastic for less noice."
+        "Electronic Pulsator",
+        "Vacuum pump is oil type with two years warranty",
+        "Stainless steel bucket (30 Kg) with cut off system",
+        "Can milk 16-20 animals / hour"
       ],
       image: "/api/placeholder/600/400"
     },
     {
       id: 3,
-      name: "Automatic Manure Scrapper",
-      description: "Efficient milking systems for dairy farms",
+      name: "Mobile Milking Master",
+      description: "Mobile Milking Master",
       features: [
-        "Automatic cluster removal",
-        "Stainless steel construction",
-        "Easy to clean and maintain"
+        "It can milk 8 animals at one time",
+        "You can move it at your desired milking shed",
+        " It pumps milk directly to chiller after milking",
+        "Easy to operate"
       ],
       image: "/api/placeholder/600/400"
     },
     {
       id: 4,
-      name: "Cooling Fans",
-      description: "Automated feed delivery systems",
+      name: "Mobile Milking Machine - Double Bucket Double Cluster",
+      description: "Mobile Milking Machine - Double Bucket Double Cluster",
       features: [
-        "Customizable feeding schedules",
-        "Reduces labor costs",
-        "Ensures consistent nutrition"
+        "Electronic pulsator",
+        "Vacuum pump is oil type with two years warranty",
+        "Stainless steel bucket (30 Kg) with cut off system",
+        "Can milk 16-20 animals / hour"
       ],
       image: "/api/placeholder/600/400"
     },
     {
         id: 5,
-        name: "Cow Comfort Mat",
-        description: "Cow mats",
+        name: "IN/ONE",
+        description: "IN/ONE",
         features: [
-          "Very easy to clean, gives comforts to animals",
-          "Reduces labor for filling of sand and then cleaning from drains"
+          "Traits With inOne, it is very easy to have your dream milking parlour",
+          "Comapct design and one day installation"
         ],
         image: "/api/placeholder/600/400"
     },
 
     {
         id: 6,
-        name: "Automatic Cow Brush",
-        description: "Used to massage the cows",
+        name: "Polypropylene Milk Cans",
+        description: "Polypropylene Milk Cans",
         features: [
-          "Increases blood circulation",
-          "Increases milk yield",
-          "Increases skin shining by increasing blood circulation to skin"
+          "Food grade polypropylene milk cans for milking machines",
+          "Easy to wash "
         ],
         image: "/api/placeholder/600/400"
     },
     {
         id: 7,
-        name: "Hydraulic Cattle Crush",
-        description: "Hydraulic Cattle Crush",
+        name: "Automatic Churm",
+        description: "Automatic Churm",
         features: [
-          "Used to hold animal for medication, surgery, and inseminations",
-          "Can be operated easily using hydraulic system"
+          "It is used to make butter"
         ],
         image: "/api/placeholder/600/400"
     },
     {
         id: 8,
-        name: "Calf Hutch",
-        description: "Calf Hutch",
+        name: "Plastic Milk Cans",
+        description: "Plastic Milk Cans",
         features: [
           "Used for calf care in the first two months of age",
           "Ensure calf health by individual feeding and avoid contamination"
         ],
         image: "/api/placeholder/600/400"
+    },
+    {
+      id: 9,
+      name: "Bucket with Milking Cluster",
+      description: "Bucket with Milking Cluster",
+      features: [
+        "Used to extend milk line"
+      ],
+      image: "/api/placeholder/600/400"
+    },
+    {
+      id: 10,
+      name: "Herribone Milking Parlor",
+      description: "Herribone Milking Parlor",
+      features: [
+        "Best milking parlors with herd management system",
+        "Ensures fast and hygienic milking"
+      ],
+      image: "/api/placeholder/600/400"
+    },
+
+    {
+      id: 10,
+      name: "Fast Exit Milking Parlor",
+      description: "Fast Exit Milking Parlor",
+      features: [
+        "Complete parlor with herd management system",
+        "Provides heat detection, rumination and health management"
+      ],
+      image: "/api/placeholder/600/400"
     }
   ];
 
@@ -239,4 +271,4 @@ const ProductCard = ({ product }) => {
   );
 };
 
-export default DairyFarmingSol;
+export default Milking;

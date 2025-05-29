@@ -1,93 +1,69 @@
 
 import { useState} from 'react';
 import {Link} from 'react-router-dom';
-import '../styles/dairyfarmingsol.css'
+import '../styles/feeding.css'
 
-const DairyFarmingSol = () => {
-  // Sample product data - replace with your actual products
+const FeedingSol = () => {
   const products = [
     {
       id: 1,
-      name: "Cow Cubicles",
-      description: "Cubicles are animal rest areas",
+      name: "Silage Bale",
+      description: "Silage Bale",
       features: [
-        "Hot dip galvanized pipes with",
-        "Proper angle required for",
-        "Animal comfort"
+        "Ready to server silage wrapped bales"
       ],
       image: "/api/placeholder/600/400"
     },
     {
       id: 2,
-      name: "Cow Head Lock",
-      description: "Easy animals handling without any health hazard.",
+      name: "Feeding Trolly",
+      description: "Feeding Trolly",
       features: [
-        "Hot dip galvanized with top",
-        "Covering of plastic for less noice."
+        "Easy to carry feed",
+        "Reduce labor"
       ],
       image: "/api/placeholder/600/400"
     },
     {
       id: 3,
-      name: "Automatic Manure Scrapper",
-      description: "Efficient milking systems for dairy farms",
+      name: "Calf Feeding Trolly",
+      description: "Calf Feeding Trolly",
       features: [
-        "Automatic cluster removal",
-        "Stainless steel construction",
-        "Easy to clean and maintain"
+        "Used to maintain temperature of milk for calves",
+        "It maintains temperature by indirect heating system",
+        "Delivers measured quantity milk by flow meter nozzle"
       ],
       image: "/api/placeholder/600/400"
     },
     {
       id: 4,
-      name: "Cooling Fans",
-      description: "Automated feed delivery systems",
+      name: "Automatic Drinker",
+      description: "Automatic Drinker",
       features: [
-        "Customizable feeding schedules",
-        "Reduces labor costs",
-        "Ensures consistent nutrition"
+        " Enables the cattle to drink fresh and clean water",
+        "Controls wastage of water",
+        " Easy approach of animal"
       ],
       image: "/api/placeholder/600/400"
     },
     {
         id: 5,
-        name: "Cow Comfort Mat",
-        description: "Cow mats",
+        name: "Milk Feeding Bucket For Calves",
+        description: "Feeding Bucket for Calves",
         features: [
-          "Very easy to clean, gives comforts to animals",
-          "Reduces labor for filling of sand and then cleaning from drains"
+          "Ensures calf health by proper feeding",
+          "Each calf gets measured quantity of milk"
         ],
         image: "/api/placeholder/600/400"
     },
 
     {
         id: 6,
-        name: "Automatic Cow Brush",
-        description: "Used to massage the cows",
+        name: "Feed Crusher",
+        description: "Feed Crusher",
         features: [
-          "Increases blood circulation",
-          "Increases milk yield",
-          "Increases skin shining by increasing blood circulation to skin"
-        ],
-        image: "/api/placeholder/600/400"
-    },
-    {
-        id: 7,
-        name: "Hydraulic Cattle Crush",
-        description: "Hydraulic Cattle Crush",
-        features: [
-          "Used to hold animal for medication, surgery, and inseminations",
-          "Can be operated easily using hydraulic system"
-        ],
-        image: "/api/placeholder/600/400"
-    },
-    {
-        id: 8,
-        name: "Calf Hutch",
-        description: "Calf Hutch",
-        features: [
-          "Used for calf care in the first two months of age",
-          "Ensure calf health by individual feeding and avoid contamination"
+          " Used to crush feed grains",
+          "Its rollers are designed to give required particle size"
         ],
         image: "/api/placeholder/600/400"
     }
@@ -239,4 +215,4 @@ const ProductCard = ({ product }) => {
   );
 };
 
-export default DairyFarmingSol;
+export default FeedingSol;
