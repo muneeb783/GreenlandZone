@@ -7,88 +7,49 @@ const TeatHealthSol = () => {
   const products = [
     {
       id: 1,
-      name: "Cow Cubicles",
+      name: "Pre Dip Teat Foam",
       description: "Cubicles are animal rest areas",
       features: [
-        "Hot dip galvanized pipes with",
-        "Proper angle required for",
-        "Animal comfort"
+        "Acetic acid based & Iodine based",
+        "Contains provitamine B5, glycerine & lanolin",
+        "Softens the udder skin and hydrate it during milking"
       ],
       image: "/api/placeholder/600/400"
     },
     {
       id: 2,
-      name: "Cow Head Lock",
-      description: "Easy animals handling without any health hazard.",
+      name: "Post Dip Solution",
+      description: "Post Dip Solution",
       features: [
-        "Hot dip galvanized with top",
-        "Covering of plastic for less noice."
+        "Have same active properties & ingrediants as Herbafilm",
+        "Does not create a peelable film",
+        "Creates a very thin waxy barrier on the teat skin which comes off easily when you wipe it"
       ],
       image: "/api/placeholder/600/400"
     },
     {
       id: 3,
-      name: "Automatic Manure Scrapper",
-      description: "Efficient milking systems for dairy farms",
+      name: "Post Dip Film",
+      description: "Post Dip Film",
       features: [
-        "Automatic cluster removal",
-        "Stainless steel construction",
-        "Easy to clean and maintain"
+        "Post dip anti-becterial which protects teat orrifice between two milking",
+        "Fly repellent",
+        "Enriched with glycerine and lanoline to prevent irritation",
+        "Contains skin softener  & substances with moisturizing cosmetic properties"
       ],
       image: "/api/placeholder/600/400"
     },
     {
       id: 4,
-      name: "Cooling Fans",
-      description: "Automated feed delivery systems",
+      name: "Post Dip Solution/Spray",
+      description: "Post Dip Solution/Spray",
       features: [
-        "Customizable feeding schedules",
-        "Reduces labor costs",
-        "Ensures consistent nutrition"
+        "Ready to use post milking disinfectant which kills bacteria that causes mastits",
+        "Contains 5.5% active iodine",
+        "Enriched with glycerine and lanoline to prevent irritation and protects integrity of teat",
+        "Dries on teat and creates a barrier"
       ],
       image: "/api/placeholder/600/400"
-    },
-    {
-        id: 5,
-        name: "Cow Comfort Mat",
-        description: "Cow mats",
-        features: [
-          "Very easy to clean, gives comforts to animals",
-          "Reduces labor for filling of sand and then cleaning from drains"
-        ],
-        image: "/api/placeholder/600/400"
-    },
-
-    {
-        id: 6,
-        name: "Automatic Cow Brush",
-        description: "Used to massage the cows",
-        features: [
-          "Increases blood circulation",
-          "Increases milk yield",
-          "Increases skin shining by increasing blood circulation to skin"
-        ],
-        image: "/api/placeholder/600/400"
-    },
-    {
-        id: 7,
-        name: "Hydraulic Cattle Crush",
-        description: "Hydraulic Cattle Crush",
-        features: [
-          "Used to hold animal for medication, surgery, and inseminations",
-          "Can be operated easily using hydraulic system"
-        ],
-        image: "/api/placeholder/600/400"
-    },
-    {
-        id: 8,
-        name: "Calf Hutch",
-        description: "Calf Hutch",
-        features: [
-          "Used for calf care in the first two months of age",
-          "Ensure calf health by individual feeding and avoid contamination"
-        ],
-        image: "/api/placeholder/600/400"
     }
   ];
 

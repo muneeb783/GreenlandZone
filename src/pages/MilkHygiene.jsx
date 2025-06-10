@@ -7,86 +7,38 @@ const MilkHygiene = () => {
   const products = [
     {
       id: 1,
-      name: "Cow Cubicles",
-      description: "Cubicles are animal rest areas",
+      name: "Cleaning Alkaline CIP",
+      description: "Cleaning Alkaline CIP",
       features: [
-        "Hot dip galvanized pipes with",
-        "Proper angle required for",
-        "Animal comfort"
+        "Peracetic Acid < 5%",
+        "Designed for cleaning & hygiene of milking machines, cooling tanks, pipes, brushes etc"
       ],
       image: "/api/placeholder/600/400"
     },
     {
       id: 2,
-      name: "Cow Head Lock",
-      description: "Easy animals handling without any health hazard.",
+      name: "Cleaning Acidic CIP",
+      description: "Cleaning Acidic CIP",
       features: [
-        "Hot dip galvanized with top",
-        "Covering of plastic for less noice."
+        "Designed for cleaning of milking machines, milk containers & for surfaces in contact with milk."
       ],
       image: "/api/placeholder/600/400"
     },
     {
       id: 3,
-      name: "Automatic Manure Scrapper",
-      description: "Efficient milking systems for dairy farms",
+      name: "Acid Per Acitic",
+      description: "Acid Per Acitic",
       features: [
-        "Automatic cluster removal",
-        "Stainless steel construction",
-        "Easy to clean and maintain"
+        "It is a powerful disinfectant and also used to clean the milking clusters just before moving to the next animal"
       ],
       image: "/api/placeholder/600/400"
     },
     {
-      id: 4,
-      name: "Cooling Fans",
-      description: "Automated feed delivery systems",
-      features: [
-        "Customizable feeding schedules",
-        "Reduces labor costs",
-        "Ensures consistent nutrition"
-      ],
-      image: "/api/placeholder/600/400"
-    },
-    {
-        id: 5,
-        name: "Cow Comfort Mat",
-        description: "Cow mats",
+        id: 4,
+        name: "Cleaner Surface Foamy",
+        description: "Cleaner Surface Foamy",
         features: [
-          "Very easy to clean, gives comforts to animals",
-          "Reduces labor for filling of sand and then cleaning from drains"
-        ],
-        image: "/api/placeholder/600/400"
-    },
-
-    {
-        id: 6,
-        name: "Automatic Cow Brush",
-        description: "Used to massage the cows",
-        features: [
-          "Increases blood circulation",
-          "Increases milk yield",
-          "Increases skin shining by increasing blood circulation to skin"
-        ],
-        image: "/api/placeholder/600/400"
-    },
-    {
-        id: 7,
-        name: "Hydraulic Cattle Crush",
-        description: "Hydraulic Cattle Crush",
-        features: [
-          "Used to hold animal for medication, surgery, and inseminations",
-          "Can be operated easily using hydraulic system"
-        ],
-        image: "/api/placeholder/600/400"
-    },
-    {
-        id: 8,
-        name: "Calf Hutch",
-        description: "Calf Hutch",
-        features: [
-          "Used for calf care in the first two months of age",
-          "Ensure calf health by individual feeding and avoid contamination"
+          "Designed for surface cleaning like bulk tanks, milk silos, farm equipment, surfaces of milking machine clustors, pipes & other equipment"
         ],
         image: "/api/placeholder/600/400"
     }

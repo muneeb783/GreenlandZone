@@ -13,6 +13,10 @@
     color: #1f2937;
     line-height: 1.5;
   }
+
+  .body-text {
+    text-align: left;
+  }
   
   .container {
     width: 100%;
@@ -208,4 +212,26 @@
   
   .product-card {
     animation: fadeIn 0.3s ease-in-out;
+  }
+
+  /* Vision container with green bar */
+  .green-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .green-bar {
+    width: 4px;
+    min-height: 150px;
+    background-color: #16a34a;
+    flex-shrink: 0;
+  }
+  
+  .green-content {
+    flex: 1;
+  }
+  
+  .green-content h1 {
+    margin-top: 0;
   }
