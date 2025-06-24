@@ -1,9 +1,9 @@
-
-import { useState} from 'react';
-import {Link} from 'react-router-dom';
-import '../styles/dairyfarmingsol.css'
+import { useState } from 'react';
+import "../styles/dairyfarmingsol.css";
 
 const DairyFarmingSol = () => {
+  const [selectedProduct, setSelectedProduct] = useState(null);
+  
   // Sample product data - replace with your actual products
   const products = [
     {
@@ -15,7 +15,8 @@ const DairyFarmingSol = () => {
         "Proper angle required for",
         "Animal comfort"
       ],
-      image: "/api/placeholder/600/400"
+      image: "/api/placeholder/600/400",
+      category: "Comfort"
     },
     {
       id: 2,
@@ -23,218 +24,230 @@ const DairyFarmingSol = () => {
       description: "Easy animals handling without any health hazard.",
       features: [
         "Hot dip galvanized with top",
-        "Covering of plastic for less noice."
+        "Covering of plastic for less noise."
       ],
-      image: "/api/placeholder/600/400"
+      image: "/api/placeholder/600/400",
+      category: "Handling"
     },
     {
       id: 3,
       name: "Automatic Manure Scrapper",
-      description: "Efficient milking systems for dairy farms",
+      description: "Efficient waste management for dairy farms",
       features: [
-        "Automatic cluster removal",
+        "Automatic operation",
         "Stainless steel construction",
         "Easy to clean and maintain"
       ],
-      image: "/api/placeholder/600/400"
+      image: "/api/placeholder/600/400",
+      category: "Hygiene"
     },
     {
       id: 4,
       name: "Cooling Fans",
-      description: "Automated feed delivery systems",
+      description: "Climate control for optimal cow comfort",
       features: [
-        "Customizable feeding schedules",
-        "Reduces labor costs",
-        "Ensures consistent nutrition"
+        "Energy efficient operation",
+        "Reduces heat stress",
+        "Improves milk production"
       ],
-      image: "/api/placeholder/600/400"
+      image: "/api/placeholder/600/400",
+      category: "Climate"
     },
     {
-        id: 5,
-        name: "Cow Comfort Mat",
-        description: "Cow mats",
-        features: [
-          "Very easy to clean, gives comforts to animals",
-          "Reduces labor for filling of sand and then cleaning from drains"
-        ],
-        image: "/api/placeholder/600/400"
-    },
-
-    {
-        id: 6,
-        name: "Automatic Cow Brush",
-        description: "Used to massage the cows",
-        features: [
-          "Increases blood circulation",
-          "Increases milk yield",
-          "Increases skin shining by increasing blood circulation to skin"
-        ],
-        image: "/api/placeholder/600/400"
+      id: 5,
+      name: "Cow Comfort Mat",
+      description: "Premium comfort mats for cow welfare",
+      features: [
+        "Very easy to clean, gives comfort to animals",
+        "Reduces labor for filling of sand and then cleaning from drains"
+      ],
+      image: "/api/placeholder/600/400",
+      category: "Comfort"
     },
     {
-        id: 7,
-        name: "Hydraulic Cattle Crush",
-        description: "Hydraulic Cattle Crush",
-        features: [
-          "Used to hold animal for medication, surgery, and inseminations",
-          "Can be operated easily using hydraulic system"
-        ],
-        image: "/api/placeholder/600/400"
+      id: 6,
+      name: "Automatic Cow Brush",
+      description: "Used to massage the cows",
+      features: [
+        "Increases blood circulation",
+        "Increases milk yield",
+        "Increases skin shining by increasing blood circulation to skin"
+      ],
+      image: "/api/placeholder/600/400",
+      category: "Comfort"
     },
     {
-        id: 8,
-        name: "Calf Hutch",
-        description: "Calf Hutch",
-        features: [
-          "Used for calf care in the first two months of age",
-          "Ensure calf health by individual feeding and avoid contamination"
-        ],
-        image: "/api/placeholder/600/400"
+      id: 7,
+      name: "Hydraulic Cattle Crush",
+      description: "Safe and efficient cattle handling system",
+      features: [
+        "Used to hold animal for medication, surgery, and inseminations",
+        "Can be operated easily using hydraulic system"
+      ],
+      image: "/api/placeholder/600/400",
+      category: "Handling"
+    },
+    {
+      id: 8,
+      name: "Calf Hutch",
+      description: "Individual housing for young calves",
+      features: [
+        "Used for calf care in the first two months of age",
+        "Ensure calf health by individual feeding and avoid contamination"
+      ],
+      image: "/api/placeholder/600/400",
+      category: "Housing"
     }
   ];
 
-  const [filter, setFilter] = useState('all');
-  
-  const filteredProducts = filter === 'all' 
-    ? products 
-    : products.filter(product => product.name.toLowerCase().includes(filter.toLowerCase()));
-
   return (
-    <div>
-      {/* Header */}
-      <header className="header">
-        <div className="container header-content">
-          <h1 className="header-title">Dairy Farm Equipment Solutions</h1>
-          <p className="header-subtitle">Comprehensive solutions for modern dairy farming</p>
+    <div className="dairy-container">
+      {/* Hero Section */}
+      <header className="dairy-hero-section dairy-full-width">
+        <div className="dairy-hero-overlay"></div>
+        <div className="dairy-hero-content">
+          <div className="dairy-hero-badge">PREMIUM DAIRY EQUIPMENT</div>
+          <h1 className="dairy-hero-title">
+            Dairy Farm Equipment
+            <span className="dairy-hero-accent">Solutions</span>
+          </h1>
+          <p className="dairy-hero-description">
+            Comprehensive solutions for modern dairy farming - from comfort to productivity
+          </p>
+          <div className="dairy-hero-stats">
+            <div className="dairy-stat-item">
+              <div className="dairy-stat-icon">🐄</div>
+              <div className="dairy-stat-number">98%</div>
+              <div className="dairy-stat-label">Cow Comfort</div>
+            </div>
+            <div className="dairy-stat-item">
+              <div className="dairy-stat-icon">📈</div>
+              <div className="dairy-stat-number">35%</div>
+              <div className="dairy-stat-label">Increased Yield</div>
+            </div>
+            <div className="dairy-stat-item">
+              <div className="dairy-stat-icon">⚡</div>
+              <div className="dairy-stat-number">50%</div>
+              <div className="dairy-stat-label">Labor Reduction</div>
+            </div>
+          </div>
         </div>
       </header>
 
-      {/* Product Filter */}
-      <div className="container-fluid px-4">
-        <div className="filter-section">
-          <h2 className="section-title">Our Product Solutions</h2>
-          <div className="filter-buttons">
-
-            <Link
-              to="/products/dairy"
-              className="filter-button btn-link"
-            >
-              Dairy Farming
-            </Link>
-
-            <Link
-              to="/products/feeding"
-              className="filter-button btn-link"
-            >
-              Feeding
-            </Link>
-
-            <Link
-              to="/products/forage"
-              className="filter-button btn-link"
-            >
-              Forage &amp; Hay Making
-            </Link>
-
-            <Link
-              to="/products/silage"
-              className="filter-button btn-link"
-            >
-              Silage Making
-            </Link>
-
-            <Link
-              to="/products/milking"
-              className="filter-button btn-link"
-            >
-              Milking
-            </Link>
-
-            <Link
-              to="/products/biosecurity"
-              className="filter-button btn-link"
-            >
-              Farm Biosecurity
-            </Link>
-
-            <Link
-              to="/products/hygiene"
-              className="filter-button btn-link"
-            >
-              Milk Hygiene
-            </Link>
-
-            <Link
-              to="/products/teat"
-              className="filter-button btn-link"
-            >
-              Teat & Udder Health
-            </Link>
-
-            <Link
-              to="/products/calf"
-              className="filter-button btn-link"
-            >
-              Calf Health
-            </Link>
-
-            <Link
-              to="/products/monitoring"
-              className="filter-button btn-link"
-            >
-              SenseTime Cow Monitoring
-            </Link>
-
-            <Link
-              to="/products/monitoring"
-              className="filter-button btn-link"
-            >
-              Feed Additives
-            </Link>
-
+      {/* Features Section */}
+      <section className="dairy-features-section dairy-full-width">
+        <div className="dairy-features-container">
+          <h2 className="dairy-features-title">Why Choose Our Solutions?</h2>
+          <div className="dairy-features-grid">
+            <div className="dairy-feature-card">
+              <div className="dairy-feature-icon">🏆</div>
+              <h3>Premium Quality</h3>
+              <p>Hot-dip galvanized construction ensures long-lasting durability</p>
+            </div>
+            <div className="dairy-feature-card">
+              <div className="dairy-feature-icon">🛡️</div>
+              <h3>Animal Welfare</h3>
+              <p>Designed with cow comfort and safety as top priority</p>
+            </div>
+            <div className="dairy-feature-card">
+              <div className="dairy-feature-icon">💡</div>
+              <h3>Innovation</h3>
+              <p>Latest technology for efficient farm management</p>
+            </div>
+            <div className="dairy-feature-card">
+              <div className="dairy-feature-icon">🔧</div>
+              <h3>Easy Maintenance</h3>
+              <p>Simple design for hassle-free cleaning and upkeep</p>
+            </div>
           </div>
         </div>
+      </section>
 
-        {/* Product Grid */}
-        <div className='container dairy-products-container'>
-            <div className="products-grid">
-            {filteredProducts.map(product => (
-                <ProductCard key={product.id} product={product} />
+      {/* Product Grid */}
+      <section className="dairy-products-section dairy-full-width">
+        <div className="dairy-products-container">
+          <h2 className="dairy-section-title">Our Product Range</h2>
+          <div className="dairy-products-grid">
+            {products.map(product => (
+              <div 
+                key={product.id} 
+                className="dairy-product-card"
+                onClick={() => setSelectedProduct(product)}
+              >
+                <div className="dairy-product-category">{product.category}</div>
+                <div className="dairy-product-image-container">
+                  <img 
+                    src={product.image} 
+                    alt={product.name} 
+                    className="dairy-product-image"
+                  />
+                  <div className="dairy-product-overlay">
+                    <button className="dairy-view-details-btn">View Details</button>
+                  </div>
+                </div>
+                <div className="dairy-product-content">
+                  <h3 className="dairy-product-title">{product.name}</h3>
+                  <p className="dairy-product-description">{product.description}</p>
+                  <ul className="dairy-product-features">
+                    {product.features.slice(0, 2).map((feature, index) => (
+                      <li key={index} className="dairy-feature-item">
+                        <span className="dairy-feature-bullet">✓</span>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
             ))}
-            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  );
-};
+      </section>
 
-// Product Card Component
-const ProductCard = ({ product }) => {
-  return (
-    <div className="product-card">
-      <div className="product-image-container">
-        <img 
-          src={product.image} 
-          alt={product.name} 
-          className="product-image"
-        />
-        <div className="product-title-overlay">
-          <h3 className="product-title">
-            {product.name}
-          </h3>
+      {/* CTA Section */}
+      <section className="dairy-cta-section">
+        <div className="dairy-cta-container">
+          <h2 className="dairy-cta-title">Ready to Modernize Your Dairy Farm?</h2>
+          <p className="dairy-cta-description">
+            Contact us today for a customized solution that fits your farm's needs
+          </p>
+          <div className="dairy-cta-buttons">
+            <button className="dairy-btn-primary">Get Quote</button>
+            <button className="dairy-btn-secondary">Download Catalog</button>
+          </div>
         </div>
-      </div>
-      <div className="product-content">
-        <p className="product-description">{product.description}</p>
-        <ul className="product-features">
-          {product.features.map((feature, index) => (
-            <li key={index} className="feature-item">
-              <span className="feature-bullet">•</span>
-              {feature}
-            </li>
-          ))}
-        </ul>
-      </div>
+      </section>
+
+      {/* Product Modal */}
+      {selectedProduct && (
+        <div className="dairy-modal-overlay" onClick={() => setSelectedProduct(null)}>
+          <div className="dairy-modal-content" onClick={(e) => e.stopPropagation()}>
+            <button className="dairy-modal-close" onClick={() => setSelectedProduct(null)}>×</button>
+            <div className="dairy-modal-grid">
+              <div className="dairy-modal-image">
+                <img src={selectedProduct.image} alt={selectedProduct.name} />
+              </div>
+              <div className="dairy-modal-info">
+                <div className="dairy-modal-category">{selectedProduct.category}</div>
+                <h2 className="dairy-modal-title">{selectedProduct.name}</h2>
+                <p className="dairy-modal-description">{selectedProduct.description}</p>
+                <h3 className="dairy-modal-features-title">Key Features:</h3>
+                <ul className="dairy-modal-features">
+                  {selectedProduct.features.map((feature, index) => (
+                    <li key={index}>
+                      <span className="dairy-feature-icon">✓</span>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                <div className="dairy-modal-actions">
+                  <button className="dairy-btn-primary">Request Quote</button>
+                  <button className="dairy-btn-secondary">Ask Question</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

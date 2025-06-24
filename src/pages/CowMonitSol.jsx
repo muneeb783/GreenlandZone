@@ -1,241 +1,183 @@
-import { useState} from 'react';
-import {Link} from 'react-router-dom';
-import '../styles/farmbiosec.css'
+import { useState } from 'react';
+import "../styles/cowmonitsol.css";
 
-const CowMonitSol = () => {
-  // Sample product data - replace with your actual products
-  const products = [
-    {
-      id: 1,
-      name: "Cow Cubicles",
-      description: "Cubicles are animal rest areas",
-      features: [
-        "Hot dip galvanized pipes with",
-        "Proper angle required for",
-        "Animal comfort"
-      ],
-      image: "/api/placeholder/600/400"
-    },
-    {
-      id: 2,
-      name: "Cow Head Lock",
-      description: "Easy animals handling without any health hazard.",
-      features: [
-        "Hot dip galvanized with top",
-        "Covering of plastic for less noice."
-      ],
-      image: "/api/placeholder/600/400"
-    },
-    {
-      id: 3,
-      name: "Automatic Manure Scrapper",
-      description: "Efficient milking systems for dairy farms",
-      features: [
-        "Automatic cluster removal",
-        "Stainless steel construction",
-        "Easy to clean and maintain"
-      ],
-      image: "/api/placeholder/600/400"
-    },
-    {
-      id: 4,
-      name: "Cooling Fans",
-      description: "Automated feed delivery systems",
-      features: [
-        "Customizable feeding schedules",
-        "Reduces labor costs",
-        "Ensures consistent nutrition"
-      ],
-      image: "/api/placeholder/600/400"
-    },
-    {
-        id: 5,
-        name: "Cow Comfort Mat",
-        description: "Cow mats",
-        features: [
-          "Very easy to clean, gives comforts to animals",
-          "Reduces labor for filling of sand and then cleaning from drains"
-        ],
-        image: "/api/placeholder/600/400"
-    },
+const SenseTimePage = () => {
+  const [selectedImage, setSelectedImage] = useState(null);
 
+  const features = [
     {
-        id: 6,
-        name: "Automatic Cow Brush",
-        description: "Used to massage the cows",
-        features: [
-          "Increases blood circulation",
-          "Increases milk yield",
-          "Increases skin shining by increasing blood circulation to skin"
-        ],
-        image: "/api/placeholder/600/400"
+      icon: "🌡️",
+      title: "Heat Detection",
+      description: "Best-in-class heat detection for optimal breeding timing"
     },
     {
-        id: 7,
-        name: "Hydraulic Cattle Crush",
-        description: "Hydraulic Cattle Crush",
-        features: [
-          "Used to hold animal for medication, surgery, and inseminations",
-          "Can be operated easily using hydraulic system"
-        ],
-        image: "/api/placeholder/600/400"
+      icon: "📊",
+      title: "Health Insights",
+      description: "Real-time health monitoring and early disease detection"
     },
     {
-        id: 8,
-        name: "Calf Hutch",
-        description: "Calf Hutch",
-        features: [
-          "Used for calf care in the first two months of age",
-          "Ensure calf health by individual feeding and avoid contamination"
-        ],
-        image: "/api/placeholder/600/400"
+      icon: "🏷️",
+      title: "Flexible Tagging",
+      description: "Choose between ear tags or neck tags based on your preference"
+    },
+    {
+      icon: "📱",
+      title: "Data-Driven",
+      description: "Actionable insights on reproductive, health, and nutritional status"
     }
   ];
 
-  const [filter, setFilter] = useState('all');
-  
-  const filteredProducts = filter === 'all' 
-    ? products 
-    : products.filter(product => product.name.toLowerCase().includes(filter.toLowerCase()));
+  const images = [
+    {
+      id: 1,
+      src: "/api/placeholder/400/300",
+      alt: "Cow with monitoring tag",
+      caption: "SenseTM Flex neck tag in action"
+    },
+    {
+      id: 2,
+      src: "/api/placeholder/400/300",
+      alt: "Close-up of monitoring system",
+      caption: "Advanced monitoring technology"
+    },
+    {
+      id: 3,
+      src: "/api/placeholder/400/300",
+      alt: "eSenseTM Flex ear tag",
+      caption: "eSenseTM Flex ear tag device"
+    }
+  ];
 
   return (
-    <div>
-      {/* Header */}
-      <header className="header">
-        <div className="container header-content">
-          <h1 className="header-title">Dairy Farm Equipment Solutions</h1>
-          <p className="header-subtitle">Comprehensive solutions for modern dairy farming</p>
-        </div>
-      </header>
-
-      {/* Product Filter */}
-      <div className="container-fluid px-4">
-        <div className="filter-section">
-          <h2 className="section-title">Our Product Solutions</h2>
-          <div className="filter-buttons">
-
-            <Link
-              to="/products/dairy"
-              className="filter-button btn-link"
-            >
-              Dairy Farming
-            </Link>
-
-            <Link
-              to="/products/feeding"
-              className="filter-button btn-link"
-            >
-              Feeding
-            </Link>
-
-            <Link
-              to="/products/forage"
-              className="filter-button btn-link"
-            >
-              Forage &amp; Hay Making
-            </Link>
-
-            <Link
-              to="/products/silage"
-              className="filter-button btn-link"
-            >
-              Silage Making
-            </Link>
-
-            <Link
-              to="/products/milking"
-              className="filter-button btn-link"
-            >
-              Milking
-            </Link>
-
-            <Link
-              to="/products/biosecurity"
-              className="filter-button btn-link"
-            >
-              Farm Biosecurity
-            </Link>
-
-            <Link
-              to="/products/hygiene"
-              className="filter-button btn-link"
-            >
-              Milk Hygiene
-            </Link>
-
-            <Link
-              to="/products/teat"
-              className="filter-button btn-link"
-            >
-              Teat & Udder Health
-            </Link>
-
-            <Link
-              to="/products/calf"
-              className="filter-button btn-link"
-            >
-              Calf Health
-            </Link>
-
-            <Link
-              to="/products/monitoring"
-              className="filter-button btn-link"
-            >
-              SenseTime Cow Monitoring
-            </Link>
-
-            <Link
-              to="/products/monitoring"
-              className="filter-button btn-link"
-            >
-              Feed Additives
-            </Link>
-
+    <div className="sensetime-container">
+      {/* Hero Section */}
+      <section className="hero-section hero-full-width">
+        <div className="hero-background-pattern"></div>
+        <div className="hero-container">
+          <div className="hero-content">
+            <div className="hero-badge">ADVANCED MONITORING TECHNOLOGY</div>
+            <h1 className="hero-title">
+              SenseTime Cow<br/>
+              <span className="hero-accent">Monitoring System</span>
+            </h1>
+            <p className="hero-description">
+              Revolutionary Technology for Modern Dairy Farming
+            </p>
+            <div className="hero-stats">
+              <div className="stat-item">
+                <div className="stat-number">95%</div>
+                <div className="stat-label">Heat Detection Rate</div>
+              </div>
+              <div className="stat-divider"></div>
+              <div className="stat-item">
+                <div className="stat-number">24/7</div>
+                <div className="stat-label">Real-Time Monitoring</div>
+              </div>
+              <div className="stat-divider"></div>
+              <div className="stat-item">
+                <div className="stat-number">1000+</div>
+                <div className="stat-label">Farms Worldwide</div>
+              </div>
+            </div>
+            <div className="hero-cta">
+              <button className="hero-btn-primary">Get Started</button>
+              <button className="hero-btn-secondary">Watch Demo</button>
+            </div>
+          </div>
+          <div className="hero-visual">
+            <div className="hero-image-container">
+              <svg className="hero-svg" viewBox="0 0 400 300">
+                {/* Cow silhouette with tech overlay */}
+                <path d="M100 150 Q150 100 200 150 T300 150" stroke="#16a34a" strokeWidth="2" fill="none" opacity="0.3"/>
+                <circle cx="150" cy="150" r="5" fill="#16a34a" className="pulse-dot"/>
+                <circle cx="250" cy="150" r="5" fill="#16a34a" className="pulse-dot" style={{animationDelay: '0.5s'}}/>
+                <circle cx="200" cy="120" r="5" fill="#16a34a" className="pulse-dot" style={{animationDelay: '1s'}}/>
+                
+                {/* Data visualization elements */}
+                <path d="M50 200 L100 180 L150 190 L200 170 L250 175 L300 160" stroke="#3b82f6" strokeWidth="2" fill="none" className="data-line"/>
+                <rect x="320" y="140" width="60" height="40" rx="4" fill="#1f2937" opacity="0.8"/>
+                <text x="350" y="165" fill="white" fontSize="12" textAnchor="middle">Live Data</text>
+              </svg>
+            </div>
           </div>
         </div>
+      </section>
 
-        {/* Product Grid */}
-        <div className='container dairy-products-container'>
-            <div className="products-grid">
-            {filteredProducts.map(product => (
-                <ProductCard key={product.id} product={product} />
-            ))}
+      {/* Main Content */}
+      <section className="content-section">
+        <div className="content-wrapper">
+          {/* Introduction */}
+          <div className="intro-section">
+            <div className="green-accent"></div>
+            <div className="intro-content">
+              <p className="lead-text">
+              The revolutionary SenseTimeTM cow monitoring solution delivers proven best-in-class heat detection and health insight, a choice of ear tags or neck tags and inherent simplicity for maximized productivity.
+              SenseTime is a sophisticated, modular cow monitoring solution that delivers data-driven, actionable information on the reproductive, health, nutritional and wellbeing status of individual cows and groups, for more productive farm management and operations.
+              </p>
+              <p className="description-text">
+              Highly flexible, it is the first cow monitoring system that allows farmers to use either ear tags or neck tags, according to their preference. The cSenseTM Flex (neck) tags are based on the SCR neck tags already in use on thousands of farms worldwide, and the eSenseTM Flex (ear) tags are the newest and most advanced ear tags on the market.
+              </p>
             </div>
+          </div>
+
+          {/* Features Grid */}
+          <div className="features-section">
+            <h2 className="section-title">Key Features</h2>
+            <div className="features-grid">
+              {features.map((feature, index) => (
+                <div key={index} className="feature-card">
+                  <div className="feature-icon">{feature.icon}</div>
+                  <h3 className="feature-title">{feature.title}</h3>
+                  <p className="feature-description">{feature.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Image Gallery */}
+          <div className="gallery-section">
+            <h2 className="section-title">See It In Action</h2>
+            <div className="image-gallery">
+              {images.map((image) => (
+                <div 
+                  key={image.id} 
+                  className="gallery-item"
+                  onClick={() => setSelectedImage(image)}
+                >
+                  <img src={image.src} alt={image.alt} />
+                  <div className="image-overlay">
+                    <p className="image-caption">{image.caption}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* CTA Section */}
+          <div className="cta-section">
+            <h2 className="cta-title">Ready to Transform Your Farm?</h2>
+            <p className="cta-description">
+              Join thousands of farmers worldwide who are already benefiting from SenseTime technology
+            </p>
+            <div className="cta-buttons">
+              <button className="btn-primary">Download Brochure</button>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
+
+      {/* Image Modal */}
+      {selectedImage && (
+        <div className="modal-overlay" onClick={() => setSelectedImage(null)}>
+          <div className="modal-content">
+            <img src={selectedImage.src} alt={selectedImage.alt} />
+            <p className="modal-caption">{selectedImage.caption}</p>
+            <button className="modal-close" onClick={() => setSelectedImage(null)}>✕</button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
 
-// Product Card Component
-const ProductCard = ({ product }) => {
-  return (
-    <div className="product-card">
-      <div className="product-image-container">
-        <img 
-          src={product.image} 
-          alt={product.name} 
-          className="product-image"
-        />
-        <div className="product-title-overlay">
-          <h3 className="product-title">
-            {product.name}
-          </h3>
-        </div>
-      </div>
-      <div className="product-content">
-        <p className="product-description">{product.description}</p>
-        <ul className="product-features">
-          {product.features.map((feature, index) => (
-            <li key={index} className="feature-item">
-              <span className="feature-bullet">•</span>
-              {feature}
-            </li>
-          ))}
-        </ul>
-      </div>
-    </div>
-  );
-};
-
-export default CowMonitSol;
+export default SenseTimePage;

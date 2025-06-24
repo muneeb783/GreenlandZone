@@ -1,272 +1,296 @@
-import { useState} from 'react';
-import {Link} from 'react-router-dom';
+import { useState } from 'react';
 import '../styles/milking.css'
 
 const Milking = () => {
-  // Sample product data - replace with your actual products
+  const [selectedProduct, setSelectedProduct] = useState(null);
+  
   const products = [
     {
       id: 1,
       name: "Mobile Milking Machine",
-      description: "Mobile Milking Machine",
+      description: "Portable milking solution for flexible operations",
       features: [
         "Electronic Pulsator",
-        "Oil type vacuum pump with wo years warranty",
+        "Oil type vacuum pump with two years warranty",
         "Stainless steel bucket (40 Kg) with cut off system",
         "Can milk 16-20 animals / hour"
       ],
-      image: "/api/placeholder/600/400"
+      image: "/api/placeholder/600/400",
+      category: "Mobile"
     },
     {
       id: 2,
       name: "Rooster Group",
-      description: "Rooster Group",
+      description: "Efficient group milking system",
       features: [
         "Electronic Pulsator",
         "Vacuum pump is oil type with two years warranty",
         "Stainless steel bucket (30 Kg) with cut off system",
         "Can milk 16-20 animals / hour"
       ],
-      image: "/api/placeholder/600/400"
+      image: "/api/placeholder/600/400",
+      category: "Group"
     },
     {
       id: 3,
       name: "Mobile Milking Master",
-      description: "Mobile Milking Master",
+      description: "Advanced mobile milking station",
       features: [
         "It can milk 8 animals at one time",
         "You can move it at your desired milking shed",
-        " It pumps milk directly to chiller after milking",
+        "It pumps milk directly to chiller after milking",
         "Easy to operate"
       ],
-      image: "/api/placeholder/600/400"
+      image: "/api/placeholder/600/400",
+      category: "Mobile"
     },
     {
       id: 4,
-      name: "Mobile Milking Machine - Double Bucket Double Cluster",
-      description: "Mobile Milking Machine - Double Bucket Double Cluster",
+      name: "Double Bucket Double Cluster",
+      description: "High-capacity mobile milking solution",
       features: [
         "Electronic pulsator",
         "Vacuum pump is oil type with two years warranty",
         "Stainless steel bucket (30 Kg) with cut off system",
         "Can milk 16-20 animals / hour"
       ],
-      image: "/api/placeholder/600/400"
+      image: "/api/placeholder/600/400",
+      category: "Mobile"
     },
     {
-        id: 5,
-        name: "IN/ONE",
-        description: "IN/ONE",
-        features: [
-          "Traits With inOne, it is very easy to have your dream milking parlour",
-          "Comapct design and one day installation"
-        ],
-        image: "/api/placeholder/600/400"
-    },
-
-    {
-        id: 6,
-        name: "Polypropylene Milk Cans",
-        description: "Polypropylene Milk Cans",
-        features: [
-          "Food grade polypropylene milk cans for milking machines",
-          "Easy to wash "
-        ],
-        image: "/api/placeholder/600/400"
+      id: 5,
+      name: "IN/ONE",
+      description: "Compact milking parlour solution",
+      features: [
+        "Traits With inOne, it is very easy to have your dream milking parlour",
+        "Compact design and one day installation",
+        "Complete integrated system"
+      ],
+      image: "/api/placeholder/600/400",
+      category: "Parlour"
     },
     {
-        id: 7,
-        name: "Automatic Churm",
-        description: "Automatic Churm",
-        features: [
-          "It is used to make butter"
-        ],
-        image: "/api/placeholder/600/400"
+      id: 6,
+      name: "Polypropylene Milk Cans",
+      description: "Food-grade milk storage solution",
+      features: [
+        "Food grade polypropylene milk cans for milking machines",
+        "Easy to wash",
+        "Durable construction"
+      ],
+      image: "/api/placeholder/600/400",
+      category: "Storage"
     },
     {
-        id: 8,
-        name: "Plastic Milk Cans",
-        description: "Plastic Milk Cans",
-        features: [
-          "Used for calf care in the first two months of age",
-          "Ensure calf health by individual feeding and avoid contamination"
-        ],
-        image: "/api/placeholder/600/400"
+      id: 7,
+      name: "Automatic Churn",
+      description: "Automated butter production equipment",
+      features: [
+        "It is used to make butter",
+        "Automatic operation",
+        "Consistent quality output"
+      ],
+      image: "/api/placeholder/600/400",
+      category: "Processing"
+    },
+    {
+      id: 8,
+      name: "Plastic Milk Cans",
+      description: "Lightweight milk storage containers",
+      features: [
+        "Durable plastic construction",
+        "Easy to handle and clean",
+        "Multiple size options available"
+      ],
+      image: "/api/placeholder/600/400",
+      category: "Storage"
     },
     {
       id: 9,
       name: "Bucket with Milking Cluster",
-      description: "Bucket with Milking Cluster",
+      description: "Extension solution for milk lines",
       features: [
-        "Used to extend milk line"
+        "Used to extend milk line",
+        "Compatible with existing systems",
+        "Easy installation"
       ],
-      image: "/api/placeholder/600/400"
+      image: "/api/placeholder/600/400",
+      category: "Accessories"
     },
     {
       id: 10,
-      name: "Herribone Milking Parlor",
-      description: "Herribone Milking Parlor",
+      name: "Herringbone Milking Parlor",
+      description: "Efficient parlor design with management system",
       features: [
         "Best milking parlors with herd management system",
-        "Ensures fast and hygienic milking"
+        "Ensures fast and hygienic milking",
+        "Optimized cow flow"
       ],
-      image: "/api/placeholder/600/400"
+      image: "/api/placeholder/600/400",
+      category: "Parlour"
     },
-
     {
-      id: 10,
+      id: 11,
       name: "Fast Exit Milking Parlor",
-      description: "Fast Exit Milking Parlor",
+      description: "Advanced parlor with quick release system",
       features: [
         "Complete parlor with herd management system",
-        "Provides heat detection, rumination and health management"
+        "Provides heat detection, rumination and health management",
+        "Rapid cow turnover"
       ],
-      image: "/api/placeholder/600/400"
+      image: "/api/placeholder/600/400",
+      category: "Parlour"
     }
   ];
 
-  const [filter, setFilter] = useState('all');
-  
-  const filteredProducts = filter === 'all' 
-    ? products 
-    : products.filter(product => product.name.toLowerCase().includes(filter.toLowerCase()));
-
   return (
-    <div>
-      {/* Header */}
-      <header className="header">
-        <div className="container header-content">
-          <h1 className="header-title">Dairy Farm Equipment Solutions</h1>
-          <p className="header-subtitle">Comprehensive solutions for modern dairy farming</p>
+    <div className="milking-container milking-full-width">
+      {/* Hero Section */}
+      <header className="milking-hero-section">
+        <div className="milking-hero-overlay"></div>
+        <div className="milking-hero-content">
+          <div className="milking-hero-badge">ADVANCED MILKING TECHNOLOGY</div>
+          <h1 className="milking-hero-title">
+            Milking Equipment
+            <span className="milking-hero-accent">Solutions</span>
+          </h1>
+          <p className="milking-hero-description">
+            Complete milking systems for efficient, hygienic, and profitable dairy operations
+          </p>
+          <div className="milking-hero-stats">
+            <div className="milking-stat-item">
+              <div className="milking-stat-icon">🥛</div>
+              <div className="milking-stat-number">2x</div>
+              <div className="milking-stat-label">Faster Milking</div>
+            </div>
+            <div className="milking-stat-item">
+              <div className="milking-stat-icon">✨</div>
+              <div className="milking-stat-number">99%</div>
+              <div className="milking-stat-label">Hygiene Level</div>
+            </div>
+            <div className="milking-stat-item">
+              <div className="milking-stat-icon">📈</div>
+              <div className="milking-stat-number">30%</div>
+              <div className="milking-stat-label">Yield Increase</div>
+            </div>
+          </div>
         </div>
       </header>
 
-      {/* Product Filter */}
-      <div className="container-fluid px-4">
-        <div className="filter-section">
-          <h2 className="section-title">Our Product Solutions</h2>
-          <div className="filter-buttons">
-
-            <Link
-              to="/products/dairy"
-              className="filter-button btn-link"
-            >
-              Dairy Farming
-            </Link>
-
-            <Link
-              to="/products/feeding"
-              className="filter-button btn-link"
-            >
-              Feeding
-            </Link>
-
-            <Link
-              to="/products/forage"
-              className="filter-button btn-link"
-            >
-              Forage &amp; Hay Making
-            </Link>
-
-            <Link
-              to="/products/silage"
-              className="filter-button btn-link"
-            >
-              Silage Making
-            </Link>
-
-            <Link
-              to="/products/milking"
-              className="filter-button btn-link"
-            >
-              Milking
-            </Link>
-
-            <Link
-              to="/products/biosecurity"
-              className="filter-button btn-link"
-            >
-              Farm Biosecurity
-            </Link>
-
-            <Link
-              to="/products/hygiene"
-              className="filter-button btn-link"
-            >
-              Milk Hygiene
-            </Link>
-
-            <Link
-              to="/products/teat"
-              className="filter-button btn-link"
-            >
-              Teat & Udder Health
-            </Link>
-
-            <Link
-              to="/products/calf"
-              className="filter-button btn-link"
-            >
-              Calf Health
-            </Link>
-
-            <Link
-              to="/products/monitoring"
-              className="filter-button btn-link"
-            >
-              SenseTime Cow Monitoring
-            </Link>
-
-            <Link
-              to="/products/monitoring"
-              className="filter-button btn-link"
-            >
-              Feed Additives
-            </Link>
-
+      {/* Features Section */}
+      <section className="milking-features-section milking-full-width">
+        <div className="milking-features-container">
+          <h2 className="milking-features-title">Why Choose Our Milking Solutions?</h2>
+          <div className="milking-features-grid">
+            <div className="milking-feature-card">
+              <div className="milking-feature-icon">🎯</div>
+              <h3>Precision Technology</h3>
+              <p>Electronic pulsators and automated systems for consistent milking</p>
+            </div>
+            <div className="milking-feature-card">
+              <div className="milking-feature-icon">🛡️</div>
+              <h3>Hygiene First</h3>
+              <p>Stainless steel construction and easy cleaning for milk quality</p>
+            </div>
+            <div className="milking-feature-card">
+              <div className="milking-feature-icon">⚡</div>
+              <h3>High Efficiency</h3>
+              <p>Milk up to 20 animals per hour with mobile solutions</p>
+            </div>
+            <div className="milking-feature-card">
+              <div className="milking-feature-icon">🔧</div>
+              <h3>Flexible Options</h3>
+              <p>From mobile units to complete parlor installations</p>
+            </div>
           </div>
         </div>
+      </section>
 
-        {/* Product Grid */}
-        <div className='container dairy-products-container'>
-            <div className="products-grid">
-            {filteredProducts.map(product => (
-                <ProductCard key={product.id} product={product} />
+      {/* Product Grid */}
+      <section className="milking-products-section milking-full-width">
+        <div className="milking-products-container">
+          <h2 className="milking-section-title">Our Product Range</h2>
+          <div className="milking-products-grid">
+            {products.map(product => (
+              <div 
+                key={product.id} 
+                className="milking-product-card"
+                onClick={() => setSelectedProduct(product)}
+              >
+                <div className="milking-product-category">{product.category}</div>
+                <div className="milking-product-image-container">
+                  <img 
+                    src={product.image} 
+                    alt={product.name} 
+                    className="milking-product-image"
+                  />
+                  <div className="milking-product-overlay">
+                    <button className="milking-view-details-btn">View Details</button>
+                  </div>
+                </div>
+                <div className="milking-product-content">
+                  <h3 className="milking-product-title">{product.name}</h3>
+                  <p className="milking-product-description">{product.description}</p>
+                  <ul className="milking-product-features">
+                    {product.features.slice(0, 2).map((feature, index) => (
+                      <li key={index} className="milking-feature-item">
+                        <span className="milking-feature-bullet">✓</span>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
             ))}
-            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  );
-};
+      </section>
 
-// Product Card Component
-const ProductCard = ({ product }) => {
-  return (
-    <div className="product-card">
-      <div className="product-image-container">
-        <img 
-          src={product.image} 
-          alt={product.name} 
-          className="product-image"
-        />
-        <div className="product-title-overlay">
-          <h3 className="product-title">
-            {product.name}
-          </h3>
+      {/* CTA Section */}
+      <section className="milking-cta-section milking-full-width">
+        <div className="milking-cta-container">
+          <h2 className="milking-cta-title">Transform Your Milking Operations</h2>
+          <p className="milking-cta-description">
+            Get the right milking equipment for your farm's specific needs and scale
+          </p>
+          <div className="milking-cta-buttons">
+            <button className="milking-btn-primary">Get Quote</button>
+            <button className="milking-btn-secondary">Download Catalog</button>
+          </div>
         </div>
-      </div>
-      <div className="product-content">
-        <p className="product-description">{product.description}</p>
-        <ul className="product-features">
-          {product.features.map((feature, index) => (
-            <li key={index} className="feature-item">
-              <span className="feature-bullet">•</span>
-              {feature}
-            </li>
-          ))}
-        </ul>
-      </div>
+      </section>
+
+      {/* Product Modal */}
+      {selectedProduct && (
+        <div className="milking-modal-overlay" onClick={() => setSelectedProduct(null)}>
+          <div className="milking-modal-content" onClick={(e) => e.stopPropagation()}>
+            <button className="milking-modal-close" onClick={() => setSelectedProduct(null)}>×</button>
+            <div className="milking-modal-grid">
+              <div className="milking-modal-image">
+                <img src={selectedProduct.image} alt={selectedProduct.name} />
+              </div>
+              <div className="milking-modal-info">
+                <div className="milking-modal-category">{selectedProduct.category}</div>
+                <h2 className="milking-modal-title">{selectedProduct.name}</h2>
+                <p className="milking-modal-description">{selectedProduct.description}</p>
+                <h3 className="milking-modal-features-title">Key Features:</h3>
+                <ul className="milking-modal-features">
+                  {selectedProduct.features.map((feature, index) => (
+                    <li key={index}>
+                      <span className="milking-feature-icon">✓</span>
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                <div className="milking-modal-actions">
+                  <button className="milking-btn-primary">Request Quote</button>
+                  <button className="milking-btn-secondary">Ask Question</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

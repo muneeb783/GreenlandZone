@@ -26,31 +26,31 @@ export default function GlobalNavBar() {
               <NavDropdown.Item as={Link} to="/products/feeding">
                 Feeding Solutions
               </NavDropdown.Item>
-              <NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/products/forage">
                 Forage and hay making Solutions
               </NavDropdown.Item>
-              <NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/products/silage">
                 Silage Making Solutions
               </NavDropdown.Item>
-              <NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/products/milking">
                 Milking Solutions
               </NavDropdown.Item>
-              <NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/products/biosecurity">
                 Farm Biosecurity Solutions
               </NavDropdown.Item>
-              <NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/products/hygiene">
                 Milk Hygiene Solutions
               </NavDropdown.Item>
-              <NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/products/teat">
                 Teat and Udder Health Solutions
-              </NavDropdown.Item>
-              <NavDropdown.Item>
+              </NavDropdown.Item >
+              <NavDropdown.Item as={Link} to="/products/calf">
                 Calf Health Solutions
               </NavDropdown.Item>
-              <NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/products/monitoring">
                 Sensetime Cow Monitoring System
               </NavDropdown.Item>
-              <NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/products/feed">
                 Feed Additives
               </NavDropdown.Item>
             </NavDropdown>

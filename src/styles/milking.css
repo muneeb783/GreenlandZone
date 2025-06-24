@@ -1,229 +1,501 @@
-/* ProductSolutions.css */
+/* Milking.css - All classes prefixed with 'milking-' */
 
-/* Base styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.milking-container {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #1f2937;
+  background-color: #ffffff;
+  min-height: 100vh;
+}
+
+/* Hero Section */
+.milking-hero-section {
+  position: relative;
+  background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+  color: white;
+  padding: 5rem 2rem;
+  overflow: hidden;
+}
+
+.milking-full-width {
+  position: relative;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  left: 0;
+}
+
+.milking-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 20% 80%, rgba(22, 163, 74, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(59, 130, 246, 0.05) 0%, transparent 50%);
+}
+
+.milking-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.milking-hero-badge {
+  display: inline-block;
+  background: rgba(22, 163, 74, 0.2);
+  border: 1px solid rgba(22, 163, 74, 0.3);
+  color: #86efac;
+  padding: 0.5rem 1.5rem;
+  border-radius: 2rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  margin-bottom: 2rem;
+}
+
+.milking-hero-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.milking-hero-accent {
+  display: block;
+  color: #16a34a;
+}
+
+.milking-hero-description {
+  font-size: 1.25rem;
+  color: #e5e7eb;
+  max-width: 600px;
+  margin: 0 auto 3rem;
+  line-height: 1.6;
+}
+
+.milking-hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+
+.milking-stat-item {
+  text-align: center;
+}
+
+.milking-stat-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.milking-stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #16a34a;
+  margin-bottom: 0.25rem;
+}
+
+.milking-stat-label {
+  font-size: 0.875rem;
+  color: #9ca3af;
+}
+
+/* Features Section */
+.milking-features-section {
+  padding: 5rem 2rem;
+  background: #f8f9fa;
+}
+
+.milking-features-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.milking-features-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #1f2937;
+}
+
+.milking-features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.milking-feature-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.milking-feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.milking-feature-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.milking-feature-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  color: #1f2937;
+}
+
+.milking-feature-card p {
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+/* Products Section */
+.milking-products-section {
+  padding: 5rem 2rem;
+  background: white;
+}
+
+.milking-products-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.milking-section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #1f2937;
+}
+
+.milking-products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.milking-product-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.milking-product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.milking-product-category {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: #16a34a;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  z-index: 10;
+}
+
+.milking-product-image-container {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.milking-product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.milking-product-card:hover .milking-product-image {
+  transform: scale(1.05);
+}
+
+.milking-product-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.milking-product-card:hover .milking-product-overlay {
+  opacity: 1;
+}
+
+.milking-view-details-btn {
+  background: #16a34a;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.milking-view-details-btn:hover {
+  background: #15803d;
+}
+
+.milking-product-content {
+  padding: 1.5rem;
+}
+
+.milking-product-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #1f2937;
+}
+
+.milking-product-description {
+  color: #6b7280;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.milking-product-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.milking-feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: #4b5563;
+  font-size: 0.875rem;
+}
+
+.milking-feature-bullet {
+  color: #16a34a;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+/* CTA Section */
+.milking-cta-section {
+  background: linear-gradient(135deg, #16a34a 0%, #22c55e 100%);
+  padding: 5rem 2rem;
+  color: white;
+  text-align: center;
+}
+
+.milking-cta-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.milking-cta-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.milking-cta-description {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.milking-cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.milking-btn-primary, .milking-btn-secondary {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.milking-btn-primary {
+  background: white;
+  color: #16a34a;
+}
+
+.milking-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.milking-btn-secondary {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.milking-btn-secondary:hover {
+  background: white;
+  color: #16a34a;
+}
+
+/* Modal */
+.milking-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 2rem;
+}
+
+.milking-modal-content {
+  background: white;
+  border-radius: 16px;
+  max-width: 900px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.milking-modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: #f3f4f6;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: background 0.3s ease;
+}
+
+.milking-modal-close:hover {
+  background: #e5e7eb;
+}
+
+.milking-modal-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.milking-modal-image img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 16px 0 0 16px;
+}
+
+.milking-modal-info {
+  padding: 2rem;
+}
+
+.milking-modal-category {
+  background: #dcfce7;
+  color: #16a34a;
+  display: inline-block;
+  padding: 0.25rem 1rem;
+  border-radius: 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.milking-modal-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #1f2937;
+}
+
+.milking-modal-description {
+  color: #6b7280;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.milking-modal-features-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #1f2937;
+}
+
+.milking-modal-features {
+  list-style: none;
+  margin-bottom: 2rem;
+  padding: 0;
+}
+
+.milking-modal-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+  color: #4b5563;
+}
+
+.milking-feature-icon {
+  color: #16a34a;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.milking-modal-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .milking-hero-title {
+    font-size: 2.5rem;
   }
-  
-  body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    background-color: #f9fafb;
-    color: #1f2937;
-    line-height: 1.5;
+
+  .milking-hero-stats {
+    gap: 2rem;
   }
-  
-  .container {
-    width: 100%;
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 0 1rem;
-    margin-top: 3rem;
-  }
-  
-  /* Header styles */
-  .header {
-    background-color: #ffffff;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    padding: 1.5rem 0;
-  }
-  
-  .header-content {
-    display: flex;
-    flex-direction: column;
-    padding: 0 1rem;
-  }
-  
-  .header-title {
-    font-size: 1.875rem;
-    font-weight: 700;
-    color: #1f2937;
-  }
-  
-  .header-subtitle {
-    font-size: 1rem;
-    color: #6b7280;
-    margin-top: 0.5rem;
-  }
-  
-  /* Filter section */
-  .filter-section {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 3rem;
-    flex-wrap: wrap;
-    gap: 1rem;
-    padding: 2rem 1rem 1rem 1rem;
-  }
-  
-  .section-title {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #1f2937;
-  }
-  
-  .filter-buttons {
-    display: flex;
-    gap: 0.5rem;
-  }
-  
-  .filter-button {
-    padding: 0.5rem 1rem;
-    border-radius: 0.375rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    border: none;
-    outline: none;
-  }
-  
-  .filter-button.active {
-    background-color: #16a34a;
-    color: white;
-  }
-  
-  .filter-button:not(.active) {
-    background-color: white;
-    color: #4b5563;
-  }
-  
-  .filter-button:not(.active):hover {
-    background-color: #dcfce7;
-  }
-  
-  /* Product grid */
-  .products-grid {
-    display: grid;
+
+  .milking-modal-grid {
     grid-template-columns: 1fr;
-    gap: 3rem;
-    padding: 0 0rem 2rem 0rem;
   }
-  
-  @media (min-width: 768px) {
-    .products-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
+
+  .milking-modal-image img {
+    border-radius: 16px 16px 0 0;
+    height: 250px;
   }
-  
-  @media (min-width: 1024px) {
-    .products-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
+
+  .milking-products-grid {
+    grid-template-columns: 1fr;
   }
-  
-  .dairy-products-container {
-    margin-bottom: 4rem;
-  }
-  
-  /* Product card */
-  .product-card {
-    display: flex;
-    flex-direction: column;
-    border-radius: 0.5rem;
-    overflow: hidden;
-    background-color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    height: 100%;
-    animation: fadeIn 0.3s ease-in-out;
-    margin-right: 3rem;
-  }
-  
-  .product-image-container {
-    position: relative;
-    height: 22rem;
-  }
-  
-  .product-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .product-title-overlay {
-    position: absolute;
-    inset: 0;
-    background-color: rgba(0, 0, 0, 0.2);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .product-title {
-    color: white;
-    font-size: 1.875rem;
-    font-weight: 700;
-    text-align: center;
-    padding: 0.5rem 1rem;
-    border-radius: 0.375rem;
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-  
-  .product-content {
-    padding: 1.5rem;
-    background-color: #86d333; /* Light lime color */
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    transition: background-color 0.4s ease-in-out, transform 0.3s ease;
-  }
-  
-  .product-content:hover {
-    background-color: #3971B8;
-    transform: translateY(-4px);
-  }
-  
-  .product-description {
-    color: white;
-    text-align: center;
-    margin-bottom: 1rem;
-  }
-  
-  .product-features {
-    list-style: none;
-    margin-bottom: 1.5rem;
-  }
-  
-  .feature-item {
-    display: flex;
-    align-items: center;
-    color: white;
-    margin-bottom: 0.5rem;
-  }
-  
-  .feature-bullet {
-    margin-right: 0.5rem;
-    color: #16a34a;
-    font-size: 1.25rem;
-  }
-  
-  .button-container {
-    margin-top: auto;
-    text-align: center;
-  }
-  
-  .learn-more-button {
-    background-color: #16a34a;
-    color: white;
-    font-weight: 500;
-    padding: 0.5rem 1.5rem;
-    border-radius: 0.375rem;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-  }
-  
-  .learn-more-button:hover {
-    background-color: #15803d;
-  }
-  
-  /* Animation */
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  
-  .product-card {
-    animation: fadeIn 0.3s ease-in-out;
-  }
+}

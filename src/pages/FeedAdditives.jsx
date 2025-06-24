@@ -1,241 +1,156 @@
-import { useState} from 'react';
-import {Link} from 'react-router-dom';
-import '../styles/farmbiosec.css'
+import { useState } from 'react';
+import "../styles/feedadditives.css";
 
-const FeedAdditives = () => {
-  // Sample product data - replace with your actual products
-  const products = [
-    {
-      id: 1,
-      name: "Cow Cubicles",
-      description: "Cubicles are animal rest areas",
-      features: [
-        "Hot dip galvanized pipes with",
-        "Proper angle required for",
-        "Animal comfort"
-      ],
-      image: "/api/placeholder/600/400"
-    },
-    {
-      id: 2,
-      name: "Cow Head Lock",
-      description: "Easy animals handling without any health hazard.",
-      features: [
-        "Hot dip galvanized with top",
-        "Covering of plastic for less noice."
-      ],
-      image: "/api/placeholder/600/400"
-    },
-    {
-      id: 3,
-      name: "Automatic Manure Scrapper",
-      description: "Efficient milking systems for dairy farms",
-      features: [
-        "Automatic cluster removal",
-        "Stainless steel construction",
-        "Easy to clean and maintain"
-      ],
-      image: "/api/placeholder/600/400"
-    },
-    {
-      id: 4,
-      name: "Cooling Fans",
-      description: "Automated feed delivery systems",
-      features: [
-        "Customizable feeding schedules",
-        "Reduces labor costs",
-        "Ensures consistent nutrition"
-      ],
-      image: "/api/placeholder/600/400"
-    },
-    {
-        id: 5,
-        name: "Cow Comfort Mat",
-        description: "Cow mats",
-        features: [
-          "Very easy to clean, gives comforts to animals",
-          "Reduces labor for filling of sand and then cleaning from drains"
-        ],
-        image: "/api/placeholder/600/400"
-    },
+const FeedAdditivesPage = () => {
+  const [selectedProduct, setSelectedProduct] = useState('toxin');
 
-    {
-        id: 6,
-        name: "Automatic Cow Brush",
-        description: "Used to massage the cows",
-        features: [
-          "Increases blood circulation",
-          "Increases milk yield",
-          "Increases skin shining by increasing blood circulation to skin"
-        ],
-        image: "/api/placeholder/600/400"
+  const products = {
+    toxin: {
+      title: "TOXIN BINDER",
+      subtitle: "Novasil Plus",
+      description: "Natural clay of the smectite group that specifically binds aflatoxins, it is 2:1 layer-lattice phyllosilicate clay rich in calcium montmorillonite.",
+      benefits: [
+        "Specifically binds aflatoxins",
+        "Natural smectite clay",
+        "Rich in calcium montmorillonite",
+        "2:1 layer-lattice phyllosilicate structure"
+      ],
+      dosage: {
+        title: "Dosage",
+        instructions: [
+          "0.1 to 0.5% depending on aflatoxin and animals",
+          "0.1% :Aflatoxin level 80-100ppb",
+          "0.25% :Aflatoxin level 3,750ppb",
+          "0.5% :Aflatoxin level 7,500ppbf"
+        ]
+      },
+      image: "/api/placeholder/400/300"
     },
-    {
-        id: 7,
-        name: "Hydraulic Cattle Crush",
-        description: "Hydraulic Cattle Crush",
-        features: [
-          "Used to hold animal for medication, surgery, and inseminations",
-          "Can be operated easily using hydraulic system"
-        ],
-        image: "/api/placeholder/600/400"
-    },
-    {
-        id: 8,
-        name: "Calf Hutch",
-        description: "Calf Hutch",
-        features: [
-          "Used for calf care in the first two months of age",
-          "Ensure calf health by individual feeding and avoid contamination"
-        ],
-        image: "/api/placeholder/600/400"
+    mineral: {
+      title: "MINERAL PREMIX",
+      subtitle: "Complete Nutrition Solution",
+      description: "Advanced mineral premix formulation designed to optimize animal health and productivity through balanced nutrition.",
+      benefits: [
+        "IMPROVED: Digestive comfort",
+        "INCREASED: Production",
+        "BALANCED: Nutrition intake",
+        "DECREASED: Medical cost"
+      ],
+      dosage: {
+        title: "Dosage",
+        instructions: [
+          "Cow, Buffaloes, Horse, Camel: 100-125 gm/day",
+          "Calves, Sheep and Goat: 50 gm/day"
+        ]
+      },
+      image: "/api/placeholder/400/300"
     }
-  ];
+  };
 
-  const [filter, setFilter] = useState('all');
-  
-  const filteredProducts = filter === 'all' 
-    ? products 
-    : products.filter(product => product.name.toLowerCase().includes(filter.toLowerCase()));
+  const currentProduct = products[selectedProduct];
 
   return (
-    <div>
-      {/* Header */}
-      <header className="header">
-        <div className="container header-content">
-          <h1 className="header-title">Dairy Farm Equipment Solutions</h1>
-          <p className="header-subtitle">Comprehensive solutions for modern dairy farming</p>
+    <div className="feed-additives-container">
+      {/* Header Section */}
+      <header className="page-header">
+        <div className="header-content">
+          <h1 className="page-title">Feed Additives</h1>
+          <p className="page-subtitle">Premium nutrition solutions for optimal animal health and productivity</p>
         </div>
       </header>
 
-      {/* Product Filter */}
-      <div className="container-fluid px-4">
-        <div className="filter-section">
-          <h2 className="section-title">Our Product Solutions</h2>
-          <div className="filter-buttons">
+      {/* Product Selector */}
+      <section className="product-selector">
+        <div className="selector-container">
+          <button 
+            className={`selector-btn ${selectedProduct === 'toxin' ? 'active' : ''}`}
+            onClick={() => setSelectedProduct('toxin')}
+          >
+            <span className="selector-icon">🛡️</span>
+            <span>Toxin Binder</span>
+          </button>
+          <button 
+            className={`selector-btn ${selectedProduct === 'mineral' ? 'active' : ''}`}
+            onClick={() => setSelectedProduct('mineral')}
+          >
+            <span className="selector-icon">💎</span>
+            <span>Mineral Premix</span>
+          </button>
+        </div>
+      </section>
 
-            <Link
-              to="/products/dairy"
-              className="filter-button btn-link"
-            >
-              Dairy Farming
-            </Link>
+      {/* Product Detail Section */}
+      <section className="product-detail">
+        <div className="detail-container">
+          <div className="product-grid">
+            {/* Product Image */}
+            <div className="product-image-section">
+              <div className="image-container">
+                <img src={currentProduct.image} alt={currentProduct.title} />
+                <div className="product-badge">{currentProduct.subtitle}</div>
+              </div>
+            </div>
 
-            <Link
-              to="/products/feeding"
-              className="filter-button btn-link"
-            >
-              Feeding
-            </Link>
+            {/* Product Info */}
+            <div className="product-info-section">
+              <h2 className="feed-product-title">{currentProduct.title}</h2>
+              <p className="product-description">{currentProduct.description}</p>
+              
+              {/* Benefits */}
+              <div className="benefits-section">
+                <h3 className="feed-section-title">Key Benefits</h3>
+                <ul className="benefits-list">
+                  {currentProduct.benefits.map((benefit, index) => (
+                    <li key={index} className="benefit-item">
+                      <span className="benefit-icon">✓</span>
+                      {benefit}
+                    </li>
+                  ))}
+                </ul>
+              </div>
 
-            <Link
-              to="/products/forage"
-              className="filter-button btn-link"
-            >
-              Forage &amp; Hay Making
-            </Link>
+              {/* Dosage */}
+              <div className="dosage-section">
+                <h3 className="feed-section-title">{currentProduct.dosage.title}</h3>
+                <div className="dosage-content">
+                  {currentProduct.dosage.instructions.map((instruction, index) => (
+                    <p key={index} className="dosage-item">{instruction}</p>
+                  ))}
+                </div>
+              </div>
 
-            <Link
-              to="/products/silage"
-              className="filter-button btn-link"
-            >
-              Silage Making
-            </Link>
-
-            <Link
-              to="/products/milking"
-              className="filter-button btn-link"
-            >
-              Milking
-            </Link>
-
-            <Link
-              to="/products/biosecurity"
-              className="filter-button btn-link"
-            >
-              Farm Biosecurity
-            </Link>
-
-            <Link
-              to="/products/hygiene"
-              className="filter-button btn-link"
-            >
-              Milk Hygiene
-            </Link>
-
-            <Link
-              to="/products/teat"
-              className="filter-button btn-link"
-            >
-              Teat & Udder Health
-            </Link>
-
-            <Link
-              to="/products/calf"
-              className="filter-button btn-link"
-            >
-              Calf Health
-            </Link>
-
-            <Link
-              to="/products/monitoring"
-              className="filter-button btn-link"
-            >
-              SenseTime Cow Monitoring
-            </Link>
-
-            <Link
-              to="/products/monitoring"
-              className="filter-button btn-link"
-            >
-              Feed Additives
-            </Link>
-
+              {/* CTA Buttons */}
+              <div className="feed-cta-section">
+                <button className="feed-btn-primary">Get Quote</button>
+                <button className="btn-secondary">Download Brochure</button>
+              </div>
+            </div>
           </div>
         </div>
+      </section>
 
-        {/* Product Grid */}
-        <div className='container dairy-products-container'>
-            <div className="products-grid">
-            {filteredProducts.map(product => (
-                <ProductCard key={product.id} product={product} />
-            ))}
+      {/* Additional Products Gallery */}
+      <section className="products-gallery">
+        <div className="gallery-container">
+          <h2 className="gallery-title">Complete Product Range</h2>
+          <div className="gallery-grid">
+            <div className="gallery-item">
+              <img src="/api/placeholder/300/200" alt="Toxin Binder Package" />
+              <p>Toxin Binder Range</p>
             </div>
+            <div className="gallery-item">
+              <img src="/api/placeholder/300/200" alt="Mineral Premix Range" />
+              <p>Mineral Premix Collection</p>
+            </div>
+            <div className="gallery-item">
+              <img src="/api/placeholder/300/200" alt="Custom Solutions" />
+              <p>Custom Formulations</p>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 };
 
-// Product Card Component
-const ProductCard = ({ product }) => {
-  return (
-    <div className="product-card">
-      <div className="product-image-container">
-        <img 
-          src={product.image} 
-          alt={product.name} 
-          className="product-image"
-        />
-        <div className="product-title-overlay">
-          <h3 className="product-title">
-            {product.name}
-          </h3>
-        </div>
-      </div>
-      <div className="product-content">
-        <p className="product-description">{product.description}</p>
-        <ul className="product-features">
-          {product.features.map((feature, index) => (
-            <li key={index} className="feature-item">
-              <span className="feature-bullet">•</span>
-              {feature}
-            </li>
-          ))}
-        </ul>
-      </div>
-    </div>
-  );
-};
-
-export default FeedAdditives;
+export default FeedAdditivesPage;

@@ -1,211 +1,501 @@
-/* ProductSolutions.css */
+/* FarmBiosec.css - All classes prefixed with 'biosec-' */
 
-/* Base styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.biosec-container {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #1f2937;
+  background-color: #ffffff;
+  min-height: 100vh;
+}
+
+/* Hero Section */
+.biosec-hero-section {
+  position: relative;
+  background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+  color: white;
+  padding: 5rem 2rem;
+  overflow: hidden;
+}
+
+.biosec-full-width {
+  position: relative;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  left: 0;
+}
+
+.biosec-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 20% 80%, rgba(22, 163, 74, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(59, 130, 246, 0.05) 0%, transparent 50%);
+}
+
+.biosec-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.biosec-hero-badge {
+  display: inline-block;
+  background: rgba(22, 163, 74, 0.2);
+  border: 1px solid rgba(22, 163, 74, 0.3);
+  color: #86efac;
+  padding: 0.5rem 1.5rem;
+  border-radius: 2rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  margin-bottom: 2rem;
+}
+
+.biosec-hero-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.biosec-hero-accent {
+  display: block;
+  color: #16a34a;
+}
+
+.biosec-hero-description {
+  font-size: 1.25rem;
+  color: #e5e7eb;
+  max-width: 600px;
+  margin: 0 auto 3rem;
+  line-height: 1.6;
+}
+
+.biosec-hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+
+.biosec-stat-item {
+  text-align: center;
+}
+
+.biosec-stat-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.biosec-stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #16a34a;
+  margin-bottom: 0.25rem;
+}
+
+.biosec-stat-label {
+  font-size: 0.875rem;
+  color: #9ca3af;
+}
+
+/* Features Section */
+.biosec-features-section {
+  padding: 5rem 2rem;
+  background: #f8f9fa;
+}
+
+.biosec-features-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.biosec-features-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #1f2937;
+}
+
+.biosec-features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.biosec-feature-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.biosec-feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.biosec-feature-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.biosec-feature-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  color: #1f2937;
+}
+
+.biosec-feature-card p {
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+/* Products Section */
+.biosec-products-section {
+  padding: 5rem 2rem;
+  background: white;
+}
+
+.biosec-products-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.biosec-section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #1f2937;
+}
+
+.biosec-products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.biosec-product-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.biosec-product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.biosec-product-category {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: #16a34a;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  z-index: 10;
+}
+
+.biosec-product-image-container {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.biosec-product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.biosec-product-card:hover .biosec-product-image {
+  transform: scale(1.05);
+}
+
+.biosec-product-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.biosec-product-card:hover .biosec-product-overlay {
+  opacity: 1;
+}
+
+.biosec-view-details-btn {
+  background: #16a34a;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.biosec-view-details-btn:hover {
+  background: #15803d;
+}
+
+.biosec-product-content {
+  padding: 1.5rem;
+}
+
+.biosec-product-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #1f2937;
+}
+
+.biosec-product-description {
+  color: #6b7280;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.biosec-product-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.biosec-feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: #4b5563;
+  font-size: 0.875rem;
+}
+
+.biosec-feature-bullet {
+  color: #16a34a;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+/* CTA Section */
+.biosec-cta-section {
+  background: linear-gradient(135deg, #16a34a 0%, #22c55e 100%);
+  padding: 5rem 2rem;
+  color: white;
+  text-align: center;
+}
+
+.biosec-cta-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.biosec-cta-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.biosec-cta-description {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.biosec-cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.biosec-btn-primary, .biosec-btn-secondary {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.biosec-btn-primary {
+  background: white;
+  color: #16a34a;
+}
+
+.biosec-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.biosec-btn-secondary {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.biosec-btn-secondary:hover {
+  background: white;
+  color: #16a34a;
+}
+
+/* Modal */
+.biosec-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 2rem;
+}
+
+.biosec-modal-content {
+  background: white;
+  border-radius: 16px;
+  max-width: 900px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.biosec-modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: #f3f4f6;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: background 0.3s ease;
+}
+
+.biosec-modal-close:hover {
+  background: #e5e7eb;
+}
+
+.biosec-modal-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.biosec-modal-image img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 16px 0 0 16px;
+}
+
+.biosec-modal-info {
+  padding: 2rem;
+}
+
+.biosec-modal-category {
+  background: #dcfce7;
+  color: #16a34a;
+  display: inline-block;
+  padding: 0.25rem 1rem;
+  border-radius: 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.biosec-modal-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #1f2937;
+}
+
+.biosec-modal-description {
+  color: #6b7280;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.biosec-modal-features-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #1f2937;
+}
+
+.biosec-modal-features {
+  list-style: none;
+  margin-bottom: 2rem;
+  padding: 0;
+}
+
+.biosec-modal-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+  color: #4b5563;
+}
+
+.biosec-feature-icon {
+  color: #16a34a;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.biosec-modal-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .biosec-hero-title {
+    font-size: 2.5rem;
   }
-  
-  body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    background-color: #f9fafb;
-    color: #1f2937;
-    line-height: 1.5;
+
+  .biosec-hero-stats {
+    gap: 2rem;
   }
-  
-  .container {
-    width: 100%;
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 0 1rem;
-    margin-top: 3rem;
-  }
-  
-  /* Header styles */
-  .header {
-    background-color: #ffffff;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    padding: 1.5rem 0;
-  }
-  
-  .header-content {
-    display: flex;
-    flex-direction: column;
-    padding: 0 1rem;
-  }
-  
-  .header-title {
-    font-size: 1.875rem;
-    font-weight: 700;
-    color: #1f2937;
-  }
-  
-  .header-subtitle {
-    font-size: 1rem;
-    color: #6b7280;
-    margin-top: 0.5rem;
-  }
-  
-  /* Filter section */
-  .filter-section {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 3rem;
-    flex-wrap: wrap;
-    gap: 1rem;
-    padding: 2rem 1rem 1rem 1rem;
-  }
-  
-  .section-title {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #1f2937;
-  }
-  
-  .filter-buttons {
-    display: flex;
-    gap: 0.5rem;
-  }
-  
-  .filter-button {
-    padding: 0.5rem 1rem;
-    border-radius: 0.375rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    border: none;
-    outline: none;
-  }
-  
-  .filter-button.active {
-    background-color: #16a34a;
-    color: white;
-  }
-  
-  .filter-button:not(.active) {
-    background-color: white;
-    color: #4b5563;
-  }
-  
-  .filter-button:not(.active):hover {
-    background-color: #dcfce7;
-  }
-  
-  /* Product grid */
-  .products-grid {
-    display: grid;
+
+  .biosec-modal-grid {
     grid-template-columns: 1fr;
-    gap: 3rem;
-    padding: 0 0rem 2rem 0rem;
   }
-  
-  @media (min-width: 768px) {
-    .products-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  
-  @media (min-width: 1024px) {
-    .products-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  
-  .dairy-products-container {
-    margin-bottom: 4rem;
-  }
-  
-  /* Product card */
-  .product-card {
-    display: flex;
-    flex-direction: column;
-    border-radius: 0.5rem;
-    overflow: hidden;
-    background-color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    height: 100%;
-    animation: fadeIn 0.3s ease-in-out;
-    margin-right: 3rem;
-  }
-  
-  .product-image-container {
-    position: relative;
-    height: 22rem;
-  }
-  
-  .product-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .product-title-overlay {
-    position: absolute;
-    inset: 0;
-    background-color: rgba(0, 0, 0, 0.2);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .product-title {
-    color: white;
-    font-size: 1.875rem;
-    font-weight: 700;
-    text-align: center;
-    padding: 0.5rem 1rem;
-    border-radius: 0.375rem;
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-  
-  .product-content {
-    padding: 1.5rem;
-    background-color: #86d333; /* Light lime color */
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    transition: background-color 0.4s ease-in-out, transform 0.3s ease;
-  }
-  
-  .product-content:hover {
-    background-color: #3971B8;
-    transform: translateY(-4px);
-  }
-  
-  .product-description {
-    color: white;
-    text-align: center;
-    margin-bottom: 1rem;
-  }
-  
-  .product-features {
-    list-style: none;
-    text-align: left;
-    margin-bottom: 1.5rem;
-  }
-  
-  .feature-item {
-    display: flex;
-    align-items: center;
-    color: white;
-    margin-bottom: 0.5rem;
-  }
-  
-  .feature-bullet {
-    margin-right: 0.5rem;
-    color: #16a34a;
-    font-size: 1.25rem;
-  }
-  
 
-  /* Animation */
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+  .biosec-modal-image img {
+    border-radius: 16px 16px 0 0;
+    height: 250px;
   }
-  
-  .product-card {
-    animation: fadeIn 0.3s ease-in-out;
+
+  .biosec-products-grid {
+    grid-template-columns: 1fr;
   }
+}

@@ -37,113 +37,22 @@ const CalfHealthSol = () => {
     }
   ];
 
-  const [filter, setFilter] = useState('all');
-  
-  const filteredProducts = filter === 'all' 
-    ? products 
-    : products.filter(product => product.name.toLowerCase().includes(filter.toLowerCase()));
-
   return (
-    <div>
+    <div className="calf-health-page">
       {/* Header */}
-      <header className="header">
-        <div className="container header-content">
-          <h1 className="header-title">Dairy Farm Equipment Solutions</h1>
-          <p className="header-subtitle">Comprehensive solutions for modern dairy farming</p>
+      <header className="calf-header">
+        <div className="calf-container calf-header-content">
+          <h1 className="calf-header-title">Dairy Farm Equipment Solutions</h1>
+          <p className="calf-header-subtitle">Comprehensive solutions for modern dairy farming</p>
         </div>
       </header>
 
-      {/* Product Filter */}
-      <div className="container-fluid px-4">
-        <div className="filter-section">
-          <h2 className="section-title">Our Product Solutions</h2>
-          <div className="filter-buttons">
-
-            <Link
-              to="/products/dairy"
-              className="filter-button btn-link"
-            >
-              Dairy Farming
-            </Link>
-
-            <Link
-              to="/products/feeding"
-              className="filter-button btn-link"
-            >
-              Feeding
-            </Link>
-
-            <Link
-              to="/products/forage"
-              className="filter-button btn-link"
-            >
-              Forage &amp; Hay Making
-            </Link>
-
-            <Link
-              to="/products/silage"
-              className="filter-button btn-link"
-            >
-              Silage Making
-            </Link>
-
-            <Link
-              to="/products/milking"
-              className="filter-button btn-link"
-            >
-              Milking
-            </Link>
-
-            <Link
-              to="/products/biosecurity"
-              className="filter-button btn-link"
-            >
-              Farm Biosecurity
-            </Link>
-
-            <Link
-              to="/products/hygiene"
-              className="filter-button btn-link"
-            >
-              Milk Hygiene
-            </Link>
-
-            <Link
-              to="/products/teat"
-              className="filter-button btn-link"
-            >
-              Teat & Udder Health
-            </Link>
-
-            <Link
-              to="/products/calf"
-              className="filter-button btn-link"
-            >
-              Calf Health
-            </Link>
-
-            <Link
-              to="/products/monitoring"
-              className="filter-button btn-link"
-            >
-              SenseTime Cow Monitoring
-            </Link>
-
-            <Link
-              to="/products/monitoring"
-              className="filter-button btn-link"
-            >
-              Feed Additives
-            </Link>
-
-          </div>
-        </div>
-
+      <div className="calf-container-fluid px-4">
         <div>
-          <h1 className="body-text">Calf Health Introduction</h1>
-          <div className="green-container">
-            <div className="green-bar"></div>
-            <p className="body-text green-content">The aim of successful calf rearing is to produce a healthy calf which is capable of optimum performance throughout its life from birth through to finishing. A suitable calf rearing system has the following characteristics:
+          <h1 className="calf-body-text">Calf Health Introduction</h1>
+          <div className="calf-green-container">
+            <div className="calf-green-bar"></div>
+            <p className="calf-body-text calf-green-content">The aim of successful calf rearing is to produce a healthy calf which is capable of optimum performance throughout its life from birth through to finishing. A suitable calf rearing system has the following characteristics:
               Good animal performance with minimal disease and morbidity
               Low cost input
               Low labour input
@@ -157,11 +66,11 @@ const CalfHealthSol = () => {
           </div>
         </div>
         <div>
-          <h1 className="body-text">Calf Health Infectious Disease Agents</h1>
-            <h3 className="body-text">
+          <h1 className="calf-body-text">Calf Health Infectious Disease Agents</h1>
+            <h3 className="calf-body-text">
               Calf Scours 
             </h3>
-            <p className="body-text">Scours are the main causes of calf mortality. The majority of calf scours are caused by six organisms: viruses such as rotavirus and coronavirus, bacteria such as E. coli and Salmonella sp., and protozoa, such as cryptosporidia and coccidia. As outlined above, vaccination of the dam will help reduce the probability of calf scours but cannot solely be depended upon for prevention on calf Health.
+            <p className="calf-body-text">Scours are the main causes of calf mortality. The majority of calf scours are caused by six organisms: viruses such as rotavirus and coronavirus, bacteria such as E. coli and Salmonella sp., and protozoa, such as cryptosporidia and coccidia. As outlined above, vaccination of the dam will help reduce the probability of calf scours but cannot solely be depended upon for prevention on calf Health.
             Furthermore, there are no vaccines available to combat protozoa. However, good hygiene and 
             management practices will reduce the likelihood of infection from cryptosporidia and coccidia. 
             Diarrhea in calves results in losses of water and electrolytes, such as sodium, bicarbonate, 
@@ -173,8 +82,8 @@ const CalfHealthSol = () => {
             despite a somewhat lowered digestive capacity. The milk supplies the calf with energy and other 
             nutrients that are essential for survival.
             </p>
-            <h3 className="body-text">Calf Pneumonia</h3>
-            <p className="body-text">
+            <h3 className="calf-body-text">Calf Pneumonia</h3>
+            <p className="calf-body-text">
             The underlying cause of pneumonia or bovine respiratory disease (BRD) is extremely complex with 
             the involvement of viruses, bacteria and mycoplasma. The incidence of infection is usually high, 
             but the mortality rate is variable. The main viruses that cause outbreaks of pneumonia in calves 
@@ -191,8 +100,8 @@ const CalfHealthSol = () => {
             pneumonia will be achieved where a vaccination programme includes the three most common respiratory 
             viruses (IBR, RSV and PI-3) and the bacterial pathogen Mannheimia (Pasteurella) haemolytica.
             </p>
-            <h3 className="body-text">Calf Immunity</h3>
-            <p className="body-text">
+            <h3 className="calf-body-text">Calf Immunity</h3>
+            <p className="calf-body-text">
             In the bovine species, immunoglobulins do not cross the placenta in utero, and the newborn calf is, 
             therefore, dependent on antibodies obtained through ingestion of colostrum. Maternal colostrum 
             provides the main source of immunoglobulins (Ig) and other nutrients for the newborn calf. If the 
@@ -204,9 +113,9 @@ const CalfHealthSol = () => {
             of exposure to infection. Foetal growth retardation or a stressful birth process is likely to 
             reduce the ability of the intestine to absorb immunoglobulins from colostrum.
             </p>
-            <h3 className="body-text">Variation in immunoglobulin concentration</h3>
-            <p className="body-text">
-            Immunoglobulins help to maintain the animal’s health and reduce mortality rates by helping to 
+            <h3 className="calf-body-text">Variation in immunoglobulin concentration</h3>
+            <p className="calf-body-text">
+            Immunoglobulins help to maintain the animal's health and reduce mortality rates by helping to 
             eliminate foreign agents in the body (e.g. bacteria and viruses). Considerable variation exists 
             between cows with respect to immunoglobulin concentration in the colostrum. No significant 
             difference between colostrum IgG1 concentrations in either the front or hindquarters of the 
@@ -220,9 +129,9 @@ const CalfHealthSol = () => {
         </div>
 
         {/* Product Grid */}
-        <div className='container dairy-products-container'>
-            <div className="products-grid">
-            {filteredProducts.map(product => (
+        <div className='calf-container calf-dairy-products-container'>
+            <div className="calf-products-grid">
+            {products.map(product => (
                 <ProductCard key={product.id} product={product} />
             ))}
             </div>
@@ -235,25 +144,25 @@ const CalfHealthSol = () => {
 // Product Card Component
 const ProductCard = ({ product }) => {
   return (
-    <div className="product-card">
-      <div className="product-image-container">
+    <div className="calf-product-card">
+      <div className="calf-product-image-container">
         <img 
           src={product.image} 
           alt={product.name} 
-          className="product-image"
+          className="calf-product-image"
         />
-        <div className="product-title-overlay">
-          <h3 className="product-title">
+        <div className="calf-product-title-overlay">
+          <h3 className="calf-product-title">
             {product.name}
           </h3>
         </div>
       </div>
-      <div className="product-content">
-        <p className="product-description">{product.description}</p>
-        <ul className="product-features">
+      <div className="calf-product-content">
+        <p className="calf-product-description">{product.description}</p>
+        <ul className="calf-product-features">
           {product.features.map((feature, index) => (
-            <li key={index} className="feature-item">
-              <span className="feature-bullet">•</span>
+            <li key={index} className="calf-feature-item">
+              <span className="calf-feature-bullet">•</span>
               {feature}
             </li>
           ))}
