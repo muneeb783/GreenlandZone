@@ -1,0 +1,387 @@
+/* Container */
+.farmbiosec-container {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #1f2937;
+    background-color: #ffffff;
+    min-height: 100vh;
+  }
+  
+  /* Full Width Helper */
+  .farmbiosec-full-width {
+    position: relative;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    left: 0;
+  }
+  
+  /* Hero Section */
+  .farmbiosec-hero-section {
+    position: relative;
+    background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+    color: white;
+    padding: 5rem 2rem;
+    overflow: hidden;
+  }
+  
+  .farmbiosec-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+      radial-gradient(circle at 20% 80%, rgba(22, 163, 74, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(59, 130, 246, 0.05) 0%, transparent 50%);
+  }
+  
+  .farmbiosec-hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .farmbiosec-hero-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+  
+  .farmbiosec-hero-accent {
+    display: block;
+    color: #16a34a;
+  }
+  
+  .farmbiosec-hero-description {
+    font-size: 1.25rem;
+    color: #e5e7eb;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+  
+  /* Filter Section */
+  .farmbiosec-filter-section {
+    padding: 3rem 2rem;
+    background: #f8f9fa;
+  }
+  
+  .farmbiosec-filter-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .farmbiosec-filter-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #1f2937;
+  }
+  
+  .farmbiosec-filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .farmbiosec-filter-button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: 2px solid #16a34a;
+    border-radius: 8px;
+    background: transparent;
+    color: #16a34a;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .farmbiosec-filter-button.active,
+  .farmbiosec-filter-button:hover {
+    background: #16a34a;
+    color: white;
+  }
+  
+  /* Products Section */
+  .farmbiosec-products-section {
+    padding: 5rem 2rem;
+    background: white;
+  }
+  
+  .farmbiosec-products-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .farmbiosec-section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #1f2937;
+  }
+  
+  .farmbiosec-products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+  
+  .farmbiosec-product-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .farmbiosec-product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  }
+  
+  .farmbiosec-product-image-container {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+  }
+  
+  .farmbiosec-product-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .farmbiosec-product-card:hover .farmbiosec-product-image {
+    transform: scale(1.05);
+  }
+  
+  .farmbiosec-product-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .farmbiosec-product-card:hover .farmbiosec-product-overlay {
+    opacity: 1;
+  }
+  
+  .farmbiosec-view-details-btn {
+    background: #16a34a;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .farmbiosec-view-details-btn:hover {
+    background: #15803d;
+  }
+  
+  .farmbiosec-product-content {
+    padding: 1.5rem;
+  }
+  
+  .farmbiosec-product-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #1f2937;
+  }
+  
+  .farmbiosec-product-description {
+    color: #6b7280;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+  }
+  
+  /* CTA Section */
+  .farmbiosec-cta-section {
+    background: linear-gradient(135deg, #16a34a 0%, #22c55e 100%);
+    padding: 5rem 2rem;
+    color: white;
+    text-align: center;
+  }
+  
+  .farmbiosec-cta-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .farmbiosec-cta-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  
+  .farmbiosec-cta-description {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+  }
+  
+  .farmbiosec-cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .farmbiosec-btn-primary,
+  .farmbiosec-btn-secondary {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .farmbiosec-btn-primary {
+    background: white;
+    color: #16a34a;
+  }
+  
+  .farmbiosec-btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .farmbiosec-btn-secondary {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+  }
+  
+  .farmbiosec-btn-secondary:hover {
+    background: white;
+    color: #16a34a;
+  }
+  
+  /* Modal */
+  .farmbiosec-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 2rem;
+  }
+  
+  .farmbiosec-modal-content {
+    background: white;
+    border-radius: 16px;
+    max-width: 900px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+  }
+  
+  .farmbiosec-modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: #f3f4f6;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+  }
+  
+  .farmbiosec-modal-close:hover {
+    background: #e5e7eb;
+  }
+  
+  .farmbiosec-modal-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  
+  .farmbiosec-modal-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 16px 0 0 16px;
+  }
+  
+  .farmbiosec-modal-info {
+    padding: 2rem;
+  }
+  
+  .farmbiosec-modal-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #1f2937;
+  }
+  
+  .farmbiosec-modal-description {
+    color: #6b7280;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+  }
+  
+  .farmbiosec-modal-features-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #1f2937;
+  }
+  
+  .farmbiosec-modal-features {
+    list-style: none;
+    margin-bottom: 2rem;
+    padding: 0;
+  }
+  
+  .farmbiosec-feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+    color: #4b5563;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .farmbiosec-hero-title {
+      font-size: 2.5rem;
+    }
+    .farmbiosec-modal-grid {
+      grid-template-columns: 1fr;
+    }
+    .farmbiosec-modal-image img {
+      border-radius: 16px 16px 0 0;
+      height: 250px;
+    }
+    .farmbiosec-products-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  

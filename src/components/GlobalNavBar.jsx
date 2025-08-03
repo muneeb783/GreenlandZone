@@ -1,25 +1,96 @@
 import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 import logo from '../assets/logo.png';
-import '../styles/navbar.css'
+import '../styles/navbar.css';
 
 export default function GlobalNavBar() {
+  const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Add this state after your existing states
+const [isLightBg, setIsLightBg] = useState(false);
+
+useEffect(() => {
+  const checkTheme = () => {
+    const sections = document.querySelectorAll('[data-navbar-theme]');
+    const scrollPosition = window.scrollY + 100;
+    
+    // Debug: Check if sections are found
+    console.log('Found sections:', sections.length);
+    
+    let foundMatch = false;
+    
+    for (let section of sections) {
+      const rect = section.getBoundingClientRect();
+      const sectionTop = rect.top + window.scrollY;
+      const sectionBottom = sectionTop + rect.height;
+      
+      if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+        const theme = section.dataset.navbarTheme;
+        console.log('Current section theme:', theme); // Debug
+        setIsLightBg(theme === 'light'); // Changed from 'light-bg' to 'light'
+        foundMatch = true;
+        break;
+      }
+    }
+    
+    // If no section matched, default to dark
+    if (!foundMatch) {
+      setIsLightBg(false);
+    }
+  };
+
+  window.addEventListener('scroll', checkTheme);
+  checkTheme(); // Check immediately on mount
+
+  return () => window.removeEventListener('scroll', checkTheme);
+}, []);
+
   return (
-    <Navbar className="navbar" bg="light" expand="lg" fixed="top">
-      <Container fluid className='pr-10'>
+    <Navbar className={`navbar ${scrolled ? 'scrolled' : ''} ${isLightBg ? 'light-bg' : 'dark-bg'}`} bg="transparent" expand="lg" fixed="top">
+      <Container fluid>
         <Navbar.Brand as={Link} to="/">
           <img
             src={logo}
-            height="80"
             alt="Greenland Zone"
           />
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="main-nav" />
+        <Navbar.Toggle aria-controls="main-nav">
+          <span className="navbar-toggler-icon">
+            <span></span>
+          </span>
+        </Navbar.Toggle>
         <Navbar.Collapse id="main-nav">
-          <Nav className="ms-auto gap-3">
-            <Nav.Link as={Link} to="/">Home</Nav.Link>
-            <Nav.Link as={Link} to="/about">About Us</Nav.Link>
-            <NavDropdown title="Products" id="products-dropdown">
+          <Nav className="ms-auto">
+            <Nav.Link 
+              as={Link} 
+              to="/" 
+              className={location.pathname === '/' ? 'active' : ''}
+            >
+              Home
+            </Nav.Link>
+            <Nav.Link 
+              as={Link} 
+              to="/about" 
+              className={location.pathname === '/about' ? 'active' : ''}
+            >
+              About Us
+            </Nav.Link>
+            <NavDropdown 
+              title="Products" 
+              id="products-dropdown"
+              className={location.pathname.startsWith('/products') ? 'active' : ''}
+            >
               <NavDropdown.Item as={Link} to="/products/dairy">
                 Dairy Farming Solutions
               </NavDropdown.Item>
@@ -27,7 +98,7 @@ export default function GlobalNavBar() {
                 Feeding Solutions
               </NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/products/forage">
-                Forage and hay making Solutions
+                Forage and Hay Making Solutions
               </NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/products/silage">
                 Silage Making Solutions
@@ -43,7 +114,7 @@ export default function GlobalNavBar() {
               </NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/products/teat">
                 Teat and Udder Health Solutions
-              </NavDropdown.Item >
+              </NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/products/calf">
                 Calf Health Solutions
               </NavDropdown.Item>
@@ -54,7 +125,13 @@ export default function GlobalNavBar() {
                 Feed Additives
               </NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link as={Link} to="/contact">Contact Us</Nav.Link>
+            <Nav.Link 
+              as={Link} 
+              to="/contact" 
+              className={location.pathname === '/contact' ? 'active' : ''}
+            >
+              Contact Us
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

@@ -1,9 +1,11 @@
-import { useState} from 'react';
-import {Link} from 'react-router-dom';
-import '../styles/farmbiosec.css'
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import '../styles/teathealth.css';
 
 const TeatHealthSol = () => {
-  // Sample product data - replace with your actual products
+  const [selectedProduct, setSelectedProduct] = useState(null);
+  const [filter, setFilter] = useState('all');
+
   const products = [
     {
       id: 1,
@@ -53,148 +55,123 @@ const TeatHealthSol = () => {
     }
   ];
 
-  const [filter, setFilter] = useState('all');
-  
-  const filteredProducts = filter === 'all' 
-    ? products 
-    : products.filter(product => product.name.toLowerCase().includes(filter.toLowerCase()));
+  const filteredProducts = 
+    filter === 'all' 
+      ? products 
+      : products.filter(p => p.name.toLowerCase().includes(filter));
 
   return (
-    <div>
-      {/* Header */}
-      <header className="header">
-        <div className="container header-content">
-          <h1 className="header-title">Dairy Farm Equipment Solutions</h1>
-          <p className="header-subtitle">Comprehensive solutions for modern dairy farming</p>
+    <div className="farmbiosec-container farmbiosec-full-width">
+      {/* Hero Section */}
+      <header className="farmbiosec-hero-section">
+        <div className="farmbiosec-hero-overlay"></div>
+        <div className="farmbiosec-hero-content">
+          <h1 className="farmbiosec-hero-title">
+            Teat & Udder Health
+            <span className="farmbiosec-hero-accent">Solutions</span>
+          </h1>
+          <p className="farmbiosec-hero-description">
+            Effective teat care products to ensure animal well-being and milk quality
+          </p>
         </div>
       </header>
 
-      {/* Product Filter */}
-      <div className="container-fluid px-4">
-        <div className="filter-section">
-          <h2 className="section-title">Our Product Solutions</h2>
-          <div className="filter-buttons">
-
-            <Link
-              to="/products/dairy"
-              className="filter-button btn-link"
+      {/* Filter Section */}
+      <section className="farmbiosec-filter-section farmbiosec-full-width" data-navbar-theme="light">
+        <div className="farmbiosec-filter-container">
+          <h2 className="farmbiosec-filter-title">Our Product Solutions</h2>
+          <div className="farmbiosec-filter-buttons">
+            <button
+              className={`farmbiosec-filter-button ${filter === 'all' ? 'active' : ''}`}
+              onClick={() => setFilter('all')}
             >
-              Dairy Farming
-            </Link>
-
-            <Link
-              to="/products/feeding"
-              className="filter-button btn-link"
-            >
-              Feeding
-            </Link>
-
-            <Link
-              to="/products/forage"
-              className="filter-button btn-link"
-            >
-              Forage &amp; Hay Making
-            </Link>
-
-            <Link
-              to="/products/silage"
-              className="filter-button btn-link"
-            >
-              Silage Making
-            </Link>
-
-            <Link
-              to="/products/milking"
-              className="filter-button btn-link"
-            >
-              Milking
-            </Link>
-
-            <Link
-              to="/products/biosecurity"
-              className="filter-button btn-link"
-            >
-              Farm Biosecurity
-            </Link>
-
-            <Link
-              to="/products/hygiene"
-              className="filter-button btn-link"
-            >
-              Milk Hygiene
-            </Link>
-
-            <Link
-              to="/products/teat"
-              className="filter-button btn-link"
-            >
-              Teat & Udder Health
-            </Link>
-
-            <Link
-              to="/products/calf"
-              className="filter-button btn-link"
-            >
-              Calf Health
-            </Link>
-
-            <Link
-              to="/products/monitoring"
-              className="filter-button btn-link"
-            >
-              SenseTime Cow Monitoring
-            </Link>
-
-            <Link
-              to="/products/monitoring"
-              className="filter-button btn-link"
-            >
-              Feed Additives
-            </Link>
-
+              All
+            </button>
+            {products.map(p => (
+              <button
+                key={p.id}
+                className={`farmbiosec-filter-button ${filter === p.name.toLowerCase() ? 'active' : ''}`}
+                onClick={() => setFilter(p.name.toLowerCase())}
+              >
+                {p.name}
+              </button>
+            ))}
           </div>
         </div>
+      </section>
 
-        {/* Product Grid */}
-        <div className='container dairy-products-container'>
-            <div className="products-grid">
+      {/* Products Section */}
+      <section className="farmbiosec-products-section farmbiosec-full-width" data-navbar-theme="light">
+        <div className="farmbiosec-products-container">
+          <h2 className="farmbiosec-section-title">Products</h2>
+          <div className="farmbiosec-products-grid">
             {filteredProducts.map(product => (
-                <ProductCard key={product.id} product={product} />
+              <div 
+                key={product.id} 
+                className="farmbiosec-product-card"
+                onClick={() => setSelectedProduct(product)}
+              >
+                <div className="farmbiosec-product-image-container">
+                  <img 
+                    src={product.image} 
+                    alt={product.name} 
+                    className="farmbiosec-product-image"
+                  />
+                  <div className="farmbiosec-product-overlay">
+                    <button className="farmbiosec-view-details-btn">View Details</button>
+                  </div>
+                </div>
+                <div className="farmbiosec-product-content">
+                  <h3 className="farmbiosec-product-title">{product.name}</h3>
+                  <p className="farmbiosec-product-description">{product.description}</p>
+                </div>
+              </div>
             ))}
-            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  );
-};
+      </section>
 
-// Product Card Component
-const ProductCard = ({ product }) => {
-  return (
-    <div className="product-card">
-      <div className="product-image-container">
-        <img 
-          src={product.image} 
-          alt={product.name} 
-          className="product-image"
-        />
-        <div className="product-title-overlay">
-          <h3 className="product-title">
-            {product.name}
-          </h3>
+      {/* CTA Section */}
+      <section className="farmbiosec-cta-section farmbiosec-full-width" data-navbar-theme="light">
+        <div className="farmbiosec-cta-container">
+          <h2 className="farmbiosec-cta-title">Ensure Optimal Teat Health</h2>
+          <p className="farmbiosec-cta-description">
+            Contact us for tailored teat health protocols.
+          </p>
+          <div className="farmbiosec-cta-buttons">
+            <Link to="/contact" className="farmbiosec-btn-primary">Get Quote</Link>
+            <a href="/catalog.pdf" className="farmbiosec-btn-secondary">Download Catalog</a>
+          </div>
         </div>
-      </div>
-      <div className="product-content">
-        <p className="product-description">{product.description}</p>
-        <ul className="product-features">
-          {product.features.map((feature, index) => (
-            <li key={index} className="feature-item">
-              <span className="feature-bullet">•</span>
-              {feature}
-            </li>
-          ))}
-        </ul>
-      </div>
+      </section>
+
+      {/* Product Modal */}
+      {selectedProduct && (
+        <div className="farmbiosec-modal-overlay" onClick={() => setSelectedProduct(null)}>
+          <div className="farmbiosec-modal-content" onClick={e => e.stopPropagation()}>
+            <button className="farmbiosec-modal-close" onClick={() => setSelectedProduct(null)}>×</button>
+            <div className="farmbiosec-modal-grid">
+              <div className="farmbiosec-modal-image">
+                <img src={selectedProduct.image} alt={selectedProduct.name} />
+              </div>
+              <div className="farmbiosec-modal-info">
+                <h2 className="farmbiosec-modal-title">{selectedProduct.name}</h2>
+                <p className="farmbiosec-modal-description">{selectedProduct.description}</p>
+                <h3 className="farmbiosec-modal-features-title">Key Features:</h3>
+                <ul className="farmbiosec-modal-features">
+                  {selectedProduct.features.map((feature, idx) => (
+                    <li key={idx} className="farmbiosec-feature-item">{feature}</li>
+                  ))}
+                </ul>
+                <div className="farmbiosec-modal-actions">
+                  <button className="farmbiosec-btn-primary">Request Quote</button>
+                  <button className="farmbiosec-btn-secondary">Ask Question</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

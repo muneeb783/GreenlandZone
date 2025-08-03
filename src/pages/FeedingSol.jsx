@@ -114,7 +114,7 @@ const FeedingSol = () => {
       </header>
 
       {/* Features Section */}
-      <section className="feeding-features-section feeding-full-width">
+      <section className="feeding-features-section feeding-full-width" data-navbar-theme="light">
         <div className="feeding-features-container">
           <h2 className="feeding-features-title">Why Choose Our Feeding Solutions?</h2>
           <div className="feeding-features-grid">
@@ -143,7 +143,7 @@ const FeedingSol = () => {
       </section>
 
       {/* Product Grid */}
-      <section className="feeding-products-section feeding-full-width">
+      <section className="feeding-products-section feeding-full-width" data-navbar-theme="light">
         <div className="feeding-products-container">
           <h2 className="feeding-section-title">Our Product Range</h2>
           <div className="feeding-products-grid">
@@ -183,7 +183,7 @@ const FeedingSol = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="feeding-cta-section feeding-full-width">
+      <section className="feeding-cta-section feeding-full-width" data-navbar-theme="light">
         <div className="feeding-cta-container">
           <h2 className="feeding-cta-title">Optimize Your Feeding Operations Today</h2>
           <p className="feeding-cta-description">

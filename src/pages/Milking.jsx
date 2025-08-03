@@ -178,7 +178,7 @@ const Milking = () => {
       </header>
 
       {/* Features Section */}
-      <section className="milking-features-section milking-full-width">
+      <section className="milking-features-section milking-full-width" data-navbar-theme="light">
         <div className="milking-features-container">
           <h2 className="milking-features-title">Why Choose Our Milking Solutions?</h2>
           <div className="milking-features-grid">
@@ -207,7 +207,7 @@ const Milking = () => {
       </section>
 
       {/* Product Grid */}
-      <section className="milking-products-section milking-full-width">
+      <section className="milking-products-section milking-full-width" data-navbar-theme="light">
         <div className="milking-products-container">
           <h2 className="milking-section-title">Our Product Range</h2>
           <div className="milking-products-grid">
@@ -247,7 +247,7 @@ const Milking = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="milking-cta-section milking-full-width">
+      <section className="milking-cta-section milking-full-width" data-navbar-theme="light">
         <div className="milking-cta-container">
           <h2 className="milking-cta-title">Transform Your Milking Operations</h2>
           <p className="milking-cta-description">

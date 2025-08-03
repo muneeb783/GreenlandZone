@@ -90,7 +90,7 @@ const FarmBiosecuritySol = () => {
       </header>
 
       {/* Features Section */}
-      <section className="biosec-features-section biosec-full-width">
+      <section className="biosec-features-section biosec-full-width" data-navbar-theme="light">
         <div className="biosec-features-container">
           <h2 className="biosec-features-title">Why Choose Our Biosecurity Solutions?</h2>
           <div className="biosec-features-grid">
@@ -119,7 +119,7 @@ const FarmBiosecuritySol = () => {
       </section>
 
       {/* Product Grid */}
-      <section className="biosec-products-section biosec-full-width">
+      <section className="biosec-products-section biosec-full-width" data-navbar-theme="light">
         <div className="biosec-products-container">
           <h2 className="biosec-section-title">Our Product Range</h2>
           <div className="biosec-products-grid">
@@ -159,7 +159,7 @@ const FarmBiosecuritySol = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="biosec-cta-section biosec-full-width">
+      <section className="biosec-cta-section biosec-full-width" data-navbar-theme="light">
         <div className="biosec-cta-container">
           <h2 className="biosec-cta-title">Protect Your Farm Today</h2>
           <p className="biosec-cta-description">

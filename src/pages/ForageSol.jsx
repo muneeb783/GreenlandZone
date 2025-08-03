@@ -90,7 +90,7 @@ const ForageSol = () => {
       </header>
 
       {/* Features Section */}
-      <section className="forage-features-section forage-full-width">
+      <section className="forage-features-section forage-full-width" data-navbar-theme="light">
         <div className="forage-features-container">
           <h2 className="forage-features-title">Why Choose Our Forage Solutions?</h2>
           <div className="forage-features-grid">
@@ -119,7 +119,7 @@ const ForageSol = () => {
       </section>
 
       {/* Product Grid */}
-      <section className="forage-products-section forage-full-width">
+      <section className="forage-products-section forage-full-width" data-navbar-theme="light">
         <div className="forage-products-container">
           <h2 className="forage-section-title">Our Product Range</h2>
           <div className="forage-products-grid">
@@ -159,7 +159,7 @@ const ForageSol = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="forage-cta-section forage-full-width">
+      <section className="forage-cta-section forage-full-width" data-navbar-theme="light">
         <div className="forage-cta-container">
           <h2 className="forage-cta-title">Maximize Your Forage Production</h2>
           <p className="forage-cta-description">

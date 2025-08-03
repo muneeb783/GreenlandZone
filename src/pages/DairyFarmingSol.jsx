@@ -135,7 +135,7 @@ const DairyFarmingSol = () => {
       </header>
 
       {/* Features Section */}
-      <section className="dairy-features-section dairy-full-width">
+      <section className="dairy-features-section dairy-full-width" data-navbar-theme="light">
         <div className="dairy-features-container">
           <h2 className="dairy-features-title">Why Choose Our Solutions?</h2>
           <div className="dairy-features-grid">
@@ -164,7 +164,7 @@ const DairyFarmingSol = () => {
       </section>
 
       {/* Product Grid */}
-      <section className="dairy-products-section dairy-full-width">
+      <section className="dairy-products-section dairy-full-width" data-navbar-theme="light">
         <div className="dairy-products-container">
           <h2 className="dairy-section-title">Our Product Range</h2>
           <div className="dairy-products-grid">
@@ -204,7 +204,7 @@ const DairyFarmingSol = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="dairy-cta-section">
+      <section className="dairy-cta-section" data-navbar-theme="light">
         <div className="dairy-cta-container">
           <h2 className="dairy-cta-title">Ready to Modernize Your Dairy Farm?</h2>
           <p className="dairy-cta-description">

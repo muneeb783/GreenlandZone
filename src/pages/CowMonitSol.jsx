@@ -104,7 +104,7 @@ const SenseTimePage = () => {
       </section>
 
       {/* Main Content */}
-      <section className="content-section">
+      <section className="content-section" data-navbar-theme="light">
         <div className="content-wrapper">
           {/* Introduction */}
           <div className="intro-section">

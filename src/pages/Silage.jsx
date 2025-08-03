@@ -105,7 +105,7 @@ const Silage = () => {
       </header>
 
       {/* Features Section */}
-      <section className="silage-features-section silage-full-width">
+      <section className="silage-features-section silage-full-width" data-navbar-theme="light">
         <div className="silage-features-container">
           <h2 className="silage-features-title">Why Choose Our Silage Solutions?</h2>
           <div className="silage-features-grid">
@@ -134,7 +134,7 @@ const Silage = () => {
       </section>
 
       {/* Product Grid */}
-      <section className="silage-products-section silage-full-width">
+      <section className="silage-products-section silage-full-width" data-navbar-theme="light">
         <div className="silage-products-container">
           <h2 className="silage-section-title">Our Product Range</h2>
           <div className="silage-products-grid">
@@ -174,7 +174,7 @@ const Silage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="silage-cta-section silage-full-width">
+      <section className="silage-cta-section silage-full-width" data-navbar-theme="light">
         <div className="silage-cta-container">
           <h2 className="silage-cta-title">Upgrade Your Silage Production Today</h2>
           <p className="silage-cta-description">

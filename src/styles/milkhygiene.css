@@ -1,0 +1,500 @@
+
+.hygiene-container {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #1f2937;
+    background-color: #ffffff;
+    min-height: 100vh;
+  }
+  
+  /* Hero Section */
+  .hygiene-hero-section {
+    position: relative;
+    background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+    color: white;
+    padding: 5rem 2rem;
+    overflow: hidden;
+  }
+
+  .hygiene-full-width {
+    position: relative;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    left: 0;
+  }
+  
+  .hygiene-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+      radial-gradient(circle at 20% 80%, rgba(22, 163, 74, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(59, 130, 246, 0.05) 0%, transparent 50%);
+  }
+  
+  .hygiene-hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .hygiene-hero-badge {
+    display: inline-block;
+    background: rgba(22, 163, 74, 0.2);
+    border: 1px solid rgba(22, 163, 74, 0.3);
+    color: #86efac;
+    padding: 0.5rem 1.5rem;
+    border-radius: 2rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    margin-bottom: 2rem;
+  }
+  
+  .hygiene-hero-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+  }
+  
+  .hygiene-hero-accent {
+    display: block;
+    color: #16a34a;
+  }
+  
+  .hygiene-hero-description {
+    font-size: 1.25rem;
+    color: #e5e7eb;
+    max-width: 600px;
+    margin: 0 auto 3rem;
+    line-height: 1.6;
+  }
+  
+  .hygiene-hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+  }
+  
+  .hygiene-stat-item {
+    text-align: center;
+  }
+  
+  .hygiene-stat-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .hygiene-stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #16a34a;
+    margin-bottom: 0.25rem;
+  }
+  
+  .hygiene-stat-label {
+    font-size: 0.875rem;
+    color: #9ca3af;
+  }
+  
+  /* Features Section */
+  .hygiene-features-section {
+    padding: 5rem 2rem;
+    background: #f8f9fa;
+  }
+  
+  .hygiene-features-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .hygiene-features-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #1f2937;
+  }
+  
+  .hygiene-features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+  
+  .hygiene-feature-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .hygiene-feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  }
+  
+  .hygiene-feature-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hygiene-feature-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: #1f2937;
+  }
+  
+  .hygiene-feature-card p {
+    color: #6b7280;
+    line-height: 1.6;
+  }
+  
+  /* Products Section */
+  .hygiene-products-section {
+    padding: 5rem 2rem;
+    background: white;
+  }
+  
+  .hygiene-products-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .hygiene-section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #1f2937;
+  }
+  
+  .hygiene-products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+  
+  .hygiene-product-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .hygiene-product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  }
+  
+  .hygiene-product-category {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: #16a34a;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    z-index: 10;
+  }
+  
+  .hygiene-product-image-container {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+  }
+  
+  .hygiene-product-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .hygiene-product-card:hover .hygiene-product-image {
+    transform: scale(1.05);
+  }
+  
+  .hygiene-product-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .hygiene-product-card:hover .hygiene-product-overlay {
+    opacity: 1;
+  }
+  
+  .hygiene-view-details-btn {
+    background: #16a34a;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .hygiene-view-details-btn:hover {
+    background: #15803d;
+  }
+  
+  .hygiene-product-content {
+    padding: 1.5rem;
+  }
+  
+  .hygiene-product-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #1f2937;
+  }
+  
+  .hygiene-product-description {
+    color: #6b7280;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+  }
+  
+  .hygiene-product-features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .hygiene-feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    color: #4b5563;
+    font-size: 0.875rem;
+  }
+  
+  .hygiene-feature-bullet {
+    color: #16a34a;
+    font-weight: bold;
+    flex-shrink: 0;
+  }
+  
+  /* CTA Section */
+  .hygiene-cta-section {
+    background: linear-gradient(135deg, #16a34a 0%, #22c55e 100%);
+    padding: 5rem 2rem;
+    color: white;
+    text-align: center;
+  }
+  
+  .hygiene-cta-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .hygiene-cta-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  
+  .hygiene-cta-description {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+  }
+  
+  .hygiene-cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .hygiene-btn-primary, .hygiene-btn-secondary {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .hygiene-btn-primary {
+    background: white;
+    color: #16a34a;
+  }
+  
+  .hygiene-btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .hygiene-btn-secondary {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+  }
+  
+  .hygiene-btn-secondary:hover {
+    background: white;
+    color: #16a34a;
+  }
+  
+  /* Modal */
+  .hygiene-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 2rem;
+  }
+  
+  .hygiene-modal-content {
+    background: white;
+    border-radius: 16px;
+    max-width: 900px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+  }
+  
+  .hygiene-modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: #f3f4f6;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    transition: background 0.3s ease;
+  }
+  
+  .hygiene-modal-close:hover {
+    background: #e5e7eb;
+  }
+  
+  .hygiene-modal-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  
+  .hygiene-modal-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 16px 0 0 16px;
+  }
+  
+  .hygiene-modal-info {
+    padding: 2rem;
+  }
+  
+  .hygiene-modal-category {
+    background: #dcfce7;
+    color: #16a34a;
+    display: inline-block;
+    padding: 0.25rem 1rem;
+    border-radius: 1rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  .hygiene-modal-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #1f2937;
+  }
+  
+  .hygiene-modal-description {
+    color: #6b7280;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+  }
+  
+  .hygiene-modal-features-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #1f2937;
+  }
+  
+  .hygiene-modal-features {
+    list-style: none;
+    margin-bottom: 2rem;
+    padding: 0;
+  }
+  
+  .hygiene-modal-features li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+    color: #4b5563;
+  }
+  
+  .hygiene-feature-icon {
+    color: #16a34a;
+    font-weight: bold;
+    flex-shrink: 0;
+  }
+  
+  .hygiene-modal-actions {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .hygiene-hero-title {
+      font-size: 2.5rem;
+    }
+  
+    .hygiene-hero-stats {
+      gap: 2rem;
+    }
+  
+    .hygiene-modal-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .hygiene-modal-image img {
+      border-radius: 16px 16px 0 0;
+      height: 250px;
+    }
+  
+    .hygiene-products-grid {
+      grid-template-columns: 1fr;
+    }
+  }

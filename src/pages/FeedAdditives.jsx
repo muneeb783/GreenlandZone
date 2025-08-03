@@ -50,7 +50,7 @@ const FeedAdditivesPage = () => {
   const currentProduct = products[selectedProduct];
 
   return (
-    <div className="feed-additives-container">
+    <div className="feed-additives-container" >
       {/* Header Section */}
       <header className="page-header">
         <div className="header-content">
@@ -60,7 +60,7 @@ const FeedAdditivesPage = () => {
       </header>
 
       {/* Product Selector */}
-      <section className="product-selector">
+      <section className="product-selector" data-navbar-theme="light">
         <div className="selector-container">
           <button 
             className={`selector-btn ${selectedProduct === 'toxin' ? 'active' : ''}`}
@@ -80,7 +80,7 @@ const FeedAdditivesPage = () => {
       </section>
 
       {/* Product Detail Section */}
-      <section className="product-detail">
+      <section className="product-detail" data-navbar-theme="light">
         <div className="detail-container">
           <div className="product-grid">
             {/* Product Image */}
@@ -130,7 +130,7 @@ const FeedAdditivesPage = () => {
       </section>
 
       {/* Additional Products Gallery */}
-      <section className="products-gallery">
+      <section className="products-gallery" data-navbar-theme="light">
         <div className="gallery-container">
           <h2 className="gallery-title">Complete Product Range</h2>
           <div className="gallery-grid">
