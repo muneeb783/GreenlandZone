@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import '../styles/milking.css'
+import '../styles/milking.css';
+import dbdc from "../assets/dbdc.JPG";
 
 const Milking = () => {
   const [selectedProduct, setSelectedProduct] = useState(null);
@@ -54,7 +55,7 @@ const Milking = () => {
         "Stainless steel bucket (30 Kg) with cut off system",
         "Can milk 16-20 animals / hour"
       ],
-      image: "/api/placeholder/600/400",
+      image: dbdc,
       category: "Mobile"
     },
     {

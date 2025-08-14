@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import "../styles/dairyfarmingsol.css";
+import fanImage from "../assets/fan.JPG";
 
 const DairyFarmingSol = () => {
   const [selectedProduct, setSelectedProduct] = useState(null);
@@ -15,7 +16,7 @@ const DairyFarmingSol = () => {
         "Proper angle required for",
         "Animal comfort"
       ],
-      image: "/api/placeholder/600/400",
+      image: "/assets/fan.JPG",
       category: "Comfort"
     },
     {
@@ -50,7 +51,7 @@ const DairyFarmingSol = () => {
         "Reduces heat stress",
         "Improves milk production"
       ],
-      image: "/api/placeholder/600/400",
+      image: fanImage,
       category: "Climate"
     },
     {
