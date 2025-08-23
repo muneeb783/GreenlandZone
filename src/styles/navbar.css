@@ -297,3 +297,49 @@
     transition-timing-function: ease;
     transition: color 0.3s ease;
 }
+
+/* Mobile-specific theme handling */
+@media (max-width: 991px) {
+
+    
+    /* Keep all text white on mobile regardless of theme */
+    .navbar.mobile-theme .nav-link {
+        color: rgba(255, 255, 255, 0.9) !important;
+    }
+    
+    .navbar.mobile-theme .dropdown-item {
+        color: rgba(255, 255, 255, 0.8) !important;
+    }
+    
+    .navbar.mobile-theme .nav-link:hover {
+        color: #00E676 !important;
+        background: rgba(0, 200, 83, 0.1);
+    }
+    
+    .navbar.mobile-theme .dropdown-item:hover {
+        color: #00E676 !important;
+    }
+    
+    /* Only hamburger icon changes based on light-bg class */
+    .navbar.mobile-theme.light-bg .navbar-toggler {
+        border-color: rgba(0, 0, 0, 0.3);
+    }
+    
+    .navbar.mobile-theme.light-bg .navbar-toggler-icon span,
+    .navbar.mobile-theme.light-bg .navbar-toggler-icon::before,
+    .navbar.mobile-theme.light-bg .navbar-toggler-icon::after {
+        background: #000;
+    }
+    
+    /* Dark background keeps white hamburger */
+    .navbar.mobile-theme:not(.light-bg) .navbar-toggler-icon span,
+    .navbar.mobile-theme:not(.light-bg) .navbar-toggler-icon::before,
+    .navbar.mobile-theme:not(.light-bg) .navbar-toggler-icon::after {
+        background: #fff;
+    }
+    
+    /* Keep dropdown menu dark on mobile */
+    .navbar.mobile-theme .navbar-collapse {
+        background: rgba(26, 35, 50, 0.98) !important;
+    }
+}

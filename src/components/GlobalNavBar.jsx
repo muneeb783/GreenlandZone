@@ -24,9 +24,7 @@ useEffect(() => {
   const checkTheme = () => {
     const sections = document.querySelectorAll('[data-navbar-theme]');
     const scrollPosition = window.scrollY + 100;
-    
-    // Debug: Check if sections are found
-    console.log('Found sections:', sections.length);
+    const isMobile = window.matchMedia("(max-width: 991px)").matches; // Using 991px to match Bootstrap's lg breakpoint
     
     let foundMatch = false;
     
@@ -37,8 +35,18 @@ useEffect(() => {
       
       if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
         const theme = section.dataset.navbarTheme;
-        console.log('Current section theme:', theme); // Debug
-        setIsLightBg(theme === 'light'); // Changed from 'light-bg' to 'light'
+        
+        if (isMobile) {
+          // On mobile: only change hamburger icon theme
+          setIsLightBg(theme === 'light');
+          // Add mobile-specific class
+          document.querySelector('.navbar')?.classList.add('mobile-theme');
+        } else {
+          // On desktop: change entire navbar theme
+          setIsLightBg(theme === 'light');
+          document.querySelector('.navbar')?.classList.remove('mobile-theme');
+        }
+        
         foundMatch = true;
         break;
       }

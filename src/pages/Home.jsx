@@ -182,7 +182,7 @@ export default function Home() {
               <div id="intro-heading" className={`animate-on-scroll ${isVisible['intro-heading'] ? 'visible' : ''}`}>
                 <h1 className="modern-heading">
                   GreenLand Zone<br/>
-                  From Grass to Glass
+                  <span className="mobile-break">From Grass to Glass</span>
                 </h1>
                 <div className="accent-bar" />
               </div>
@@ -207,7 +207,7 @@ export default function Home() {
           </div>
 
           {/* Vision & Mission */}
-          <div className="row mt-5 pt-5">
+          <div className="row mt-5 pt-5 vision-mission-row">
             <div className="col col-md-6">
               <div id="vision-card" className={`animate-on-scroll ${isVisible['vision-card'] ? 'visible' : ''}`}>
                 <div className="vision-mission-card">
@@ -238,13 +238,13 @@ export default function Home() {
       </div>
 
       {/* Products Section */}
-      <div className="section-container" data-navbar-theme="light">
+      <div className="section-container products-section" data-navbar-theme="light">
         <div className="container">
           <div className="text-center mb-5">
             <h2 className="modern-heading">Our Solutions</h2>
             <div className="accent-bar mx-auto" />
           </div>
-          <div className="row">
+          <div className="row products-row">
             {products.map((product, index) => (
               <div className="col col-md-4" key={index}>
                 <div 
@@ -272,7 +272,7 @@ export default function Home() {
       {/* Contact Section */}
       <div className="contact-section" data-navbar-theme="light">
         <div className="container">
-          <div className="row">
+          <div className="row contact-row">
             <div className="col col-md-4">
               <div id="contact-heading" className={`animate-on-scroll ${isVisible['contact-heading'] ? 'visible' : ''}`}>
                 <h2 className="modern-heading">
@@ -288,7 +288,7 @@ export default function Home() {
               <div id="contact-form" className={`animate-on-scroll ${isVisible['contact-form'] ? 'visible' : ''}`} style={{ animationDelay: '0.2s' }}>
                 <div className="modern-form">
                   <form onSubmit={handleSubmit}>
-                    <div className="row">
+                    <div className="row form-row">
                       <div className="col col-md-6">
                         <input 
                           className="form-control"
