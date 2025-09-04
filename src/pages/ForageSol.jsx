@@ -194,10 +194,6 @@ const ForageSol = () => {
                     </li>
                   ))}
                 </ul>
-                <div className="forage-modal-actions">
-                  <button className="forage-btn-primary">Request Quote</button>
-                  <button className="forage-btn-secondary">Ask Question</button>
-                </div>
               </div>
             </div>
           </div>

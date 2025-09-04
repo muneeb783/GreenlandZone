@@ -294,6 +294,8 @@
   color: #16a34a;
   font-weight: bold;
   flex-shrink: 0;
+  line-height: 1.4;
+  font-size: 1rem;
 }
 
 /* CTA Section */
@@ -362,13 +364,17 @@
 /* Modal */
 .dairy-modal-overlay {
   position: fixed;
-  inset: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background: rgba(0, 0, 0, 0.8);
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1000;
+  z-index: 999; /* Keep below navbar's z-index (usually 1000+) */
   padding: 2rem;
+  padding-top: 100px;
 }
 
 .dairy-modal-content {
@@ -376,16 +382,19 @@
   border-radius: 16px;
   max-width: 900px;
   width: 100%;
-  max-height: 90vh;
+  max-height: calc(100vh - 120px); /* Subtract navbar height + padding */
+  height: auto;
   overflow-y: auto;
   position: relative;
+  margin: auto;
 }
 
 .dairy-modal-close {
   position: absolute;
   top: 1rem;
   right: 1rem;
-  background: #f3f4f6;
+  background: #ef4444;
+  color: white;
   border: none;
   width: 40px;
   height: 40px;
@@ -396,106 +405,516 @@
   align-items: center;
   justify-content: center;
   z-index: 10;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .dairy-modal-close:hover {
-  background: #e5e7eb;
+  background: #dc2626;
+  transform: scale(1.1);
+
 }
 
 .dairy-modal-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
+  max-height: calc(100vh - 160px); /* Account for modal padding */
+  overflow-y: auto;
 }
 
 .dairy-modal-image img {
   width: 100%;
-  height: 400px;
+  height: 100%;
+  max-height: 400px;
   object-fit: cover;
   border-radius: 16px 0 0 16px;
 }
 
 .dairy-modal-info {
-  padding: 2rem;
+  padding: 1.5rem;
 }
 
 .dairy-modal-category {
   background: #dcfce7;
   color: #16a34a;
   display: inline-block;
-  padding: 0.25rem 1rem;
+  padding: 0.2rem 0.75rem;
   border-radius: 1rem;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   font-weight: 600;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
 }
 
 .dairy-modal-title {
-  font-size: 2rem;
+  font-size: 1.75rem;
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   color: #1f2937;
+  line-height: 1.2;
 }
 
 .dairy-modal-description {
   color: #6b7280;
-  margin-bottom: 2rem;
-  line-height: 1.6;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+  font-size: 0.95rem;
 }
 
 .dairy-modal-features-title {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   font-weight: 600;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
   color: #1f2937;
 }
 
 .dairy-modal-features {
   list-style: none;
-  margin-bottom: 2rem;
+  margin-bottom: 0;
   padding: 0;
 }
 
 .dairy-modal-features li {
   display: flex;
-  align-items: flex-start;
-  gap: 0.75rem;
-  margin-bottom: 0.75rem;
+  align-items: flex-start; /* Keep flex-start for multi-line alignment */
+  gap: 0.75rem; /* Increase gap slightly for better spacing */
+  margin-bottom: 0.6rem;
   color: #4b5563;
+  font-size: 0.9rem;
+  line-height: 1.4;
 }
 
 .dairy-feature-icon {
   color: #16a34a;
   font-weight: bold;
   flex-shrink: 0;
+  font-size: 1.1rem; /* Make checkmark slightly larger */
+  line-height: 1.4; /* Match text line-height */
+  display: flex;
+  align-items: center;
+  height: 1.4em; /* Match line height to align with first line of text */
 }
 
 .dairy-modal-actions {
-  display: flex;
-  gap: 1rem;
+  display: none;
 }
 
-/* Responsive */
+.dairy-modal-features li span:not(.dairy-feature-icon) {
+  text-align: left;
+  flex: 1;
+}
+
+/* Enhanced Mobile Responsive Styles */
 @media (max-width: 768px) {
+  /* Hero Section Mobile */
+  .dairy-hero-section {
+    padding: 3rem 1rem;
+  }
+
+  .dairy-hero-badge {
+    font-size: 0.75rem;
+    padding: 0.4rem 1rem;
+    margin-bottom: 1.5rem;
+  }
+
   .dairy-hero-title {
-    font-size: 2.5rem;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .dairy-hero-accent {
+    display: inline;
+    margin-left: 0.25rem;
+  }
+
+  .dairy-hero-description {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    padding: 0 1rem;
   }
 
   .dairy-hero-stats {
-    gap: 2rem;
+    gap: 1.5rem;
   }
 
-  .dairy-modal-grid {
+  .dairy-stat-item {
+    flex: 1;
+    min-width: 80px;
+  }
+
+  .dairy-stat-icon {
+    font-size: 1.75rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .dairy-stat-number {
+    font-size: 1.5rem;
+  }
+
+  .dairy-stat-label {
+    font-size: 0.75rem;
+  }
+
+  /* Features Section Mobile */
+  .dairy-features-section {
+    padding: 3rem 1rem;
+  }
+
+  .dairy-features-title {
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+  }
+
+  .dairy-features-grid {
     grid-template-columns: 1fr;
+    gap: 1rem;
   }
 
-  .dairy-modal-image img {
-    border-radius: 16px 16px 0 0;
-    height: 250px;
+  .dairy-feature-card {
+    padding: 1.5rem;
+  }
+
+  .dairy-feature-icon {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .dairy-feature-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .dairy-feature-card p {
+    font-size: 0.9rem;
+  }
+
+  /* Products Section Mobile */
+  .dairy-products-section {
+    padding: 3rem 1rem;
+  }
+
+  .dairy-section-title {
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
   }
 
   .dairy-products-grid {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .dairy-product-card {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  }
+
+  .dairy-product-category {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.5rem;
+    top: 0.75rem;
+    right: 0.75rem;
+  }
+
+  .dairy-product-image-container {
+    height: 180px;
+  }
+
+  .dairy-product-content {
+    padding: 1.25rem;
+  }
+
+  .dairy-product-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .dairy-product-description {
+    font-size: 0.875rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .dairy-feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    color: #4b5563;
+    font-size: 0.875rem;
+    text-align: left;
+  }
+
+  /* CTA Section Mobile */
+  .dairy-cta-section {
+    padding: 3rem 1rem;
+  }
+
+  .dairy-cta-title {
+    font-size: 1.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .dairy-cta-description {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .dairy-cta-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .dairy-btn-primary, 
+  .dairy-btn-secondary {
+    padding: 0.875rem 1.5rem;
+    font-size: 0.95rem;
+    width: 100%;
+  }
+
+  /* Modal Mobile */
+  .dairy-modal-overlay {
+    padding: 1rem;
+  }
+
+  .dairy-modal-content {
+    border-radius: 12px;
+    max-height: 95vh;
+  }
+
+  .dairy-modal-close {
+    width: 35px;
+    height: 35px;
+    font-size: 1.25rem;
+    top: 0.75rem;
+    right: 0.75rem;
+  }
+
+  .dairy-modal-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .dairy-modal-image img {
+    height: 200px;
+    border-radius: 12px 12px 0 0;
+  }
+
+  .dairy-modal-info {
+    padding: 1.25rem;
+  }
+
+  .dairy-modal-category {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .dairy-modal-title {
+    font-size: 1.5rem;
+  }
+
+  .dairy-modal-description {
+    font-size: 0.875rem;
+  }
+
+  .dairy-modal-features-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .dairy-modal-features li {
+    gap: 0.6rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+
+  .dairy-modal-actions {
+    flex-direction: column;
+  }
+
+  .dairy-modal-actions button {
+    width: 100%;
+  }
+
+  .dairy-feature-icon {
+    font-size: 1rem;
+    line-height: 1.4;
+    height: 1.4em;
+  }
+  
+  /* For card features on mobile */
+  .dairy-feature-item {
+    gap: 0.5rem;
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+  
+  .dairy-feature-bullet {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  /* Disable hover effects on mobile touch devices */
+  @media (hover: none) {
+    .dairy-product-card:hover {
+      transform: none;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .dairy-product-card:hover .dairy-product-image {
+      transform: none;
+    }
+
+    .dairy-product-overlay {
+      opacity: 1;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    .dairy-feature-card:hover {
+      transform: none;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+  }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 480px) {
+  .dairy-hero-title {
+    font-size: 1.75rem;
+  }
+
+  .dairy-hero-description {
+    font-size: 0.9rem;
+  }
+
+  .dairy-stat-number {
+    font-size: 1.25rem;
+  }
+
+  .dairy-features-title,
+  .dairy-section-title,
+  .dairy-cta-title {
+    font-size: 1.5rem;
+  }
+
+  .dairy-feature-card {
+    padding: 1.25rem;
+  }
+
+  .dairy-product-content {
+    padding: 1rem;
+  }
+
+  .dairy-btn-primary,
+  .dairy-btn-secondary {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Tablet Responsive */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .dairy-hero-title {
+    font-size: 3rem;
+  }
+
+  .dairy-products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dairy-features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dairy-modal-grid {
+    gap: 1.5rem;
+  }
+
+  .dairy-modal-image img {
+    height: 350px;
+  }
+}
+
+/* Landscape Mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+  .dairy-hero-section {
+    padding: 2rem 1rem;
+  }
+
+  .dairy-hero-title {
+    font-size: 1.75rem;
+  }
+
+  .dairy-hero-description {
+    margin-bottom: 1.5rem;
+  }
+
+  .dairy-hero-stats {
+    margin-top: 1rem;
+  }
+
+  .dairy-stat-icon {
+    font-size: 1.5rem;
+  }
+
+  .dairy-stat-number {
+    font-size: 1.25rem;
+  }
+
+  .dairy-modal-content {
+    max-height: 90vh;
+  }
+
+  .dairy-modal-image img {
+    height: 150px;
+  }
+}
+
+/* Fix for iOS Safari */
+@supports (-webkit-touch-callout: none) {
+  .dairy-modal-overlay {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .dairy-modal-content {
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Ensure full width sections work properly on mobile */
+@media (max-width: 768px) {
+  .dairy-full-width {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+/* For screens with limited height */
+@media (max-height: 700px) {
+  .dairy-modal-content {
+    max-height: calc(100vh - 100px);
+  }
+  
+  .dairy-modal-image img {
+    max-height: 250px;
+  }
+  
+  .dairy-modal-info {
+    padding: 1.5rem;
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .dairy-modal-overlay {
+    padding: 1rem;
+    padding-top: 80px; /* Smaller navbar on mobile */
+  }
+  
+  .dairy-modal-content {
+    max-height: calc(100vh - 100px);
+    margin-top: 0;
+  }
+  
+  .dairy-modal-image img {
+    max-height: 200px;
   }
 }

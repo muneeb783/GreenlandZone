@@ -7,72 +7,97 @@ const FeedingSol = () => {
   const products = [
     {
       id: 1,
-      name: "Silage Bale",
-      description: "Ready to serve silage wrapped bales",
+      name: "Feeder",
+      description: "Durable milk feeding bucket for cattle",
       features: [
-        "Ready to serve silage wrapped bales",
-        "Maintains nutritional value",
-        "Easy storage and handling"
+        "Ensure even feed distribution",
+        "Reduces wastage",
+        "Easy storage, handling and cleaning"
       ],
       image: "/api/placeholder/600/400",
-      category: "Storage"
+      category: "Feeding"
     },
     {
       id: 2,
-      name: "Feeding Trolly",
-      description: "Efficient feed distribution system",
+      name: "Cleaing Brush",
+      description: "Efficient cleaning equipment to clean buckets",
       features: [
-        "Easy to carry feed",
-        "Reduce labor",
-        "Durable construction"
+        "Durable and safe bristles",
+        "Ensures cleanliness"
       ],
       image: "/api/placeholder/600/400",
-      category: "Distribution"
+      category: "Cleaning"
     },
     {
       id: 3,
-      name: "Calf Feeding Trolly",
-      description: "Specialized milk feeding system for calves",
+      name: "Collector",
+      description: "Used to collect and measure milk during milking",
       features: [
-        "Used to maintain temperature of milk for calves",
-        "It maintains temperature by indirect heating system",
+        "Durable and hygienic construction",
+        "Reliable scale",
         "Delivers measured quantity milk by flow meter nozzle"
       ],
       image: "/api/placeholder/600/400",
-      category: "Calf Care"
+      category: "Milking"
     },
     {
       id: 4,
-      name: "Automatic Drinker",
-      description: "Fresh water supply system",
+      name: "Electronic Pulsator",
+      description: "Used for consistent milking rhythm",
       features: [
-        "Enables the cattle to drink fresh and clean water",
-        "Controls wastage of water",
-        "Easy approach of animal"
+        "Precise control of pulsation rate",
+        "Improves udder health and milking efficiency",
+        "Low maintenance and durable"
       ],
       image: "/api/placeholder/600/400",
-      category: "Hydration"
+      category: "Milking"
     },
     {
       id: 5,
-      name: "Milk Feeding Bucket",
-      description: "Individual feeding solution for calves",
+      name: "Pneumatic Pulsator",
+      description: "Air-driven pulsation system",
       features: [
-        "Ensures calf health by proper feeding",
-        "Each calf gets measured quantity of milk",
-        "Easy to clean and maintain"
+        "Reliable pulsation for gentle milking",
+        "Simple design, easy maintenance",
+        "Compatible with most vacuum systems"
       ],
       image: "/api/placeholder/600/400",
-      category: "Calf Care"
+      category: "Milking"
     },
     {
       id: 6,
-      name: "Feed Crusher",
-      description: "Grain processing equipment",
+      name: "Tubing",
+      description: "Transporting Milk",
       features: [
-        "Used to crush feed grains",
-        "Its rollers are designed to give required particle size",
-        "High efficiency crushing"
+        "Food-grade, hygienic material",
+        "Flexible and durable",
+        "Easy to clean and replace"
+      ],
+      image: "/api/placeholder/600/400",
+      category: "Milking Accessories"
+    },
+
+    {
+      id: 7,
+      name: "Ztag",
+      description: "For cattle identification and herd management",
+      features: [
+        "Long-lasting and weather resistant",
+        "Easy application with tag applicator",
+        "Helps track health, breeding, and production"
+      ],
+      image: "/api/placeholder/600/400",
+      category: "Cow Monitoring"
+    },
+
+    {
+      id: 8,
+      name: "Milk Meter",
+      description: "Measure milk yield from each cow",
+      features: [
+        "Accurate measurement of milk quantity",
+        "Helps monitor cow productivity",
+        "Easy integration with milking systems"
       ],
       image: "/api/placeholder/600/400",
       category: "Processing"
@@ -87,7 +112,7 @@ const FeedingSol = () => {
         <div className="feeding-hero-content">
           <div className="feeding-hero-badge">ADVANCED FEEDING SYSTEMS</div>
           <h1 className="feeding-hero-title">
-            Feeding Equipment
+            Dairy Parts
             <span className="feeding-hero-accent">Solutions</span>
           </h1>
           <p className="feeding-hero-description">

@@ -194,10 +194,6 @@ const FarmBiosecuritySol = () => {
                     </li>
                   ))}
                 </ul>
-                <div className="biosec-modal-actions">
-                  <button className="biosec-btn-primary">Request Quote</button>
-                  <button className="biosec-btn-secondary">Ask Question</button>
-                </div>
               </div>
             </div>
           </div>

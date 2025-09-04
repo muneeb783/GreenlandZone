@@ -49,7 +49,7 @@ const SenseTimePage = () => {
   ];
 
   return (
-    <div className="sensetime-container">
+    <div className="sensetime-container hero-full-width">
       {/* Hero Section */}
       <section className="hero-section hero-full-width">
         <div className="hero-background-pattern"></div>

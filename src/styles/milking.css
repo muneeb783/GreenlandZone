@@ -288,12 +288,15 @@
   margin-bottom: 0.5rem;
   color: #4b5563;
   font-size: 0.875rem;
+  text-align: left;
 }
 
 .milking-feature-bullet {
   color: #16a34a;
   font-weight: bold;
   flex-shrink: 0;
+  line-height: 1.4;
+  font-size: 1rem;
 }
 
 /* CTA Section */
@@ -362,13 +365,17 @@
 /* Modal */
 .milking-modal-overlay {
   position: fixed;
-  inset: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background: rgba(0, 0, 0, 0.8);
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1000;
+  z-index: 999; /* Keep below navbar's z-index (usually 1000+) */
   padding: 2rem;
+  padding-top: 100px; /* Account for navbar height */
 }
 
 .milking-modal-content {
@@ -376,16 +383,19 @@
   border-radius: 16px;
   max-width: 900px;
   width: 100%;
-  max-height: 90vh;
+  max-height: calc(100vh - 120px); /* Subtract navbar height + padding */
+  height: auto;
   overflow-y: auto;
   position: relative;
+  margin: auto;
 }
 
 .milking-modal-close {
   position: absolute;
   top: 1rem;
   right: 1rem;
-  background: #f3f4f6;
+  background: #ef4444;
+  color: white;
   border: none;
   width: 40px;
   height: 40px;
@@ -396,85 +406,107 @@
   align-items: center;
   justify-content: center;
   z-index: 10;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .milking-modal-close:hover {
-  background: #e5e7eb;
+  background: #dc2626;
+  transform: scale(1.1);
 }
 
 .milking-modal-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
+  max-height: calc(100vh - 160px); /* Account for modal padding */
+  overflow-y: auto;
 }
 
 .milking-modal-image img {
   width: 100%;
-  height: 400px;
+  height: 100%;
+  max-height: 400px;
   object-fit: cover;
   border-radius: 16px 0 0 16px;
 }
 
 .milking-modal-info {
-  padding: 2rem;
+  padding: 1.5rem;
 }
 
 .milking-modal-category {
   background: #dcfce7;
   color: #16a34a;
   display: inline-block;
-  padding: 0.25rem 1rem;
+  padding: 0.2rem 0.75rem;
   border-radius: 1rem;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   font-weight: 600;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
 }
 
 .milking-modal-title {
-  font-size: 2rem;
+  font-size: 1.75rem;
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   color: #1f2937;
+  line-height: 1.2;
 }
 
 .milking-modal-description {
   color: #6b7280;
-  margin-bottom: 2rem;
-  line-height: 1.6;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+  font-size: 0.95rem;
+  align-items: left;
 }
 
 .milking-modal-features-title {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   font-weight: 600;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
   color: #1f2937;
 }
 
+/* Optimize features list layout */
 .milking-modal-features {
   list-style: none;
-  margin-bottom: 2rem;
+  margin-bottom: 0;
   padding: 0;
 }
 
 .milking-modal-features li {
   display: flex;
-  align-items: flex-start;
-  gap: 0.75rem;
-  margin-bottom: 0.75rem;
+  align-items: flex-start; /* Keep flex-start for multi-line alignment */
+  gap: 0.75rem; /* Increase gap slightly for better spacing */
+  margin-bottom: 0.6rem;
   color: #4b5563;
+  font-size: 0.9rem;
+  line-height: 1.4;
 }
 
 .milking-feature-icon {
   color: #16a34a;
   font-weight: bold;
   flex-shrink: 0;
+  font-size: 1.1rem; /* Make checkmark slightly larger */
+  line-height: 1.4; /* Match text line-height */
+  display: flex;
+  align-items: center;
+  height: 1.4em; /* Match line height to align with first line of text */
 }
 
-.milking-modal-actions {
-  display: flex;
-  gap: 1rem;
+/* Ensure text is left-aligned and wraps properly */
+.milking-modal-features li span:not(.milking-feature-icon) {
+  text-align: left;
+  flex: 1;
 }
+
+/* Hide the action buttons */
+.milking-modal-actions {
+  display: none;
+}
+
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -497,5 +529,49 @@
 
   .milking-products-grid {
     grid-template-columns: 1fr;
+  }
+
+  .milking-modal-overlay {
+    padding: 1rem;
+    padding-top: 80px; /* Smaller navbar on mobile */
+  }
+  
+  .milking-modal-content {
+    max-height: calc(100vh - 100px);
+    margin-top: 0;
+  }
+  
+  .milking-modal-image img {
+    max-height: 200px;
+  }
+
+  .milking-modal-info {
+    padding: 1.25rem;
+  }
+  
+  .milking-modal-title {
+    font-size: 1.5rem;
+  }
+  
+  .milking-modal-description {
+    font-size: 0.875rem;
+  }
+  
+  .milking-modal-features li {
+    font-size: 0.85rem;
+  }  
+}
+
+@media (max-height: 700px) {
+  .milking-modal-content {
+    max-height: calc(100vh - 100px);
+  }
+  
+  .milking-modal-image img {
+    max-height: 250px;
+  }
+  
+  .milkling-modal-info {
+    padding: 1.5rem;
   }
 }

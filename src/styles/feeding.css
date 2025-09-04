@@ -476,26 +476,363 @@
   gap: 1rem;
 }
 
-/* Responsive */
+/* Enhanced Mobile Responsive Styles */
 @media (max-width: 768px) {
+  .feeding-hero-section {
+    padding: 3rem 1rem;
+  }
+
+  .feeding-hero-badge {
+    font-size: 0.75rem;
+    padding: 0.4rem 1rem;
+    margin-bottom: 1.5rem;
+  }
+
   .feeding-hero-title {
-    font-size: 2.5rem;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .feeding-hero-accent {
+    display: inline;
+    margin-left: 0.25rem;
+  }
+
+  .feeding-hero-description {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    padding: 0 1rem;
   }
 
   .feeding-hero-stats {
-    gap: 2rem;
+    gap: 1.5rem;
   }
 
-  .feeding-modal-grid {
+  .feeding-stat-item {
+    flex: 1;
+    min-width: 80px;
+  }
+
+  .feeding-stat-icon {
+    font-size: 1.75rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .feeding-stat-number {
+    font-size: 1.5rem;
+  }
+
+  .feeding-stat-label {
+    font-size: 0.75rem;
+  }
+
+  /* Features Section Mobile */
+  .feeding-features-section {
+    padding: 3rem 1rem;
+  }
+
+  .feeding-features-title {
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+  }
+
+  .feeding-features-grid {
     grid-template-columns: 1fr;
+    gap: 1rem;
   }
 
-  .feeding-modal-image img {
-    border-radius: 16px 16px 0 0;
-    height: 250px;
+  .feeding-feature-card {
+    padding: 1.5rem;
+  }
+
+  .feeding-feature-icon {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .feeding-feature-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .feeding-feature-card p {
+    font-size: 0.9rem;
+  }
+
+  /* Products Section Mobile */
+  .feeding-products-section {
+    padding: 3rem 1rem;
+  }
+
+  .feeding-section-title {
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
   }
 
   .feeding-products-grid {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .feeding-product-card {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  }
+
+  .feeding-product-category {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.5rem;
+    top: 0.75rem;
+    right: 0.75rem;
+  }
+
+  .feeding-product-image-container {
+    height: 180px;
+  }
+
+  .feeding-product-content {
+    padding: 1.25rem;
+  }
+
+  .feeding-product-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .feeding-product-description {
+    font-size: 0.875rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .feeding-feature-item {
+    font-size: 0.8rem;
+    margin-bottom: 0.4rem;
+  }
+
+  /* CTA Section Mobile */
+  .feeding-cta-section {
+    padding: 3rem 1rem;
+  }
+
+  .feeding-cta-title {
+    font-size: 1.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .feeding-cta-description {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .feeding-cta-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .feeding-btn-primary, 
+  .feeding-btn-secondary {
+    padding: 0.875rem 1.5rem;
+    font-size: 0.95rem;
+    width: 100%;
+  }
+
+  /* Modal Mobile */
+  .feeding-modal-overlay {
+    padding: 1rem;
+  }
+
+  .feeding-modal-content {
+    border-radius: 12px;
+    max-height: 95vh;
+  }
+
+  .feeding-modal-close {
+    width: 35px;
+    height: 35px;
+    font-size: 1.25rem;
+    top: 0.75rem;
+    right: 0.75rem;
+  }
+
+  .feeding-modal-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .feeding-modal-image img {
+    height: 200px;
+    border-radius: 12px 12px 0 0;
+  }
+
+  .feeding-modal-info {
+    padding: 1.5rem;
+  }
+
+  .feeding-modal-category {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .feeding-modal-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .feeding-modal-description {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .feeding-modal-features-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .feeding-modal-features li {
+    font-size: 0.875rem;
+    margin-bottom: 0.6rem;
+    gap: 0.5rem;
+  }
+
+  .feeding-modal-actions {
+    flex-direction: column;
+  }
+
+  .feeding-modal-actions button {
+    width: 100%;
+  }
+
+  /* Disable hover effects on mobile touch devices */
+  @media (hover: none) {
+    .feeding-product-card:hover {
+      transform: none;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .feeding-product-card:hover .feeding-product-image {
+      transform: none;
+    }
+
+    .feeding-product-overlay {
+      opacity: 1;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    .feeding-feature-card:hover {
+      transform: none;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+  }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 480px) {
+  .feeding-hero-title {
+    font-size: 1.75rem;
+  }
+
+  .feeding-hero-description {
+    font-size: 0.9rem;
+  }
+
+  .feeding-stat-number {
+    font-size: 1.25rem;
+  }
+
+  .feeding-features-title,
+  .feeding-section-title,
+  .feeding-cta-title {
+    font-size: 1.5rem;
+  }
+
+  .feeding-feature-card {
+    padding: 1.25rem;
+  }
+
+  .feeding-product-content {
+    padding: 1rem;
+  }
+
+  .feeding-btn-primary,
+  .feeding-btn-secondary {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Tablet Responsive */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .feeding-hero-title {
+    font-size: 3rem;
+  }
+
+  .feeding-products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .feeding-features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .feeding-modal-grid {
+    gap: 1.5rem;
+  }
+
+  .feeding-modal-image img {
+    height: 350px;
+  }
+}
+
+/* Landscape Mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+  .feeding-hero-section {
+    padding: 2rem 1rem;
+  }
+
+  .feeding-hero-title {
+    font-size: 1.75rem;
+  }
+
+  .feeding-hero-description {
+    margin-bottom: 1.5rem;
+  }
+
+  .feeding-hero-stats {
+    margin-top: 1rem;
+  }
+
+  .feeding-stat-icon {
+    font-size: 1.5rem;
+  }
+
+  .feeding-stat-number {
+    font-size: 1.25rem;
+  }
+
+  .feeding-modal-content {
+    max-height: 90vh;
+  }
+
+  .feeding-modal-image img {
+    height: 150px;
+  }
+}
+
+/* iOS Safari Fixes */
+@supports (-webkit-touch-callout: none) {
+  .feeding-modal-overlay {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .feeding-modal-content {
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Full width sections on mobile */
+@media (max-width: 768px) {
+  .feeding-full-width {
+    margin-left: 0;
+    width: 100%;
   }
 }

@@ -209,10 +209,6 @@ const Silage = () => {
                     </li>
                   ))}
                 </ul>
-                <div className="silage-modal-actions">
-                  <button className="silage-btn-primary">Request Quote</button>
-                  <button className="silage-btn-secondary">Ask Question</button>
-                </div>
               </div>
             </div>
           </div>

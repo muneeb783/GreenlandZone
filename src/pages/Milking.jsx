@@ -283,10 +283,6 @@ const Milking = () => {
                     </li>
                   ))}
                 </ul>
-                <div className="milking-modal-actions">
-                  <button className="milking-btn-primary">Request Quote</button>
-                  <button className="milking-btn-secondary">Ask Question</button>
-                </div>
               </div>
             </div>
           </div>

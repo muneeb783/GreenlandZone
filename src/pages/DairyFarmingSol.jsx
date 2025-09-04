@@ -9,41 +9,6 @@ const DairyFarmingSol = () => {
   const products = [
     {
       id: 1,
-      name: "Cow Cubicles",
-      description: "Cubicles are animal rest areas",
-      features: [
-        "Hot dip galvanized pipes with",
-        "Proper angle required for",
-        "Animal comfort"
-      ],
-      image: "/assets/fan.JPG",
-      category: "Comfort"
-    },
-    {
-      id: 2,
-      name: "Cow Head Lock",
-      description: "Easy animals handling without any health hazard.",
-      features: [
-        "Hot dip galvanized with top",
-        "Covering of plastic for less noise."
-      ],
-      image: "/api/placeholder/600/400",
-      category: "Handling"
-    },
-    {
-      id: 3,
-      name: "Automatic Manure Scrapper",
-      description: "Efficient waste management for dairy farms",
-      features: [
-        "Automatic operation",
-        "Stainless steel construction",
-        "Easy to clean and maintain"
-      ],
-      image: "/api/placeholder/600/400",
-      category: "Hygiene"
-    },
-    {
-      id: 4,
       name: "Cooling Fans",
       description: "Climate control for optimal cow comfort",
       features: [
@@ -53,51 +18,6 @@ const DairyFarmingSol = () => {
       ],
       image: fanImage,
       category: "Climate"
-    },
-    {
-      id: 5,
-      name: "Cow Comfort Mat",
-      description: "Premium comfort mats for cow welfare",
-      features: [
-        "Very easy to clean, gives comfort to animals",
-        "Reduces labor for filling of sand and then cleaning from drains"
-      ],
-      image: "/api/placeholder/600/400",
-      category: "Comfort"
-    },
-    {
-      id: 6,
-      name: "Automatic Cow Brush",
-      description: "Used to massage the cows",
-      features: [
-        "Increases blood circulation",
-        "Increases milk yield",
-        "Increases skin shining by increasing blood circulation to skin"
-      ],
-      image: "/api/placeholder/600/400",
-      category: "Comfort"
-    },
-    {
-      id: 7,
-      name: "Hydraulic Cattle Crush",
-      description: "Safe and efficient cattle handling system",
-      features: [
-        "Used to hold animal for medication, surgery, and inseminations",
-        "Can be operated easily using hydraulic system"
-      ],
-      image: "/api/placeholder/600/400",
-      category: "Handling"
-    },
-    {
-      id: 8,
-      name: "Calf Hutch",
-      description: "Individual housing for young calves",
-      features: [
-        "Used for calf care in the first two months of age",
-        "Ensure calf health by individual feeding and avoid contamination"
-      ],
-      image: "/api/placeholder/600/400",
-      category: "Housing"
     }
   ];
 
@@ -205,7 +125,7 @@ const DairyFarmingSol = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="dairy-cta-section" data-navbar-theme="light">
+      <section className="dairy-cta-section dairy-full-width" data-navbar-theme="light">
         <div className="dairy-cta-container">
           <h2 className="dairy-cta-title">Ready to Modernize Your Dairy Farm?</h2>
           <p className="dairy-cta-description">
@@ -240,10 +160,6 @@ const DairyFarmingSol = () => {
                     </li>
                   ))}
                 </ul>
-                <div className="dairy-modal-actions">
-                  <button className="dairy-btn-primary">Request Quote</button>
-                  <button className="dairy-btn-secondary">Ask Question</button>
-                </div>
               </div>
             </div>
           </div>
