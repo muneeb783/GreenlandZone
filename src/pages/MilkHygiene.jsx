@@ -40,18 +40,6 @@ const MilkHygiene = () => {
       ],
       image: "/api/placeholder/600/400",
       category: "Disinfectant"
-    },
-    {
-      id: 4,
-      name: "Cleaner Surface Foamy",
-      description: "Foaming surface cleaner for equipment",
-      features: [
-        "Designed for surface cleaning like bulk tanks, milk silos, farm equipment, surfaces of milking machine clusters, pipes & other equipment",
-        "Long-lasting foam action",
-        "Easy rinse formula"
-      ],
-      image: "/api/placeholder/600/400",
-      category: "Surface Cleaner"
     }
   ];
 

@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import '../styles/milking.css';
 import dbdc from "../assets/dbdc.JPG";
+import sbsc from "../assets/sbsc.JPG";
+import sbdc from "../assets/sbdc.JPG";
 
 const Milking = () => {
   const [selectedProduct, setSelectedProduct] = useState(null);
@@ -8,8 +10,8 @@ const Milking = () => {
   const products = [
     {
       id: 1,
-      name: "Mobile Milking Machine",
-      description: "Portable milking solution for flexible operations",
+      name: "Mikline",
+      description: "Efficient group milking system",
       features: [
         "Electronic Pulsator",
         "Oil type vacuum pump with two years warranty",
@@ -21,28 +23,28 @@ const Milking = () => {
     },
     {
       id: 2,
-      name: "Rooster Group",
-      description: "Efficient group milking system",
+      name: "Single Bucket Single Cluster",
+      description: "Efficient milking system",
       features: [
         "Electronic Pulsator",
         "Vacuum pump is oil type with two years warranty",
         "Stainless steel bucket (30 Kg) with cut off system",
         "Can milk 16-20 animals / hour"
       ],
-      image: "/api/placeholder/600/400",
+      image: sbsc,
       category: "Group"
     },
     {
       id: 3,
-      name: "Mobile Milking Master",
-      description: "Advanced mobile milking station",
+      name: "Single Bucket Double Cluster",
+      description: "Efficient milking system",
       features: [
         "It can milk 8 animals at one time",
         "You can move it at your desired milking shed",
         "It pumps milk directly to chiller after milking",
         "Easy to operate"
       ],
-      image: "/api/placeholder/600/400",
+      image: sbdc,
       category: "Mobile"
     },
     {
@@ -59,67 +61,7 @@ const Milking = () => {
       category: "Mobile"
     },
     {
-      id: 5,
-      name: "IN/ONE",
-      description: "Compact milking parlour solution",
-      features: [
-        "Traits With inOne, it is very easy to have your dream milking parlour",
-        "Compact design and one day installation",
-        "Complete integrated system"
-      ],
-      image: "/api/placeholder/600/400",
-      category: "Parlour"
-    },
-    {
-      id: 6,
-      name: "Polypropylene Milk Cans",
-      description: "Food-grade milk storage solution",
-      features: [
-        "Food grade polypropylene milk cans for milking machines",
-        "Easy to wash",
-        "Durable construction"
-      ],
-      image: "/api/placeholder/600/400",
-      category: "Storage"
-    },
-    {
-      id: 7,
-      name: "Automatic Churn",
-      description: "Automated butter production equipment",
-      features: [
-        "It is used to make butter",
-        "Automatic operation",
-        "Consistent quality output"
-      ],
-      image: "/api/placeholder/600/400",
-      category: "Processing"
-    },
-    {
-      id: 8,
-      name: "Plastic Milk Cans",
-      description: "Lightweight milk storage containers",
-      features: [
-        "Durable plastic construction",
-        "Easy to handle and clean",
-        "Multiple size options available"
-      ],
-      image: "/api/placeholder/600/400",
-      category: "Storage"
-    },
-    {
-      id: 9,
-      name: "Bucket with Milking Cluster",
-      description: "Extension solution for milk lines",
-      features: [
-        "Used to extend milk line",
-        "Compatible with existing systems",
-        "Easy installation"
-      ],
-      image: "/api/placeholder/600/400",
-      category: "Accessories"
-    },
-    {
-      id: 10,
+      id: 4,
       name: "Herringbone Milking Parlor",
       description: "Efficient parlor design with management system",
       features: [
@@ -131,7 +73,7 @@ const Milking = () => {
       category: "Parlour"
     },
     {
-      id: 11,
+      id: 6,
       name: "Fast Exit Milking Parlor",
       description: "Advanced parlor with quick release system",
       features: [

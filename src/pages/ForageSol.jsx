@@ -31,27 +31,30 @@ const ForageSol = () => {
     },
     {
       id: 3,
-      name: "Hay Wheel Rakes",
-      description: "Economical hay collection system",
+      name: "Single Row Forage Harvester",
+      description: "Efficient single-row harvesting solution",
       features: [
-        "It is economical speedy dry hay collector",
-        "Easily attachable with different tractors with minor adjustments",
-        "Efficient hay gathering"
+        "Used in field for cutting and harvesting",
+        "Chop size is adjustable",
+        "Note: 40 HP tractor is required for this machine"
       ],
       image: "/api/placeholder/600/400",
-      category: "Collection"
+      category: "Harvesting"
     },
     {
       id: 4,
-      name: "Rotary Tedder",
-      description: "Advanced fodder drying equipment",
+      name: "Small Silage Baler and Wrapper",
+      description: "Automated baling and wrapping system",
       features: [
-        "It spreads mown fodder for rapid drying",
-        "Preserving its nutrition hence allowing multiple harvests",
-        "Fuel efficient, easy maintenance and mobility"
+        "Fully automatic machine with ABB motors and Siemens PLC system",
+        "Wrapping table is equipped with invertor system",
+        "Smooth wrapping & less breakdown of wrapping table",
+        "Adjustable baler chamber",
+        "Provides bale size from 60kg - 100kg",
+        "Less manpower required"
       ],
       image: "/api/placeholder/600/400",
-      category: "Drying"
+      category: "Baling"
     }
   ];
 
@@ -61,13 +64,13 @@ const ForageSol = () => {
       <header className="forage-hero-section">
         <div className="forage-hero-overlay"></div>
         <div className="forage-hero-content">
-          <div className="forage-hero-badge">FORAGE & HAY MAKING EQUIPMENT</div>
+          <div className="forage-hero-badge">FORAGE & SILAGE MAKING EQUIPMENT</div>
           <h1 className="forage-hero-title">
-            Forage & Hay Making
+            Forage & SILAGE Making
             <span className="forage-hero-accent">Solutions</span>
           </h1>
           <p className="forage-hero-description">
-            Advanced equipment for efficient forage harvesting and hay production
+            Advanced equipment for efficient forage harvesting and silage making
           </p>
           <div className="forage-hero-stats">
             <div className="forage-stat-item">
@@ -77,8 +80,8 @@ const ForageSol = () => {
             </div>
             <div className="forage-stat-item">
               <div className="forage-stat-icon">📈</div>
-              <div className="forage-stat-number">45%</div>
-              <div className="forage-stat-label">Higher Yield</div>
+              <div className="forage-stat-number">90%</div>
+              <div className="forage-stat-label">Feed Quality</div>
             </div>
             <div className="forage-stat-item">
               <div className="forage-stat-icon">💪</div>
@@ -92,7 +95,7 @@ const ForageSol = () => {
       {/* Features Section */}
       <section className="forage-features-section forage-full-width" data-navbar-theme="light">
         <div className="forage-features-container">
-          <h2 className="forage-features-title">Why Choose Our Forage Solutions?</h2>
+          <h2 className="forage-features-title">Why Choose Our Forage & Silage Solutions?</h2>
           <div className="forage-features-grid">
             <div className="forage-feature-card">
               <div className="forage-feature-icon">🚜</div>
@@ -107,12 +110,12 @@ const ForageSol = () => {
             <div className="forage-feature-card">
               <div className="forage-feature-icon">🎯</div>
               <h3>Precision Cutting</h3>
-              <p>Adjustable settings for optimal forage quality</p>
+              <p>Adjustable settings for optimal forage quality & silage quality</p>
             </div>
             <div className="forage-feature-card">
-              <div className="forage-feature-icon">🔄</div>
-              <h3>Multi-Purpose</h3>
-              <p>Versatile equipment for various grass and fodder types</p>
+              <div className="forage-feature-icon">🤖</div>
+              <h3>Automation</h3>
+              <p>Fully automated systems reduce labor and increase efficiency</p>
             </div>
           </div>
         </div>

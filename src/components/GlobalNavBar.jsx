@@ -102,29 +102,20 @@ useEffect(() => {
               <NavDropdown.Item as={Link} to="/products/dairy">
                 Dairy Farming Solutions
               </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/products/feeding">
-                Feeding Solutions
+              <NavDropdown.Item as={Link} to="/products/parts">
+                Dairy Parts
               </NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/products/forage">
-                Forage and Hay Making Solutions
-              </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/products/silage">
-                Silage Making Solutions
+                Forage and Silage Making Solutions
               </NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/products/milking">
                 Milking Solutions
-              </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/products/biosecurity">
-                Farm Biosecurity Solutions
               </NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/products/hygiene">
                 Milk Hygiene Solutions
               </NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/products/teat">
                 Teat and Udder Health Solutions
-              </NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/products/calf">
-                Calf Health Solutions
               </NavDropdown.Item>
               <NavDropdown.Item as={Link} to="/products/monitoring">
                 Sensetime Cow Monitoring System
