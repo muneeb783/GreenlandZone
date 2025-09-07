@@ -5,6 +5,8 @@
   color: #1f2937;
   background-color: #ffffff;
   min-height: 100vh;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-y;
 }
 
 /* Hero Section */
@@ -14,6 +16,7 @@
   color: white;
   padding: 5rem 2rem;
   overflow: hidden;
+  touch-action: pan-y;
 }
 
 .feeding-full-width {
@@ -519,15 +522,31 @@
 
 /* Enhanced Mobile Responsive Styles */
 @media (max-width: 768px) {
-  /* Fix full-width sections on mobile */
-  .feeding-full-width {
-    margin-left: 0 !important;
-    width: 100% !important;
-  }
-  
-  .feeding-container {
-    overflow-x: hidden;
-  }
+  /* Hero Section Mobile */
+
+     html {
+      overflow-x: hidden;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      overflow-x: hidden;
+      -webkit-overflow-scrolling: touch;
+      touch-action: manipulation;
+    }
+
+    .feeding-container {
+      position: relative;
+      touch-action: pan-y;
+    }
+
+    .feeding-hero-section,
+    .feeding-features-section,
+    .feeding-products-section,
+    .feeding-cta-section {
+      touch-action: pan-y;
+      -webkit-overflow-scrolling: touch;
+    }
 
   .feeding-hero-section {
     padding: 3rem 1rem;

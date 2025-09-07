@@ -909,14 +909,6 @@
   }
 }
 
-/* Ensure full width sections work properly on mobile
-@media (max-width: 768px) {
-  .dairy-full-width {
-    margin-left: 0;
-    width: 100%;
-  }
-} */
-
 /* For screens with limited height */
 @media (max-height: 700px) {
   .dairy-modal-content {
@@ -931,20 +923,3 @@
     padding: 1.5rem;
   }
 }
-
-/* Mobile adjustments
-@media (max-width: 768px) {
-  .dairy-modal-overlay {
-    padding: 1rem;
-    padding-top: 80px; /* Smaller navbar on mobile */
-  /* }
-  
-  .dairy-modal-content {
-    max-height: calc(100vh - 100px);
-    margin-top: 0;
-  }
-  
-  .dairy-modal-image img {
-    max-height: 200px;
-  }
-} */
