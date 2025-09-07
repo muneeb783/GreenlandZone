@@ -22,9 +22,9 @@ const DairyFarmingSol = () => {
   ];
 
   return (
-    <div className="dairy-container" style={{ touchAction: 'pan-y' }}>
+    <div className="dairy-container" style={{ touchAction: 'pan-y', overflowX: 'hidden' }}>
       {/* Hero Section */}
-      <header className="dairy-hero-section dairy-full-width">
+      <header className="dairy-hero-section dairy-full-width" style={{ touchAction: 'pan-y' }}>
         <div className="dairy-hero-overlay"></div>
         <div className="dairy-hero-content">
           <div className="dairy-hero-badge">PREMIUM DAIRY EQUIPMENT</div>
