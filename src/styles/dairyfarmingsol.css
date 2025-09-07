@@ -18,7 +18,7 @@
   touch-action: pan-y;
 }
 
-/* Desktop full-width (laptop and up) */
+/* Desktop full-width (laptop and up) - More aggressive approach */
 .dairy-full-width {
   position: relative;
   width: 100vw;
@@ -26,15 +26,27 @@
   left: 0;
 }
 
-/* Ensure no container constraints on desktop */
+/* Override ALL parent constraints on desktop */
 @media (min-width: 769px) {
+  /* Override App.css #root constraints specifically for dairy pages */
+  .dairy-container {
+    max-width: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+  }
+  
   .dairy-full-width {
     width: 100vw !important;
+    /* More aggressive breakout calculation */
     margin-left: calc(-50vw + 50%) !important;
-    left: 0 !important;
-    right: 0;
+    /* Alternative: try viewport-based positioning */
+    left: 50% !important;
+    transform: translateX(-50%) !important;
     position: relative;
     box-sizing: border-box;
+    /* Ensure it goes edge to edge */
+    min-width: 100vw;
   }
   
   /* Make sure containers inside don't constrain width */
