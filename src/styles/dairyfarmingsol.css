@@ -5,7 +5,6 @@
   color: #1f2937;
   background-color: #ffffff;
   min-height: 100vh;
-  overflow-x: hidden;
 }
 
 /* Hero Section */
@@ -15,50 +14,13 @@
   color: white;
   padding: 5rem 2rem;
   overflow: hidden;
-  touch-action: pan-y;
 }
 
-/* Desktop full-width (laptop and up) - More aggressive approach */
 .dairy-full-width {
   position: relative;
   width: 100vw;
   margin-left: calc(-50vw + 50%);
   left: 0;
-}
-
-/* Override ALL parent constraints on desktop */
-@media (min-width: 769px) {
-  /* Override App.css #root constraints specifically for dairy pages */
-  .dairy-container {
-    max-width: none !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    width: 100% !important;
-  }
-  
-  .dairy-full-width {
-    width: 100vw !important;
-    /* More aggressive breakout calculation */
-    margin-left: calc(-50vw + 50%) !important;
-    /* Alternative: try viewport-based positioning */
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-    position: relative;
-    box-sizing: border-box;
-    /* Ensure it goes edge to edge */
-    min-width: 100vw;
-  }
-  
-  /* Make sure containers inside don't constrain width */
-  .dairy-hero-content,
-  .dairy-features-container,
-  .dairy-products-container,
-  .dairy-cta-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
 }
 
 .dairy-hero-overlay {
@@ -541,72 +503,11 @@
   flex: 1;
 }
 
-
-/* CONSOLIDATED Mobile Responsive Styles - All mobile fixes in one place */
+/* Enhanced Mobile Responsive Styles */
 @media (max-width: 768px) {
-  /* Global mobile overflow and touch fixes */
-  html {
-    overflow-x: hidden;
-    -webkit-text-size-adjust: 100%;
-  }
-  
-  body {
-    overflow-x: hidden;
-    -webkit-overflow-scrolling: touch;
-    touch-action: manipulation;
-  }
-  
-  /* Container and sections mobile fixes */
-  .dairy-container {
-    -webkit-overflow-scrolling: touch;
-    overflow-x: hidden;
-    position: relative;
-    touch-action: pan-y;
-  }
-  
-  /* Full width fix for mobile - NO horizontal margins/padding */
-  .dairy-full-width {
-    margin-left: 0 !important;
-    width: 100vw !important;
-    left: 0 !important;
-    position: relative;
-    overflow-x: hidden;
-    max-width: 100vw;
-    box-sizing: border-box;
-  }
-  
-  /* Remove all section padding on mobile for edge-to-edge */
-  .dairy-hero-section,
-  .dairy-features-section,
-  .dairy-products-section,
-  .dairy-cta-section {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-    box-sizing: border-box;
-    touch-action: pan-y;
-    -webkit-overflow-scrolling: touch;
-  }
-  
-  /* Hero section specific */
+  /* Hero Section Mobile */
   .dairy-hero-section {
-    padding: 3rem 0 !important;
-  }
-  
-  /* Content containers - only these have padding */
-  .dairy-hero-content {
-    padding-left: 1rem !important;
-    padding-right: 1rem !important;
-    max-width: none;
-    margin: 0;
-  }
-  
-  .dairy-features-container,
-  .dairy-products-container,
-  .dairy-cta-container {
-    padding-left: 1rem !important;
-    padding-right: 1rem !important;
-    max-width: none;
-    margin: 0;
+    padding: 3rem 1rem;
   }
 
   .dairy-hero-badge {
@@ -978,6 +879,13 @@
   }
 }
 
+/* Ensure full width sections work properly on mobile */
+@media (max-width: 768px) {
+  .dairy-full-width {
+    margin-left: 0;
+    width: 100%;
+  }
+}
 
 /* For screens with limited height */
 @media (max-height: 700px) {
@@ -994,3 +902,19 @@
   }
 }
 
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .dairy-modal-overlay {
+    padding: 1rem;
+    padding-top: 80px; /* Smaller navbar on mobile */
+  }
+  
+  .dairy-modal-content {
+    max-height: calc(100vh - 100px);
+    margin-top: 0;
+  }
+  
+  .dairy-modal-image img {
+    max-height: 200px;
+  }
+}
