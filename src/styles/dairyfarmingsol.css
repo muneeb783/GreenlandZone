@@ -5,6 +5,8 @@
   color: #1f2937;
   background-color: #ffffff;
   min-height: 100vh;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-y;
 }
 
 /* Hero Section */
@@ -14,6 +16,7 @@
   color: white;
   padding: 5rem 2rem;
   overflow: hidden;
+  touch-action: pan-y;
 }
 
 .dairy-full-width {
@@ -506,6 +509,31 @@
 /* Enhanced Mobile Responsive Styles */
 @media (max-width: 768px) {
   /* Hero Section Mobile */
+
+     html {
+      overflow-x: hidden;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      overflow-x: hidden;
+      -webkit-overflow-scrolling: touch;
+      touch-action: manipulation;
+    }
+
+    .dairy-container {
+      position: relative;
+      touch-action: pan-y;
+    }
+
+    .dairy-hero-section,
+    .dairy-features-section,
+    .dairy-products-section,
+    .dairy-cta-section {
+      touch-action: pan-y;
+      -webkit-overflow-scrolling: touch;
+    }
+
   .dairy-hero-section {
     padding: 3rem 1rem;
   }
@@ -671,11 +699,13 @@
   /* Modal Mobile */
   .dairy-modal-overlay {
     padding: 1rem;
+    padding-top: 80px;
   }
 
   .dairy-modal-content {
     border-radius: 12px;
-    max-height: 95vh;
+    max-height: calc(100vh - 100px);
+    margin-top: 0;
   }
 
   .dairy-modal-close {
@@ -879,13 +909,13 @@
   }
 }
 
-/* Ensure full width sections work properly on mobile */
+/* Ensure full width sections work properly on mobile
 @media (max-width: 768px) {
   .dairy-full-width {
     margin-left: 0;
     width: 100%;
   }
-}
+} */
 
 /* For screens with limited height */
 @media (max-height: 700px) {
@@ -902,12 +932,12 @@
   }
 }
 
-/* Mobile adjustments */
+/* Mobile adjustments
 @media (max-width: 768px) {
   .dairy-modal-overlay {
     padding: 1rem;
     padding-top: 80px; /* Smaller navbar on mobile */
-  }
+  /* }
   
   .dairy-modal-content {
     max-height: calc(100vh - 100px);
@@ -917,4 +947,4 @@
   .dairy-modal-image img {
     max-height: 200px;
   }
-}
+} */
