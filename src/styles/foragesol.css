@@ -533,6 +533,11 @@
       touch-action: pan-y;
       -webkit-overflow-scrolling: touch;
     }
+  
+  .forage-full-width {
+    margin-left: 0;
+    width: 100%;
+  }
 
   .forage-hero-section {
     padding: 3rem 1rem;
@@ -697,13 +702,24 @@
   }
 
   /* Modal Mobile */
+
+  .forage-modal-overlay {
+    padding: 1rem;
+    padding-top: 80px; /* Smaller navbar on mobile */
+  }
+  
+  .forage-modal-content {
+    max-height: calc(100vh - 100px);
+    margin-top: 0;
+  }
+
   .forage-modal-overlay {
     padding: 1rem;
   }
 
   .forage-modal-content {
     border-radius: 12px;
-    max-height: 95vh;
+    max-height: calc(100vh - 100px);
   }
 
   .forage-modal-close {
@@ -720,12 +736,12 @@
   }
 
   .forage-modal-image img {
-    height: 200px;
+    height: 250px;
     border-radius: 12px 12px 0 0;
   }
 
   .forage-modal-info {
-    padding: 1.25rem;
+    padding: 1.5rem;
   }
 
   .forage-modal-category {
@@ -907,16 +923,16 @@
   }
 }
 
-/* Ensure full width sections work properly on mobile */
+/* Ensure full width sections work properly on mobile
 @media (max-width: 768px) {
   .forage-full-width {
     margin-left: 0;
     width: 100%;
   }
-}
+} */
 
 /* For screens with limited height */
-@media (max-height: 700px) {
+/* @media (max-height: 700px) {
   .forage-modal-content {
     max-height: calc(100vh - 100px);
   }
@@ -928,14 +944,14 @@
   .forage-modal-info {
     padding: 1.5rem;
   }
-}
+} */
 
 /* Mobile adjustments */
-@media (max-width: 768px) {
-  .forage-modal-overlay {
+/* @media (max-width: 768px) { */
+  /* .forage-modal-overlay {
     padding: 1rem;
     padding-top: 80px; /* Smaller navbar on mobile */
-  }
+  /* }
   
   .forage-modal-content {
     max-height: calc(100vh - 100px);
