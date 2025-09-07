@@ -20,8 +20,8 @@
 
 .dairy-full-width {
   position: relative;
-  width: 100%;
-  margin-left: 0;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
   left: 0;
 }
 
@@ -505,16 +505,33 @@
   flex: 1;
 }
 
-/* Additional mobile scrolling fixes */
+/* Additional mobile scrolling and touch fixes */
 @media (max-width: 768px) {
   /* Prevent horizontal scroll and improve touch */
   html {
     overflow-x: hidden;
+    -webkit-text-size-adjust: 100%;
   }
   
   body {
     overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
+    touch-action: manipulation;
+  }
+  
+  /* Fix all potential scroll-blocking elements */
+  .dairy-hero-section,
+  .dairy-features-section,
+  .dairy-products-section,
+  .dairy-cta-section {
+    touch-action: pan-y;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  /* Prevent iOS bounce scroll issues */
+  .dairy-container {
+    position: relative;
+    touch-action: pan-y;
   }
   
   /* Fix modal positioning issues */
@@ -531,9 +548,15 @@
 
 /* Enhanced Mobile Responsive Styles */
 @media (max-width: 768px) {
-  /* Hero Section Mobile */
+  /* Override previous mobile styles */
   .dairy-hero-section {
-    padding: 3rem 1rem;
+    padding: 3rem 0 !important; /* Remove horizontal padding completely */
+  }
+  
+  /* Force override for content padding */
+  .dairy-hero-content {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
   }
 
   .dairy-hero-badge {
@@ -907,34 +930,53 @@
 
 /* Enhanced mobile fixes for white space and scrolling issues */
 @media (max-width: 768px) {
-  /* Fix full width sections to prevent horizontal overflow */
+  /* Fix full width sections - maintain full width but prevent overflow */
   .dairy-full-width {
     margin-left: 0;
-    width: 100%;
+    width: 100vw;
     left: 0;
     position: relative;
+    overflow-x: hidden;
+    /* Force full width on mobile without horizontal scroll */
+    max-width: 100vw;
+    box-sizing: border-box;
+  }
+  
+  /* Remove all side padding on mobile for true edge-to-edge */
+  .dairy-hero-section {
+    padding-left: 0;
+    padding-right: 0;
+    box-sizing: border-box;
+  }
+  
+  .dairy-features-section,
+  .dairy-products-section,
+  .dairy-cta-section {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  /* Content containers with minimal padding */
+  .dairy-hero-content {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    max-width: none;
+    margin: 0;
+  }
+  
+  .dairy-features-container,
+  .dairy-products-container,
+  .dairy-cta-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    max-width: none;
+    margin: 0;
   }
   
   /* Improve touch scrolling */
   .dairy-container {
     -webkit-overflow-scrolling: touch;
     overflow-x: hidden;
-  }
-  
-  /* Ensure hero section allows natural scrolling */
-  .dairy-hero-section {
-    touch-action: pan-y;
-    overflow-x: hidden;
-  }
-  
-  /* Fix container padding to prevent horizontal issues */
-  .dairy-hero-content,
-  .dairy-features-container,
-  .dairy-products-container,
-  .dairy-cta-container {
-    padding-left: 1rem;
-    padding-right: 1rem;
-    max-width: calc(100% - 2rem);
   }
 }
 
