@@ -777,6 +777,18 @@
     line-height: 1.4;
     height: 1.4em;
   }
+  
+  /* For card features on mobile */
+  .feeding-feature-item {
+    gap: 0.5rem;
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+  
+  .feeding-feature-bullet {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
 
   /* Disable hover effects on mobile touch devices */
   @media (hover: none) {
@@ -803,15 +815,6 @@
 
 /* Small Mobile Devices */
 @media (max-width: 480px) {
-  body {
-    overflow-x: hidden !important;
-  }
-  
-  .feeding-container {
-    width: 100vw !important;
-    overflow-x: hidden !important;
-  }
-
   .feeding-hero-title {
     font-size: 1.75rem;
   }
@@ -920,5 +923,31 @@
 
   .feeding-modal-content {
     -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Fix for iOS Safari */
+@supports (-webkit-touch-callout: none) {
+  .feeding-modal-overlay {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .feeding-modal-content {
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* For screens with limited height */
+@media (max-height: 700px) {
+  .feeding-modal-content {
+    max-height: calc(100vh - 100px);
+  }
+  
+  .feeding-modal-image img {
+    max-height: 250px;
+  }
+  
+  .feeding-modal-info {
+    padding: 1.5rem;
   }
 }
