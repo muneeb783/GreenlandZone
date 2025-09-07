@@ -5,6 +5,7 @@
   color: #1f2937;
   background-color: #ffffff;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 /* Hero Section */
@@ -14,12 +15,13 @@
   color: white;
   padding: 5rem 2rem;
   overflow: hidden;
+  touch-action: pan-y;
 }
 
 .dairy-full-width {
   position: relative;
-  width: 100vw;
-  margin-left: calc(-50vw + 50%);
+  width: 100%;
+  margin-left: 0;
   left: 0;
 }
 
@@ -503,6 +505,30 @@
   flex: 1;
 }
 
+/* Additional mobile scrolling fixes */
+@media (max-width: 768px) {
+  /* Prevent horizontal scroll and improve touch */
+  html {
+    overflow-x: hidden;
+  }
+  
+  body {
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  /* Fix modal positioning issues */
+  .dairy-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+  }
+}
+
 /* Enhanced Mobile Responsive Styles */
 @media (max-width: 768px) {
   /* Hero Section Mobile */
@@ -879,11 +905,36 @@
   }
 }
 
-/* Ensure full width sections work properly on mobile */
+/* Enhanced mobile fixes for white space and scrolling issues */
 @media (max-width: 768px) {
+  /* Fix full width sections to prevent horizontal overflow */
   .dairy-full-width {
     margin-left: 0;
     width: 100%;
+    left: 0;
+    position: relative;
+  }
+  
+  /* Improve touch scrolling */
+  .dairy-container {
+    -webkit-overflow-scrolling: touch;
+    overflow-x: hidden;
+  }
+  
+  /* Ensure hero section allows natural scrolling */
+  .dairy-hero-section {
+    touch-action: pan-y;
+    overflow-x: hidden;
+  }
+  
+  /* Fix container padding to prevent horizontal issues */
+  .dairy-hero-content,
+  .dairy-features-container,
+  .dairy-products-container,
+  .dairy-cta-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    max-width: calc(100% - 2rem);
   }
 }
 
