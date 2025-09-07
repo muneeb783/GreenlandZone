@@ -5,6 +5,8 @@
   color: #1f2937;
   background-color: #ffffff;
   min-height: 100vh;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-y;
 }
 
 /* Hero Section */
@@ -14,6 +16,7 @@
   color: white;
   padding: 5rem 2rem;
   overflow: hidden;
+  touch-action: pan-y;
 }
 
 .forage-full-width {
@@ -288,7 +291,6 @@
   margin-bottom: 0.5rem;
   color: #4b5563;
   font-size: 0.875rem;
-  text-align: left;
 }
 
 .forage-feature-bullet {
@@ -412,6 +414,7 @@
 .forage-modal-close:hover {
   background: #dc2626;
   transform: scale(1.1);
+
 }
 
 .forage-modal-grid {
@@ -467,7 +470,6 @@
   color: #1f2937;
 }
 
-/* Optimize features list layout */
 .forage-modal-features {
   list-style: none;
   margin-bottom: 0;
@@ -495,43 +497,441 @@
   height: 1.4em; /* Match line height to align with first line of text */
 }
 
-/* Ensure text is left-aligned and wraps properly */
+.forage-modal-actions {
+  display: none;
+}
+
 .forage-modal-features li span:not(.forage-feature-icon) {
   text-align: left;
   flex: 1;
 }
 
-
-/* Hide the action buttons */
-.forage-modal-actions {
-  display: none;
-}
-
-
-
-/* Responsive */
+/* Enhanced Mobile Responsive Styles */
 @media (max-width: 768px) {
+  /* Hero Section Mobile */
+
+     html {
+      overflow-x: hidden;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      overflow-x: hidden;
+      -webkit-overflow-scrolling: touch;
+      touch-action: manipulation;
+    }
+
+    .forage-container {
+      position: relative;
+      touch-action: pan-y;
+    }
+
+    .forage-hero-section,
+    .forage-features-section,
+    .forage-products-section,
+    .forage-cta-section {
+      touch-action: pan-y;
+      -webkit-overflow-scrolling: touch;
+    }
+
+  .forage-hero-section {
+    padding: 3rem 1rem;
+  }
+
+  .forage-hero-badge {
+    font-size: 0.75rem;
+    padding: 0.4rem 1rem;
+    margin-bottom: 1.5rem;
+  }
+
   .forage-hero-title {
-    font-size: 2.5rem;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .forage-hero-accent {
+    display: inline;
+    margin-left: 0.25rem;
+  }
+
+  .forage-hero-description {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    padding: 0 1rem;
   }
 
   .forage-hero-stats {
-    gap: 2rem;
+    gap: 1.5rem;
   }
 
-  .forage-modal-grid {
+  .forage-stat-item {
+    flex: 1;
+    min-width: 80px;
+  }
+
+  .forage-stat-icon {
+    font-size: 1.75rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .forage-stat-number {
+    font-size: 1.5rem;
+  }
+
+  .forage-stat-label {
+    font-size: 0.75rem;
+  }
+
+  /* Features Section Mobile */
+  .forage-features-section {
+    padding: 3rem 1rem;
+  }
+
+  .forage-features-title {
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+  }
+
+  .forage-features-grid {
     grid-template-columns: 1fr;
+    gap: 1rem;
   }
 
-  .forage-modal-image img {
-    border-radius: 16px 16px 0 0;
-    height: 250px;
+  .forage-feature-card {
+    padding: 1.5rem;
+  }
+
+  .forage-feature-icon {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .forage-feature-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .forage-feature-card p {
+    font-size: 0.9rem;
+  }
+
+  /* Products Section Mobile */
+  .forage-products-section {
+    padding: 3rem 1rem;
+  }
+
+  .forage-section-title {
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
   }
 
   .forage-products-grid {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 
+  .forage-product-card {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  }
+
+  .forage-product-category {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.5rem;
+    top: 0.75rem;
+    right: 0.75rem;
+  }
+
+  .forage-product-image-container {
+    height: 180px;
+  }
+
+  .forage-product-content {
+    padding: 1.25rem;
+  }
+
+  .forage-product-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .forage-product-description {
+    font-size: 0.875rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .forage-feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    color: #4b5563;
+    font-size: 0.875rem;
+    text-align: left;
+  }
+
+  /* CTA Section Mobile */
+  .forage-cta-section {
+    padding: 3rem 1rem;
+  }
+
+  .forage-cta-title {
+    font-size: 1.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .forage-cta-description {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .forage-cta-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .forage-btn-primary, 
+  .forage-btn-secondary {
+    padding: 0.875rem 1.5rem;
+    font-size: 0.95rem;
+    width: 100%;
+  }
+
+  /* Modal Mobile */
+  .forage-modal-overlay {
+    padding: 1rem;
+  }
+
+  .forage-modal-content {
+    border-radius: 12px;
+    max-height: 95vh;
+  }
+
+  .forage-modal-close {
+    width: 35px;
+    height: 35px;
+    font-size: 1.25rem;
+    top: 0.75rem;
+    right: 0.75rem;
+  }
+
+  .forage-modal-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .forage-modal-image img {
+    height: 200px;
+    border-radius: 12px 12px 0 0;
+  }
+
+  .forage-modal-info {
+    padding: 1.25rem;
+  }
+
+  .forage-modal-category {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .forage-modal-title {
+    font-size: 1.5rem;
+  }
+
+  .forage-modal-description {
+    font-size: 0.875rem;
+  }
+
+  .forage-modal-features-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .forage-modal-features li {
+    gap: 0.6rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+
+  .forage-modal-actions {
+    flex-direction: column;
+  }
+
+  .forage-modal-actions button {
+    width: 100%;
+  }
+
+  .forage-feature-icon {
+    font-size: 1rem;
+    line-height: 1.4;
+    height: 1.4em;
+  }
+  
+  /* For card features on mobile */
+  .forage-feature-item {
+    gap: 0.5rem;
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+  
+  .forage-feature-bullet {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  /* Disable hover effects on mobile touch devices */
+  @media (hover: none) {
+    .forage-product-card:hover {
+      transform: none;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .forage-product-card:hover .forage-product-image {
+      transform: none;
+    }
+
+    .forage-product-overlay {
+      opacity: 1;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    .forage-feature-card:hover {
+      transform: none;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+  }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 480px) {
+  .forage-hero-title {
+    font-size: 1.75rem;
+  }
+
+  .forage-hero-description {
+    font-size: 0.9rem;
+  }
+
+  .forage-stat-number {
+    font-size: 1.25rem;
+  }
+
+  .forage-features-title,
+  .forage-section-title,
+  .forage-cta-title {
+    font-size: 1.5rem;
+  }
+
+  .forage-feature-card {
+    padding: 1.25rem;
+  }
+
+  .forage-product-content {
+    padding: 1rem;
+  }
+
+  .forage-btn-primary,
+  .forage-btn-secondary {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Tablet Responsive */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .forage-hero-title {
+    font-size: 3rem;
+  }
+
+  .forage-products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .forage-features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .forage-modal-grid {
+    gap: 1.5rem;
+  }
+
+  .forage-modal-image img {
+    height: 350px;
+  }
+}
+
+/* Landscape Mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+  .forage-hero-section {
+    padding: 2rem 1rem;
+  }
+
+  .forage-hero-title {
+    font-size: 1.75rem;
+  }
+
+  .forage-hero-description {
+    margin-bottom: 1.5rem;
+  }
+
+  .forage-hero-stats {
+    margin-top: 1rem;
+  }
+
+  .forage-stat-icon {
+    font-size: 1.5rem;
+  }
+
+  .forage-stat-number {
+    font-size: 1.25rem;
+  }
+
+  .forage-modal-content {
+    max-height: 90vh;
+  }
+
+  .forage-modal-image img {
+    height: 150px;
+  }
+}
+
+/* Fix for iOS Safari */
+@supports (-webkit-touch-callout: none) {
+  .forage-modal-overlay {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .forage-modal-content {
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Ensure full width sections work properly on mobile */
+@media (max-width: 768px) {
+  .forage-full-width {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+/* For screens with limited height */
+@media (max-height: 700px) {
+  .forage-modal-content {
+    max-height: calc(100vh - 100px);
+  }
+  
+  .forage-modal-image img {
+    max-height: 250px;
+  }
+  
+  .forage-modal-info {
+    padding: 1.5rem;
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
   .forage-modal-overlay {
     padding: 1rem;
     padding-top: 80px; /* Smaller navbar on mobile */
@@ -544,36 +944,5 @@
   
   .forage-modal-image img {
     max-height: 200px;
-  }
-
-  .dairy-modal-info {
-    padding: 1.25rem;
-  }
-  
-  .dairy-modal-title {
-    font-size: 1.5rem;
-  }
-  
-  .dairy-modal-description {
-    font-size: 0.875rem;
-  }
-  
-  .dairy-modal-features li {
-    font-size: 0.85rem;
-  }
-}
-
-/* For screens with limited height */
-@media (max-height: 700px) {
-  .dairy-modal-content {
-    max-height: calc(100vh - 100px);
-  }
-  
-  .dairy-modal-image img {
-    max-height: 250px;
-  }
-  
-  .dairy-modal-info {
-    padding: 1.5rem;
   }
 }
