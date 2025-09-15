@@ -61,7 +61,7 @@ const Milking = () => {
       category: "Mobile"
     },
     {
-      id: 4,
+      id: 5,
       name: "Herringbone Milking Parlor",
       description: "Efficient parlor design with management system",
       features: [

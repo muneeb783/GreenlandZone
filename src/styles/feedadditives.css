@@ -1,3 +1,7 @@
+body{
+  overflow-x: hidden;
+}
+
 .feedadd-container {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   color: #1f2937;
@@ -278,16 +282,6 @@
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
-  /* Fix full-width sections on mobile */
-  .feedadd-full-width {
-    margin-left: 0 !important;
-    width: 100% !important;
-  }
-  
-  .feedadd-container {
-    overflow-x: hidden;
-  }
-  
   /* Hero Mobile */
   .feedadd-hero-section {
     padding: 3rem 1rem;

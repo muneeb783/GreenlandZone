@@ -1,5 +1,7 @@
 /* DairyParts.css - All classes prefixed with 'feeding-' */
-
+body {
+  overflow-x: hidden;
+}
 .feeding-container {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   color: #1f2937;
@@ -509,31 +511,6 @@
 /* Enhanced Mobile Responsive Styles */
 @media (max-width: 768px) {
   /* Hero Section Mobile */
-
-     html {
-      overflow-x: hidden;
-      -webkit-text-size-adjust: 100%;
-    }
-
-    body {
-      overflow-x: hidden;
-      -webkit-overflow-scrolling: touch;
-      touch-action: manipulation;
-    }
-
-    .feeding-container {
-      position: relative;
-      touch-action: pan-y;
-    }
-
-    .feeding-hero-section,
-    .feeding-features-section,
-    .feeding-products-section,
-    .feeding-cta-section {
-      touch-action: pan-y;
-      -webkit-overflow-scrolling: touch;
-    }
-
   .feeding-hero-section {
     padding: 3rem 1rem;
   }
@@ -893,25 +870,6 @@
 
   .feeding-modal-image img {
     height: 150px;
-  }
-}
-
-/* Fix for iOS Safari */
-@supports (-webkit-touch-callout: none) {
-  .feeding-modal-overlay {
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .feeding-modal-content {
-    -webkit-overflow-scrolling: touch;
-  }
-}
-
-/* Ensure full width sections work properly on mobile */
-@media (max-width: 768px) {
-  .feeding-full-width {
-    margin-left: 0;
-    width: 100%;
   }
 }
 

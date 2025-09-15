@@ -1,3 +1,7 @@
+body {
+  overflow-x: hidden; /* <-- Add this line */
+}
+
 .hygiene-container {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   color: #1f2937;
@@ -517,16 +521,6 @@
 
 /* Enhanced Mobile Responsive Styles */
 @media (max-width: 768px) {
-  /* Fix full-width sections on mobile */
-  .hygiene-full-width {
-    margin-left: 0 !important;
-    width: 100% !important;
-  }
-  
-  .hygiene-container {
-    overflow-x: hidden;
-  }
-
   .hygiene-hero-section {
     padding: 3rem 1rem;
   }
@@ -782,15 +776,6 @@
 
 /* Small Mobile Devices */
 @media (max-width: 480px) {
-  body {
-    overflow-x: hidden !important;
-  }
-  
-  .hygiene-container {
-    width: 100vw !important;
-    overflow-x: hidden !important;
-  }
-
   .hygiene-hero-title {
     font-size: 1.75rem;
   }
@@ -888,16 +873,5 @@
 
   .hygiene-modal-image img {
     height: 150px;
-  }
-}
-
-/* iOS Safari Fixes */
-@supports (-webkit-touch-callout: none) {
-  .hygiene-modal-overlay {
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .hygiene-modal-content {
-    -webkit-overflow-scrolling: touch;
   }
 }

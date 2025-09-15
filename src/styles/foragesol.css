@@ -1,4 +1,7 @@
 /* ForageSol.css - All classes prefixed with 'forage-' */
+body {
+  overflow-x: hidden; /* <-- Add this line */
+}
 
 .forage-container {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -508,37 +511,6 @@
 
 /* Enhanced Mobile Responsive Styles */
 @media (max-width: 768px) {
-  /* Hero Section Mobile */
-
-     html {
-      overflow-x: hidden;
-      -webkit-text-size-adjust: 100%;
-    }
-
-    body {
-      overflow-x: hidden;
-      -webkit-overflow-scrolling: touch;
-      touch-action: manipulation;
-    }
-
-    .forage-container {
-      position: relative;
-      touch-action: pan-y;
-    }
-
-    .forage-hero-section,
-    .forage-features-section,
-    .forage-products-section,
-    .forage-cta-section {
-      touch-action: pan-y;
-      -webkit-overflow-scrolling: touch;
-    }
-  
-  .forage-full-width {
-    margin-left: 0;
-    width: 100%;
-  }
-
   .forage-hero-section {
     padding: 3rem 1rem;
   }
@@ -912,7 +884,7 @@
   }
 }
 
-/* Fix for iOS Safari */
+/* Fix for iOS Safari
 @supports (-webkit-touch-callout: none) {
   .forage-modal-overlay {
     -webkit-overflow-scrolling: touch;
@@ -921,7 +893,7 @@
   .forage-modal-content {
     -webkit-overflow-scrolling: touch;
   }
-}
+} */
 
 /* Ensure full width sections work properly on mobile
 @media (max-width: 768px) {

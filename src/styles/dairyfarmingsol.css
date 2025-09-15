@@ -1,4 +1,7 @@
 /* DairyFarmingSol.css - All classes prefixed with 'dairy-' */
+body {
+  overflow-x: hidden; /* <-- Add this line */
+}
 
 .dairy-container {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -21,9 +24,9 @@
 
 .dairy-full-width {
   position: relative;
-  width: 100vw;
   margin-left: calc(-50vw + 50%);
   left: 0;
+  width: 100vw;
 }
 
 .dairy-hero-overlay {
@@ -705,7 +708,6 @@
   .dairy-modal-content {
     border-radius: 12px;
     max-height: calc(100vh - 100px);
-    margin-top: 0;
   }
 
   .dairy-modal-close {
