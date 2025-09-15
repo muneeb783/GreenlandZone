@@ -24,9 +24,9 @@ body {
 
 .dairy-full-width {
   position: relative;
-  margin-left: calc(-50vw + 50%);
-  left: 0;
   width: 100vw;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .dairy-hero-overlay {
