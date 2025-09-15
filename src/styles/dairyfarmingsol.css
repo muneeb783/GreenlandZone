@@ -512,18 +512,6 @@ body {
 /* Enhanced Mobile Responsive Styles */
 @media (max-width: 768px) {
   /* Hero Section Mobile */
-
-     html {
-      overflow-x: hidden;
-      -webkit-text-size-adjust: 100%;
-    }
-
-    body {
-      overflow-x: hidden;
-      -webkit-overflow-scrolling: touch;
-      touch-action: manipulation;
-    }
-
     .dairy-container {
       position: relative;
       touch-action: pan-y;
@@ -911,7 +899,7 @@ body {
   }
 }
 
-/* For screens with limited height */
+/* For screens with limited height
 @media (max-height: 700px) {
   .dairy-modal-content {
     max-height: calc(100vh - 100px);
@@ -924,4 +912,4 @@ body {
   .dairy-modal-info {
     padding: 1.5rem;
   }
-}
+} */
