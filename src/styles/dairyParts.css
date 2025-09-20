@@ -24,7 +24,6 @@ body {
 .feeding-full-width {
   position: relative;
   width: 100vw;
-  margin-left: auto;
   left: 0;
 }
 
