@@ -21,7 +21,7 @@ body{
 .feedadd-full-width {
   position: relative;
   width: 100vw;
-  margin-left: calc(-50vw + 50%);
+  transform: translateX(-50%);
   left: 0;
 }
 
@@ -282,6 +282,13 @@ body{
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
+
+  .feedadd-full-width{
+    width: auto;
+    left: auto;
+    transform: none;
+  }
+  
   /* Hero Mobile */
   .feedadd-hero-section {
     padding: 3rem 1rem;

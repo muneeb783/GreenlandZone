@@ -21,7 +21,7 @@ body {
 .hygiene-full-width {
   position: relative;
   width: 100vw;
-  margin-left: calc(-50vw + 50%);
+  transform: translateX(-50%);
   left: 0;
 }
 
@@ -521,6 +521,13 @@ body {
 
 /* Enhanced Mobile Responsive Styles */
 @media (max-width: 768px) {
+
+  .hygiene-full-width {
+    width: auto;
+    left: auto;
+    transform: none;
+  }
+
   .hygiene-hero-section {
     padding: 3rem 1rem;
   }

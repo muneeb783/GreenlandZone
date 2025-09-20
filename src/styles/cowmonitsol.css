@@ -33,7 +33,7 @@
   .hero-full-width {
     position: relative;
     width: 100vw;
-    margin-left: calc(-50vw + 50%);
+    transform: translateX(-50%);
     left: 0;
   }
 
@@ -515,6 +515,11 @@
 
   /* Responsive */
   @media (max-width: 768px) {
+    .hero-full-width{
+      width: auto;
+      left: auto;
+      transform: none;
+    }
     .hero-title {
       font-size: 1.75rem;
     }

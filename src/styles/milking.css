@@ -22,7 +22,7 @@ body {
 .milking-full-width {
   position: relative;
   width: 100vw;
-  margin-left: calc(-50vw + 50%);
+  transform: translateX(-50%);
   left: 0;
 }
 
@@ -513,6 +513,13 @@ body {
 
 /* Responsive */
 @media (max-width: 768px) {
+
+  .milking-full-width {
+    /* This resets the class to behave normally on mobile */
+    width: auto;
+    left: auto;
+    transform: none;
+  }
   .milking-hero-title {
     font-size: 2.5rem;
   }
