@@ -21,8 +21,8 @@ body {
 .hygiene-full-width {
   position: relative;
   width: 100vw;
-  margin-left: calc(-50vw + 50%);
-  left: 0;
+  transform: translateX(-50%);
+  left: 50%;
 }
 
 .hygiene-hero-overlay {
