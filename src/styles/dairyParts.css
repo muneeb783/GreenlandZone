@@ -24,7 +24,7 @@ body {
 .feeding-full-width {
   position: relative;
   width: 100vw;
-  transform: translateX(-50%);
+  margin-left: calc(-50vw + 50%);
   left: 0;
 }
 
