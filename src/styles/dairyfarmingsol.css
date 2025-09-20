@@ -511,6 +511,14 @@ body {
 
 /* Enhanced Mobile Responsive Styles */
 @media (max-width: 768px) {
+
+  .dairy-full-width {
+    /* This resets the class to behave normally on mobile */
+    width: auto;
+    left: auto;
+    transform: none;
+  }
+  
   /* Hero Section Mobile */
     .dairy-container {
       position: relative;
