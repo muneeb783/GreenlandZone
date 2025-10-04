@@ -22,12 +22,12 @@ body {
   touch-action: pan-y;
 }
 
-.dairy-full-width {
+/* .dairy-full-width {
   position: relative;
   width: 100vw;
   left: 50%;
   transform: translateX(-50%);
-}
+} */
 
 .dairy-hero-overlay {
   position: absolute;
@@ -906,18 +906,3 @@ body {
     -webkit-overflow-scrolling: touch;
   }
 }
-
-/* For screens with limited height
-@media (max-height: 700px) {
-  .dairy-modal-content {
-    max-height: calc(100vh - 100px);
-  }
-  
-  .dairy-modal-image img {
-    max-height: 250px;
-  }
-  
-  .dairy-modal-info {
-    padding: 1.5rem;
-  }
-} */
