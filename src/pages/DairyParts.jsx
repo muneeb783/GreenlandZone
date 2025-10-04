@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import '../styles/common-styles.css';
 import '../styles/dairyParts.css'
 import feeder from '../assets/feeder.JPG';
 import brush from '../assets/cleaning_brush.JPG';

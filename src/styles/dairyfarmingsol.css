@@ -1,33 +1,59 @@
-/* DairyFarmingSol.css - All classes prefixed with 'dairy-' */
-body {
-  overflow-x: hidden; /* <-- Add this line */
+/* ============================================================================
+   DAIRY FARMING SOLUTIONS - Optimized Stylesheet
+   ============================================================================
+
+   This file extends common-styles.css with page-specific customizations.
+   Import common-styles.css BEFORE this file in your component.
+
+   Usage in React component:
+   import '../styles/common-styles.css';
+   import '../styles/dairyfarmingsol.css';
+
+   ============================================================================ */
+
+/* ============================================================================
+   CLASS MAPPING & BACKWARDS COMPATIBILITY
+   ============================================================================
+
+   The legacy .dairy-* classes now map to the new common classes.
+   This ensures existing React components continue to work without changes.
+   ============================================================================ */
+
+/* Container Mapping */
+.dairy-container {
+  /* Inherits from body overflow-x: hidden in common-styles.css */
 }
 
+/* Apply common page-container class via dairy-container */
 .dairy-container {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  color: #1f2937;
-  background-color: #ffffff;
+  font-family: var(--font-family-base);
+  color: var(--color-dark);
+  background-color: var(--color-white);
   min-height: 100vh;
   -webkit-overflow-scrolling: touch;
   touch-action: pan-y;
 }
 
-/* Hero Section */
-.dairy-hero-section {
-  position: relative;
-  background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
-  color: white;
-  padding: 5rem 2rem;
-  overflow: hidden;
-  touch-action: pan-y;
-}
+/* ============================================================================
+   HERO SECTION - Dairy Specific
+   ============================================================================ */
 
-/* .dairy-full-width {
+/* Full-width utility */
+.dairy-full-width {
   position: relative;
   width: 100vw;
   left: 50%;
   transform: translateX(-50%);
-} */
+}
+
+.dairy-hero-section {
+  position: relative;
+  background: linear-gradient(135deg, var(--color-dark) 0%, var(--color-dark-light) 100%);
+  color: var(--color-white);
+  padding: var(--spacing-5xl) var(--spacing-2xl);
+  overflow: hidden;
+  touch-action: pan-y;
+}
 
 .dairy-hero-overlay {
   position: absolute;
@@ -35,56 +61,56 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: 
+  background-image:
     radial-gradient(circle at 20% 80%, rgba(22, 163, 74, 0.1) 0%, transparent 50%),
     radial-gradient(circle at 80% 20%, rgba(59, 130, 246, 0.05) 0%, transparent 50%);
 }
 
 .dairy-hero-content {
   position: relative;
-  z-index: 1;
-  max-width: 1200px;
+  z-index: var(--z-base);
+  max-width: var(--container-max-width);
   margin: 0 auto;
   text-align: center;
 }
 
 .dairy-hero-badge {
   display: inline-block;
-  background: rgba(22, 163, 74, 0.2);
-  border: 1px solid rgba(22, 163, 74, 0.3);
-  color: #86efac;
-  padding: 0.5rem 1.5rem;
-  border-radius: 2rem;
-  font-size: 0.875rem;
-  font-weight: 600;
+  background: var(--color-primary-bg);
+  border: 1px solid var(--color-primary-border);
+  color: var(--color-primary-lightest);
+  padding: var(--spacing-sm) var(--spacing-xl);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
   letter-spacing: 0.05em;
-  margin-bottom: 2rem;
+  margin-bottom: var(--spacing-2xl);
 }
 
 .dairy-hero-title {
-  font-size: 3.5rem;
-  font-weight: 800;
-  line-height: 1.2;
-  margin-bottom: 1.5rem;
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-extrabold);
+  line-height: var(--line-height-tight);
+  margin-bottom: var(--spacing-xl);
 }
 
 .dairy-hero-accent {
   display: block;
-  color: #16a34a;
+  color: var(--color-primary);
 }
 
 .dairy-hero-description {
-  font-size: 1.25rem;
-  color: #e5e7eb;
+  font-size: var(--font-size-lg);
+  color: var(--color-gray-100);
   max-width: 600px;
-  margin: 0 auto 3rem;
-  line-height: 1.6;
+  margin: 0 auto var(--spacing-3xl);
+  line-height: var(--line-height-relaxed);
 }
 
 .dairy-hero-stats {
   display: flex;
   justify-content: center;
-  gap: 4rem;
+  gap: var(--spacing-4xl);
   flex-wrap: wrap;
 }
 
@@ -94,127 +120,186 @@ body {
 
 .dairy-stat-icon {
   font-size: 2.5rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: var(--spacing-sm);
 }
 
 .dairy-stat-number {
   font-size: 2.5rem;
-  font-weight: 700;
-  color: #16a34a;
-  margin-bottom: 0.25rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-xs);
 }
 
 .dairy-stat-label {
-  font-size: 0.875rem;
-  color: #9ca3af;
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-400);
 }
 
-/* Features Section */
+/* ============================================================================
+   FEATURES SECTION - Dairy Specific
+   ============================================================================ */
+
 .dairy-features-section {
-  padding: 5rem 2rem;
-  background: #f8f9fa;
+  padding: var(--spacing-5xl) var(--spacing-2xl);
+  background: var(--color-gray-50);
+  touch-action: pan-y;
+  -webkit-overflow-scrolling: touch;
 }
 
 .dairy-features-container {
-  max-width: 1200px;
+  max-width: var(--container-max-width);
   margin: 0 auto;
 }
 
 .dairy-features-title {
-  font-size: 2.5rem;
-  font-weight: 700;
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
   text-align: center;
-  margin-bottom: 3rem;
-  color: #1f2937;
+  margin-bottom: var(--spacing-3xl);
+  color: var(--color-dark);
 }
 
 .dairy-features-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
+  gap: var(--spacing-2xl);
 }
 
 .dairy-feature-card {
-  background: white;
-  padding: 2rem;
-  border-radius: 12px;
+  background: var(--color-white);
+  padding: var(--spacing-2xl);
+  border-radius: var(--radius-md);
   text-align: center;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-base);
+  border: 1px solid transparent;
 }
 
 .dairy-feature-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--color-primary);
+}
+
+.dairy-feature-icon-wrapper {
+  width: 64px;
+  height: 64px;
+  background: rgba(22, 163, 74, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--spacing-xl);
+}
+
+.dairy-feature-icon-svg {
+  color: var(--color-primary);
 }
 
 .dairy-feature-icon {
   font-size: 3rem;
-  margin-bottom: 1rem;
+  margin-bottom: var(--spacing-lg);
 }
 
 .dairy-feature-card h3 {
-  font-size: 1.25rem;
-  margin-bottom: 0.75rem;
-  color: #1f2937;
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--spacing-md);
+  color: var(--color-dark);
+  font-weight: var(--font-weight-bold);
 }
 
 .dairy-feature-card p {
-  color: #6b7280;
-  line-height: 1.6;
+  color: var(--color-gray-500);
+  line-height: var(--line-height-relaxed);
 }
 
-/* Products Section */
+/* ============================================================================
+   PRODUCTS SECTION - Dairy Specific
+   ============================================================================ */
+
 .dairy-products-section {
-  padding: 5rem 2rem;
-  background: white;
+  padding: var(--spacing-5xl) var(--spacing-2xl);
+  background: var(--color-white);
+  touch-action: pan-y;
+  -webkit-overflow-scrolling: touch;
 }
 
 .dairy-products-container {
-  max-width: 1200px;
+  max-width: var(--container-max-width);
   margin: 0 auto;
 }
 
 .dairy-section-title {
-  font-size: 2.5rem;
-  font-weight: 700;
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
   text-align: center;
-  margin-bottom: 3rem;
-  color: #1f2937;
+  margin-bottom: var(--spacing-lg);
+  color: var(--color-dark);
+}
+
+.dairy-section-subtitle {
+  font-size: var(--font-size-lg);
+  color: var(--color-gray-500);
+  text-align: center;
+  margin-bottom: var(--spacing-3xl);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .dairy-products-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 2rem;
+  gap: var(--spacing-2xl);
 }
 
 .dairy-product-card {
-  background: white;
-  border-radius: 12px;
+  background: var(--color-white);
+  border-radius: var(--radius-md);
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition-base);
   cursor: pointer;
   position: relative;
+  border: 1px solid transparent;
 }
 
 .dairy-product-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  border-color: var(--color-primary);
+}
+
+.dairy-product-category-text {
+  font-size: var(--font-size-sm);
+  color: var(--color-primary);
+  font-weight: var(--font-weight-medium);
+  margin-bottom: var(--spacing-sm);
+}
+
+.dairy-feature-bullet-icon {
+  color: var(--color-primary);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.btn-icon {
+  display: inline-block;
+  margin-left: var(--spacing-sm);
+  vertical-align: middle;
 }
 
 .dairy-product-category {
   position: absolute;
-  top: 1rem;
-  right: 1rem;
-  background: #16a34a;
-  color: white;
-  padding: 0.25rem 0.75rem;
-  border-radius: 1rem;
-  font-size: 0.75rem;
-  font-weight: 600;
-  z-index: 10;
+  top: var(--spacing-lg);
+  right: var(--spacing-lg);
+  background: var(--color-primary);
+  color: var(--color-white);
+  padding: var(--spacing-xs) var(--spacing-md);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  z-index: var(--z-dropdown);
 }
 
 .dairy-product-image-container {
@@ -227,7 +312,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.3s ease;
+  transition: var(--transition-base);
 }
 
 .dairy-product-card:hover .dairy-product-image {
@@ -242,7 +327,7 @@ body {
   align-items: center;
   justify-content: center;
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: var(--transition-fast);
 }
 
 .dairy-product-card:hover .dairy-product-overlay {
@@ -250,35 +335,35 @@ body {
 }
 
 .dairy-view-details-btn {
-  background: #16a34a;
-  color: white;
+  background: var(--color-primary);
+  color: var(--color-white);
   border: none;
-  padding: 0.75rem 1.5rem;
-  border-radius: 8px;
-  font-weight: 600;
+  padding: var(--spacing-md) var(--spacing-xl);
+  border-radius: var(--radius-sm);
+  font-weight: var(--font-weight-medium);
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: var(--transition-fast);
 }
 
 .dairy-view-details-btn:hover {
-  background: #15803d;
+  background: var(--color-primary-dark);
 }
 
 .dairy-product-content {
-  padding: 1.5rem;
+  padding: var(--spacing-xl);
 }
 
 .dairy-product-title {
-  font-size: 1.25rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-  color: #1f2937;
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-dark);
 }
 
 .dairy-product-description {
-  color: #6b7280;
-  margin-bottom: 1rem;
-  line-height: 1.5;
+  color: var(--color-gray-500);
+  margin-bottom: var(--spacing-lg);
+  line-height: var(--line-height-base);
 }
 
 .dairy-product-features {
@@ -290,84 +375,93 @@ body {
 .dairy-feature-item {
   display: flex;
   align-items: flex-start;
-  gap: 0.5rem;
-  margin-bottom: 0.5rem;
-  color: #4b5563;
-  font-size: 0.875rem;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-gray-600);
+  font-size: var(--font-size-sm);
 }
 
 .dairy-feature-bullet {
-  color: #16a34a;
+  color: var(--color-primary);
   font-weight: bold;
   flex-shrink: 0;
   line-height: 1.4;
-  font-size: 1rem;
+  font-size: var(--font-size-base);
 }
 
-/* CTA Section */
+/* ============================================================================
+   CTA SECTION - Dairy Specific
+   ============================================================================ */
+
 .dairy-cta-section {
-  background: linear-gradient(135deg, #16a34a 0%, #22c55e 100%);
-  padding: 5rem 2rem;
-  color: white;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+  padding: var(--spacing-5xl) var(--spacing-2xl);
+  color: var(--color-white);
   text-align: center;
+  touch-action: pan-y;
+  -webkit-overflow-scrolling: touch;
 }
 
 .dairy-cta-container {
-  max-width: 800px;
+  max-width: var(--container-narrow);
   margin: 0 auto;
 }
 
 .dairy-cta-title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-lg);
 }
 
 .dairy-cta-description {
-  font-size: 1.25rem;
-  margin-bottom: 2rem;
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--spacing-2xl);
   opacity: 0.9;
 }
 
 .dairy-cta-buttons {
   display: flex;
-  gap: 1rem;
+  gap: var(--spacing-lg);
   justify-content: center;
   flex-wrap: wrap;
 }
 
-.dairy-btn-primary, .dairy-btn-secondary {
-  padding: 1rem 2rem;
-  font-size: 1rem;
-  font-weight: 600;
+.dairy-btn-primary,
+.dairy-btn-secondary {
+  padding: var(--spacing-lg) var(--spacing-2xl);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
   border: none;
-  border-radius: 8px;
+  border-radius: var(--radius-sm);
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: var(--transition-base);
 }
 
 .dairy-btn-primary {
-  background: white;
-  color: #16a34a;
+  background: var(--color-white);
+  color: var(--color-primary);
 }
 
 .dairy-btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--shadow-cta);
 }
 
 .dairy-btn-secondary {
   background: transparent;
-  color: white;
-  border: 2px solid white;
+  color: var(--color-white);
+  border: 2px solid var(--color-white);
 }
 
 .dairy-btn-secondary:hover {
-  background: white;
-  color: #16a34a;
+  background: var(--color-white);
+  color: var(--color-primary);
 }
 
-/* Modal */
+/* ============================================================================
+   MODAL - Dairy Specific
+   ============================================================================ */
+
 .dairy-modal-overlay {
   position: fixed;
   top: 0;
@@ -378,17 +472,17 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 999; /* Keep below navbar's z-index (usually 1000+) */
-  padding: 2rem;
+  z-index: var(--z-modal);
+  padding: var(--spacing-2xl);
   padding-top: 100px;
 }
 
 .dairy-modal-content {
-  background: white;
-  border-radius: 16px;
-  max-width: 900px;
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  max-width: var(--container-wide);
   width: 100%;
-  max-height: calc(100vh - 120px); /* Subtract navbar height + padding */
+  max-height: calc(100vh - 120px);
   height: auto;
   overflow-y: auto;
   position: relative;
@@ -397,34 +491,33 @@ body {
 
 .dairy-modal-close {
   position: absolute;
-  top: 1rem;
-  right: 1rem;
-  background: #ef4444;
-  color: white;
+  top: var(--spacing-lg);
+  right: var(--spacing-lg);
+  background: var(--color-danger);
+  color: var(--color-white);
   border: none;
   width: 40px;
   height: 40px;
-  border-radius: 50%;
-  font-size: 1.5rem;
+  border-radius: var(--radius-circle);
+  font-size: var(--font-size-xl);
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 10;
-  transition: all 0.3s ease;
+  z-index: var(--z-dropdown);
+  transition: var(--transition-base);
 }
 
 .dairy-modal-close:hover {
-  background: #dc2626;
+  background: var(--color-danger-dark);
   transform: scale(1.1);
-
 }
 
 .dairy-modal-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  max-height: calc(100vh - 160px); /* Account for modal padding */
+  gap: var(--spacing-2xl);
+  max-height: calc(100vh - 160px);
   overflow-y: auto;
 }
 
@@ -433,44 +526,64 @@ body {
   height: 100%;
   max-height: 400px;
   object-fit: cover;
-  border-radius: 16px 0 0 16px;
+  border-radius: var(--radius-lg) 0 0 var(--radius-lg);
 }
 
 .dairy-modal-info {
-  padding: 1.5rem;
+  padding: var(--spacing-xl);
+}
+
+.dairy-modal-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+  flex-wrap: wrap;
 }
 
 .dairy-modal-category {
-  background: #dcfce7;
-  color: #16a34a;
+  background: var(--color-primary-pale);
+  color: var(--color-primary);
   display: inline-block;
-  padding: 0.2rem 0.75rem;
-  border-radius: 1rem;
-  font-size: 0.75rem;
-  font-weight: 600;
-  margin-bottom: 0.75rem;
+  padding: 0.2rem var(--spacing-md);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+}
+
+.dairy-modal-tag {
+  background: rgba(22, 163, 74, 0.1);
+  color: var(--color-primary);
+  padding: 0.25rem var(--spacing-md);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+}
+
+.dairy-modal-features-section {
+  margin-top: var(--spacing-xl);
 }
 
 .dairy-modal-title {
-  font-size: 1.75rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-  color: #1f2937;
-  line-height: 1.2;
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-dark);
+  line-height: var(--line-height-tight);
 }
 
 .dairy-modal-description {
-  color: #6b7280;
-  margin-bottom: 1rem;
-  line-height: 1.5;
+  color: var(--color-gray-500);
+  margin-bottom: var(--spacing-lg);
+  line-height: var(--line-height-base);
   font-size: 0.95rem;
 }
 
 .dairy-modal-features-title {
   font-size: 1.1rem;
-  font-weight: 600;
-  margin-bottom: 0.75rem;
-  color: #1f2937;
+  font-weight: var(--font-weight-medium);
+  margin-bottom: var(--spacing-md);
+  color: var(--color-dark);
 }
 
 .dairy-modal-features {
@@ -481,27 +594,39 @@ body {
 
 .dairy-modal-features li {
   display: flex;
-  align-items: flex-start; /* Keep flex-start for multi-line alignment */
-  gap: 0.75rem; /* Increase gap slightly for better spacing */
+  align-items: flex-start;
+  gap: var(--spacing-md);
   margin-bottom: 0.6rem;
-  color: #4b5563;
+  color: var(--color-gray-600);
   font-size: 0.9rem;
   line-height: 1.4;
 }
 
 .dairy-feature-icon {
-  color: #16a34a;
+  color: var(--color-primary);
   font-weight: bold;
   flex-shrink: 0;
-  font-size: 1.1rem; /* Make checkmark slightly larger */
-  line-height: 1.4; /* Match text line-height */
+  font-size: 1.1rem;
+  line-height: 1.4;
   display: flex;
   align-items: center;
-  height: 1.4em; /* Match line height to align with first line of text */
+  height: 1.4em;
 }
 
 .dairy-modal-actions {
-  display: none;
+  display: flex;
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-2xl);
+  padding-top: var(--spacing-xl);
+  border-top: 1px solid var(--color-gray-100);
+}
+
+.dairy-modal-cta {
+  flex: 1;
+}
+
+.dairy-modal-close-btn {
+  flex: 1;
 }
 
 .dairy-modal-features li span:not(.dairy-feature-icon) {
@@ -509,58 +634,62 @@ body {
   flex: 1;
 }
 
-/* Enhanced Mobile Responsive Styles */
+/* ============================================================================
+   RESPONSIVE DESIGN - MOBILE OPTIMIZATIONS
+   ============================================================================ */
+
 @media (max-width: 768px) {
 
+  /* CRITICAL FIX: Reset full-width on mobile to prevent scrolling issues */
   .dairy-full-width {
-    /* This resets the class to behave normally on mobile */
     width: auto;
     left: auto;
     transform: none;
   }
-  
+
+  /* Ensure smooth touch scrolling */
+  .dairy-container {
+    position: relative;
+    touch-action: pan-y;
+  }
+
+  .dairy-hero-section,
+  .dairy-features-section,
+  .dairy-products-section,
+  .dairy-cta-section {
+    touch-action: pan-y;
+    -webkit-overflow-scrolling: touch;
+  }
+
   /* Hero Section Mobile */
-    .dairy-container {
-      position: relative;
-      touch-action: pan-y;
-    }
-
-    .dairy-hero-section,
-    .dairy-features-section,
-    .dairy-products-section,
-    .dairy-cta-section {
-      touch-action: pan-y;
-      -webkit-overflow-scrolling: touch;
-    }
-
   .dairy-hero-section {
-    padding: 3rem 1rem;
+    padding: var(--spacing-3xl) var(--spacing-lg);
   }
 
   .dairy-hero-badge {
-    font-size: 0.75rem;
-    padding: 0.4rem 1rem;
-    margin-bottom: 1.5rem;
+    font-size: var(--font-size-xs);
+    padding: 0.4rem var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
   }
 
   .dairy-hero-title {
     font-size: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: var(--spacing-lg);
   }
 
   .dairy-hero-accent {
     display: inline;
-    margin-left: 0.25rem;
+    margin-left: var(--spacing-xs);
   }
 
   .dairy-hero-description {
-    font-size: 1rem;
-    margin-bottom: 2rem;
-    padding: 0 1rem;
+    font-size: var(--font-size-base);
+    margin-bottom: var(--spacing-2xl);
+    padding: 0 var(--spacing-lg);
   }
 
   .dairy-hero-stats {
-    gap: 1.5rem;
+    gap: var(--spacing-xl);
   }
 
   .dairy-stat-item {
@@ -570,7 +699,7 @@ body {
 
   .dairy-stat-icon {
     font-size: 1.75rem;
-    margin-bottom: 0.25rem;
+    margin-bottom: var(--spacing-xs);
   }
 
   .dairy-stat-number {
@@ -578,36 +707,36 @@ body {
   }
 
   .dairy-stat-label {
-    font-size: 0.75rem;
+    font-size: var(--font-size-xs);
   }
 
   /* Features Section Mobile */
   .dairy-features-section {
-    padding: 3rem 1rem;
+    padding: var(--spacing-3xl) var(--spacing-lg);
   }
 
   .dairy-features-title {
-    font-size: 1.75rem;
-    margin-bottom: 2rem;
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-2xl);
   }
 
   .dairy-features-grid {
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: var(--spacing-lg);
   }
 
   .dairy-feature-card {
-    padding: 1.5rem;
+    padding: var(--spacing-xl);
   }
 
   .dairy-feature-icon {
     font-size: 2rem;
-    margin-bottom: 0.75rem;
+    margin-bottom: var(--spacing-md);
   }
 
   .dairy-feature-card h3 {
     font-size: 1.1rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: var(--spacing-sm);
   }
 
   .dairy-feature-card p {
@@ -616,28 +745,28 @@ body {
 
   /* Products Section Mobile */
   .dairy-products-section {
-    padding: 3rem 1rem;
+    padding: var(--spacing-3xl) var(--spacing-lg);
   }
 
   .dairy-section-title {
-    font-size: 1.75rem;
-    margin-bottom: 2rem;
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-2xl);
   }
 
   .dairy-products-grid {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: var(--spacing-xl);
   }
 
   .dairy-product-card {
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    box-shadow: var(--shadow-sm);
   }
 
   .dairy-product-category {
     font-size: 0.7rem;
-    padding: 0.2rem 0.5rem;
-    top: 0.75rem;
-    right: 0.75rem;
+    padding: 0.2rem var(--spacing-sm);
+    top: var(--spacing-md);
+    right: var(--spacing-md);
   }
 
   .dairy-product-image-container {
@@ -654,33 +783,29 @@ body {
   }
 
   .dairy-product-description {
-    font-size: 0.875rem;
-    margin-bottom: 0.75rem;
+    font-size: var(--font-size-sm);
+    margin-bottom: var(--spacing-md);
   }
 
   .dairy-feature-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 0.5rem;
-    margin-bottom: 0.5rem;
-    color: #4b5563;
-    font-size: 0.875rem;
+    gap: var(--spacing-sm);
+    font-size: var(--font-size-sm);
     text-align: left;
   }
 
   /* CTA Section Mobile */
   .dairy-cta-section {
-    padding: 3rem 1rem;
+    padding: var(--spacing-3xl) var(--spacing-lg);
   }
 
   .dairy-cta-title {
-    font-size: 1.75rem;
-    margin-bottom: 0.75rem;
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-md);
   }
 
   .dairy-cta-description {
-    font-size: 1rem;
-    margin-bottom: 1.5rem;
+    font-size: var(--font-size-base);
+    margin-bottom: var(--spacing-xl);
   }
 
   .dairy-cta-buttons {
@@ -688,21 +813,21 @@ body {
     align-items: stretch;
   }
 
-  .dairy-btn-primary, 
+  .dairy-btn-primary,
   .dairy-btn-secondary {
-    padding: 0.875rem 1.5rem;
+    padding: 0.875rem var(--spacing-xl);
     font-size: 0.95rem;
     width: 100%;
   }
 
   /* Modal Mobile */
   .dairy-modal-overlay {
-    padding: 1rem;
+    padding: var(--spacing-lg);
     padding-top: 80px;
   }
 
   .dairy-modal-content {
-    border-radius: 12px;
+    border-radius: var(--radius-md);
     max-height: calc(100vh - 100px);
   }
 
@@ -710,8 +835,8 @@ body {
     width: 35px;
     height: 35px;
     font-size: 1.25rem;
-    top: 0.75rem;
-    right: 0.75rem;
+    top: var(--spacing-md);
+    right: var(--spacing-md);
   }
 
   .dairy-modal-grid {
@@ -721,7 +846,7 @@ body {
 
   .dairy-modal-image img {
     height: 200px;
-    border-radius: 12px 12px 0 0;
+    border-radius: var(--radius-md) var(--radius-md) 0 0;
   }
 
   .dairy-modal-info {
@@ -729,9 +854,9 @@ body {
   }
 
   .dairy-modal-category {
-    font-size: 0.75rem;
-    padding: 0.2rem 0.75rem;
-    margin-bottom: 0.75rem;
+    font-size: var(--font-size-xs);
+    padding: 0.2rem var(--spacing-md);
+    margin-bottom: var(--spacing-md);
   }
 
   .dairy-modal-title {
@@ -739,17 +864,17 @@ body {
   }
 
   .dairy-modal-description {
-    font-size: 0.875rem;
+    font-size: var(--font-size-sm);
   }
 
   .dairy-modal-features-title {
     font-size: 1.1rem;
-    margin-bottom: 0.75rem;
+    margin-bottom: var(--spacing-md);
   }
 
   .dairy-modal-features li {
     gap: 0.6rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: var(--spacing-sm);
     font-size: 0.85rem;
     line-height: 1.4;
   }
@@ -763,28 +888,28 @@ body {
   }
 
   .dairy-feature-icon {
-    font-size: 1rem;
+    font-size: var(--font-size-base);
     line-height: 1.4;
     height: 1.4em;
   }
-  
+
   /* For card features on mobile */
   .dairy-feature-item {
-    gap: 0.5rem;
+    gap: var(--spacing-sm);
     font-size: 0.8rem;
     line-height: 1.4;
   }
-  
+
   .dairy-feature-bullet {
     font-size: 0.9rem;
     line-height: 1.4;
   }
 
-  /* Disable hover effects on mobile touch devices */
+  /* Disable hover effects on touch devices */
   @media (hover: none) {
     .dairy-product-card:hover {
       transform: none;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      box-shadow: var(--shadow-md);
     }
 
     .dairy-product-card:hover .dairy-product-image {
@@ -798,12 +923,12 @@ body {
 
     .dairy-feature-card:hover {
       transform: none;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      box-shadow: var(--shadow-sm);
     }
   }
 }
 
-/* Small Mobile Devices */
+/* Small Mobile Devices (≤480px) */
 @media (max-width: 480px) {
   .dairy-hero-title {
     font-size: 1.75rem;
@@ -828,17 +953,17 @@ body {
   }
 
   .dairy-product-content {
-    padding: 1rem;
+    padding: var(--spacing-lg);
   }
 
   .dairy-btn-primary,
   .dairy-btn-secondary {
-    padding: 0.75rem 1.25rem;
+    padding: var(--spacing-md) 1.25rem;
     font-size: 0.9rem;
   }
 }
 
-/* Tablet Responsive */
+/* Tablet (769px - 1024px) */
 @media (min-width: 769px) and (max-width: 1024px) {
   .dairy-hero-title {
     font-size: 3rem;
@@ -853,7 +978,7 @@ body {
   }
 
   .dairy-modal-grid {
-    gap: 1.5rem;
+    gap: var(--spacing-xl);
   }
 
   .dairy-modal-image img {
@@ -864,7 +989,7 @@ body {
 /* Landscape Mobile */
 @media (max-width: 768px) and (orientation: landscape) {
   .dairy-hero-section {
-    padding: 2rem 1rem;
+    padding: var(--spacing-2xl) var(--spacing-lg);
   }
 
   .dairy-hero-title {
@@ -872,11 +997,11 @@ body {
   }
 
   .dairy-hero-description {
-    margin-bottom: 1.5rem;
+    margin-bottom: var(--spacing-xl);
   }
 
   .dairy-hero-stats {
-    margin-top: 1rem;
+    margin-top: var(--spacing-lg);
   }
 
   .dairy-stat-icon {
@@ -896,7 +1021,7 @@ body {
   }
 }
 
-/* Fix for iOS Safari */
+/* iOS Safari Fixes */
 @supports (-webkit-touch-callout: none) {
   .dairy-modal-overlay {
     -webkit-overflow-scrolling: touch;

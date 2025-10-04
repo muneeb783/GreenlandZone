@@ -1,31 +1,53 @@
-/* DairyParts.css - All classes prefixed with 'feeding-' */
-body {
-  overflow-x: hidden;
-}
+/* ============================================================================
+   DAIRY PARTS - Optimized Stylesheet
+   ============================================================================
+
+   This file extends common-styles.css with page-specific customizations.
+   Import common-styles.css BEFORE this file in your component.
+
+   Usage in React component:
+   import '../styles/common-styles.css';
+   import '../styles/dairyParts.css';
+
+   ============================================================================ */
+
+/* ============================================================================
+   CLASS MAPPING & BACKWARDS COMPATIBILITY
+   ============================================================================
+
+   The legacy .feeding-* classes now map to the new common classes.
+   This ensures existing React components continue to work without changes.
+   ============================================================================ */
+
+/* Container Mapping */
 .feeding-container {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  color: #1f2937;
-  background-color: #ffffff;
+  font-family: var(--font-family-base);
+  color: var(--color-dark);
+  background-color: var(--color-white);
   min-height: 100vh;
   -webkit-overflow-scrolling: touch;
   touch-action: pan-y;
 }
 
-/* Hero Section */
-.feeding-hero-section {
-  position: relative;
-  background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
-  color: white;
-  padding: 5rem 2rem;
-  overflow: hidden;
-  touch-action: pan-y;
-}
+/* ============================================================================
+   HERO SECTION - Feeding/Dairy Parts Specific
+   ============================================================================ */
 
+/* Full-width utility */
 .feeding-full-width {
   position: relative;
   width: 100vw;
-  transform: translateX(-50%);
   left: 50%;
+  transform: translateX(-50%);
+}
+
+.feeding-hero-section {
+  position: relative;
+  background: linear-gradient(135deg, var(--color-dark) 0%, var(--color-dark-light) 100%);
+  color: var(--color-white);
+  padding: var(--spacing-5xl) var(--spacing-2xl);
+  overflow: hidden;
+  touch-action: pan-y;
 }
 
 .feeding-hero-overlay {
@@ -34,56 +56,56 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: 
+  background-image:
     radial-gradient(circle at 20% 80%, rgba(22, 163, 74, 0.1) 0%, transparent 50%),
     radial-gradient(circle at 80% 20%, rgba(59, 130, 246, 0.05) 0%, transparent 50%);
 }
 
 .feeding-hero-content {
   position: relative;
-  z-index: 1;
-  max-width: 1200px;
+  z-index: var(--z-base);
+  max-width: var(--container-max-width);
   margin: 0 auto;
   text-align: center;
 }
 
 .feeding-hero-badge {
   display: inline-block;
-  background: rgba(22, 163, 74, 0.2);
-  border: 1px solid rgba(22, 163, 74, 0.3);
-  color: #86efac;
-  padding: 0.5rem 1.5rem;
-  border-radius: 2rem;
-  font-size: 0.875rem;
-  font-weight: 600;
+  background: var(--color-primary-bg);
+  border: 1px solid var(--color-primary-border);
+  color: var(--color-primary-lightest);
+  padding: var(--spacing-sm) var(--spacing-xl);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
   letter-spacing: 0.05em;
-  margin-bottom: 2rem;
+  margin-bottom: var(--spacing-2xl);
 }
 
 .feeding-hero-title {
-  font-size: 3.5rem;
-  font-weight: 800;
-  line-height: 1.2;
-  margin-bottom: 1.5rem;
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-extrabold);
+  line-height: var(--line-height-tight);
+  margin-bottom: var(--spacing-xl);
 }
 
 .feeding-hero-accent {
   display: block;
-  color: #16a34a;
+  color: var(--color-primary);
 }
 
 .feeding-hero-description {
-  font-size: 1.25rem;
-  color: #e5e7eb;
+  font-size: var(--font-size-lg);
+  color: var(--color-gray-100);
   max-width: 600px;
-  margin: 0 auto 3rem;
-  line-height: 1.6;
+  margin: 0 auto var(--spacing-3xl);
+  line-height: var(--line-height-relaxed);
 }
 
 .feeding-hero-stats {
   display: flex;
   justify-content: center;
-  gap: 4rem;
+  gap: var(--spacing-4xl);
   flex-wrap: wrap;
 }
 
@@ -93,127 +115,137 @@ body {
 
 .feeding-stat-icon {
   font-size: 2.5rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: var(--spacing-sm);
 }
 
 .feeding-stat-number {
   font-size: 2.5rem;
-  font-weight: 700;
-  color: #16a34a;
-  margin-bottom: 0.25rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-xs);
 }
 
 .feeding-stat-label {
-  font-size: 0.875rem;
-  color: #9ca3af;
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-400);
 }
 
-/* Features Section */
+/* ============================================================================
+   FEATURES SECTION - Feeding/Dairy Parts Specific
+   ============================================================================ */
+
 .feeding-features-section {
-  padding: 5rem 2rem;
-  background: #f8f9fa;
+  padding: var(--spacing-5xl) var(--spacing-2xl);
+  background: var(--color-gray-50);
+  touch-action: pan-y;
+  -webkit-overflow-scrolling: touch;
 }
 
 .feeding-features-container {
-  max-width: 1200px;
+  max-width: var(--container-max-width);
   margin: 0 auto;
 }
 
 .feeding-features-title {
-  font-size: 2.5rem;
-  font-weight: 700;
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
   text-align: center;
-  margin-bottom: 3rem;
-  color: #1f2937;
+  margin-bottom: var(--spacing-3xl);
+  color: var(--color-dark);
 }
 
 .feeding-features-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
+  gap: var(--spacing-2xl);
 }
 
 .feeding-feature-card {
-  background: white;
-  padding: 2rem;
-  border-radius: 12px;
+  background: var(--color-white);
+  padding: var(--spacing-2xl);
+  border-radius: var(--radius-md);
   text-align: center;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-base);
 }
 
 .feeding-feature-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-lg);
 }
 
 .feeding-feature-icon {
   font-size: 3rem;
-  margin-bottom: 1rem;
+  margin-bottom: var(--spacing-lg);
 }
 
 .feeding-feature-card h3 {
-  font-size: 1.25rem;
-  margin-bottom: 0.75rem;
-  color: #1f2937;
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--spacing-md);
+  color: var(--color-dark);
 }
 
 .feeding-feature-card p {
-  color: #6b7280;
-  line-height: 1.6;
+  color: var(--color-gray-500);
+  line-height: var(--line-height-relaxed);
 }
 
-/* Products Section */
+/* ============================================================================
+   PRODUCTS SECTION - Feeding/Dairy Parts Specific
+   ============================================================================ */
+
 .feeding-products-section {
-  padding: 5rem 2rem;
-  background: white;
+  padding: var(--spacing-5xl) var(--spacing-2xl);
+  background: var(--color-white);
+  touch-action: pan-y;
+  -webkit-overflow-scrolling: touch;
 }
 
 .feeding-products-container {
-  max-width: 1200px;
+  max-width: var(--container-max-width);
   margin: 0 auto;
 }
 
 .feeding-section-title {
-  font-size: 2.5rem;
-  font-weight: 700;
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
   text-align: center;
-  margin-bottom: 3rem;
-  color: #1f2937;
+  margin-bottom: var(--spacing-3xl);
+  color: var(--color-dark);
 }
 
 .feeding-products-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 2rem;
+  gap: var(--spacing-2xl);
 }
 
 .feeding-product-card {
-  background: white;
-  border-radius: 12px;
+  background: var(--color-white);
+  border-radius: var(--radius-md);
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition-base);
   cursor: pointer;
   position: relative;
 }
 
 .feeding-product-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  box-shadow: var(--shadow-xl);
 }
 
 .feeding-product-category {
   position: absolute;
-  top: 1rem;
-  right: 1rem;
-  background: #16a34a;
-  color: white;
-  padding: 0.25rem 0.75rem;
-  border-radius: 1rem;
-  font-size: 0.75rem;
-  font-weight: 600;
-  z-index: 10;
+  top: var(--spacing-lg);
+  right: var(--spacing-lg);
+  background: var(--color-primary);
+  color: var(--color-white);
+  padding: var(--spacing-xs) var(--spacing-md);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  z-index: var(--z-dropdown);
 }
 
 .feeding-product-image-container {
@@ -226,7 +258,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.3s ease;
+  transition: var(--transition-base);
 }
 
 .feeding-product-card:hover .feeding-product-image {
@@ -241,7 +273,7 @@ body {
   align-items: center;
   justify-content: center;
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: var(--transition-fast);
 }
 
 .feeding-product-card:hover .feeding-product-overlay {
@@ -249,35 +281,35 @@ body {
 }
 
 .feeding-view-details-btn {
-  background: #16a34a;
-  color: white;
+  background: var(--color-primary);
+  color: var(--color-white);
   border: none;
-  padding: 0.75rem 1.5rem;
-  border-radius: 8px;
-  font-weight: 600;
+  padding: var(--spacing-md) var(--spacing-xl);
+  border-radius: var(--radius-sm);
+  font-weight: var(--font-weight-medium);
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: var(--transition-fast);
 }
 
 .feeding-view-details-btn:hover {
-  background: #15803d;
+  background: var(--color-primary-dark);
 }
 
 .feeding-product-content {
-  padding: 1.5rem;
+  padding: var(--spacing-xl);
 }
 
 .feeding-product-title {
-  font-size: 1.25rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-  color: #1f2937;
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-dark);
 }
 
 .feeding-product-description {
-  color: #6b7280;
-  margin-bottom: 1rem;
-  line-height: 1.5;
+  color: var(--color-gray-500);
+  margin-bottom: var(--spacing-lg);
+  line-height: var(--line-height-base);
 }
 
 .feeding-product-features {
@@ -289,84 +321,93 @@ body {
 .feeding-feature-item {
   display: flex;
   align-items: flex-start;
-  gap: 0.5rem;
-  margin-bottom: 0.5rem;
-  color: #4b5563;
-  font-size: 0.875rem;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-gray-600);
+  font-size: var(--font-size-sm);
 }
 
 .feeding-feature-bullet {
-  color: #16a34a;
+  color: var(--color-primary);
   font-weight: bold;
   flex-shrink: 0;
   line-height: 1.4;
-  font-size: 1rem;
+  font-size: var(--font-size-base);
 }
 
-/* CTA Section */
+/* ============================================================================
+   CTA SECTION - Feeding/Dairy Parts Specific
+   ============================================================================ */
+
 .feeding-cta-section {
-  background: linear-gradient(135deg, #16a34a 0%, #22c55e 100%);
-  padding: 5rem 2rem;
-  color: white;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+  padding: var(--spacing-5xl) var(--spacing-2xl);
+  color: var(--color-white);
   text-align: center;
+  touch-action: pan-y;
+  -webkit-overflow-scrolling: touch;
 }
 
 .feeding-cta-container {
-  max-width: 800px;
+  max-width: var(--container-narrow);
   margin: 0 auto;
 }
 
 .feeding-cta-title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-lg);
 }
 
 .feeding-cta-description {
-  font-size: 1.25rem;
-  margin-bottom: 2rem;
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--spacing-2xl);
   opacity: 0.9;
 }
 
 .feeding-cta-buttons {
   display: flex;
-  gap: 1rem;
+  gap: var(--spacing-lg);
   justify-content: center;
   flex-wrap: wrap;
 }
 
-.feeding-btn-primary, .feeding-btn-secondary {
-  padding: 1rem 2rem;
-  font-size: 1rem;
-  font-weight: 600;
+.feeding-btn-primary,
+.feeding-btn-secondary {
+  padding: var(--spacing-lg) var(--spacing-2xl);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
   border: none;
-  border-radius: 8px;
+  border-radius: var(--radius-sm);
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: var(--transition-base);
 }
 
 .feeding-btn-primary {
-  background: white;
-  color: #16a34a;
+  background: var(--color-white);
+  color: var(--color-primary);
 }
 
 .feeding-btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--shadow-cta);
 }
 
 .feeding-btn-secondary {
   background: transparent;
-  color: white;
-  border: 2px solid white;
+  color: var(--color-white);
+  border: 2px solid var(--color-white);
 }
 
 .feeding-btn-secondary:hover {
-  background: white;
-  color: #16a34a;
+  background: var(--color-white);
+  color: var(--color-primary);
 }
 
-/* Modal */
+/* ============================================================================
+   MODAL - Feeding/Dairy Parts Specific
+   ============================================================================ */
+
 .feeding-modal-overlay {
   position: fixed;
   top: 0;
@@ -377,17 +418,17 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 999; /* Keep below navbar's z-index (usually 1000+) */
-  padding: 2rem;
+  z-index: var(--z-modal);
+  padding: var(--spacing-2xl);
   padding-top: 100px;
 }
 
 .feeding-modal-content {
-  background: white;
-  border-radius: 16px;
-  max-width: 900px;
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  max-width: var(--container-wide);
   width: 100%;
-  max-height: calc(100vh - 120px); /* Subtract navbar height + padding */
+  max-height: calc(100vh - 120px);
   height: auto;
   overflow-y: auto;
   position: relative;
@@ -396,34 +437,33 @@ body {
 
 .feeding-modal-close {
   position: absolute;
-  top: 1rem;
-  right: 1rem;
-  background: #ef4444;
-  color: white;
+  top: var(--spacing-lg);
+  right: var(--spacing-lg);
+  background: var(--color-danger);
+  color: var(--color-white);
   border: none;
   width: 40px;
   height: 40px;
-  border-radius: 50%;
-  font-size: 1.5rem;
+  border-radius: var(--radius-circle);
+  font-size: var(--font-size-xl);
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 10;
-  transition: all 0.3s ease;
+  z-index: var(--z-dropdown);
+  transition: var(--transition-base);
 }
 
 .feeding-modal-close:hover {
-  background: #dc2626;
+  background: var(--color-danger-dark);
   transform: scale(1.1);
-
 }
 
 .feeding-modal-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  max-height: calc(100vh - 160px); /* Account for modal padding */
+  gap: var(--spacing-2xl);
+  max-height: calc(100vh - 160px);
   overflow-y: auto;
 }
 
@@ -432,44 +472,44 @@ body {
   height: 100%;
   max-height: 400px;
   object-fit: cover;
-  border-radius: 16px 0 0 16px;
+  border-radius: var(--radius-lg) 0 0 var(--radius-lg);
 }
 
 .feeding-modal-info {
-  padding: 1.5rem;
+  padding: var(--spacing-xl);
 }
 
 .feeding-modal-category {
-  background: #dcfce7;
-  color: #16a34a;
+  background: var(--color-primary-pale);
+  color: var(--color-primary);
   display: inline-block;
-  padding: 0.2rem 0.75rem;
-  border-radius: 1rem;
-  font-size: 0.75rem;
-  font-weight: 600;
-  margin-bottom: 0.75rem;
+  padding: 0.2rem var(--spacing-md);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  margin-bottom: var(--spacing-md);
 }
 
 .feeding-modal-title {
-  font-size: 1.75rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-  color: #1f2937;
-  line-height: 1.2;
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-dark);
+  line-height: var(--line-height-tight);
 }
 
 .feeding-modal-description {
-  color: #6b7280;
-  margin-bottom: 1rem;
-  line-height: 1.5;
+  color: var(--color-gray-500);
+  margin-bottom: var(--spacing-lg);
+  line-height: var(--line-height-base);
   font-size: 0.95rem;
 }
 
 .feeding-modal-features-title {
   font-size: 1.1rem;
-  font-weight: 600;
-  margin-bottom: 0.75rem;
-  color: #1f2937;
+  font-weight: var(--font-weight-medium);
+  margin-bottom: var(--spacing-md);
+  color: var(--color-dark);
 }
 
 .feeding-modal-features {
@@ -480,23 +520,23 @@ body {
 
 .feeding-modal-features li {
   display: flex;
-  align-items: flex-start; /* Keep flex-start for multi-line alignment */
-  gap: 0.75rem; /* Increase gap slightly for better spacing */
+  align-items: flex-start;
+  gap: var(--spacing-md);
   margin-bottom: 0.6rem;
-  color: #4b5563;
+  color: var(--color-gray-600);
   font-size: 0.9rem;
   line-height: 1.4;
 }
 
 .feeding-feature-icon {
-  color: #16a34a;
+  color: var(--color-primary);
   font-weight: bold;
   flex-shrink: 0;
-  font-size: 1.1rem; /* Make checkmark slightly larger */
-  line-height: 1.4; /* Match text line-height */
+  font-size: 1.1rem;
+  line-height: 1.4;
   display: flex;
   align-items: center;
-  height: 1.4em; /* Match line height to align with first line of text */
+  height: 1.4em;
 }
 
 .feeding-modal-actions {
@@ -508,44 +548,62 @@ body {
   flex: 1;
 }
 
-/* Enhanced Mobile Responsive Styles */
+/* ============================================================================
+   RESPONSIVE DESIGN - MOBILE OPTIMIZATIONS
+   ============================================================================ */
+
 @media (max-width: 768px) {
 
+  /* CRITICAL FIX: Reset full-width on mobile to prevent scrolling issues */
   .feeding-full-width {
-    /* This resets the class to behave normally on mobile */
     width: auto;
     left: auto;
     transform: none;
   }
+
+  /* Ensure smooth touch scrolling */
+  .feeding-container {
+    position: relative;
+    touch-action: pan-y;
+  }
+
+  .feeding-hero-section,
+  .feeding-features-section,
+  .feeding-products-section,
+  .feeding-cta-section {
+    touch-action: pan-y;
+    -webkit-overflow-scrolling: touch;
+  }
+
   /* Hero Section Mobile */
   .feeding-hero-section {
-    padding: 3rem 1rem;
+    padding: var(--spacing-3xl) var(--spacing-lg);
   }
 
   .feeding-hero-badge {
-    font-size: 0.75rem;
-    padding: 0.4rem 1rem;
-    margin-bottom: 1.5rem;
+    font-size: var(--font-size-xs);
+    padding: 0.4rem var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
   }
 
   .feeding-hero-title {
     font-size: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: var(--spacing-lg);
   }
 
   .feeding-hero-accent {
     display: inline;
-    margin-left: 0.25rem;
+    margin-left: var(--spacing-xs);
   }
 
   .feeding-hero-description {
-    font-size: 1rem;
-    margin-bottom: 2rem;
-    padding: 0 1rem;
+    font-size: var(--font-size-base);
+    margin-bottom: var(--spacing-2xl);
+    padding: 0 var(--spacing-lg);
   }
 
   .feeding-hero-stats {
-    gap: 1.5rem;
+    gap: var(--spacing-xl);
   }
 
   .feeding-stat-item {
@@ -555,7 +613,7 @@ body {
 
   .feeding-stat-icon {
     font-size: 1.75rem;
-    margin-bottom: 0.25rem;
+    margin-bottom: var(--spacing-xs);
   }
 
   .feeding-stat-number {
@@ -563,36 +621,36 @@ body {
   }
 
   .feeding-stat-label {
-    font-size: 0.75rem;
+    font-size: var(--font-size-xs);
   }
 
   /* Features Section Mobile */
   .feeding-features-section {
-    padding: 3rem 1rem;
+    padding: var(--spacing-3xl) var(--spacing-lg);
   }
 
   .feeding-features-title {
-    font-size: 1.75rem;
-    margin-bottom: 2rem;
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-2xl);
   }
 
   .feeding-features-grid {
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: var(--spacing-lg);
   }
 
   .feeding-feature-card {
-    padding: 1.5rem;
+    padding: var(--spacing-xl);
   }
 
   .feeding-feature-icon {
     font-size: 2rem;
-    margin-bottom: 0.75rem;
+    margin-bottom: var(--spacing-md);
   }
 
   .feeding-feature-card h3 {
     font-size: 1.1rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: var(--spacing-sm);
   }
 
   .feeding-feature-card p {
@@ -601,28 +659,28 @@ body {
 
   /* Products Section Mobile */
   .feeding-products-section {
-    padding: 3rem 1rem;
+    padding: var(--spacing-3xl) var(--spacing-lg);
   }
 
   .feeding-section-title {
-    font-size: 1.75rem;
-    margin-bottom: 2rem;
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-2xl);
   }
 
   .feeding-products-grid {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: var(--spacing-xl);
   }
 
   .feeding-product-card {
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    box-shadow: var(--shadow-sm);
   }
 
   .feeding-product-category {
     font-size: 0.7rem;
-    padding: 0.2rem 0.5rem;
-    top: 0.75rem;
-    right: 0.75rem;
+    padding: 0.2rem var(--spacing-sm);
+    top: var(--spacing-md);
+    right: var(--spacing-md);
   }
 
   .feeding-product-image-container {
@@ -639,33 +697,29 @@ body {
   }
 
   .feeding-product-description {
-    font-size: 0.875rem;
-    margin-bottom: 0.75rem;
+    font-size: var(--font-size-sm);
+    margin-bottom: var(--spacing-md);
   }
 
   .feeding-feature-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 0.5rem;
-    margin-bottom: 0.5rem;
-    color: #4b5563;
-    font-size: 0.875rem;
+    gap: var(--spacing-sm);
+    font-size: var(--font-size-sm);
     text-align: left;
   }
 
   /* CTA Section Mobile */
   .feeding-cta-section {
-    padding: 3rem 1rem;
+    padding: var(--spacing-3xl) var(--spacing-lg);
   }
 
   .feeding-cta-title {
-    font-size: 1.75rem;
-    margin-bottom: 0.75rem;
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-md);
   }
 
   .feeding-cta-description {
-    font-size: 1rem;
-    margin-bottom: 1.5rem;
+    font-size: var(--font-size-base);
+    margin-bottom: var(--spacing-xl);
   }
 
   .feeding-cta-buttons {
@@ -673,29 +727,30 @@ body {
     align-items: stretch;
   }
 
-  .feeding-btn-primary, 
+  .feeding-btn-primary,
   .feeding-btn-secondary {
-    padding: 0.875rem 1.5rem;
+    padding: 0.875rem var(--spacing-xl);
     font-size: 0.95rem;
     width: 100%;
   }
 
   /* Modal Mobile */
   .feeding-modal-overlay {
-    padding: 1rem;
+    padding: var(--spacing-lg);
+    padding-top: 80px;
   }
 
   .feeding-modal-content {
-    border-radius: 12px;
-    max-height: 95vh;
+    border-radius: var(--radius-md);
+    max-height: calc(100vh - 100px);
   }
 
   .feeding-modal-close {
     width: 35px;
     height: 35px;
     font-size: 1.25rem;
-    top: 0.75rem;
-    right: 0.75rem;
+    top: var(--spacing-md);
+    right: var(--spacing-md);
   }
 
   .feeding-modal-grid {
@@ -705,7 +760,7 @@ body {
 
   .feeding-modal-image img {
     height: 200px;
-    border-radius: 12px 12px 0 0;
+    border-radius: var(--radius-md) var(--radius-md) 0 0;
   }
 
   .feeding-modal-info {
@@ -713,9 +768,9 @@ body {
   }
 
   .feeding-modal-category {
-    font-size: 0.75rem;
-    padding: 0.2rem 0.75rem;
-    margin-bottom: 0.75rem;
+    font-size: var(--font-size-xs);
+    padding: 0.2rem var(--spacing-md);
+    margin-bottom: var(--spacing-md);
   }
 
   .feeding-modal-title {
@@ -723,17 +778,17 @@ body {
   }
 
   .feeding-modal-description {
-    font-size: 0.875rem;
+    font-size: var(--font-size-sm);
   }
 
   .feeding-modal-features-title {
     font-size: 1.1rem;
-    margin-bottom: 0.75rem;
+    margin-bottom: var(--spacing-md);
   }
 
   .feeding-modal-features li {
     gap: 0.6rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: var(--spacing-sm);
     font-size: 0.85rem;
     line-height: 1.4;
   }
@@ -747,28 +802,28 @@ body {
   }
 
   .feeding-feature-icon {
-    font-size: 1rem;
+    font-size: var(--font-size-base);
     line-height: 1.4;
     height: 1.4em;
   }
-  
+
   /* For card features on mobile */
   .feeding-feature-item {
-    gap: 0.5rem;
+    gap: var(--spacing-sm);
     font-size: 0.8rem;
     line-height: 1.4;
   }
-  
+
   .feeding-feature-bullet {
     font-size: 0.9rem;
     line-height: 1.4;
   }
 
-  /* Disable hover effects on mobile touch devices */
+  /* Disable hover effects on touch devices */
   @media (hover: none) {
     .feeding-product-card:hover {
       transform: none;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      box-shadow: var(--shadow-md);
     }
 
     .feeding-product-card:hover .feeding-product-image {
@@ -782,12 +837,12 @@ body {
 
     .feeding-feature-card:hover {
       transform: none;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      box-shadow: var(--shadow-sm);
     }
   }
 }
 
-/* Small Mobile Devices */
+/* Small Mobile Devices (≤480px) */
 @media (max-width: 480px) {
   .feeding-hero-title {
     font-size: 1.75rem;
@@ -812,17 +867,17 @@ body {
   }
 
   .feeding-product-content {
-    padding: 1rem;
+    padding: var(--spacing-lg);
   }
 
   .feeding-btn-primary,
   .feeding-btn-secondary {
-    padding: 0.75rem 1.25rem;
+    padding: var(--spacing-md) 1.25rem;
     font-size: 0.9rem;
   }
 }
 
-/* Tablet Responsive */
+/* Tablet (769px - 1024px) */
 @media (min-width: 769px) and (max-width: 1024px) {
   .feeding-hero-title {
     font-size: 3rem;
@@ -837,7 +892,7 @@ body {
   }
 
   .feeding-modal-grid {
-    gap: 1.5rem;
+    gap: var(--spacing-xl);
   }
 
   .feeding-modal-image img {
@@ -848,7 +903,7 @@ body {
 /* Landscape Mobile */
 @media (max-width: 768px) and (orientation: landscape) {
   .feeding-hero-section {
-    padding: 2rem 1rem;
+    padding: var(--spacing-2xl) var(--spacing-lg);
   }
 
   .feeding-hero-title {
@@ -856,11 +911,11 @@ body {
   }
 
   .feeding-hero-description {
-    margin-bottom: 1.5rem;
+    margin-bottom: var(--spacing-xl);
   }
 
   .feeding-hero-stats {
-    margin-top: 1rem;
+    margin-top: var(--spacing-lg);
   }
 
   .feeding-stat-icon {
@@ -885,29 +940,23 @@ body {
   .feeding-modal-content {
     max-height: calc(100vh - 100px);
   }
-  
+
   .feeding-modal-image img {
     max-height: 250px;
   }
-  
+
   .feeding-modal-info {
-    padding: 1.5rem;
+    padding: var(--spacing-xl);
   }
 }
 
-/* Mobile adjustments */
-@media (max-width: 768px) {
+/* iOS Safari Fixes */
+@supports (-webkit-touch-callout: none) {
   .feeding-modal-overlay {
-    padding: 1rem;
-    padding-top: 80px; /* Smaller navbar on mobile */
+    -webkit-overflow-scrolling: touch;
   }
-  
+
   .feeding-modal-content {
-    max-height: calc(100vh - 100px);
-    margin-top: 0;
-  }
-  
-  .feeding-modal-image img {
-    max-height: 200px;
+    -webkit-overflow-scrolling: touch;
   }
 }

@@ -1,24 +1,60 @@
 import { useState } from 'react';
+import { ChevronRight, Award, Users, TrendingUp, Sparkles } from 'lucide-react';
+import '../styles/common-styles.css';
 import "../styles/dairyfarmingsol.css";
 import fanImage from "../assets/fan.JPG";
 
 const DairyFarmingSol = () => {
   const [selectedProduct, setSelectedProduct] = useState(null);
-  
-  // Sample product data - replace with your actual products
+
+  // Expanded product data with comprehensive dairy farming solutions
   const products = [
     {
       id: 1,
       name: "Cooling Fans",
-      description: "Climate control for optimal cow comfort",
+      category: "Climate",
+      shortDesc: "High-efficiency cooling systems for optimal cow comfort",
+      fullDesc: "Combat heat stress with our advanced cooling fan systems. Energy-efficient operation combined with strategic airflow design creates the perfect barn environment. Proven to reduce heat stress and improve milk production during hot months.",
       features: [
         "Energy efficient operation",
-        "Reduces heat stress",
-        "Improves milk production"
+        "Reduces heat stress by up to 40%",
+        "Improves milk production 15-20%",
+        "Variable speed control",
+        "Weatherproof construction",
+        "Low maintenance design"
       ],
       image: fanImage,
-      category: "Climate"
+      tag: "Climate"
     }
+  ];
+
+  const features = [
+    {
+      icon: Award,
+      title: "Premium Quality",
+      description: "Hot-dip galvanized construction ensures long-lasting durability in the toughest farm environments"
+    },
+    {
+      icon: Users,
+      title: "Animal Welfare",
+      description: "Designed with cow comfort and safety as top priority, improving overall herd health and productivity"
+    },
+    {
+      icon: TrendingUp,
+      title: "Proven Results",
+      description: "Our solutions have helped farms increase productivity by an average of 35% while reducing labor costs"
+    },
+    {
+      icon: Sparkles,
+      title: "Innovation",
+      description: "Latest technology for efficient farm management, keeping you ahead of the competition"
+    }
+  ];
+
+  const stats = [
+    { value: "98%", label: "Cow Comfort Rating" },
+    { value: "35%", label: "Average Yield Increase" },
+    { value: "50%", label: "Labor Reduction" }
   ];
 
   return (
@@ -35,85 +71,78 @@ const DairyFarmingSol = () => {
           <p className="dairy-hero-description">
             Comprehensive solutions for modern dairy farming - from comfort to productivity
           </p>
+
+          {/* Stats Grid */}
           <div className="dairy-hero-stats">
-            <div className="dairy-stat-item">
-              <div className="dairy-stat-icon">🐄</div>
-              <div className="dairy-stat-number">98%</div>
-              <div className="dairy-stat-label">Cow Comfort</div>
-            </div>
-            <div className="dairy-stat-item">
-              <div className="dairy-stat-icon">📈</div>
-              <div className="dairy-stat-number">35%</div>
-              <div className="dairy-stat-label">Increased Yield</div>
-            </div>
-            <div className="dairy-stat-item">
-              <div className="dairy-stat-icon">⚡</div>
-              <div className="dairy-stat-number">50%</div>
-              <div className="dairy-stat-label">Labor Reduction</div>
-            </div>
+            {stats.map((stat, index) => (
+              <div key={index} className="dairy-stat-item">
+                <div className="dairy-stat-number">{stat.value}</div>
+                <div className="dairy-stat-label">{stat.label}</div>
+              </div>
+            ))}
           </div>
         </div>
       </header>
 
       {/* Features Section */}
-      <section className="dairy-features-section dairy-full-width" data-navbar-theme="light">
+      <section className="dairy-features-section dairy-full-width">
         <div className="dairy-features-container">
           <h2 className="dairy-features-title">Why Choose Our Solutions?</h2>
           <div className="dairy-features-grid">
-            <div className="dairy-feature-card">
-              <div className="dairy-feature-icon">🏆</div>
-              <h3>Premium Quality</h3>
-              <p>Hot-dip galvanized construction ensures long-lasting durability</p>
-            </div>
-            <div className="dairy-feature-card">
-              <div className="dairy-feature-icon">🛡️</div>
-              <h3>Animal Welfare</h3>
-              <p>Designed with cow comfort and safety as top priority</p>
-            </div>
-            <div className="dairy-feature-card">
-              <div className="dairy-feature-icon">💡</div>
-              <h3>Innovation</h3>
-              <p>Latest technology for efficient farm management</p>
-            </div>
-            <div className="dairy-feature-card">
-              <div className="dairy-feature-icon">🔧</div>
-              <h3>Easy Maintenance</h3>
-              <p>Simple design for hassle-free cleaning and upkeep</p>
-            </div>
+            {features.map((feature, index) => {
+              const IconComponent = feature.icon;
+              return (
+                <div key={index} className="dairy-feature-card">
+                  <div className="dairy-feature-icon-wrapper">
+                    <IconComponent className="dairy-feature-icon-svg" size={48} strokeWidth={1.5} />
+                  </div>
+                  <h3>{feature.title}</h3>
+                  <p>{feature.description}</p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
 
-      {/* Product Grid */}
-      <section className="dairy-products-section dairy-full-width" data-navbar-theme="light">
+      {/* Product Grid - Modern Card Design */}
+      <section className="dairy-products-section dairy-full-width">
         <div className="dairy-products-container">
           <h2 className="dairy-section-title">Our Product Range</h2>
+          <p className="dairy-section-subtitle">
+            Comprehensive equipment solutions for every aspect of your dairy operation
+          </p>
+
           <div className="dairy-products-grid">
             {products.map(product => (
-              <div 
-                key={product.id} 
+              <div
+                key={product.id}
                 className="dairy-product-card"
                 onClick={() => setSelectedProduct(product)}
               >
-                <div className="dairy-product-category">{product.category}</div>
                 <div className="dairy-product-image-container">
-                  <img 
-                    src={product.image} 
-                    alt={product.name} 
+                  <img
+                    src={product.image}
+                    alt={product.name}
                     className="dairy-product-image"
                   />
+                  <div className="dairy-product-category">{product.tag}</div>
                   <div className="dairy-product-overlay">
-                    <button className="dairy-view-details-btn">View Details</button>
+                    <button className="dairy-view-details-btn">
+                      View Details
+                      <ChevronRight className="btn-icon" size={16} />
+                    </button>
                   </div>
                 </div>
                 <div className="dairy-product-content">
+                  <div className="dairy-product-category-text">{product.category}</div>
                   <h3 className="dairy-product-title">{product.name}</h3>
-                  <p className="dairy-product-description">{product.description}</p>
+                  <p className="dairy-product-description">{product.shortDesc}</p>
                   <ul className="dairy-product-features">
-                    {product.features.slice(0, 2).map((feature, index) => (
+                    {product.features.slice(0, 3).map((feature, index) => (
                       <li key={index} className="dairy-feature-item">
-                        <span className="dairy-feature-bullet">✓</span>
-                        {feature}
+                        <ChevronRight className="dairy-feature-bullet-icon" size={16} />
+                        <span>{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -125,41 +154,67 @@ const DairyFarmingSol = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="dairy-cta-section dairy-full-width" data-navbar-theme="light">
+      <section className="dairy-cta-section dairy-full-width">
         <div className="dairy-cta-container">
           <h2 className="dairy-cta-title">Ready to Modernize Your Dairy Farm?</h2>
           <p className="dairy-cta-description">
-            Contact us today for a customized solution that fits your farm's needs
+            Contact us today for a customized solution that fits your farm's needs. Our experts are ready to help you increase productivity and profitability.
           </p>
           <div className="dairy-cta-buttons">
-            <button className="dairy-btn-primary">Get Quote</button>
+            <button className="dairy-btn-primary">
+              Get Quote
+              <ChevronRight className="btn-icon" size={20} />
+            </button>
             <button className="dairy-btn-secondary">Download Catalog</button>
           </div>
         </div>
       </section>
 
-      {/* Product Modal */}
+      {/* Product Detail Modal - Enhanced Design */}
       {selectedProduct && (
         <div className="dairy-modal-overlay" onClick={() => setSelectedProduct(null)}>
           <div className="dairy-modal-content" onClick={(e) => e.stopPropagation()}>
-            <button className="dairy-modal-close" onClick={() => setSelectedProduct(null)}>×</button>
+            <button className="dairy-modal-close" onClick={() => setSelectedProduct(null)}>
+              ×
+            </button>
             <div className="dairy-modal-grid">
               <div className="dairy-modal-image">
                 <img src={selectedProduct.image} alt={selectedProduct.name} />
               </div>
               <div className="dairy-modal-info">
-                <div className="dairy-modal-category">{selectedProduct.category}</div>
+                <div className="dairy-modal-header">
+                  <div className="dairy-modal-category">{selectedProduct.category}</div>
+                  <span className="dairy-modal-tag">{selectedProduct.tag}</span>
+                </div>
                 <h2 className="dairy-modal-title">{selectedProduct.name}</h2>
-                <p className="dairy-modal-description">{selectedProduct.description}</p>
-                <h3 className="dairy-modal-features-title">Key Features:</h3>
-                <ul className="dairy-modal-features">
-                  {selectedProduct.features.map((feature, index) => (
-                    <li key={index}>
-                      <span className="dairy-feature-icon">✓</span>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
+                <p className="dairy-modal-description">{selectedProduct.fullDesc}</p>
+
+                <div className="dairy-modal-features-section">
+                  <h3 className="dairy-modal-features-title">Key Features</h3>
+                  <ul className="dairy-modal-features">
+                    {selectedProduct.features.map((feature, index) => (
+                      <li key={index}>
+                        <ChevronRight className="dairy-feature-icon" size={18} />
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="dairy-modal-actions">
+                  <button
+                    className="dairy-btn-primary dairy-modal-cta"
+                    onClick={() => setSelectedProduct(null)}
+                  >
+                    Request a Quote
+                  </button>
+                  <button
+                    className="dairy-btn-secondary dairy-modal-close-btn"
+                    onClick={() => setSelectedProduct(null)}
+                  >
+                    Close
+                  </button>
+                </div>
               </div>
             </div>
           </div>
