@@ -30,6 +30,13 @@
   color: var(--color-dark);
   background-color: var(--color-white);
   min-height: 100vh;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
   touch-action: pan-y;
 }
@@ -38,19 +45,11 @@
    HERO SECTION - Dairy Specific
    ============================================================================ */
 
-/* Full-width utility */
-.dairy-full-width {
-  position: relative;
-  width: 100vw;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
 .dairy-hero-section {
   position: relative;
+  width: 100%;
   background: linear-gradient(135deg, var(--color-dark) 0%, var(--color-dark-light) 100%);
   color: var(--color-white);
-  padding: var(--spacing-5xl) var(--spacing-2xl);
   overflow: hidden;
   touch-action: pan-y;
 }
@@ -69,8 +68,9 @@
 .dairy-hero-content {
   position: relative;
   z-index: var(--z-base);
-  max-width: var(--container-max-width);
+  max-width: 1200px;
   margin: 0 auto;
+  padding: var(--spacing-5xl) var(--spacing-2xl);
   text-align: center;
 }
 
@@ -140,15 +140,16 @@
    ============================================================================ */
 
 .dairy-features-section {
-  padding: var(--spacing-5xl) var(--spacing-2xl);
+  width: 100%;
   background: var(--color-gray-50);
   touch-action: pan-y;
   -webkit-overflow-scrolling: touch;
 }
 
 .dairy-features-container {
-  max-width: var(--container-max-width);
+  max-width: 1200px;
   margin: 0 auto;
+  padding: var(--spacing-5xl) var(--spacing-2xl);
 }
 
 .dairy-features-title {
@@ -218,15 +219,16 @@
    ============================================================================ */
 
 .dairy-products-section {
-  padding: var(--spacing-5xl) var(--spacing-2xl);
+  width: 100%;
   background: var(--color-white);
   touch-action: pan-y;
   -webkit-overflow-scrolling: touch;
 }
 
 .dairy-products-container {
-  max-width: var(--container-max-width);
+  max-width: 1200px;
   margin: 0 auto;
+  padding: var(--spacing-5xl) var(--spacing-2xl);
 }
 
 .dairy-section-title {
@@ -390,72 +392,217 @@
 }
 
 /* ============================================================================
-   CTA SECTION - Dairy Specific
+   CTA SECTION - User Journey Design
    ============================================================================ */
 
 .dairy-cta-section {
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
-  padding: var(--spacing-5xl) var(--spacing-2xl);
-  color: var(--color-white);
-  text-align: center;
+  width: 100%;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  color: var(--color-dark);
   touch-action: pan-y;
   -webkit-overflow-scrolling: touch;
+  position: relative;
+  overflow: hidden;
+}
+
+.dairy-cta-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-primary) 0%, #22c55e 100%);
 }
 
 .dairy-cta-container {
-  max-width: var(--container-narrow);
+  max-width: 1200px;
   margin: 0 auto;
+  padding: var(--spacing-5xl) var(--spacing-2xl);
+}
+
+/* Header Section */
+.dairy-cta-header {
+  text-align: center;
+  margin-bottom: var(--spacing-5xl);
+}
+
+.dairy-cta-badge {
+  display: inline-block;
+  background: var(--color-primary);
+  color: var(--color-white);
+  padding: var(--spacing-xs) var(--spacing-lg);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: var(--spacing-lg);
 }
 
 .dairy-cta-title {
-  font-size: var(--font-size-2xl);
-  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-extrabold);
   margin-bottom: var(--spacing-lg);
+  color: var(--color-dark);
+  line-height: var(--line-height-tight);
 }
 
 .dairy-cta-description {
   font-size: var(--font-size-lg);
-  margin-bottom: var(--spacing-2xl);
-  opacity: 0.9;
+  color: var(--color-gray-600);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: var(--line-height-relaxed);
 }
 
-.dairy-cta-buttons {
+/* Journey Steps */
+.dairy-journey-steps {
   display: flex;
-  gap: var(--spacing-lg);
+  align-items: stretch;
+  justify-content: space-between;
+  gap: var(--spacing-2xl);
+  margin-bottom: var(--spacing-4xl);
+}
+
+.dairy-step {
+  flex: 1;
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-2xl);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 2px solid transparent;
+  position: relative;
+}
+
+.dairy-step:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  border-color: var(--color-primary);
+}
+
+.dairy-step-number {
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, var(--color-primary) 0%, #22c55e 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--spacing-xl);
+  box-shadow: 0 4px 12px rgba(22, 163, 74, 0.3);
+}
+
+.dairy-step-number span {
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-extrabold);
+  color: var(--color-white);
+}
+
+.dairy-step-content {
+  text-align: center;
+}
+
+.dairy-step-title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-dark);
+  margin-bottom: var(--spacing-sm);
+  line-height: var(--line-height-tight);
+}
+
+.dairy-step-description {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-600);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: var(--spacing-xl);
+  min-height: 48px;
+}
+
+.dairy-step-action {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  background: var(--color-primary);
+  color: var(--color-white);
+  padding: var(--spacing-sm) var(--spacing-xl);
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  justify-content: center;
+}
+
+.dairy-step-action:hover {
+  background: var(--color-primary-dark);
+  transform: scale(1.02);
+}
+
+.dairy-step-action-secondary {
+  background: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.dairy-step-action-secondary:hover {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+.dairy-step-features {
+  display: flex;
+  gap: var(--spacing-md);
   justify-content: center;
   flex-wrap: wrap;
 }
 
-.dairy-btn-primary,
-.dairy-btn-secondary {
-  padding: var(--spacing-lg) var(--spacing-2xl);
-  font-size: var(--font-size-base);
+.dairy-step-features span {
+  font-size: var(--font-size-xs);
+  color: var(--color-primary);
   font-weight: var(--font-weight-medium);
-  border: none;
-  border-radius: var(--radius-sm);
-  cursor: pointer;
-  transition: var(--transition-base);
+  background: rgba(22, 163, 74, 0.1);
+  padding: var(--spacing-xs) var(--spacing-md);
+  border-radius: var(--radius-full);
 }
 
-.dairy-btn-primary {
-  background: var(--color-white);
+/* Step Connectors */
+.dairy-step-connector {
+  display: flex;
+  align-items: center;
   color: var(--color-primary);
+  flex-shrink: 0;
 }
 
-.dairy-btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-cta);
+.dairy-step-connector svg {
+  opacity: 0.3;
 }
 
-.dairy-btn-secondary {
-  background: transparent;
-  color: var(--color-white);
-  border: 2px solid var(--color-white);
+/* Footer Section */
+.dairy-cta-footer {
+  text-align: center;
+  padding-top: var(--spacing-3xl);
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
 }
 
-.dairy-btn-secondary:hover {
+.dairy-cta-trust {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-size: var(--font-size-base);
+  color: var(--color-gray-700);
+  font-weight: var(--font-weight-medium);
   background: var(--color-white);
-  color: var(--color-primary);
+  padding: var(--spacing-md) var(--spacing-xl);
+  border-radius: var(--radius-full);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+}
+
+.dairy-trust-icon {
+  font-size: 1.25rem;
 }
 
 /* ============================================================================
@@ -640,29 +787,8 @@
 
 @media (max-width: 768px) {
 
-  /* CRITICAL FIX: Reset full-width on mobile to prevent scrolling issues */
-  .dairy-full-width {
-    width: auto;
-    left: auto;
-    transform: none;
-  }
-
-  /* Ensure smooth touch scrolling */
-  .dairy-container {
-    position: relative;
-    touch-action: pan-y;
-  }
-
-  .dairy-hero-section,
-  .dairy-features-section,
-  .dairy-products-section,
-  .dairy-cta-section {
-    touch-action: pan-y;
-    -webkit-overflow-scrolling: touch;
-  }
-
   /* Hero Section Mobile */
-  .dairy-hero-section {
+  .dairy-hero-content {
     padding: var(--spacing-3xl) var(--spacing-lg);
   }
 
@@ -711,7 +837,7 @@
   }
 
   /* Features Section Mobile */
-  .dairy-features-section {
+  .dairy-features-container {
     padding: var(--spacing-3xl) var(--spacing-lg);
   }
 
@@ -744,7 +870,7 @@
   }
 
   /* Products Section Mobile */
-  .dairy-products-section {
+  .dairy-products-container {
     padding: var(--spacing-3xl) var(--spacing-lg);
   }
 
@@ -794,7 +920,7 @@
   }
 
   /* CTA Section Mobile */
-  .dairy-cta-section {
+  .dairy-cta-container {
     padding: var(--spacing-3xl) var(--spacing-lg);
   }
 
@@ -988,7 +1114,7 @@
 
 /* Landscape Mobile */
 @media (max-width: 768px) and (orientation: landscape) {
-  .dairy-hero-section {
+  .dairy-hero-content {
     padding: var(--spacing-2xl) var(--spacing-lg);
   }
 

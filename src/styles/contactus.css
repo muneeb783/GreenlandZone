@@ -30,21 +30,21 @@
 
 /* === Main Layout & Full Width Fix === */
 .contact-page-wrapper {
-  overflow: hidden;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  overflow-x: hidden;
 }
 
 .contact-page {
   position: relative;
+  width: 100%;
   background-color: var(--light-gray);
   padding: 6rem 0;
   overflow: visible;
-}
-
-.contact-full-width {
-  position: relative;
-  width: 100vw;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 /* === Animated Background === */
@@ -427,12 +427,6 @@
 }
 
 @media (max-width: 768px) {
-  .contact-full-width {
-    width: auto;
-    left: auto;
-    transform: none;
-  }
-  
   .contact-page {
     padding: 4rem 1rem;
   }

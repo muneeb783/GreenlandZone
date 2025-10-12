@@ -1,396 +1,859 @@
-/* Container */
-body{
+/**
+ * Teat Health Solutions Page Styles
+ *
+ * Professional stylesheet for the teat and udder health product showcase page.
+ * Features modern card-based design with enhanced modals and responsive layout.
+ *
+ * Key Features:
+ * - Full-width sections with mobile scrolling fix
+ * - Enhanced color scheme with subtle rgba backgrounds
+ * - Professional feature cards with icon wrappers
+ * - Hover transitions and border effects
+ * - Complete responsive design for all screen sizes
+ * - Touch optimization for mobile devices
+ *
+ * Dependencies:
+ * - common-styles.css (CSS variables and base styles)
+ * - Lucide React icons for UI elements
+ */
+
+/* ============================================
+   BASE CONTAINER
+   ============================================ */
+
+.teathealth-container {
+  font-family: var(--font-family-base);
+  color: var(--color-gray-800);
+  background-color: var(--color-white);
+  min-height: 100vh;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
   overflow-x: hidden;
 }
-.farmbiosec-container {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    color: #1f2937;
-    background-color: #ffffff;
-    min-height: 100vh;
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+
+.teathealth-hero-section {
+  position: relative;
+  width: 100%;
+  background: linear-gradient(135deg, var(--color-dark) 0%, var(--color-dark-light) 100%);
+  color: var(--color-white);
+  overflow: hidden;
+  touch-action: pan-y;
+}
+
+.teathealth-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image:
+    radial-gradient(circle at 20% 80%, rgba(22, 163, 74, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(59, 130, 246, 0.05) 0%, transparent 50%);
+}
+
+.teathealth-hero-content {
+  position: relative;
+  z-index: var(--z-base);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-5xl) var(--spacing-2xl);
+  text-align: center;
+}
+
+
+.teathealth-hero-badge {
+  display: inline-block;
+  background: var(--color-primary-bg);
+  border: 1px solid var(--color-primary-border);
+  color: var(--color-primary-lightest);
+  padding: var(--spacing-sm) var(--spacing-xl);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 0.05em;
+  margin-bottom: var(--spacing-2xl);
+}
+
+.teathealth-hero-title {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-extrabold);
+  line-height: var(--line-height-tight);
+  margin-bottom: var(--spacing-xl);
+}
+
+.teathealth-hero-accent {
+  display: block;
+  color: var(--color-primary);
+}
+
+.teathealth-hero-description {
+  font-size: var(--font-size-lg);
+  color: var(--color-gray-100);
+  max-width: 600px;
+  margin: 0 auto var(--spacing-3xl);
+  line-height: var(--line-height-relaxed);
+}
+
+.teathealth-hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-4xl);
+  flex-wrap: wrap;
+}
+
+.teathealth-stat-item {
+  text-align: center;
+}
+
+.teathealth-stat-number {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.teathealth-stat-label {
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-400);
+}
+
+/* ============================================
+   FEATURES SECTION
+   ============================================ */
+
+.teathealth-features-section {
+  width: 100%;
+  background: var(--color-gray-50);
+  touch-action: pan-y;
+  -webkit-overflow-scrolling: touch;
+}
+
+.teathealth-features-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-5xl) var(--spacing-2xl);
+}
+
+.teathealth-features-title {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  text-align: center;
+  margin-bottom: var(--spacing-3xl);
+  color: var(--color-dark);
+}
+
+.teathealth-features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-xl);
+}
+
+.teathealth-feature-card {
+  background: var(--color-white);
+  padding: var(--spacing-2xl);
+  border-radius: var(--radius-md);
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid transparent;
+  transition: var(--transition-base);
+}
+
+.teathealth-feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--color-primary);
+}
+
+.teathealth-feature-icon-wrapper {
+  width: 64px;
+  height: 64px;
+  background: rgba(22, 163, 74, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--spacing-xl);
+}
+
+.teathealth-feature-icon-svg {
+  color: var(--color-primary);
+}
+
+.teathealth-feature-card h3 {
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--spacing-md);
+  color: var(--color-dark);
+  font-weight: var(--font-weight-bold);
+}
+
+.teathealth-feature-card p {
+  color: var(--color-gray-500);
+  line-height: var(--line-height-relaxed);
+}
+
+/* ============================================
+   PRODUCTS SECTION
+   ============================================ */
+
+.teathealth-products-section {
+  width: 100%;
+  background: var(--color-white);
+  touch-action: pan-y;
+  -webkit-overflow-scrolling: touch;
+}
+
+.teathealth-products-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-5xl) var(--spacing-2xl);
+}
+
+.teathealth-section-title {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+  color: var(--color-gray-800);
+}
+
+.teathealth-section-subtitle {
+  text-align: center;
+  color: var(--color-gray-600);
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--spacing-2xl);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.teathealth-products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--spacing-xl);
+}
+
+.teathealth-product-card {
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  border: 1px solid transparent;
+  transition: var(--transition-base);
+  cursor: pointer;
+  position: relative;
+}
+
+.teathealth-product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  border-color: var(--color-primary);
+}
+
+.teathealth-product-image-container {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.teathealth-product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-base);
+}
+
+.teathealth-product-card:hover .teathealth-product-image {
+  transform: scale(1.05);
+}
+
+.teathealth-product-category {
+  position: absolute;
+  top: var(--spacing-lg);
+  right: var(--spacing-lg);
+  background: var(--color-primary);
+  color: var(--color-white);
+  padding: var(--spacing-xs) var(--spacing-md);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  z-index: 10;
+}
+
+.teathealth-product-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: var(--transition-fast);
+}
+
+.teathealth-product-card:hover .teathealth-product-overlay {
+  opacity: 1;
+}
+
+.teathealth-view-details-btn {
+  background: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  padding: var(--spacing-md) var(--spacing-xl);
+  border-radius: var(--radius-sm);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.teathealth-view-details-btn:hover {
+  background: var(--color-primary-dark);
+}
+
+.teathealth-product-content {
+  padding: var(--spacing-xl);
+}
+
+.teathealth-product-category-text {
+  font-size: var(--font-size-sm);
+  color: var(--color-primary);
+  font-weight: var(--font-weight-medium);
+  margin-bottom: var(--spacing-sm);
+}
+
+.teathealth-product-title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-dark);
+}
+
+.teathealth-product-description {
+  color: var(--color-gray-500);
+  margin-bottom: var(--spacing-lg);
+  line-height: var(--line-height-base);
+}
+
+.teathealth-product-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.teathealth-feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-gray-600);
+  font-size: var(--font-size-sm);
+}
+
+.teathealth-feature-bullet-icon {
+  color: var(--color-primary);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* ============================================
+   CTA SECTION
+   ============================================ */
+
+.teathealth-cta-section {
+  width: 100%;
+  background: linear-gradient(135deg, var(--color-primary) 0%, #22c55e 100%);
+  color: var(--color-white);
+  touch-action: pan-y;
+  -webkit-overflow-scrolling: touch;
+}
+
+.teathealth-cta-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: var(--spacing-5xl) var(--spacing-2xl);
+  text-align: center;
+}
+
+.teathealth-cta-title {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-lg);
+}
+
+.teathealth-cta-description {
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--spacing-xl);
+  opacity: 0.9;
+}
+
+.teathealth-cta-buttons {
+  display: flex;
+  gap: var(--spacing-lg);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.teathealth-btn-primary,
+.teathealth-btn-secondary {
+  padding: var(--spacing-lg) var(--spacing-2xl);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: var(--transition-base);
+}
+
+.teathealth-btn-primary {
+  background: var(--color-white);
+  color: var(--color-primary);
+}
+
+.teathealth-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-cta);
+}
+
+.teathealth-btn-secondary {
+  background: transparent;
+  color: var(--color-white);
+  border: 2px solid var(--color-white);
+}
+
+.teathealth-btn-secondary:hover {
+  background: var(--color-white);
+  color: var(--color-primary);
+}
+
+/* ============================================
+   MODAL
+   ============================================ */
+
+.teathealth-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  padding: var(--spacing-xl);
+  padding-top: 100px;
+}
+
+.teathealth-modal-content {
+  background: var(--color-white);
+  border-radius: var(--radius-xl);
+  max-width: 900px;
+  width: 100%;
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
+  position: relative;
+  margin: auto;
+}
+
+.teathealth-modal-close {
+  position: absolute;
+  top: var(--spacing-lg);
+  right: var(--spacing-lg);
+  background: #ef4444;
+  color: var(--color-white);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: var(--font-size-2xl);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: all var(--transition-base);
+}
+
+.teathealth-modal-close:hover {
+  background: #dc2626;
+  transform: scale(1.1);
+}
+
+.teathealth-modal-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-xl);
+  max-height: calc(100vh - 160px);
+  overflow-y: auto;
+}
+
+.teathealth-modal-image img {
+  width: 100%;
+  height: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: var(--radius-xl) 0 0 var(--radius-xl);
+}
+
+.teathealth-modal-info {
+  padding: var(--spacing-xl);
+}
+
+.teathealth-modal-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+}
+
+.teathealth-modal-category {
+  background: var(--color-primary-pale);
+  color: var(--color-primary);
+  display: inline-block;
+  padding: 0.2rem var(--spacing-md);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+}
+
+.teathealth-modal-tag {
+  background: rgba(22, 163, 74, 0.1);
+  color: var(--color-primary);
+  padding: 0.25rem var(--spacing-md);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+}
+
+.teathealth-modal-title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-dark);
+  line-height: var(--line-height-tight);
+}
+
+.teathealth-modal-description {
+  color: var(--color-gray-500);
+  margin-bottom: var(--spacing-lg);
+  line-height: var(--line-height-base);
+  font-size: 0.95rem;
+}
+
+.teathealth-modal-features-section {
+  margin-bottom: var(--spacing-lg);
+}
+
+.teathealth-modal-features-title {
+  font-size: 1.1rem;
+  font-weight: var(--font-weight-medium);
+  margin-bottom: var(--spacing-md);
+  color: var(--color-dark);
+}
+
+.teathealth-modal-features {
+  list-style: none;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.teathealth-modal-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-md);
+  margin-bottom: 0.6rem;
+  color: var(--color-gray-600);
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.teathealth-feature-icon {
+  color: var(--color-primary);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.teathealth-modal-actions {
+  display: flex;
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-2xl);
+  padding-top: var(--spacing-xl);
+  border-top: 1px solid var(--color-gray-100);
+}
+
+.teathealth-modal-cta {
+  flex: 1;
+}
+
+.teathealth-modal-close-btn {
+  flex: 1;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+/* Mobile scrolling fix */
+@media (max-width: 768px) {
+  /* Hero Mobile */
+  .teathealth-hero-content {
+    padding: var(--spacing-3xl) var(--spacing-lg);
   }
-  
-  /* Full Width Helper */
-  .farmbiosec-full-width {
-    position: relative;
-    width: 100vw;
-    transform: translateX(-50%);
-    left: 50%;
+
+  .teathealth-hero-badge {
+    font-size: var(--font-size-xs);
+    padding: var(--spacing-sm) var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
   }
-  
-  /* Hero Section */
-  .farmbiosec-hero-section {
-    position: relative;
-    background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
-    color: white;
-    padding: 5rem 2rem;
-    overflow: hidden;
+
+  .teathealth-hero-title {
+    font-size: var(--font-size-2xl);
+    margin-bottom: var(--spacing-lg);
   }
-  
-  .farmbiosec-hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image:
-      radial-gradient(circle at 20% 80%, rgba(22, 163, 74, 0.1) 0%, transparent 50%),
-      radial-gradient(circle at 80% 20%, rgba(59, 130, 246, 0.05) 0%, transparent 50%);
+
+  .teathealth-hero-accent {
+    display: inline;
+    margin-left: var(--spacing-xs);
   }
-  
-  .farmbiosec-hero-content {
-    position: relative;
-    z-index: 1;
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
+
+  .teathealth-hero-description {
+    font-size: var(--font-size-base);
+    margin-bottom: var(--spacing-xl);
+    padding: 0 var(--spacing-lg);
   }
-  
-  .farmbiosec-hero-title {
-    font-size: 3.5rem;
-    font-weight: 800;
-    line-height: 1.2;
-    margin-bottom: 1rem;
+
+  .teathealth-hero-stats {
+    gap: var(--spacing-xl);
   }
-  
-  .farmbiosec-hero-accent {
-    display: block;
-    color: #16a34a;
+
+  .teathealth-stat-item {
+    flex: 1;
+    min-width: 80px;
   }
-  
-  .farmbiosec-hero-description {
-    font-size: 1.25rem;
-    color: #e5e7eb;
-    max-width: 600px;
-    margin: 0 auto;
-    line-height: 1.6;
+
+  .teathealth-stat-number {
+    font-size: var(--font-size-xl);
   }
-  
-  /* Filter Section */
-  .farmbiosec-filter-section {
-    padding: 3rem 2rem;
-    background: #f8f9fa;
+
+  .teathealth-stat-label {
+    font-size: var(--font-size-xs);
   }
-  
-  .farmbiosec-filter-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
+
+  /* Features Mobile */
+  .teathealth-features-container {
+    padding: var(--spacing-3xl) var(--spacing-lg);
   }
-  
-  .farmbiosec-filter-title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 1.5rem;
-    color: #1f2937;
+
+  .teathealth-features-title {
+    font-size: var(--font-size-2xl);
+    margin-bottom: var(--spacing-xl);
   }
-  
-  .farmbiosec-filter-buttons {
-    display: flex;
+
+  .teathealth-features-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .teathealth-feature-card {
+    padding: var(--spacing-xl);
+  }
+
+  .teathealth-feature-card h3 {
+    font-size: var(--font-size-lg);
+  }
+
+  .teathealth-feature-card p {
+    font-size: var(--font-size-sm);
+  }
+
+  /* Products Mobile */
+  .teathealth-products-container {
+    padding: var(--spacing-3xl) var(--spacing-lg);
+  }
+
+  .teathealth-section-title {
+    font-size: var(--font-size-2xl);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .teathealth-section-subtitle {
+    font-size: var(--font-size-base);
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .teathealth-products-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+  }
+
+  .teathealth-product-category {
+    font-size: var(--font-size-xs);
+    padding: var(--spacing-xs) var(--spacing-sm);
+  }
+
+  .teathealth-product-image-container {
+    height: 180px;
+  }
+
+  .teathealth-product-content {
+    padding: var(--spacing-lg);
+  }
+
+  .teathealth-product-title {
+    font-size: var(--font-size-lg);
+  }
+
+  .teathealth-product-description {
+    font-size: var(--font-size-sm);
+  }
+
+  .teathealth-feature-item {
+    font-size: var(--font-size-xs);
+  }
+
+  /* CTA Mobile */
+  .teathealth-cta-container {
+    padding: var(--spacing-3xl) var(--spacing-lg);
+  }
+
+  .teathealth-cta-title {
+    font-size: var(--font-size-2xl);
+  }
+
+  .teathealth-cta-description {
+    font-size: var(--font-size-base);
+  }
+
+  .teathealth-cta-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .teathealth-btn-primary,
+  .teathealth-btn-secondary {
+    padding: var(--spacing-md) var(--spacing-xl);
+    font-size: var(--font-size-base);
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Modal Mobile */
+  .teathealth-modal-overlay {
+    padding: var(--spacing-lg);
+    padding-top: 80px;
+  }
+
+  .teathealth-modal-content {
+    max-height: calc(100vh - 100px);
+    border-radius: var(--radius-lg);
+  }
+
+  .teathealth-modal-close {
+    width: 35px;
+    height: 35px;
+    font-size: var(--font-size-xl);
+  }
+
+  .teathealth-modal-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .teathealth-modal-image img {
+    max-height: 200px;
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  }
+
+  .teathealth-modal-info {
+    padding: var(--spacing-lg);
+  }
+
+  .teathealth-modal-header {
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
   }
-  
-  .farmbiosec-filter-button {
-    padding: 0.75rem 1.5rem;
-    font-size: 1rem;
-    font-weight: 600;
-    border: 2px solid #16a34a;
-    border-radius: 8px;
-    background: transparent;
-    color: #16a34a;
-    cursor: pointer;
-    transition: all 0.3s ease;
+
+  .teathealth-modal-title {
+    font-size: var(--font-size-xl);
   }
-  
-  .farmbiosec-filter-button.active,
-  .farmbiosec-filter-button:hover {
-    background: #16a34a;
-    color: white;
+
+  .teathealth-modal-description {
+    font-size: var(--font-size-sm);
   }
-  
-  /* Products Section */
-  .farmbiosec-products-section {
-    padding: 5rem 2rem;
-    background: white;
+
+  .teathealth-modal-features li {
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-xs);
+    font-size: var(--font-size-sm);
   }
-  
-  .farmbiosec-products-container {
-    max-width: 1200px;
-    margin: 0 auto;
+
+  .teathealth-modal-actions {
+    flex-direction: column;
   }
-  
-  .farmbiosec-section-title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 3rem;
-    color: #1f2937;
-  }
-  
-  .farmbiosec-products-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 2rem;
-  }
-  
-  .farmbiosec-product-card {
-    background: white;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    transition: all 0.3s ease;
-    cursor: pointer;
-    position: relative;
-  }
-  
-  .farmbiosec-product-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-  }
-  
-  .farmbiosec-product-image-container {
-    position: relative;
-    height: 200px;
-    overflow: hidden;
-  }
-  
-  .farmbiosec-product-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-  }
-  
-  .farmbiosec-product-card:hover .farmbiosec-product-image {
-    transform: scale(1.05);
-  }
-  
-  .farmbiosec-product-overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.7);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
-  
-  .farmbiosec-product-card:hover .farmbiosec-product-overlay {
-    opacity: 1;
-  }
-  
-  .farmbiosec-view-details-btn {
-    background: #16a34a;
-    color: white;
-    border: none;
-    padding: 0.75rem 1.5rem;
-    border-radius: 8px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background 0.3s ease;
-  }
-  
-  .farmbiosec-view-details-btn:hover {
-    background: #15803d;
-  }
-  
-  .farmbiosec-product-content {
-    padding: 1.5rem;
-  }
-  
-  .farmbiosec-product-title {
-    font-size: 1.25rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-    color: #1f2937;
-  }
-  
-  .farmbiosec-product-description {
-    color: #6b7280;
-    margin-bottom: 1rem;
-    line-height: 1.5;
-  }
-  
-  /* CTA Section */
-  .farmbiosec-cta-section {
-    background: linear-gradient(135deg, #16a34a 0%, #22c55e 100%);
-    padding: 5rem 2rem;
-    color: white;
-    text-align: center;
-  }
-  
-  .farmbiosec-cta-container {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
-  .farmbiosec-cta-title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-  }
-  
-  .farmbiosec-cta-description {
-    font-size: 1.25rem;
-    margin-bottom: 2rem;
-    opacity: 0.9;
-  }
-  
-  .farmbiosec-cta-buttons {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  
-  .farmbiosec-btn-primary,
-  .farmbiosec-btn-secondary {
-    padding: 1rem 2rem;
-    font-size: 1rem;
-    font-weight: 600;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  
-  .farmbiosec-btn-primary {
-    background: white;
-    color: #16a34a;
-  }
-  
-  .farmbiosec-btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  }
-  
-  .farmbiosec-btn-secondary {
-    background: transparent;
-    color: white;
-    border: 2px solid white;
-  }
-  
-  .farmbiosec-btn-secondary:hover {
-    background: white;
-    color: #16a34a;
-  }
-  
-  /* Modal */
-  .farmbiosec-modal-overlay {
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.8);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
-    padding: 2rem;
-  }
-  
-  .farmbiosec-modal-content {
-    background: white;
-    border-radius: 16px;
-    max-width: 900px;
-    width: 100%;
-    max-height: 90vh;
-    overflow-y: auto;
-    position: relative;
-  }
-  
-  .farmbiosec-modal-close {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    background: #f3f4f6;
-    border: none;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    font-size: 1.5rem;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background 0.3s ease;
-  }
-  
-  .farmbiosec-modal-close:hover {
-    background: #e5e7eb;
-  }
-  
-  .farmbiosec-modal-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-  }
-  
-  .farmbiosec-modal-image img {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-    border-radius: 16px 0 0 16px;
-  }
-  
-  .farmbiosec-modal-info {
-    padding: 2rem;
-  }
-  
-  .farmbiosec-modal-title {
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    color: #1f2937;
-  }
-  
-  .farmbiosec-modal-description {
-    color: #6b7280;
-    margin-bottom: 2rem;
-    line-height: 1.6;
-  }
-  
-  .farmbiosec-modal-features-title {
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-    color: #1f2937;
-  }
-  
-  .farmbiosec-modal-features {
-    list-style: none;
-    margin-bottom: 2rem;
-    padding: 0;
-  }
-  
-  .farmbiosec-feature-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 0.75rem;
-    margin-bottom: 0.75rem;
-    color: #4b5563;
-  }
-  
-  /* Responsive */
-  @media (max-width: 768px) {
-    .farmbiosec-full-width{
-      width: auto;
-      left: auto;
+
+  /* Disable hover effects on touch */
+  @media (hover: none) {
+    .teathealth-product-card:hover {
       transform: none;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     }
 
-    .farmbiosec-hero-title {
-      font-size: 2.5rem;
+    .teathealth-product-overlay {
+      opacity: 1;
+      background: rgba(0, 0, 0, 0.5);
     }
-    .farmbiosec-modal-grid {
-      grid-template-columns: 1fr;
-    }
-    .farmbiosec-modal-image img {
-      border-radius: 16px 16px 0 0;
-      height: 250px;
-    }
-    .farmbiosec-products-grid {
-      grid-template-columns: 1fr;
+
+    .teathealth-feature-card:hover {
+      transform: none;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     }
   }
-  
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .teathealth-hero-title {
+    font-size: var(--font-size-xl);
+  }
+
+  .teathealth-modal-features li {
+    font-size: var(--font-size-xs);
+    gap: var(--spacing-sm);
+  }
+}
+
+/* Height-limited screens */
+@media (max-height: 700px) {
+  .teathealth-modal-content {
+    max-height: calc(100vh - 100px);
+  }
+
+  .teathealth-modal-image img {
+    max-height: 250px;
+  }
+
+  .teathealth-modal-info {
+    padding: var(--spacing-xl);
+  }
+}
+
+/* Touch optimization */
+@media (hover: none) and (pointer: coarse) {
+  .teathealth-modal-content {
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-y;
+  }
+}
+
+/* iOS Safari specific fixes */
+@supports (-webkit-touch-callout: none) {
+  .teathealth-modal-overlay {
+    height: -webkit-fill-available;
+  }
+}

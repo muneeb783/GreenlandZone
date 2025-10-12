@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { ChevronRight } from 'lucide-react';
 import "../styles/cowmonitsol.css";
 
 const SenseTimePage = () => {
@@ -27,31 +28,64 @@ const SenseTimePage = () => {
     }
   ];
 
-  const images = [
+  const products = [
     {
       id: 1,
-      src: "/api/placeholder/400/300",
-      alt: "Cow with monitoring tag",
-      caption: "SenseTM Flex neck tag in action"
+      name: "cSenseTM Flex",
+      category: "Neck Tag",
+      shortDesc: "Advanced neck-mounted monitoring system for comprehensive cow health tracking",
+      fullDesc: "The cSenseTM Flex neck tag is based on the proven SCR neck tag technology already in use on thousands of farms worldwide. This advanced system delivers precise monitoring of heat detection, health status, and rumination patterns. The comfortable, durable design ensures accurate data collection while maintaining cow comfort throughout lactation.",
+      features: [
+        "Best-in-class heat detection accuracy (95%+)",
+        "Real-time health monitoring and alerts",
+        "Rumination and eating behavior tracking",
+        "Based on proven SCR technology",
+        "Weatherproof and durable construction",
+        "Long battery life with easy replacement"
+      ],
+      image: "/api/placeholder/600/400",
+      tag: "Neck Tag"
     },
     {
       id: 2,
-      src: "/api/placeholder/400/300",
-      alt: "Close-up of monitoring system",
-      caption: "Advanced monitoring technology"
+      name: "eSenseTM Flex",
+      category: "Ear Tag",
+      shortDesc: "The most advanced ear tag monitoring system available on the market",
+      fullDesc: "The eSenseTM Flex ear tag represents the newest breakthrough in cow monitoring technology. As the most advanced ear tag on the market, it provides comprehensive health insights, heat detection, and activity monitoring in a compact, lightweight design. Perfect for farmers who prefer ear tag systems or mixed-use operations.",
+      features: [
+        "Most advanced ear tag technology available",
+        "Superior heat detection capability",
+        "Comprehensive health insight monitoring",
+        "Lightweight and comfortable for cows",
+        "Easy application and management",
+        "Seamless integration with farm systems"
+      ],
+      image: "/api/placeholder/600/400",
+      tag: "Ear Tag"
     },
     {
       id: 3,
-      src: "/api/placeholder/400/300",
-      alt: "eSenseTM Flex ear tag",
-      caption: "eSenseTM Flex ear tag device"
+      name: "SenseHub System",
+      category: "Data Platform",
+      shortDesc: "Central hub for actionable farm management insights and data analytics",
+      fullDesc: "The SenseHub data platform serves as the brain of the SenseTime monitoring system. It collects, analyzes, and presents real-time data from all monitored cows, providing actionable insights on reproductive status, health conditions, nutritional needs, and overall wellbeing. The intuitive interface makes complex data simple to understand and act upon.",
+      features: [
+        "Real-time data analytics and insights",
+        "Actionable alerts for heat, health, and nutrition",
+        "Individual and group monitoring capabilities",
+        "Mobile and desktop access",
+        "Historical data tracking and reports",
+        "Integration with farm management software"
+      ],
+      image: "/api/placeholder/600/400",
+      tag: "Platform"
     }
   ];
 
   return (
-    <div className="sensetime-container hero-full-width">
+    <div className="sensetime-container">
       {/* Hero Section */}
-      <section className="hero-section hero-full-width">
+      <section className="hero-section">
         <div className="hero-background-pattern"></div>
         <div className="hero-container">
           <div className="hero-content">
@@ -134,45 +168,94 @@ const SenseTimePage = () => {
             </div>
           </div>
 
-          {/* Image Gallery */}
-          <div className="gallery-section">
+          {/* Product Showcase */}
+          <div className="products-section">
             <h2 className="section-title">See It In Action</h2>
-            <div className="image-gallery">
-              {images.map((image) => (
-                <div 
-                  key={image.id} 
-                  className="gallery-item"
-                  onClick={() => setSelectedImage(image)}
+            <p className="section-subtitle">
+              Choose the monitoring solution that fits your farm - neck tags, ear tags, or both
+            </p>
+            <div className="products-grid">
+              {products.map(product => (
+                <div
+                  key={product.id}
+                  className="product-card"
+                  onClick={() => setSelectedImage(product)}
                 >
-                  <img src={image.src} alt={image.alt} />
-                  <div className="image-overlay">
-                    <p className="image-caption">{image.caption}</p>
+                  <div className="product-image-container">
+                    <img
+                      src={product.image}
+                      alt={product.name}
+                      className="product-image"
+                    />
+                    <div className="product-tag">{product.tag}</div>
+                    <div className="product-overlay">
+                      <button className="view-details-btn">
+                        View Details
+                        <ChevronRight size={16} />
+                      </button>
+                    </div>
+                  </div>
+                  <div className="product-content">
+                    <div className="product-category-text">{product.category}</div>
+                    <h3 className="product-title">{product.name}</h3>
+                    <p className="product-description">{product.shortDesc}</p>
+                    <ul className="product-features">
+                      {product.features.slice(0, 3).map((feature, index) => (
+                        <li key={index} className="product-feature-item">
+                          <ChevronRight className="feature-bullet-icon" size={16} />
+                          <span>{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
                 </div>
               ))}
             </div>
           </div>
-
-          {/* CTA Section */}
-          <div className="cta-section">
-            <h2 className="cta-title">Ready to Transform Your Farm?</h2>
-            <p className="cta-description">
-              Join thousands of farmers worldwide who are already benefiting from SenseTime technology
-            </p>
-            <div className="cta-buttons">
-              <button className="btn-primary">Download Brochure</button>
-            </div>
-          </div>
         </div>
       </section>
 
-      {/* Image Modal */}
+      {/* Product Detail Modal */}
       {selectedImage && (
         <div className="modal-overlay" onClick={() => setSelectedImage(null)}>
-          <div className="modal-content">
-            <img src={selectedImage.src} alt={selectedImage.alt} />
-            <p className="modal-caption">{selectedImage.caption}</p>
-            <button className="modal-close" onClick={() => setSelectedImage(null)}>✕</button>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <button className="modal-close" onClick={() => setSelectedImage(null)}>
+              ×
+            </button>
+            <div className="modal-grid">
+              <div className="modal-image">
+                <img src={selectedImage.image} alt={selectedImage.name} />
+              </div>
+              <div className="modal-info">
+                <div className="modal-header">
+                  <div className="modal-category">{selectedImage.category}</div>
+                  <span className="modal-tag">{selectedImage.tag}</span>
+                </div>
+                <h2 className="modal-title">{selectedImage.name}</h2>
+                <p className="modal-description">{selectedImage.fullDesc}</p>
+
+                <div className="modal-features-section">
+                  <h3 className="modal-features-title">Key Features</h3>
+                  <ul className="modal-features">
+                    {selectedImage.features.map((feature, index) => (
+                      <li key={index}>
+                        <ChevronRight className="feature-icon" size={18} />
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="modal-actions">
+                  <button
+                    className="btn-secondary modal-close-btn"
+                    onClick={() => setSelectedImage(null)}
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       )}

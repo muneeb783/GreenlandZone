@@ -1,29 +1,52 @@
-/* Milking.css - All classes prefixed with 'milking-' */
-body {
-  overflow-x: hidden; /* <-- Add this line */
-}
+/* ============================================================================
+   MILKING EQUIPMENT SOLUTIONS - Optimized Stylesheet
+   ============================================================================
 
+   This file extends common-styles.css with page-specific customizations.
+   Import common-styles.css BEFORE this file in your component.
+
+   Usage in React component:
+   import '../styles/common-styles.css';
+   import '../styles/milking.css';
+
+   ============================================================================ */
+
+/* ============================================================================
+   CLASS MAPPING & BACKWARDS COMPATIBILITY
+   ============================================================================
+
+   The legacy .milking-* classes now map to the new common classes.
+   This ensures existing React components continue to work without changes.
+   ============================================================================ */
+
+/* Container Mapping */
 .milking-container {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  color: #1f2937;
-  background-color: #ffffff;
+  font-family: var(--font-family-base);
+  color: var(--color-dark);
+  background-color: var(--color-white);
   min-height: 100vh;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-y;
 }
 
-/* Hero Section */
+/* ============================================================================
+   HERO SECTION - Milking Specific
+   ============================================================================ */
+
 .milking-hero-section {
   position: relative;
-  background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
-  color: white;
-  padding: 5rem 2rem;
+  width: 100%;
+  background: linear-gradient(135deg, var(--color-dark) 0%, var(--color-dark-light) 100%);
+  color: var(--color-white);
   overflow: hidden;
-}
-
-.milking-full-width {
-  position: relative;
-  width: 100vw;
-  transform: translateX(-50%);
-  left: 50%;
+  touch-action: pan-y;
 }
 
 .milking-hero-overlay {
@@ -32,56 +55,57 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: 
+  background-image:
     radial-gradient(circle at 20% 80%, rgba(22, 163, 74, 0.1) 0%, transparent 50%),
     radial-gradient(circle at 80% 20%, rgba(59, 130, 246, 0.05) 0%, transparent 50%);
 }
 
 .milking-hero-content {
   position: relative;
-  z-index: 1;
+  z-index: var(--z-base);
   max-width: 1200px;
   margin: 0 auto;
+  padding: var(--spacing-5xl) var(--spacing-2xl);
   text-align: center;
 }
 
 .milking-hero-badge {
   display: inline-block;
-  background: rgba(22, 163, 74, 0.2);
-  border: 1px solid rgba(22, 163, 74, 0.3);
-  color: #86efac;
-  padding: 0.5rem 1.5rem;
-  border-radius: 2rem;
-  font-size: 0.875rem;
-  font-weight: 600;
+  background: var(--color-primary-bg);
+  border: 1px solid var(--color-primary-border);
+  color: var(--color-primary-lightest);
+  padding: var(--spacing-sm) var(--spacing-xl);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
   letter-spacing: 0.05em;
-  margin-bottom: 2rem;
+  margin-bottom: var(--spacing-2xl);
 }
 
 .milking-hero-title {
-  font-size: 3.5rem;
-  font-weight: 800;
-  line-height: 1.2;
-  margin-bottom: 1.5rem;
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-extrabold);
+  line-height: var(--line-height-tight);
+  margin-bottom: var(--spacing-xl);
 }
 
 .milking-hero-accent {
   display: block;
-  color: #16a34a;
+  color: var(--color-primary);
 }
 
 .milking-hero-description {
-  font-size: 1.25rem;
-  color: #e5e7eb;
+  font-size: var(--font-size-lg);
+  color: var(--color-gray-100);
   max-width: 600px;
-  margin: 0 auto 3rem;
-  line-height: 1.6;
+  margin: 0 auto var(--spacing-3xl);
+  line-height: var(--line-height-relaxed);
 }
 
 .milking-hero-stats {
   display: flex;
   justify-content: center;
-  gap: 4rem;
+  gap: var(--spacing-4xl);
   flex-wrap: wrap;
 }
 
@@ -91,127 +115,188 @@ body {
 
 .milking-stat-icon {
   font-size: 2.5rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: var(--spacing-sm);
 }
 
 .milking-stat-number {
   font-size: 2.5rem;
-  font-weight: 700;
-  color: #16a34a;
-  margin-bottom: 0.25rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-xs);
 }
 
 .milking-stat-label {
-  font-size: 0.875rem;
-  color: #9ca3af;
+  font-size: var(--font-size-sm);
+  color: var(--color-gray-400);
 }
 
-/* Features Section */
+/* ============================================================================
+   FEATURES SECTION - Milking Specific
+   ============================================================================ */
+
 .milking-features-section {
-  padding: 5rem 2rem;
-  background: #f8f9fa;
+  width: 100%;
+  background: var(--color-gray-50);
+  touch-action: pan-y;
+  -webkit-overflow-scrolling: touch;
 }
 
 .milking-features-container {
   max-width: 1200px;
   margin: 0 auto;
+  padding: var(--spacing-5xl) var(--spacing-2xl);
 }
 
 .milking-features-title {
-  font-size: 2.5rem;
-  font-weight: 700;
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
   text-align: center;
-  margin-bottom: 3rem;
-  color: #1f2937;
+  margin-bottom: var(--spacing-3xl);
+  color: var(--color-dark);
 }
 
 .milking-features-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
+  gap: var(--spacing-2xl);
 }
 
 .milking-feature-card {
-  background: white;
-  padding: 2rem;
-  border-radius: 12px;
+  background: var(--color-white);
+  padding: var(--spacing-2xl);
+  border-radius: var(--radius-md);
   text-align: center;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-base);
+  border: 1px solid transparent;
 }
 
 .milking-feature-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--color-primary);
+}
+
+.milking-feature-icon-wrapper {
+  width: 64px;
+  height: 64px;
+  background: rgba(22, 163, 74, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--spacing-xl);
+}
+
+.milking-feature-icon-svg {
+  color: var(--color-primary);
 }
 
 .milking-feature-icon {
   font-size: 3rem;
-  margin-bottom: 1rem;
+  margin-bottom: var(--spacing-lg);
 }
 
 .milking-feature-card h3 {
-  font-size: 1.25rem;
-  margin-bottom: 0.75rem;
-  color: #1f2937;
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--spacing-md);
+  color: var(--color-dark);
+  font-weight: var(--font-weight-bold);
 }
 
 .milking-feature-card p {
-  color: #6b7280;
-  line-height: 1.6;
+  color: var(--color-gray-500);
+  line-height: var(--line-height-relaxed);
 }
 
-/* Products Section */
+/* ============================================================================
+   PRODUCTS SECTION - Milking Specific
+   ============================================================================ */
+
 .milking-products-section {
-  padding: 5rem 2rem;
-  background: white;
+  width: 100%;
+  background: var(--color-white);
+  touch-action: pan-y;
+  -webkit-overflow-scrolling: touch;
 }
 
 .milking-products-container {
   max-width: 1200px;
   margin: 0 auto;
+  padding: var(--spacing-5xl) var(--spacing-2xl);
 }
 
 .milking-section-title {
-  font-size: 2.5rem;
-  font-weight: 700;
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
   text-align: center;
-  margin-bottom: 3rem;
-  color: #1f2937;
+  margin-bottom: var(--spacing-lg);
+  color: var(--color-dark);
+}
+
+.milking-section-subtitle {
+  font-size: var(--font-size-lg);
+  color: var(--color-gray-500);
+  text-align: center;
+  margin-bottom: var(--spacing-3xl);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .milking-products-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 2rem;
+  gap: var(--spacing-2xl);
 }
 
 .milking-product-card {
-  background: white;
-  border-radius: 12px;
+  background: var(--color-white);
+  border-radius: var(--radius-md);
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition-base);
   cursor: pointer;
   position: relative;
+  border: 1px solid transparent;
 }
 
 .milking-product-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  border-color: var(--color-primary);
+}
+
+.milking-product-category-text {
+  font-size: var(--font-size-sm);
+  color: var(--color-primary);
+  font-weight: var(--font-weight-medium);
+  margin-bottom: var(--spacing-sm);
+}
+
+.milking-feature-bullet-icon {
+  color: var(--color-primary);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.btn-icon {
+  display: inline-block;
+  margin-left: var(--spacing-sm);
+  vertical-align: middle;
 }
 
 .milking-product-category {
   position: absolute;
-  top: 1rem;
-  right: 1rem;
-  background: #16a34a;
-  color: white;
-  padding: 0.25rem 0.75rem;
-  border-radius: 1rem;
-  font-size: 0.75rem;
-  font-weight: 600;
-  z-index: 10;
+  top: var(--spacing-lg);
+  right: var(--spacing-lg);
+  background: var(--color-primary);
+  color: var(--color-white);
+  padding: var(--spacing-xs) var(--spacing-md);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  z-index: var(--z-dropdown);
 }
 
 .milking-product-image-container {
@@ -224,7 +309,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.3s ease;
+  transition: var(--transition-base);
 }
 
 .milking-product-card:hover .milking-product-image {
@@ -239,7 +324,7 @@ body {
   align-items: center;
   justify-content: center;
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: var(--transition-fast);
 }
 
 .milking-product-card:hover .milking-product-overlay {
@@ -247,35 +332,35 @@ body {
 }
 
 .milking-view-details-btn {
-  background: #16a34a;
-  color: white;
+  background: var(--color-primary);
+  color: var(--color-white);
   border: none;
-  padding: 0.75rem 1.5rem;
-  border-radius: 8px;
-  font-weight: 600;
+  padding: var(--spacing-md) var(--spacing-xl);
+  border-radius: var(--radius-sm);
+  font-weight: var(--font-weight-medium);
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: var(--transition-fast);
 }
 
 .milking-view-details-btn:hover {
-  background: #15803d;
+  background: var(--color-primary-dark);
 }
 
 .milking-product-content {
-  padding: 1.5rem;
+  padding: var(--spacing-xl);
 }
 
 .milking-product-title {
-  font-size: 1.25rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-  color: #1f2937;
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-dark);
 }
 
 .milking-product-description {
-  color: #6b7280;
-  margin-bottom: 1rem;
-  line-height: 1.5;
+  color: var(--color-gray-500);
+  margin-bottom: var(--spacing-lg);
+  line-height: var(--line-height-base);
 }
 
 .milking-product-features {
@@ -287,85 +372,94 @@ body {
 .milking-feature-item {
   display: flex;
   align-items: flex-start;
-  gap: 0.5rem;
-  margin-bottom: 0.5rem;
-  color: #4b5563;
-  font-size: 0.875rem;
-  text-align: left;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-gray-600);
+  font-size: var(--font-size-sm);
 }
 
 .milking-feature-bullet {
-  color: #16a34a;
+  color: var(--color-primary);
   font-weight: bold;
   flex-shrink: 0;
   line-height: 1.4;
-  font-size: 1rem;
+  font-size: var(--font-size-base);
 }
 
-/* CTA Section */
+/* ============================================================================
+   CTA SECTION - Milking Specific
+   ============================================================================ */
+
 .milking-cta-section {
-  background: linear-gradient(135deg, #16a34a 0%, #22c55e 100%);
-  padding: 5rem 2rem;
-  color: white;
-  text-align: center;
+  width: 100%;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+  color: var(--color-white);
+  touch-action: pan-y;
+  -webkit-overflow-scrolling: touch;
 }
 
 .milking-cta-container {
   max-width: 800px;
   margin: 0 auto;
+  padding: var(--spacing-5xl) var(--spacing-2xl);
+  text-align: center;
 }
 
 .milking-cta-title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-lg);
 }
 
 .milking-cta-description {
-  font-size: 1.25rem;
-  margin-bottom: 2rem;
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--spacing-2xl);
   opacity: 0.9;
 }
 
 .milking-cta-buttons {
   display: flex;
-  gap: 1rem;
+  gap: var(--spacing-lg);
   justify-content: center;
   flex-wrap: wrap;
 }
 
-.milking-btn-primary, .milking-btn-secondary {
-  padding: 1rem 2rem;
-  font-size: 1rem;
-  font-weight: 600;
+.milking-btn-primary,
+.milking-btn-secondary {
+  padding: var(--spacing-lg) var(--spacing-2xl);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
   border: none;
-  border-radius: 8px;
+  border-radius: var(--radius-sm);
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: var(--transition-base);
 }
 
 .milking-btn-primary {
-  background: white;
-  color: #16a34a;
+  background: var(--color-white);
+  color: var(--color-primary);
 }
 
 .milking-btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--shadow-cta);
 }
 
 .milking-btn-secondary {
   background: transparent;
-  color: white;
-  border: 2px solid white;
+  color: var(--color-white);
+  border: 2px solid var(--color-white);
 }
 
 .milking-btn-secondary:hover {
-  background: white;
-  color: #16a34a;
+  background: var(--color-white);
+  color: var(--color-primary);
 }
 
-/* Modal */
+/* ============================================================================
+   MODAL - Milking Specific
+   ============================================================================ */
+
 .milking-modal-overlay {
   position: fixed;
   top: 0;
@@ -376,17 +470,17 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 999; /* Keep below navbar's z-index (usually 1000+) */
-  padding: 2rem;
-  padding-top: 100px; /* Account for navbar height */
+  z-index: var(--z-modal);
+  padding: var(--spacing-2xl);
+  padding-top: 100px;
 }
 
 .milking-modal-content {
-  background: white;
-  border-radius: 16px;
-  max-width: 900px;
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  max-width: var(--container-wide);
   width: 100%;
-  max-height: calc(100vh - 120px); /* Subtract navbar height + padding */
+  max-height: calc(100vh - 120px);
   height: auto;
   overflow-y: auto;
   position: relative;
@@ -395,33 +489,33 @@ body {
 
 .milking-modal-close {
   position: absolute;
-  top: 1rem;
-  right: 1rem;
-  background: #ef4444;
-  color: white;
+  top: var(--spacing-lg);
+  right: var(--spacing-lg);
+  background: var(--color-danger);
+  color: var(--color-white);
   border: none;
   width: 40px;
   height: 40px;
-  border-radius: 50%;
-  font-size: 1.5rem;
+  border-radius: var(--radius-circle);
+  font-size: var(--font-size-xl);
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 10;
-  transition: all 0.3s ease;
+  z-index: var(--z-dropdown);
+  transition: var(--transition-base);
 }
 
 .milking-modal-close:hover {
-  background: #dc2626;
+  background: var(--color-danger-dark);
   transform: scale(1.1);
 }
 
 .milking-modal-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  max-height: calc(100vh - 160px); /* Account for modal padding */
+  gap: var(--spacing-2xl);
+  max-height: calc(100vh - 160px);
   overflow-y: auto;
 }
 
@@ -430,48 +524,66 @@ body {
   height: 100%;
   max-height: 400px;
   object-fit: cover;
-  border-radius: 16px 0 0 16px;
+  border-radius: var(--radius-lg) 0 0 var(--radius-lg);
 }
 
 .milking-modal-info {
-  padding: 1.5rem;
+  padding: var(--spacing-xl);
+}
+
+.milking-modal-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+  flex-wrap: wrap;
 }
 
 .milking-modal-category {
-  background: #dcfce7;
-  color: #16a34a;
+  background: var(--color-primary-pale);
+  color: var(--color-primary);
   display: inline-block;
-  padding: 0.2rem 0.75rem;
-  border-radius: 1rem;
-  font-size: 0.75rem;
-  font-weight: 600;
-  margin-bottom: 0.75rem;
+  padding: 0.2rem var(--spacing-md);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+}
+
+.milking-modal-tag {
+  background: rgba(22, 163, 74, 0.1);
+  color: var(--color-primary);
+  padding: 0.25rem var(--spacing-md);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+}
+
+.milking-modal-features-section {
+  margin-top: var(--spacing-xl);
 }
 
 .milking-modal-title {
-  font-size: 1.75rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-  color: #1f2937;
-  line-height: 1.2;
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-dark);
+  line-height: var(--line-height-tight);
 }
 
 .milking-modal-description {
-  color: #6b7280;
-  margin-bottom: 1rem;
-  line-height: 1.5;
+  color: var(--color-gray-500);
+  margin-bottom: var(--spacing-lg);
+  line-height: var(--line-height-base);
   font-size: 0.95rem;
-  align-items: left;
 }
 
 .milking-modal-features-title {
   font-size: 1.1rem;
-  font-weight: 600;
-  margin-bottom: 0.75rem;
-  color: #1f2937;
+  font-weight: var(--font-weight-medium);
+  margin-bottom: var(--spacing-md);
+  color: var(--color-dark);
 }
 
-/* Optimize features list layout */
 .milking-modal-features {
   list-style: none;
   margin-bottom: 0;
@@ -480,108 +592,434 @@ body {
 
 .milking-modal-features li {
   display: flex;
-  align-items: flex-start; /* Keep flex-start for multi-line alignment */
-  gap: 0.75rem; /* Increase gap slightly for better spacing */
+  align-items: flex-start;
+  gap: var(--spacing-md);
   margin-bottom: 0.6rem;
-  color: #4b5563;
+  color: var(--color-gray-600);
   font-size: 0.9rem;
   line-height: 1.4;
 }
 
 .milking-feature-icon {
-  color: #16a34a;
+  color: var(--color-primary);
   font-weight: bold;
   flex-shrink: 0;
-  font-size: 1.1rem; /* Make checkmark slightly larger */
-  line-height: 1.4; /* Match text line-height */
+  font-size: 1.1rem;
+  line-height: 1.4;
   display: flex;
   align-items: center;
-  height: 1.4em; /* Match line height to align with first line of text */
+  height: 1.4em;
 }
 
-/* Ensure text is left-aligned and wraps properly */
+.milking-modal-actions {
+  display: flex;
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-2xl);
+  padding-top: var(--spacing-xl);
+  border-top: 1px solid var(--color-gray-100);
+}
+
+.milking-modal-cta {
+  flex: 1;
+}
+
+.milking-modal-close-btn {
+  flex: 1;
+}
+
 .milking-modal-features li span:not(.milking-feature-icon) {
   text-align: left;
   flex: 1;
 }
 
-/* Hide the action buttons */
-.milking-modal-actions {
-  display: none;
-}
+/* ============================================================================
+   RESPONSIVE DESIGN - MOBILE OPTIMIZATIONS
+   ============================================================================ */
 
-
-/* Responsive */
 @media (max-width: 768px) {
 
-  .milking-full-width {
-    /* This resets the class to behave normally on mobile */
-    width: auto;
-    left: auto;
-    transform: none;
+  /* Hero Section Mobile */
+  .milking-hero-content {
+    padding: var(--spacing-3xl) var(--spacing-lg);
   }
+
+  .milking-hero-badge {
+    font-size: var(--font-size-xs);
+    padding: 0.4rem var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+  }
+
   .milking-hero-title {
-    font-size: 2.5rem;
+    font-size: 2rem;
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .milking-hero-accent {
+    display: inline;
+    margin-left: var(--spacing-xs);
+  }
+
+  .milking-hero-description {
+    font-size: var(--font-size-base);
+    margin-bottom: var(--spacing-2xl);
+    padding: 0 var(--spacing-lg);
   }
 
   .milking-hero-stats {
-    gap: 2rem;
+    gap: var(--spacing-xl);
   }
 
-  .milking-modal-grid {
+  .milking-stat-item {
+    flex: 1;
+    min-width: 80px;
+  }
+
+  .milking-stat-icon {
+    font-size: 1.75rem;
+    margin-bottom: var(--spacing-xs);
+  }
+
+  .milking-stat-number {
+    font-size: 1.5rem;
+  }
+
+  .milking-stat-label {
+    font-size: var(--font-size-xs);
+  }
+
+  /* Features Section Mobile */
+  .milking-features-container {
+    padding: var(--spacing-3xl) var(--spacing-lg);
+  }
+
+  .milking-features-title {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-2xl);
+  }
+
+  .milking-features-grid {
     grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
   }
 
-  .milking-modal-image img {
-    border-radius: 16px 16px 0 0;
-    height: 250px;
+  .milking-feature-card {
+    padding: var(--spacing-xl);
+  }
+
+  .milking-feature-icon {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .milking-feature-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .milking-feature-card p {
+    font-size: 0.9rem;
+  }
+
+  /* Products Section Mobile */
+  .milking-products-container {
+    padding: var(--spacing-3xl) var(--spacing-lg);
+  }
+
+  .milking-section-title {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-2xl);
   }
 
   .milking-products-grid {
     grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
   }
 
+  .milking-product-card {
+    box-shadow: var(--shadow-sm);
+  }
+
+  .milking-product-category {
+    font-size: 0.7rem;
+    padding: 0.2rem var(--spacing-sm);
+    top: var(--spacing-md);
+    right: var(--spacing-md);
+  }
+
+  .milking-product-image-container {
+    height: 180px;
+  }
+
+  .milking-product-content {
+    padding: 1.25rem;
+  }
+
+  .milking-product-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .milking-product-description {
+    font-size: var(--font-size-sm);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .milking-feature-item {
+    gap: var(--spacing-sm);
+    font-size: var(--font-size-sm);
+    text-align: left;
+  }
+
+  /* CTA Section Mobile */
+  .milking-cta-container {
+    padding: var(--spacing-3xl) var(--spacing-lg);
+  }
+
+  .milking-cta-title {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .milking-cta-description {
+    font-size: var(--font-size-base);
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .milking-cta-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .milking-btn-primary,
+  .milking-btn-secondary {
+    padding: 0.875rem var(--spacing-xl);
+    font-size: 0.95rem;
+    width: 100%;
+  }
+
+  /* Modal Mobile */
   .milking-modal-overlay {
-    padding: 1rem;
-    padding-top: 80px; /* Smaller navbar on mobile */
+    padding: var(--spacing-lg);
+    padding-top: 80px;
   }
-  
+
   .milking-modal-content {
+    border-radius: var(--radius-md);
     max-height: calc(100vh - 100px);
-    margin-top: 0;
   }
-  
+
+  .milking-modal-close {
+    width: 35px;
+    height: 35px;
+    font-size: 1.25rem;
+    top: var(--spacing-md);
+    right: var(--spacing-md);
+  }
+
+  .milking-modal-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
   .milking-modal-image img {
-    max-height: 200px;
+    height: 200px;
+    border-radius: var(--radius-md) var(--radius-md) 0 0;
   }
 
   .milking-modal-info {
     padding: 1.25rem;
   }
-  
+
+  .milking-modal-category {
+    font-size: var(--font-size-xs);
+    padding: 0.2rem var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+  }
+
   .milking-modal-title {
     font-size: 1.5rem;
   }
-  
+
   .milking-modal-description {
-    font-size: 0.875rem;
+    font-size: var(--font-size-sm);
   }
-  
+
+  .milking-modal-features-title {
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-md);
+  }
+
   .milking-modal-features li {
+    gap: 0.6rem;
+    margin-bottom: var(--spacing-sm);
     font-size: 0.85rem;
-  }  
+    line-height: 1.4;
+  }
+
+  .milking-modal-actions {
+    flex-direction: column;
+  }
+
+  .milking-modal-actions button {
+    width: 100%;
+  }
+
+  .milking-feature-icon {
+    font-size: var(--font-size-base);
+    line-height: 1.4;
+    height: 1.4em;
+  }
+
+  /* For card features on mobile */
+  .milking-feature-item {
+    gap: var(--spacing-sm);
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+
+  .milking-feature-bullet {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  /* Disable hover effects on touch devices */
+  @media (hover: none) {
+    .milking-product-card:hover {
+      transform: none;
+      box-shadow: var(--shadow-md);
+    }
+
+    .milking-product-card:hover .milking-product-image {
+      transform: none;
+    }
+
+    .milking-product-overlay {
+      opacity: 1;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    .milking-feature-card:hover {
+      transform: none;
+      box-shadow: var(--shadow-sm);
+    }
+  }
 }
 
+/* Small Mobile Devices (≤480px) */
+@media (max-width: 480px) {
+  .milking-hero-title {
+    font-size: 1.75rem;
+  }
+
+  .milking-hero-description {
+    font-size: 0.9rem;
+  }
+
+  .milking-stat-number {
+    font-size: 1.25rem;
+  }
+
+  .milking-features-title,
+  .milking-section-title,
+  .milking-cta-title {
+    font-size: 1.5rem;
+  }
+
+  .milking-feature-card {
+    padding: 1.25rem;
+  }
+
+  .milking-product-content {
+    padding: var(--spacing-lg);
+  }
+
+  .milking-btn-primary,
+  .milking-btn-secondary {
+    padding: var(--spacing-md) 1.25rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Tablet (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .milking-hero-title {
+    font-size: 3rem;
+  }
+
+  .milking-products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .milking-features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .milking-modal-grid {
+    gap: var(--spacing-xl);
+  }
+
+  .milking-modal-image img {
+    height: 350px;
+  }
+}
+
+/* Landscape Mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+  .milking-hero-content {
+    padding: var(--spacing-2xl) var(--spacing-lg);
+  }
+
+  .milking-hero-title {
+    font-size: 1.75rem;
+  }
+
+  .milking-hero-description {
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .milking-hero-stats {
+    margin-top: var(--spacing-lg);
+  }
+
+  .milking-stat-icon {
+    font-size: 1.5rem;
+  }
+
+  .milking-stat-number {
+    font-size: 1.25rem;
+  }
+
+  .milking-modal-content {
+    max-height: 90vh;
+  }
+
+  .milking-modal-image img {
+    height: 150px;
+  }
+}
+
+/* For screens with limited height */
 @media (max-height: 700px) {
   .milking-modal-content {
     max-height: calc(100vh - 100px);
   }
-  
+
   .milking-modal-image img {
     max-height: 250px;
   }
-  
-  .milkling-modal-info {
-    padding: 1.5rem;
+
+  .milking-modal-info {
+    padding: var(--spacing-xl);
+  }
+}
+
+/* iOS Safari Fixes */
+@supports (-webkit-touch-callout: none) {
+  .milking-modal-overlay {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .milking-modal-content {
+    -webkit-overflow-scrolling: touch;
   }
 }

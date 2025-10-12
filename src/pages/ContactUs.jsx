@@ -119,7 +119,7 @@ export default function ContactUs() {
   };
 
   return (
-    <div className="contact-page-wrapper contact-full-width" data-navbar-theme="light">
+    <div className="contact-page-wrapper" data-navbar-theme="light">
       <div className="contact-page">
         <div className="contact-background">
           <div className="contact-shape shape1"></div>

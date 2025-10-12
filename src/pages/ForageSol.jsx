@@ -1,93 +1,171 @@
 import { useState } from 'react';
-import '../styles/foragesol.css'
+import { ChevronRight, Award, Users, TrendingUp, Sparkles } from 'lucide-react';
+import '../styles/common-styles.css';
+import '../styles/foragesol.css';
 
 const ForageSol = () => {
   const [selectedProduct, setSelectedProduct] = useState(null);
-  
+
+  // Enhanced product data with comprehensive forage and silage equipment information
   const products = [
     {
       id: 1,
       name: "Forage Harvester For Grass",
-      description: "High-performance grass harvesting equipment",
+      category: "Harvesting",
+      shortDesc: "High-performance grass harvesting equipment for all grass types",
+      fullDesc: "Our premium forage harvester is engineered to handle all types of grasses with precision and efficiency. Featuring adjustable chop size technology, this powerful machine ensures optimal forage quality for your livestock. Built with robust construction and designed to work seamlessly with standard farm tractors, it delivers consistent performance season after season.",
       features: [
-        "Cuts all kind of grasses(Lucern, Rai grass, Rhode grass, Jodal)",
-        "Adjustable chop size",
-        "Note: 40 HP tractor required"
+        "Cuts all kinds of grasses (Lucern, Rai grass, Rhodes grass, Jodal)",
+        "Adjustable chop size for optimal feed quality",
+        "High-capacity cutting system for faster harvesting",
+        "Compatible with 40 HP tractor",
+        "Durable steel construction for long service life",
+        "Easy maintenance and blade replacement"
       ],
       image: "/api/placeholder/600/400",
-      category: "Harvesting"
+      tag: "Professional"
     },
     {
       id: 2,
-      name: "Drum Movers",
-      description: "Efficient grass cutting solution",
+      name: "Drum Mower",
+      category: "Cutting",
+      shortDesc: "Efficient drum-type grass cutting solution for clean, precise cuts",
+      fullDesc: "Our drum mower represents the pinnacle of grass cutting technology. Designed specifically for delicate grasses like Barseem, Lucern, and Rhodes grass, it delivers clean cuts that promote faster regrowth and better forage quality. The drum design ensures even cutting across the entire width, minimizing crop loss and maintaining nutritional value.",
       features: [
-        "It is used to cut grasses like Barseem, Lucern and Rhodes grass",
-        "Note: 40 HP tractor required",
-        "Durable construction"
+        "Ideal for cutting Barseem, Lucern, and Rhodes grass",
+        "Drum-type cutting system for clean, precise cuts",
+        "Minimal crop loss and maximum yield",
+        "Compatible with 40 HP tractor",
+        "Adjustable cutting height",
+        "Weather-resistant durable construction"
       ],
       image: "/api/placeholder/600/400",
-      category: "Cutting"
+      tag: "Precision"
     },
     {
       id: 3,
       name: "Single Row Forage Harvester",
-      description: "Efficient single-row harvesting solution",
+      category: "Harvesting",
+      shortDesc: "Efficient single-row harvesting solution for targeted crop collection",
+      fullDesc: "Perfect for operations requiring precise row-by-row harvesting, our single row forage harvester delivers exceptional performance and versatility. The adjustable chop size feature allows you to customize the output to match your silage or feed requirements. Engineered for efficiency and ease of use, this harvester maximizes productivity while minimizing fuel consumption.",
       features: [
-        "Used in field for cutting and harvesting",
-        "Chop size is adjustable",
-        "Note: 40 HP tractor is required for this machine"
+        "Designed for single-row field harvesting",
+        "Adjustable chop size for customized output",
+        "High-efficiency cutting and chopping system",
+        "Requires 40 HP tractor for operation",
+        "Easy to attach and detach from tractor",
+        "Low maintenance requirements"
       ],
       image: "/api/placeholder/600/400",
-      category: "Harvesting"
+      tag: "Efficient"
     },
     {
       id: 4,
       name: "Small Silage Baler and Wrapper",
-      description: "Automated baling and wrapping system",
+      category: "Baling",
+      shortDesc: "Fully automated baling and wrapping system for premium silage production",
+      fullDesc: "Revolutionize your silage making with our state-of-the-art automated baler and wrapper. Featuring ABB motors and Siemens PLC control system, this machine represents the cutting edge of agricultural automation. The inverter-equipped wrapping table ensures smooth, consistent wrapping with minimal film breakage. Adjustable chamber accommodates various bale sizes, making it perfect for farms of all scales.",
       features: [
-        "Fully automatic machine with ABB motors and Siemens PLC system",
-        "Wrapping table is equipped with invertor system",
-        "Smooth wrapping & less breakdown of wrapping table",
-        "Adjustable baler chamber",
-        "Provides bale size from 60kg - 100kg",
-        "Less manpower required"
+        "Fully automatic operation with ABB motors and Siemens PLC system",
+        "Inverter-equipped wrapping table for smooth operation",
+        "Minimized film breakdown and consistent wrapping quality",
+        "Adjustable baler chamber for flexible bale sizing",
+        "Produces bales from 60kg to 100kg",
+        "Significantly reduces labor requirements",
+        "Digital control interface for precision operation",
+        "High-quality airtight wrapping for superior fermentation"
       ],
       image: "/api/placeholder/600/400",
-      category: "Baling"
+      tag: "Automated"
+    },
+    {
+      id: 5,
+      name: "Silage Compactor",
+      category: "Processing",
+      shortDesc: "Heavy-duty compaction equipment for optimal silage density",
+      fullDesc: "Achieve maximum silage quality with our professional silage compactor. Proper compaction is crucial for anaerobic fermentation and long-term storage stability. This equipment ensures optimal density, eliminating air pockets that can cause spoilage. The robust construction handles heavy-duty use, making it ideal for large-scale silage operations.",
+      features: [
+        "Heavy-duty compaction for optimal density",
+        "Eliminates air pockets for better fermentation",
+        "Compatible with standard farm tractors",
+        "Durable steel construction",
+        "Adjustable weight distribution",
+        "Reduces silage spoilage and waste"
+      ],
+      image: "/api/placeholder/600/400",
+      tag: "Quality"
+    },
+    {
+      id: 6,
+      name: "Forage Tedder",
+      category: "Processing",
+      shortDesc: "Professional tedding equipment for faster, more uniform drying",
+      fullDesc: "Speed up your hay and forage drying process with our high-efficiency tedder. By lifting and spreading cut forage, it exposes more surface area to air and sunlight, dramatically reducing drying time. The result is better quality hay with preserved nutrients and reduced risk of weather damage. Adjustable settings allow customization for different crop types and field conditions.",
+      features: [
+        "Accelerates forage drying time by 40-50%",
+        "Lifts and spreads forage for uniform drying",
+        "Preserves nutritional value",
+        "Reduces weather damage risk",
+        "Adjustable tine settings for different crops",
+        "Compatible with standard tractors"
+      ],
+      image: "/api/placeholder/600/400",
+      tag: "Efficiency"
     }
   ];
 
+  const features = [
+    {
+      icon: Award,
+      title: "Premium Quality",
+      description: "Professional-grade equipment built to withstand the demands of modern forage operations"
+    },
+    {
+      icon: TrendingUp,
+      title: "High Efficiency",
+      description: "Maximum output with minimum fuel consumption and time, increasing your operational productivity"
+    },
+    {
+      icon: Sparkles,
+      title: "Advanced Technology",
+      description: "Fully automated systems with PLC control reduce labor costs and increase precision"
+    },
+    {
+      icon: Users,
+      title: "Tractor Compatible",
+      description: "Designed to work seamlessly with standard 40 HP farm tractors for easy integration"
+    }
+  ];
+
+  const stats = [
+    { value: "70%", label: "Faster Harvesting" },
+    { value: "90%", label: "Feed Quality Improvement" },
+    { value: "80%", label: "Labor Savings" }
+  ];
+
   return (
-    <div className="forage-container forage-full-width">
+    <div className="forage-container">
       {/* Hero Section */}
-      <header className="forage-hero-section">
+      <header className="forage-hero-section forage-full-width">
         <div className="forage-hero-overlay"></div>
         <div className="forage-hero-content">
           <div className="forage-hero-badge">FORAGE & SILAGE MAKING EQUIPMENT</div>
           <h1 className="forage-hero-title">
-            Forage & SILAGE Making
+            Forage & Silage Making
             <span className="forage-hero-accent">Solutions</span>
           </h1>
           <p className="forage-hero-description">
-            Advanced equipment for efficient forage harvesting and silage making
+            Advanced equipment for efficient forage harvesting, processing, and premium silage production
           </p>
+
+          {/* Stats Grid */}
           <div className="forage-hero-stats">
-            <div className="forage-stat-item">
-              <div className="forage-stat-icon">🌾</div>
-              <div className="forage-stat-number">70%</div>
-              <div className="forage-stat-label">Faster Harvesting</div>
-            </div>
-            <div className="forage-stat-item">
-              <div className="forage-stat-icon">📈</div>
-              <div className="forage-stat-number">90%</div>
-              <div className="forage-stat-label">Feed Quality</div>
-            </div>
-            <div className="forage-stat-item">
-              <div className="forage-stat-icon">💪</div>
-              <div className="forage-stat-number">80%</div>
-              <div className="forage-stat-label">Labor Savings</div>
-            </div>
+            {stats.map((stat, index) => (
+              <div key={index} className="forage-stat-item">
+                <div className="forage-stat-number">{stat.value}</div>
+                <div className="forage-stat-label">{stat.label}</div>
+              </div>
+            ))}
           </div>
         </div>
       </header>
@@ -97,60 +175,60 @@ const ForageSol = () => {
         <div className="forage-features-container">
           <h2 className="forage-features-title">Why Choose Our Forage & Silage Solutions?</h2>
           <div className="forage-features-grid">
-            <div className="forage-feature-card">
-              <div className="forage-feature-icon">🚜</div>
-              <h3>Tractor Compatible</h3>
-              <p>Designed to work seamlessly with standard farm tractors</p>
-            </div>
-            <div className="forage-feature-card">
-              <div className="forage-feature-icon">⚡</div>
-              <h3>High Efficiency</h3>
-              <p>Maximum output with minimum fuel consumption and time</p>
-            </div>
-            <div className="forage-feature-card">
-              <div className="forage-feature-icon">🎯</div>
-              <h3>Precision Cutting</h3>
-              <p>Adjustable settings for optimal forage quality & silage quality</p>
-            </div>
-            <div className="forage-feature-card">
-              <div className="forage-feature-icon">🤖</div>
-              <h3>Automation</h3>
-              <p>Fully automated systems reduce labor and increase efficiency</p>
-            </div>
+            {features.map((feature, index) => {
+              const IconComponent = feature.icon;
+              return (
+                <div key={index} className="forage-feature-card">
+                  <div className="forage-feature-icon-wrapper">
+                    <IconComponent className="forage-feature-icon-svg" size={48} strokeWidth={1.5} />
+                  </div>
+                  <h3>{feature.title}</h3>
+                  <p>{feature.description}</p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
 
-      {/* Product Grid */}
+      {/* Product Grid - Modern Card Design */}
       <section className="forage-products-section forage-full-width" data-navbar-theme="light">
         <div className="forage-products-container">
           <h2 className="forage-section-title">Our Product Range</h2>
+          <p className="forage-section-subtitle">
+            Complete line of forage harvesting and silage making equipment for modern agricultural operations
+          </p>
+
           <div className="forage-products-grid">
             {products.map(product => (
-              <div 
-                key={product.id} 
+              <div
+                key={product.id}
                 className="forage-product-card"
                 onClick={() => setSelectedProduct(product)}
               >
-                <div className="forage-product-category">{product.category}</div>
                 <div className="forage-product-image-container">
-                  <img 
-                    src={product.image} 
-                    alt={product.name} 
+                  <img
+                    src={product.image}
+                    alt={product.name}
                     className="forage-product-image"
                   />
+                  <div className="forage-product-category">{product.tag}</div>
                   <div className="forage-product-overlay">
-                    <button className="forage-view-details-btn">View Details</button>
+                    <button className="forage-view-details-btn">
+                      View Details
+                      <ChevronRight className="btn-icon" size={16} />
+                    </button>
                   </div>
                 </div>
                 <div className="forage-product-content">
+                  <div className="forage-product-category-text">{product.category}</div>
                   <h3 className="forage-product-title">{product.name}</h3>
-                  <p className="forage-product-description">{product.description}</p>
+                  <p className="forage-product-description">{product.shortDesc}</p>
                   <ul className="forage-product-features">
-                    {product.features.slice(0, 2).map((feature, index) => (
+                    {product.features.slice(0, 3).map((feature, index) => (
                       <li key={index} className="forage-feature-item">
-                        <span className="forage-feature-bullet">✓</span>
-                        {feature}
+                        <ChevronRight className="forage-feature-bullet-icon" size={16} />
+                        <span>{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -161,42 +239,36 @@ const ForageSol = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="forage-cta-section forage-full-width" data-navbar-theme="light">
-        <div className="forage-cta-container">
-          <h2 className="forage-cta-title">Maximize Your Forage Production</h2>
-          <p className="forage-cta-description">
-            Get the right equipment for your farm's forage and hay making needs
-          </p>
-          <div className="forage-cta-buttons">
-            <button className="forage-btn-primary">Get Quote</button>
-            <button className="forage-btn-secondary">Download Catalog</button>
-          </div>
-        </div>
-      </section>
-
-      {/* Product Modal */}
+      {/* Product Detail Modal - Enhanced Design */}
       {selectedProduct && (
         <div className="forage-modal-overlay" onClick={() => setSelectedProduct(null)}>
           <div className="forage-modal-content" onClick={(e) => e.stopPropagation()}>
-            <button className="forage-modal-close" onClick={() => setSelectedProduct(null)}>×</button>
+            <button className="forage-modal-close" onClick={() => setSelectedProduct(null)}>
+              ×
+            </button>
             <div className="forage-modal-grid">
               <div className="forage-modal-image">
                 <img src={selectedProduct.image} alt={selectedProduct.name} />
               </div>
               <div className="forage-modal-info">
-                <div className="forage-modal-category">{selectedProduct.category}</div>
+                <div className="forage-modal-header">
+                  <div className="forage-modal-category">{selectedProduct.category}</div>
+                  <span className="forage-modal-tag">{selectedProduct.tag}</span>
+                </div>
                 <h2 className="forage-modal-title">{selectedProduct.name}</h2>
-                <p className="forage-modal-description">{selectedProduct.description}</p>
-                <h3 className="forage-modal-features-title">Key Features:</h3>
-                <ul className="forage-modal-features">
-                  {selectedProduct.features.map((feature, index) => (
-                    <li key={index}>
-                      <span className="forage-feature-icon">✓</span>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
+                <p className="forage-modal-description">{selectedProduct.fullDesc}</p>
+
+                <div className="forage-modal-features-section">
+                  <h3 className="forage-modal-features-title">Key Features</h3>
+                  <ul className="forage-modal-features">
+                    {selectedProduct.features.map((feature, index) => (
+                      <li key={index}>
+                        <ChevronRight className="forage-feature-icon" size={18} />
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </div>
           </div>

@@ -1,50 +1,97 @@
 import { useState } from 'react';
-import '../styles/milkhygiene.css'
+import { ChevronRight, Award, Users, TrendingUp, Sparkles } from 'lucide-react';
+import '../styles/common-styles.css';
+import '../styles/milkhygiene.css';
 
 const MilkHygiene = () => {
   const [selectedProduct, setSelectedProduct] = useState(null);
-  
+
+  // Enhanced product data with comprehensive milk hygiene information
   const products = [
     {
       id: 1,
       name: "Cleaning Alkaline CIP",
-      description: "Industrial-grade alkaline cleaning solution",
+      category: "CIP Cleaning",
+      shortDesc: "Industrial-grade alkaline cleaning solution for complete system hygiene",
+      fullDesc: "Our premium alkaline CIP (Clean-In-Place) cleaning solution is specifically formulated for the dairy industry. Featuring powerful degreasing action with peracetic acid content below 5%, this solution ensures thorough cleaning of milking machines, cooling tanks, pipes, and all dairy equipment. The advanced formula removes protein deposits, fats, and organic residues while maintaining equipment integrity.",
       features: [
-        "Peracetic Acid < 5%",
-        "Designed for cleaning & hygiene of milking machines, cooling tanks, pipes, brushes etc",
-        "Powerful degreasing action"
+        "Peracetic Acid content < 5% for safe yet effective cleaning",
+        "Designed for cleaning & hygiene of milking machines and cooling tanks",
+        "Powerful degreasing action removes stubborn residues",
+        "Effective on pipes, brushes, and all dairy contact surfaces",
+        "Prevents biofilm formation and bacterial growth",
+        "Compatible with all standard CIP systems"
       ],
       image: "/api/placeholder/600/400",
-      category: "CIP Cleaning"
+      tag: "Professional"
     },
     {
       id: 2,
       name: "Cleaning Acidic CIP",
-      description: "Acidic cleaning solution for mineral deposits",
+      category: "CIP Cleaning",
+      shortDesc: "Acidic cleaning solution for mineral deposits and milk stone removal",
+      fullDesc: "Our acidic CIP cleaning solution is engineered to tackle the toughest challenges in dairy operations. Specifically designed for cleaning milking machines and milk containers, this powerful formula dissolves milk stone, removes mineral deposits, and prevents bacterial growth. The balanced acidity ensures thorough cleaning without damaging equipment surfaces, maintaining optimal hygiene standards for all milk contact surfaces.",
       features: [
-        "Designed for cleaning of milking machines, milk containers & for surfaces in contact with milk",
-        "Removes milk stone and mineral deposits",
-        "Prevents bacterial growth"
+        "Designed for cleaning of milking machines and milk containers",
+        "Effectively removes milk stone and hard water deposits",
+        "Prevents bacterial growth and biofilm formation",
+        "Safe for all surfaces in contact with milk",
+        "Neutralizes alkaline residues from previous cleaning",
+        "Extends equipment life by preventing scale buildup"
       ],
       image: "/api/placeholder/600/400",
-      category: "CIP Cleaning"
+      tag: "Essential"
     },
     {
       id: 3,
-      name: "Acid Per Acetic",
-      description: "Fast-acting disinfectant solution",
+      name: "Acid Per Acetic (Peracetic Acid)",
+      category: "Disinfectant",
+      shortDesc: "Fast-acting disinfectant solution for pre-milking cluster cleaning",
+      fullDesc: "Our Peracetic Acid disinfectant represents the gold standard in dairy hygiene. This powerful antimicrobial solution is specifically formulated for cleaning milking clusters between animals, ensuring zero cross-contamination. The rapid-action formula provides immediate disinfection while being completely safe for equipment and leaving no harmful residues. Essential for maintaining the highest milk quality standards and preventing mastitis transmission.",
       features: [
-        "It is a powerful disinfectant and also used to clean the milking clusters just before moving to the next animal",
-        "Rapid antimicrobial action",
-        "Safe for equipment"
+        "Powerful disinfectant for milking cluster sanitization",
+        "Used to clean clusters just before moving to the next animal",
+        "Rapid antimicrobial action - kills 99.9% of pathogens",
+        "Safe for equipment with no corrosive effects",
+        "Prevents cross-contamination between animals",
+        "No harmful residues - safe for milk quality"
       ],
       image: "/api/placeholder/600/400",
-      category: "Disinfectant"
+      tag: "Advanced"
     }
   ];
 
+  const features = [
+    {
+      icon: Award,
+      title: "Food-Grade Quality",
+      description: "All products meet stringent dairy industry standards and international food safety regulations"
+    },
+    {
+      icon: Users,
+      title: "Premium Results",
+      description: "Ensures highest milk quality, extended shelf life, and optimal bacterial reduction"
+    },
+    {
+      icon: TrendingUp,
+      title: "Complete System",
+      description: "Comprehensive hygiene solutions from pre-milking to storage tank cleaning"
+    },
+    {
+      icon: Sparkles,
+      title: "Easy Application",
+      description: "Simple procedures with effective results and clear usage guidelines"
+    }
+  ];
+
+  const stats = [
+    { value: "99.9%", label: "Bacteria Reduction" },
+    { value: "A+", label: "Milk Grade" },
+    { value: "30%", label: "Longer Shelf Life" }
+  ];
+
   return (
-    <div className="hygiene-container hygiene-full-width">
+    <div className="hygiene-container">
       {/* Hero Section */}
       <header className="hygiene-hero-section">
         <div className="hygiene-hero-overlay"></div>
@@ -55,87 +102,80 @@ const MilkHygiene = () => {
             <span className="hygiene-hero-accent">Solutions</span>
           </h1>
           <p className="hygiene-hero-description">
-            Complete cleaning and sanitization systems for premium milk quality
+            Complete cleaning and sanitization systems for premium milk quality and food safety compliance
           </p>
+
+          {/* Stats Grid */}
           <div className="hygiene-hero-stats">
-            <div className="hygiene-stat-item">
-              <div className="hygiene-stat-icon">🥛</div>
-              <div className="hygiene-stat-number">99.9%</div>
-              <div className="hygiene-stat-label">Bacteria Reduction</div>
-            </div>
-            <div className="hygiene-stat-item">
-              <div className="hygiene-stat-icon">⭐</div>
-              <div className="hygiene-stat-number">A+</div>
-              <div className="hygiene-stat-label">Milk Grade</div>
-            </div>
-            <div className="hygiene-stat-item">
-              <div className="hygiene-stat-icon">📈</div>
-              <div className="hygiene-stat-number">30%</div>
-              <div className="hygiene-stat-label">Longer Shelf Life</div>
-            </div>
+            {stats.map((stat, index) => (
+              <div key={index} className="hygiene-stat-item">
+                <div className="hygiene-stat-number">{stat.value}</div>
+                <div className="hygiene-stat-label">{stat.label}</div>
+              </div>
+            ))}
           </div>
         </div>
       </header>
 
       {/* Features Section */}
-      <section className="hygiene-features-section hygiene-full-width" data-navbar-theme="light">
+      <section className="hygiene-features-section" data-navbar-theme="light">
         <div className="hygiene-features-container">
           <h2 className="hygiene-features-title">Why Choose Our Hygiene Solutions?</h2>
           <div className="hygiene-features-grid">
-            <div className="hygiene-feature-card">
-              <div className="hygiene-feature-icon">🧪</div>
-              <h3>Food-Grade Quality</h3>
-              <p>All products meet stringent dairy industry standards</p>
-            </div>
-            <div className="hygiene-feature-card">
-              <div className="hygiene-feature-icon">💎</div>
-              <h3>Premium Results</h3>
-              <p>Ensures highest milk quality and extended shelf life</p>
-            </div>
-            <div className="hygiene-feature-card">
-              <div className="hygiene-feature-icon">🔄</div>
-              <h3>Complete System</h3>
-              <p>From pre-milking to storage tank cleaning</p>
-            </div>
-            <div className="hygiene-feature-card">
-              <div className="hygiene-feature-icon">✅</div>
-              <h3>Easy Application</h3>
-              <p>Simple procedures with effective results</p>
-            </div>
+            {features.map((feature, index) => {
+              const IconComponent = feature.icon;
+              return (
+                <div key={index} className="hygiene-feature-card">
+                  <div className="hygiene-feature-icon-wrapper">
+                    <IconComponent className="hygiene-feature-icon-svg" size={48} strokeWidth={1.5} />
+                  </div>
+                  <h3>{feature.title}</h3>
+                  <p>{feature.description}</p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
 
-      {/* Product Grid */}
-      <section className="hygiene-products-section hygiene-full-width" data-navbar-theme="light">
+      {/* Product Grid - Modern Card Design */}
+      <section className="hygiene-products-section" data-navbar-theme="light">
         <div className="hygiene-products-container">
           <h2 className="hygiene-section-title">Our Product Range</h2>
+          <p className="hygiene-section-subtitle">
+            Professional-grade hygiene solutions for every aspect of dairy milk quality management
+          </p>
+
           <div className="hygiene-products-grid">
             {products.map(product => (
-              <div 
-                key={product.id} 
+              <div
+                key={product.id}
                 className="hygiene-product-card"
                 onClick={() => setSelectedProduct(product)}
               >
-                <div className="hygiene-product-category">{product.category}</div>
                 <div className="hygiene-product-image-container">
-                  <img 
-                    src={product.image} 
-                    alt={product.name} 
+                  <img
+                    src={product.image}
+                    alt={product.name}
                     className="hygiene-product-image"
                   />
+                  <div className="hygiene-product-category">{product.tag}</div>
                   <div className="hygiene-product-overlay">
-                    <button className="hygiene-view-details-btn">View Details</button>
+                    <button className="hygiene-view-details-btn">
+                      View Details
+                      <ChevronRight className="btn-icon" size={16} />
+                    </button>
                   </div>
                 </div>
                 <div className="hygiene-product-content">
+                  <div className="hygiene-product-category-text">{product.category}</div>
                   <h3 className="hygiene-product-title">{product.name}</h3>
-                  <p className="hygiene-product-description">{product.description}</p>
+                  <p className="hygiene-product-description">{product.shortDesc}</p>
                   <ul className="hygiene-product-features">
-                    {product.features.slice(0, 2).map((feature, index) => (
+                    {product.features.slice(0, 3).map((feature, index) => (
                       <li key={index} className="hygiene-feature-item">
-                        <span className="hygiene-feature-bullet">✓</span>
-                        {feature}
+                        <ChevronRight className="hygiene-feature-bullet-icon" size={16} />
+                        <span>{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -146,45 +186,44 @@ const MilkHygiene = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="hygiene-cta-section hygiene-full-width" data-navbar-theme="light">
-        <div className="hygiene-cta-container">
-          <h2 className="hygiene-cta-title">Ensure Premium Milk Quality</h2>
-          <p className="hygiene-cta-description">
-            Get a customized hygiene protocol for your dairy operation
-          </p>
-          <div className="hygiene-cta-buttons">
-            <button className="hygiene-btn-primary">Get Quote</button>
-            <button className="hygiene-btn-secondary">Download Catalog</button>
-          </div>
-        </div>
-      </section>
-
-      {/* Product Modal */}
+      {/* Product Detail Modal - Enhanced Design */}
       {selectedProduct && (
         <div className="hygiene-modal-overlay" onClick={() => setSelectedProduct(null)}>
           <div className="hygiene-modal-content" onClick={(e) => e.stopPropagation()}>
-            <button className="hygiene-modal-close" onClick={() => setSelectedProduct(null)}>×</button>
+            <button className="hygiene-modal-close" onClick={() => setSelectedProduct(null)}>
+              ×
+            </button>
             <div className="hygiene-modal-grid">
               <div className="hygiene-modal-image">
                 <img src={selectedProduct.image} alt={selectedProduct.name} />
               </div>
               <div className="hygiene-modal-info">
-                <div className="hygiene-modal-category">{selectedProduct.category}</div>
+                <div className="hygiene-modal-header">
+                  <div className="hygiene-modal-category">{selectedProduct.category}</div>
+                  <span className="hygiene-modal-tag">{selectedProduct.tag}</span>
+                </div>
                 <h2 className="hygiene-modal-title">{selectedProduct.name}</h2>
-                <p className="hygiene-modal-description">{selectedProduct.description}</p>
-                <h3 className="hygiene-modal-features-title">Key Features:</h3>
-                <ul className="hygiene-modal-features">
-                  {selectedProduct.features.map((feature, index) => (
-                    <li key={index}>
-                      <span className="hygiene-feature-icon">✓</span>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
+                <p className="hygiene-modal-description">{selectedProduct.fullDesc}</p>
+
+                <div className="hygiene-modal-features-section">
+                  <h3 className="hygiene-modal-features-title">Key Features</h3>
+                  <ul className="hygiene-modal-features">
+                    {selectedProduct.features.map((feature, index) => (
+                      <li key={index}>
+                        <ChevronRight className="hygiene-feature-icon" size={18} />
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
                 <div className="hygiene-modal-actions">
-                  <button className="hygiene-btn-primary">Request Quote</button>
-                  <button className="hygiene-btn-secondary">Ask Question</button>
+                  <button
+                    className="hygiene-btn-secondary hygiene-modal-close-btn"
+                    onClick={() => setSelectedProduct(null)}
+                  >
+                    Close
+                  </button>
                 </div>
               </div>
             </div>

@@ -60,7 +60,7 @@ const DairyFarmingSol = () => {
   return (
     <div className="dairy-container">
       {/* Hero Section */}
-      <header className="dairy-hero-section dairy-full-width">
+      <header className="dairy-hero-section">
         <div className="dairy-hero-overlay"></div>
         <div className="dairy-hero-content">
           <div className="dairy-hero-badge">PREMIUM DAIRY EQUIPMENT</div>
@@ -85,7 +85,7 @@ const DairyFarmingSol = () => {
       </header>
 
       {/* Features Section */}
-      <section className="dairy-features-section dairy-full-width">
+      <section className="dairy-features-section" data-navbar-theme="light">
         <div className="dairy-features-container">
           <h2 className="dairy-features-title">Why Choose Our Solutions?</h2>
           <div className="dairy-features-grid">
@@ -106,7 +106,7 @@ const DairyFarmingSol = () => {
       </section>
 
       {/* Product Grid - Modern Card Design */}
-      <section className="dairy-products-section dairy-full-width">
+      <section className="dairy-products-section" data-navbar-theme="light">
         <div className="dairy-products-container">
           <h2 className="dairy-section-title">Our Product Range</h2>
           <p className="dairy-section-subtitle">
@@ -153,23 +153,6 @@ const DairyFarmingSol = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="dairy-cta-section dairy-full-width">
-        <div className="dairy-cta-container">
-          <h2 className="dairy-cta-title">Ready to Modernize Your Dairy Farm?</h2>
-          <p className="dairy-cta-description">
-            Contact us today for a customized solution that fits your farm's needs. Our experts are ready to help you increase productivity and profitability.
-          </p>
-          <div className="dairy-cta-buttons">
-            <button className="dairy-btn-primary">
-              Get Quote
-              <ChevronRight className="btn-icon" size={20} />
-            </button>
-            <button className="dairy-btn-secondary">Download Catalog</button>
-          </div>
-        </div>
-      </section>
-
       {/* Product Detail Modal - Enhanced Design */}
       {selectedProduct && (
         <div className="dairy-modal-overlay" onClick={() => setSelectedProduct(null)}>
@@ -199,21 +182,6 @@ const DairyFarmingSol = () => {
                       </li>
                     ))}
                   </ul>
-                </div>
-
-                <div className="dairy-modal-actions">
-                  <button
-                    className="dairy-btn-primary dairy-modal-cta"
-                    onClick={() => setSelectedProduct(null)}
-                  >
-                    Request a Quote
-                  </button>
-                  <button
-                    className="dairy-btn-secondary dairy-modal-close-btn"
-                    onClick={() => setSelectedProduct(null)}
-                  >
-                    Close
-                  </button>
                 </div>
               </div>
             </div>
