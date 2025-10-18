@@ -132,7 +132,7 @@ export default function Home() {
 
 
   return (
-    <div className="home-page home-full-width">
+    <div className="home-page">
       {/* Hero Section with Auto Scroll */}
       <div 
         ref={heroRef} 
