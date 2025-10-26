@@ -7,7 +7,6 @@ import fanImage from "../assets/fan.JPG";
 const DairyFarmingSol = () => {
   const [selectedProduct, setSelectedProduct] = useState(null);
 
-  // Expanded product data with comprehensive dairy farming solutions
   const products = [
     {
       id: 1,

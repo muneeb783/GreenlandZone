@@ -492,7 +492,7 @@
     font-size: 0.875rem;
   }
 
-  .feature-bullet-icon {
+  .product-feature-item svg {
     color: #16a34a;
     flex-shrink: 0;
     margin-top: 2px;
@@ -659,9 +659,10 @@
     margin-bottom: 0.75rem;
     color: #4b5563;
     font-size: 0.9rem;
+    line-height: 1.4;
   }
 
-  .feature-icon {
+  .modal-features li svg {
     color: #16a34a;
     flex-shrink: 0;
     margin-top: 2px;

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import emailjs from '@emailjs/browser';
 import '../styles/contactus.css';
 
 export default function ContactUs() {
@@ -95,14 +96,28 @@ export default function ContactUs() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!validateForm()) return;
-    
+
     setStatus('sending');
     try {
-      await new Promise(resolve => setTimeout(resolve, 1500));
+      // Send email using EmailJS
+      await emailjs.send(
+        'YOUR_SERVICE_ID',      // Replace with your EmailJS Service ID
+        'YOUR_TEMPLATE_ID',     // Replace with your EmailJS Template ID
+        {
+          from_name: form.name,
+          from_email: form.email,
+          subject: form.subject,
+          message: form.message,
+          to_email: 'your-email@example.com', // Email where you want to receive messages
+        },
+        'YOUR_PUBLIC_KEY'       // Replace with your EmailJS Public Key
+      );
+
       setForm({ name: '', email: '', subject: '', message: '' });
       setStatus('success');
       setTimeout(() => setStatus(''), 5000);
     } catch (error) {
+      console.error('EmailJS Error:', error);
       setStatus('error');
       setTimeout(() => setStatus(''), 5000);
     }

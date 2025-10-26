@@ -113,10 +113,6 @@ const SenseTimePage = () => {
                 <div className="stat-label">Farms Worldwide</div>
               </div>
             </div>
-            <div className="hero-cta">
-              <button className="hero-btn-primary">Get Started</button>
-              <button className="hero-btn-secondary">Watch Demo</button>
-            </div>
           </div>
           <div className="hero-visual">
             <div className="hero-image-container">
@@ -202,7 +198,7 @@ const SenseTimePage = () => {
                     <ul className="product-features">
                       {product.features.slice(0, 3).map((feature, index) => (
                         <li key={index} className="product-feature-item">
-                          <ChevronRight className="feature-bullet-icon" size={16} />
+                          <ChevronRight size={16} />
                           <span>{feature}</span>
                         </li>
                       ))}
@@ -239,7 +235,7 @@ const SenseTimePage = () => {
                   <ul className="modal-features">
                     {selectedImage.features.map((feature, index) => (
                       <li key={index}>
-                        <ChevronRight className="feature-icon" size={18} />
+                        <ChevronRight size={18} />
                         <span>{feature}</span>
                       </li>
                     ))}

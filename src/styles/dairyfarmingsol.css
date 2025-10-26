@@ -1,41 +1,10 @@
-/* ============================================================================
-   DAIRY FARMING SOLUTIONS - Optimized Stylesheet
-   ============================================================================
-
-   This file extends common-styles.css with page-specific customizations.
-   Import common-styles.css BEFORE this file in your component.
-
-   Usage in React component:
-   import '../styles/common-styles.css';
-   import '../styles/dairyfarmingsol.css';
-
-   ============================================================================ */
-
-/* ============================================================================
-   CLASS MAPPING & BACKWARDS COMPATIBILITY
-   ============================================================================
-
-   The legacy .dairy-* classes now map to the new common classes.
-   This ensures existing React components continue to work without changes.
-   ============================================================================ */
-
-/* Container Mapping */
-.dairy-container {
-  /* Inherits from body overflow-x: hidden in common-styles.css */
-}
-
 /* Apply common page-container class via dairy-container */
 .dairy-container {
   font-family: var(--font-family-base);
   color: var(--color-dark);
   background-color: var(--color-white);
   min-height: 100vh;
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
+  width: 100%;
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
   touch-action: pan-y;
