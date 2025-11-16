@@ -110,7 +110,7 @@ const TeatHealthSol = () => {
   return (
     <div className="teathealth-container">
       {/* Hero Section */}
-      <header className="teathealth-hero-section">
+      <header className="teathealth-hero-section" data-navbar-theme="dark">
         <div className="teathealth-hero-overlay"></div>
         <div className="teathealth-hero-content">
           <div className="teathealth-hero-badge">UDDER HEALTH EXCELLENCE</div>
@@ -207,9 +207,6 @@ const TeatHealthSol = () => {
       {selectedProduct && (
         <div className="teathealth-modal-overlay" onClick={() => setSelectedProduct(null)}>
           <div className="teathealth-modal-content" onClick={(e) => e.stopPropagation()}>
-            <button className="teathealth-modal-close" onClick={() => setSelectedProduct(null)}>
-              ×
-            </button>
             <div className="teathealth-modal-grid">
               <div className="teathealth-modal-image">
                 <img src={selectedProduct.image} alt={selectedProduct.name} />
@@ -233,16 +230,10 @@ const TeatHealthSol = () => {
                     ))}
                   </ul>
                 </div>
-
-                <div className="teathealth-modal-actions">
-                  <button
-                    className="teathealth-btn-secondary teathealth-modal-close-btn"
-                    onClick={() => setSelectedProduct(null)}
-                  >
-                    Close
-                  </button>
-                </div>
               </div>
+            </div>
+            <div className="teathealth-close-bar" onClick={() => setSelectedProduct(null)}>
+              Close
             </div>
           </div>
         </div>

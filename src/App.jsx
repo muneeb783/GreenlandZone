@@ -1,5 +1,6 @@
 import './App.css'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
+import { useEffect, useLayoutEffect } from 'react'
 import GlobalNavBar from './components/GlobalNavBar'
 import Home from './pages/Home'
 import AboutUs from './pages/AboutUs'
@@ -14,9 +15,29 @@ import Teat from './pages/TeatHealthSol'
 import Monitoring from './pages/CowMonitSol'
 import Feed from "./pages/FeedAdditives"
 
+// ScrollToTop component to handle page navigation
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useLayoutEffect(() => {
+    // Prevent browser from restoring scroll position
+    if ('scrollRestoration' in window.history) {
+      window.history.scrollRestoration = 'manual';
+    }
+
+    // Scroll to top synchronously before paint
+    window.scrollTo(0, 0);
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+  }, [pathname]);
+
+  return null;
+}
+
 export default function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <GlobalNavBar />
       <Routes>
         <Route path="/" element={<Home />} />

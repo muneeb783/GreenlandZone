@@ -186,7 +186,7 @@ const DairyParts = () => {
   return (
     <div className="feeding-container">
       {/* Hero Section */}
-      <header className="feeding-hero-section">
+      <header className="feeding-hero-section" data-navbar-theme="dark">
         <div className="feeding-hero-overlay"></div>
         <div className="feeding-hero-content">
           <div className="feeding-hero-badge">PREMIUM DAIRY PARTS & ACCESSORIES</div>
@@ -211,7 +211,7 @@ const DairyParts = () => {
       </header>
 
       {/* Features Section */}
-      <section className="feeding-features-section" data-navbar-theme="light">
+      <section className="feeding-features-section">
         <div className="feeding-features-container">
           <h2 className="feeding-features-title">Why Choose Our Dairy Parts?</h2>
           <div className="feeding-features-grid">
@@ -232,7 +232,7 @@ const DairyParts = () => {
       </section>
 
       {/* Product Grid - Modern Card Design */}
-      <section className="feeding-products-section" data-navbar-theme="light">
+      <section className="feeding-products-section">
         <div className="feeding-products-container">
           <h2 className="feeding-section-title">Our Product Range</h2>
           <p className="feeding-section-subtitle">
@@ -283,9 +283,6 @@ const DairyParts = () => {
       {selectedProduct && (
         <div className="feeding-modal-overlay" onClick={() => setSelectedProduct(null)}>
           <div className="feeding-modal-content" onClick={(e) => e.stopPropagation()}>
-            <button className="feeding-modal-close" onClick={() => setSelectedProduct(null)}>
-              ×
-            </button>
             <div className="feeding-modal-grid">
               <div className="feeding-modal-image">
                 <img src={selectedProduct.image} alt={selectedProduct.name} />
@@ -310,6 +307,9 @@ const DairyParts = () => {
                   </ul>
                 </div>
               </div>
+            </div>
+            <div className="feeding-close-bar" onClick={() => setSelectedProduct(null)}>
+              Close
             </div>
           </div>
         </div>

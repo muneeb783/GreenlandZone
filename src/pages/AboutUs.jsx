@@ -67,7 +67,7 @@ export default function AboutUs() {
         </Container>
       </motion.div>
 
-      <Container className="leadership-container about-full-width" data-navbar-theme="light">
+      <Container className="leadership-container about-full-width">
         {leadership.map((leader, idx) => (
           <motion.div
             key={leader.name}

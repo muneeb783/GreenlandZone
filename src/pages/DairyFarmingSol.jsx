@@ -59,7 +59,7 @@ const DairyFarmingSol = () => {
   return (
     <div className="dairy-container">
       {/* Hero Section */}
-      <header className="dairy-hero-section">
+      <header className="dairy-hero-section" data-navbar-theme="dark">
         <div className="dairy-hero-overlay"></div>
         <div className="dairy-hero-content">
           <div className="dairy-hero-badge">PREMIUM DAIRY EQUIPMENT</div>
@@ -156,9 +156,6 @@ const DairyFarmingSol = () => {
       {selectedProduct && (
         <div className="dairy-modal-overlay" onClick={() => setSelectedProduct(null)}>
           <div className="dairy-modal-content" onClick={(e) => e.stopPropagation()}>
-            <button className="dairy-modal-close" onClick={() => setSelectedProduct(null)}>
-              ×
-            </button>
             <div className="dairy-modal-grid">
               <div className="dairy-modal-image">
                 <img src={selectedProduct.image} alt={selectedProduct.name} />
@@ -183,6 +180,9 @@ const DairyFarmingSol = () => {
                   </ul>
                 </div>
               </div>
+            </div>
+            <div className="dairy-close-bar" onClick={() => setSelectedProduct(null)}>
+              Close
             </div>
           </div>
         </div>

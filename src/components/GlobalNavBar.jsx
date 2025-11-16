@@ -6,6 +6,7 @@ import '../styles/navbar.css';
 
 export default function GlobalNavBar() {
   const [scrolled, setScrolled] = useState(false);
+  const [expanded, setExpanded] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -17,55 +18,78 @@ export default function GlobalNavBar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Add this state after your existing states
-const [isLightBg, setIsLightBg] = useState(false);
+  // Close navbar when route changes
+  useEffect(() => {
+    setExpanded(false);
+  }, [location.pathname]);
 
-useEffect(() => {
-  const checkTheme = () => {
-    const sections = document.querySelectorAll('[data-navbar-theme]');
-    const scrollPosition = window.scrollY + 100;
-    const isMobile = window.matchMedia("(max-width: 991px)").matches; // Using 991px to match Bootstrap's lg breakpoint
-    
-    let foundMatch = false;
-    
-    for (let section of sections) {
-      const rect = section.getBoundingClientRect();
-      const sectionTop = rect.top + window.scrollY;
-      const sectionBottom = sectionTop + rect.height;
-      
-      if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
-        const theme = section.dataset.navbarTheme;
-        
-        if (isMobile) {
-          // On mobile: only change hamburger icon theme
-          setIsLightBg(theme === 'light');
-          // Add mobile-specific class
-          document.querySelector('.navbar')?.classList.add('mobile-theme');
-        } else {
-          // On desktop: change entire navbar theme
-          setIsLightBg(theme === 'light');
-          document.querySelector('.navbar')?.classList.remove('mobile-theme');
+  // Navbar theme state - default to light (dark text)
+  const [isLightBg, setIsLightBg] = useState(true);
+
+  useEffect(() => {
+    const checkTheme = () => {
+      const sections = document.querySelectorAll('[data-navbar-theme]');
+      const isMobile = window.matchMedia("(max-width: 991px)").matches;
+
+      let currentTheme = 'light'; // Default theme
+      let closestSection = null;
+      let closestDistance = Infinity;
+
+      for (let section of sections) {
+        const rect = section.getBoundingClientRect();
+        const distance = Math.abs(rect.top);
+
+        if (rect.top <= 0 && rect.bottom > 0) {
+          if (distance < closestDistance) {
+            closestDistance = distance;
+            closestSection = section;
+          }
+        } else if (rect.top > 0 && rect.top < 200) {
+          if (distance < closestDistance) {
+            closestDistance = distance;
+            closestSection = section;
+          }
         }
-        
-        foundMatch = true;
-        break;
       }
-    }
-    
-    // If no section matched, default to dark
-    if (!foundMatch) {
-      setIsLightBg(false);
-    }
-  };
 
-  window.addEventListener('scroll', checkTheme);
-  checkTheme(); // Check immediately on mount
+      if (closestSection) {
+        currentTheme = closestSection.dataset.navbarTheme;
+      }
 
-  return () => window.removeEventListener('scroll', checkTheme);
-}, []);
+      if (isMobile) {
+        setIsLightBg(currentTheme === 'light');
+        document.querySelector('.navbar')?.classList.add('mobile-theme');
+      } else {
+        setIsLightBg(currentTheme === 'light');
+        document.querySelector('.navbar')?.classList.remove('mobile-theme');
+      }
+    };
+
+    const scrollHandler = () => {
+      checkTheme();
+    };
+
+    window.addEventListener('scroll', scrollHandler, true);
+    document.addEventListener('scroll', scrollHandler, true);
+    window.addEventListener('resize', checkTheme);
+    checkTheme();
+
+    return () => {
+      window.removeEventListener('scroll', scrollHandler, true);
+      document.removeEventListener('scroll', scrollHandler, true);
+      window.removeEventListener('resize', checkTheme);
+    };
+  }, []);
 
   return (
-    <Navbar className={`navbar ${scrolled ? 'scrolled' : ''} ${isLightBg ? 'light-bg' : 'dark-bg'}`} bg="transparent" expand="lg" fixed="top">
+    <Navbar
+      className={`navbar ${scrolled ? 'scrolled' : ''} ${isLightBg ? 'light-bg' : 'dark-bg'}`}
+      bg="transparent"
+      expand="lg"
+      fixed="top"
+      expanded={expanded}
+      onToggle={(expanded) => setExpanded(expanded)}
+    >
       <Container fluid>
         <Navbar.Brand as={Link} to="/">
           <img

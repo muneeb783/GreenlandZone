@@ -148,7 +148,7 @@ const Milking = () => {
   return (
     <div className="milking-container">
       {/* Hero Section */}
-      <header className="milking-hero-section">
+      <header className="milking-hero-section" data-navbar-theme="dark">
         <div className="milking-hero-overlay"></div>
         <div className="milking-hero-content">
           <div className="milking-hero-badge">ADVANCED MILKING TECHNOLOGY</div>
@@ -245,9 +245,6 @@ const Milking = () => {
       {selectedProduct && (
         <div className="milking-modal-overlay" onClick={() => setSelectedProduct(null)}>
           <div className="milking-modal-content" onClick={(e) => e.stopPropagation()}>
-            <button className="milking-modal-close" onClick={() => setSelectedProduct(null)}>
-              ×
-            </button>
             <div className="milking-modal-grid">
               <div className="milking-modal-image">
                 <img src={selectedProduct.image} alt={selectedProduct.name} />
@@ -271,16 +268,10 @@ const Milking = () => {
                     ))}
                   </ul>
                 </div>
-
-                <div className="milking-modal-actions">
-                  <button
-                    className="milking-btn-secondary milking-modal-close-btn"
-                    onClick={() => setSelectedProduct(null)}
-                  >
-                    Close
-                  </button>
-                </div>
               </div>
+            </div>
+            <div className="milking-close-bar" onClick={() => setSelectedProduct(null)}>
+              Close
             </div>
           </div>
         </div>

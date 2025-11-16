@@ -146,7 +146,7 @@ const ForageSol = () => {
   return (
     <div className="forage-container">
       {/* Hero Section */}
-      <header className="forage-hero-section forage-full-width">
+      <header className="forage-hero-section forage-full-width" data-navbar-theme="dark">
         <div className="forage-hero-overlay"></div>
         <div className="forage-hero-content">
           <div className="forage-hero-badge">FORAGE & SILAGE MAKING EQUIPMENT</div>
@@ -171,7 +171,7 @@ const ForageSol = () => {
       </header>
 
       {/* Features Section */}
-      <section className="forage-features-section forage-full-width" data-navbar-theme="light">
+      <section className="forage-features-section forage-full-width">
         <div className="forage-features-container">
           <h2 className="forage-features-title">Why Choose Our Forage & Silage Solutions?</h2>
           <div className="forage-features-grid">
@@ -192,7 +192,7 @@ const ForageSol = () => {
       </section>
 
       {/* Product Grid - Modern Card Design */}
-      <section className="forage-products-section forage-full-width" data-navbar-theme="light">
+      <section className="forage-products-section forage-full-width">
         <div className="forage-products-container">
           <h2 className="forage-section-title">Our Product Range</h2>
           <p className="forage-section-subtitle">
@@ -243,9 +243,6 @@ const ForageSol = () => {
       {selectedProduct && (
         <div className="forage-modal-overlay" onClick={() => setSelectedProduct(null)}>
           <div className="forage-modal-content" onClick={(e) => e.stopPropagation()}>
-            <button className="forage-modal-close" onClick={() => setSelectedProduct(null)}>
-              ×
-            </button>
             <div className="forage-modal-grid">
               <div className="forage-modal-image">
                 <img src={selectedProduct.image} alt={selectedProduct.name} />
@@ -270,6 +267,9 @@ const ForageSol = () => {
                   </ul>
                 </div>
               </div>
+            </div>
+            <div className="forage-close-bar" onClick={() => setSelectedProduct(null)}>
+              Close
             </div>
           </div>
         </div>

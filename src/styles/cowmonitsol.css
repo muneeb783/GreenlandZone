@@ -353,27 +353,42 @@
   }
 
   /* Products Section */
-  .products-section {
+  .sensetime-products-section {
     margin-bottom: 3rem;
+    background: #f8fafc;
+    padding: 5rem 2rem;
   }
 
-  .section-subtitle {
+  .sensetime-products-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .sensetime-section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+  }
+
+  .sensetime-section-subtitle {
     font-size: 1.125rem;
     color: #6b7280;
     text-align: center;
-    margin-bottom: 2.5rem;
+    margin-bottom: 3rem;
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
   }
 
-  .products-grid {
+  .sensetime-products-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 2rem;
   }
 
-  .product-card {
+  .sensetime-product-card {
     background: white;
     border-radius: 12px;
     overflow: hidden;
@@ -384,30 +399,30 @@
     border: 1px solid transparent;
   }
 
-  .product-card:hover {
+  .sensetime-product-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
     border-color: #16a34a;
   }
 
-  .product-image-container {
+  .sensetime-product-image-container {
     position: relative;
     height: 200px;
     overflow: hidden;
   }
 
-  .product-image {
+  .sensetime-product-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  .product-card:hover .product-image {
+  .sensetime-product-card:hover .sensetime-product-image {
     transform: scale(1.05);
   }
 
-  .product-tag {
+  .sensetime-product-category {
     position: absolute;
     top: 1rem;
     right: 1rem;
@@ -420,7 +435,7 @@
     z-index: 10;
   }
 
-  .product-overlay {
+  .sensetime-product-overlay {
     position: absolute;
     inset: 0;
     background: rgba(0, 0, 0, 0.7);
@@ -431,11 +446,11 @@
     transition: opacity 0.2s ease;
   }
 
-  .product-card:hover .product-overlay {
+  .sensetime-product-card:hover .sensetime-product-overlay {
     opacity: 1;
   }
 
-  .view-details-btn {
+  .sensetime-view-details-btn {
     background: #16a34a;
     color: white;
     border: none;
@@ -449,41 +464,47 @@
     gap: 0.5rem;
   }
 
-  .view-details-btn:hover {
+  .sensetime-view-details-btn:hover {
     background: #15803d;
   }
 
-  .product-content {
+  .btn-icon {
+    display: inline-block;
+    margin-left: 0.5rem;
+    vertical-align: middle;
+  }
+
+  .sensetime-product-content {
     padding: 1.5rem;
   }
 
-  .product-category-text {
+  .sensetime-product-category-text {
     font-size: 0.875rem;
     color: #16a34a;
     font-weight: 600;
     margin-bottom: 0.5rem;
   }
 
-  .product-title {
+  .sensetime-product-title {
     font-size: 1.125rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
     color: #1a1a1a;
   }
 
-  .product-description {
+  .sensetime-product-description {
     color: #6b7280;
     margin-bottom: 1rem;
     line-height: 1.5;
   }
 
-  .product-features {
+  .sensetime-product-features {
     list-style: none;
     padding: 0;
     margin: 0;
   }
 
-  .product-feature-item {
+  .sensetime-feature-item {
     display: flex;
     align-items: flex-start;
     gap: 0.5rem;
@@ -492,7 +513,7 @@
     font-size: 0.875rem;
   }
 
-  .product-feature-item svg {
+  .sensetime-feature-bullet-icon {
     color: #16a34a;
     flex-shrink: 0;
     margin-top: 2px;
@@ -530,7 +551,7 @@
   }
 
   /* Modal */
-  .modal-overlay {
+  .sensetime-modal-overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -545,47 +566,77 @@
     padding-top: 100px;
   }
 
-  .modal-content {
+  .sensetime-modal-content {
     background: white;
     border-radius: 12px;
     max-width: 1000px;
     width: 100%;
     max-height: calc(100vh - 120px);
-    overflow-y: auto;
+    height: auto;
+    overflow: hidden;
     position: relative;
-  }
-
-  .modal-close {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    background: #ef4444;
-    color: white;
-    border: none;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    font-size: 1.5rem;
-    cursor: pointer;
+    margin: auto;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 10;
-    transition: all 0.3s ease;
+    flex-direction: column;
   }
 
-  .modal-close:hover {
-    background: #dc2626;
-    transform: scale(1.1);
+  .sensetime-close-bar {
+    width: 100%;
+    padding: 1.25rem 2rem;
+    background: linear-gradient(135deg, #213543 0%, #2a4555 100%);
+    color: white;
+    text-align: center;
+    font-weight: 700;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 0 0 12px 12px;
+    margin: 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 -4px 12px rgba(33, 53, 67, 0.3);
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
   }
 
-  .modal-grid {
+  .sensetime-close-bar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+    transition: left 0.5s ease;
+  }
+
+  .sensetime-close-bar:hover::before {
+    left: 100%;
+  }
+
+  .sensetime-close-bar:hover {
+    background: linear-gradient(135deg, #2a4555 0%, #355364 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 -6px 20px rgba(33, 53, 67, 0.5);
+    letter-spacing: 3px;
+  }
+
+  .sensetime-close-bar:active {
+    transform: translateY(-1px);
+    box-shadow: 0 -2px 8px rgba(33, 53, 67, 0.3);
+  }
+
+  .sensetime-modal-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
+    overflow-y: auto;
+    flex: 1;
   }
 
-  .modal-image img {
+  .sensetime-modal-image img {
     width: 100%;
     height: 100%;
     max-height: 400px;
@@ -593,18 +644,29 @@
     border-radius: 12px 0 0 12px;
   }
 
-  .modal-info {
+  .sensetime-modal-info {
     padding: 2rem;
   }
 
-  .modal-header {
+  .sensetime-modal-header {
     display: flex;
     align-items: center;
     gap: 0.75rem;
     margin-bottom: 1rem;
+    flex-wrap: wrap;
   }
 
-  .modal-category {
+  .sensetime-modal-category {
+    background: rgba(22, 163, 74, 0.1);
+    color: #16a34a;
+    display: inline-block;
+    padding: 0.2rem 0.75rem;
+    border-radius: 2rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+
+  .sensetime-modal-tag {
     background: rgba(22, 163, 74, 0.1);
     color: #16a34a;
     padding: 0.25rem 0.75rem;
@@ -613,90 +675,82 @@
     font-weight: 600;
   }
 
-  .modal-tag {
-    background: rgba(22, 163, 74, 0.1);
-    color: #16a34a;
-    padding: 0.25rem 0.75rem;
-    border-radius: 2rem;
-    font-size: 0.75rem;
-    font-weight: 600;
-  }
-
-  .modal-title {
+  .sensetime-modal-title {
     font-size: 1.75rem;
     font-weight: 700;
     margin-bottom: 0.75rem;
     color: #1a1a1a;
+    line-height: 1.2;
   }
 
-  .modal-description {
+  .sensetime-modal-description {
     color: #6b7280;
     margin-bottom: 1.5rem;
     line-height: 1.6;
+    font-size: 0.95rem;
   }
 
-  .modal-features-section {
+  .sensetime-modal-features-section {
     margin-top: 1.5rem;
   }
 
-  .modal-features-title {
-    font-size: 1.125rem;
+  .sensetime-modal-features-title {
+    font-size: 1.1rem;
     font-weight: 600;
     margin-bottom: 1rem;
     color: #1a1a1a;
   }
 
-  .modal-features {
+  .sensetime-modal-features {
     list-style: none;
+    margin-bottom: 0;
     padding: 0;
-    margin: 0;
   }
 
-  .modal-features li {
+  .sensetime-modal-features li {
     display: flex;
     align-items: flex-start;
     gap: 0.75rem;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.6rem;
     color: #4b5563;
     font-size: 0.9rem;
     line-height: 1.4;
   }
 
-  .modal-features li svg {
+  .sensetime-feature-icon {
     color: #16a34a;
+    font-weight: bold;
     flex-shrink: 0;
-    margin-top: 2px;
-  }
-
-  .modal-actions {
+    font-size: 1.1rem;
+    line-height: 1.4;
     display: flex;
-    gap: 1rem;
-    margin-top: 2rem;
-    padding-top: 1.5rem;
-    border-top: 1px solid #e5e7eb;
+    align-items: center;
+    height: 1.4em;
   }
 
-  .modal-close-btn {
+  .sensetime-modal-features li span:not(.sensetime-feature-icon) {
+    text-align: left;
     flex: 1;
   }
 
+
   /* Responsive */
   @media (max-width: 1024px) {
-    .products-grid {
+    .sensetime-products-grid {
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     }
 
-    .modal-grid {
+    .sensetime-modal-grid {
       grid-template-columns: 1fr;
       gap: 0;
     }
 
-    .modal-image img {
+    .sensetime-modal-image img {
       max-height: 250px;
       border-radius: 12px 12px 0 0;
     }
 
-    .modal-info {
+    .sensetime-modal-info {
       padding: 1.5rem;
     }
   }
@@ -718,44 +772,49 @@
       grid-template-columns: 1fr;
     }
 
-    .products-grid {
+    .sensetime-products-grid {
       grid-template-columns: 1fr;
       gap: 1.5rem;
     }
 
-    .product-card {
+    .sensetime-product-card {
       margin: 0 auto;
       max-width: 400px;
     }
 
-    .modal-overlay {
+    .sensetime-modal-overlay {
       padding: 1rem;
       padding-top: 80px;
     }
 
-    .modal-content {
+    .sensetime-modal-content {
       max-height: calc(100vh - 100px);
     }
 
-    .modal-close {
-      width: 35px;
-      height: 35px;
-      font-size: 1.25rem;
+    .sensetime-close-bar {
+      padding: 1rem 1.5rem;
+      font-size: 0.85rem;
+      letter-spacing: 1.5px;
+      border-radius: 0 0 8px 8px;
     }
 
-    .modal-image img {
+    .sensetime-close-bar:hover {
+      letter-spacing: 2px;
+    }
+
+    .sensetime-modal-image img {
       max-height: 200px;
     }
 
-    .modal-info {
+    .sensetime-modal-info {
       padding: 1rem;
     }
 
-    .modal-title {
+    .sensetime-modal-title {
       font-size: 1.5rem;
     }
 
-    .modal-features li {
+    .sensetime-modal-features li {
       font-size: 0.85rem;
     }
   }

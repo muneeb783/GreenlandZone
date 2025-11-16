@@ -280,7 +280,7 @@ const FeedAdditivesPage = () => {
   return (
     <div className="feedadd-container">
       {/* Hero Section */}
-      <header className="feedadd-hero-section">
+      <header className="feedadd-hero-section" data-navbar-theme="dark">
         <div className="feedadd-hero-overlay"></div>
         <div className="feedadd-hero-content">
           <div className="feedadd-hero-badge">PREMIUM FEED ADDITIVES</div>
@@ -377,9 +377,6 @@ const FeedAdditivesPage = () => {
       {selectedProduct && (
         <div className="feedadd-modal-overlay" onClick={() => setSelectedProduct(null)}>
           <div className="feedadd-modal-content" onClick={(e) => e.stopPropagation()}>
-            <button className="feedadd-modal-close" onClick={() => setSelectedProduct(null)}>
-              ×
-            </button>
             <div className="feedadd-modal-grid">
               <div className="feedadd-modal-image">
                 <img src={selectedProduct.image} alt={selectedProduct.name} />
@@ -403,22 +400,10 @@ const FeedAdditivesPage = () => {
                     ))}
                   </ul>
                 </div>
-
-                <div className="feedadd-modal-actions">
-                  <button
-                    className="feedadd-btn-primary feedadd-modal-cta"
-                    onClick={() => setSelectedProduct(null)}
-                  >
-                    Request a Quote
-                  </button>
-                  <button
-                    className="feedadd-btn-secondary feedadd-modal-close-btn"
-                    onClick={() => setSelectedProduct(null)}
-                  >
-                    Close
-                  </button>
-                </div>
               </div>
+            </div>
+            <div className="feedadd-close-bar" onClick={() => setSelectedProduct(null)}>
+              Close
             </div>
           </div>
         </div>

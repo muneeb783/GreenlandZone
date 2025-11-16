@@ -136,7 +136,7 @@ export default function Home() {
       {/* Hero Section with Auto Scroll */}
       <div 
         ref={heroRef} 
-        className="snap-scroll-container"
+        className="snap-scroll-container" data-navbar-theme="dark"
       >
         {heroImages.map((img, index) => (
           <div 

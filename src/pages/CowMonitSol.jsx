@@ -85,7 +85,7 @@ const SenseTimePage = () => {
   return (
     <div className="sensetime-container">
       {/* Hero Section */}
-      <section className="hero-section">
+      <section className="hero-section" data-navbar-theme="dark">
         <div className="hero-background-pattern"></div>
         <div className="hero-container">
           <div className="hero-content">
@@ -134,7 +134,7 @@ const SenseTimePage = () => {
       </section>
 
       {/* Main Content */}
-      <section className="content-section" data-navbar-theme="light">
+      <section className="content-section">
         <div className="content-wrapper">
           {/* Introduction */}
           <div className="intro-section">
@@ -165,92 +165,86 @@ const SenseTimePage = () => {
           </div>
 
           {/* Product Showcase */}
-          <div className="products-section">
-            <h2 className="section-title">See It In Action</h2>
-            <p className="section-subtitle">
-              Choose the monitoring solution that fits your farm - neck tags, ear tags, or both
-            </p>
-            <div className="products-grid">
-              {products.map(product => (
-                <div
-                  key={product.id}
-                  className="product-card"
-                  onClick={() => setSelectedImage(product)}
-                >
-                  <div className="product-image-container">
-                    <img
-                      src={product.image}
-                      alt={product.name}
-                      className="product-image"
-                    />
-                    <div className="product-tag">{product.tag}</div>
-                    <div className="product-overlay">
-                      <button className="view-details-btn">
-                        View Details
-                        <ChevronRight size={16} />
-                      </button>
+          <section className="sensetime-products-section" data-navbar-theme="light">
+            <div className="sensetime-products-container">
+              <h2 className="sensetime-section-title">Our Product Range</h2>
+              <p className="sensetime-section-subtitle">
+                Choose the monitoring solution that fits your farm - neck tags, ear tags, or both
+              </p>
+
+              <div className="sensetime-products-grid">
+                {products.map(product => (
+                  <div
+                    key={product.id}
+                    className="sensetime-product-card"
+                    onClick={() => setSelectedImage(product)}
+                  >
+                    <div className="sensetime-product-image-container">
+                      <img
+                        src={product.image}
+                        alt={product.name}
+                        className="sensetime-product-image"
+                      />
+                      <div className="sensetime-product-category">{product.tag}</div>
+                      <div className="sensetime-product-overlay">
+                        <button className="sensetime-view-details-btn">
+                          View Details
+                          <ChevronRight className="btn-icon" size={16} />
+                        </button>
+                      </div>
+                    </div>
+                    <div className="sensetime-product-content">
+                      <div className="sensetime-product-category-text">{product.category}</div>
+                      <h3 className="sensetime-product-title">{product.name}</h3>
+                      <p className="sensetime-product-description">{product.shortDesc}</p>
+                      <ul className="sensetime-product-features">
+                        {product.features.slice(0, 3).map((feature, index) => (
+                          <li key={index} className="sensetime-feature-item">
+                            <ChevronRight className="sensetime-feature-bullet-icon" size={16} />
+                            <span>{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
                   </div>
-                  <div className="product-content">
-                    <div className="product-category-text">{product.category}</div>
-                    <h3 className="product-title">{product.name}</h3>
-                    <p className="product-description">{product.shortDesc}</p>
-                    <ul className="product-features">
-                      {product.features.slice(0, 3).map((feature, index) => (
-                        <li key={index} className="product-feature-item">
-                          <ChevronRight size={16} />
-                          <span>{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
-          </div>
+          </section>
         </div>
       </section>
 
-      {/* Product Detail Modal */}
+      {/* Product Detail Modal - Enhanced Design */}
       {selectedImage && (
-        <div className="modal-overlay" onClick={() => setSelectedImage(null)}>
-          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <button className="modal-close" onClick={() => setSelectedImage(null)}>
-              ×
-            </button>
-            <div className="modal-grid">
-              <div className="modal-image">
+        <div className="sensetime-modal-overlay" onClick={() => setSelectedImage(null)}>
+          <div className="sensetime-modal-content" onClick={(e) => e.stopPropagation()}>
+            <div className="sensetime-modal-grid">
+              <div className="sensetime-modal-image">
                 <img src={selectedImage.image} alt={selectedImage.name} />
               </div>
-              <div className="modal-info">
-                <div className="modal-header">
-                  <div className="modal-category">{selectedImage.category}</div>
-                  <span className="modal-tag">{selectedImage.tag}</span>
+              <div className="sensetime-modal-info">
+                <div className="sensetime-modal-header">
+                  <div className="sensetime-modal-category">{selectedImage.category}</div>
+                  <span className="sensetime-modal-tag">{selectedImage.tag}</span>
                 </div>
-                <h2 className="modal-title">{selectedImage.name}</h2>
-                <p className="modal-description">{selectedImage.fullDesc}</p>
+                <h2 className="sensetime-modal-title">{selectedImage.name}</h2>
+                <p className="sensetime-modal-description">{selectedImage.fullDesc}</p>
 
-                <div className="modal-features-section">
-                  <h3 className="modal-features-title">Key Features</h3>
-                  <ul className="modal-features">
+                <div className="sensetime-modal-features-section">
+                  <h3 className="sensetime-modal-features-title">Key Features</h3>
+                  <ul className="sensetime-modal-features">
                     {selectedImage.features.map((feature, index) => (
                       <li key={index}>
-                        <ChevronRight size={18} />
+                        <ChevronRight className="sensetime-feature-icon" size={18} />
                         <span>{feature}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
-
-                <div className="modal-actions">
-                  <button
-                    className="btn-secondary modal-close-btn"
-                    onClick={() => setSelectedImage(null)}
-                  >
-                    Close
-                  </button>
-                </div>
               </div>
+            </div>
+            <div className="sensetime-close-bar" onClick={() => setSelectedImage(null)}>
+              Close
             </div>
           </div>
         </div>

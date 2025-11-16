@@ -93,7 +93,7 @@ const MilkHygiene = () => {
   return (
     <div className="hygiene-container">
       {/* Hero Section */}
-      <header className="hygiene-hero-section">
+      <header className="hygiene-hero-section" data-navbar-theme="dark">
         <div className="hygiene-hero-overlay"></div>
         <div className="hygiene-hero-content">
           <div className="hygiene-hero-badge">MILK QUALITY ASSURANCE</div>
@@ -190,9 +190,6 @@ const MilkHygiene = () => {
       {selectedProduct && (
         <div className="hygiene-modal-overlay" onClick={() => setSelectedProduct(null)}>
           <div className="hygiene-modal-content" onClick={(e) => e.stopPropagation()}>
-            <button className="hygiene-modal-close" onClick={() => setSelectedProduct(null)}>
-              ×
-            </button>
             <div className="hygiene-modal-grid">
               <div className="hygiene-modal-image">
                 <img src={selectedProduct.image} alt={selectedProduct.name} />
@@ -216,16 +213,10 @@ const MilkHygiene = () => {
                     ))}
                   </ul>
                 </div>
-
-                <div className="hygiene-modal-actions">
-                  <button
-                    className="hygiene-btn-secondary hygiene-modal-close-btn"
-                    onClick={() => setSelectedProduct(null)}
-                  >
-                    Close
-                  </button>
-                </div>
               </div>
+            </div>
+            <div className="milkhygiene-close-bar" onClick={() => setSelectedProduct(null)}>
+              Close
             </div>
           </div>
         </div>

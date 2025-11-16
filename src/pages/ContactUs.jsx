@@ -101,16 +101,16 @@ export default function ContactUs() {
     try {
       // Send email using EmailJS
       await emailjs.send(
-        'YOUR_SERVICE_ID',      // Replace with your EmailJS Service ID
-        'YOUR_TEMPLATE_ID',     // Replace with your EmailJS Template ID
+        'service_8h0t8jg',
+        'YOUR_TEMPLATE_ID',
         {
           from_name: form.name,
           from_email: form.email,
           subject: form.subject,
           message: form.message,
-          to_email: 'your-email@example.com', // Email where you want to receive messages
+          to_email: '783.muneeb@gmail.com',
         },
-        'YOUR_PUBLIC_KEY'       // Replace with your EmailJS Public Key
+        '4e2b9TEOJsej1d830'
       );
 
       setForm({ name: '', email: '', subject: '', message: '' });
