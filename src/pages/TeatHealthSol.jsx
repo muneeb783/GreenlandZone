@@ -65,10 +65,10 @@ const TeatHealthSol = () => {
     },
     {
       id: 4,
-      name: "Post Dip Solution/Spray",
-      category: "Post-Milking Protection",
+      name: "Pre Dip Solution/Spray",
+      category: "Pre-Milking Protection",
       shortDesc: "Ready-to-use iodine-based disinfectant with barrier protection",
-      fullDesc: "Our Post Dip Solution/Spray is a powerful ready-to-use post-milking disinfectant specifically formulated to eliminate mastitis-causing bacteria. With 5.5% active iodine content, this professional-grade solution provides immediate and lasting protection. The enriched formula with glycerine and lanolin prevents irritation while protecting the integrity of teat tissue. Upon application, the solution dries to form a protective barrier that guards against bacterial invasion until the next milking session.",
+      fullDesc: "Our Pre Dip Solution/Spray is a powerful ready-to-use post-milking disinfectant specifically formulated to eliminate mastitis-causing bacteria. With 5.5% active iodine content, this professional-grade solution provides immediate and lasting protection. The enriched formula with glycerine and lanolin prevents irritation while protecting the integrity of teat tissue. Upon application, the solution dries to form a protective barrier that guards against bacterial invasion until the next milking session.",
       features: [
         "Ready to use post-milking disinfectant - no mixing required",
         "Kills bacteria that causes mastitis with 5.5% active iodine",

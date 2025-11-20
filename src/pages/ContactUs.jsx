@@ -30,22 +30,17 @@ export default function ContactUs() {
     {
       icon: '📞',
       label: 'Call Us',
-      lines: ['Landline: 0303 1114647', 'Hotline: 0303 8847336']
+      lines: ['Landline: 042-3644228267', 'Hotline: 0303 8847336']
     },
     {
       icon: '📍',
       label: 'Head Office',
-      lines: ['783 Quaid Block, Bahria Town, Lahore', 'Phone: 0345 8432667']
+      lines: ['Ghaznavi Block Plot # 29 commercial Area, Bahria Town Lahore', 'Phone: 0345-8432667']
     },
     {
       icon: '🏭',
       label: 'Site Office',
       lines: ['2km Okara Toll Plaza, GT Road, Sahiwal', 'Phone: 0300 9692667']
-    },
-    {
-      icon: '🇬🇧',
-      label: 'UK Office',
-      lines: ['158 Weyhouse, 15 Church St, Weybridge, KT13 8NA', 'Call: +44 7796 448679']
     }
   ];
 

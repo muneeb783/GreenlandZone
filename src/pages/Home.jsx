@@ -19,7 +19,7 @@ export default function Home() {
   ];
   
   const heroContent = [
-    { title: 'GreenLand Zone', subtitle: 'From Grass to Glass', cta: 'Discover Our Story' },
+    { title: 'Green Land Zone PVT LTD', subtitle: 'From Grass to Glass', cta: 'Discover Our Story' },
     { title: 'Quality Farming', subtitle: 'Sustainable Solutions', cta: 'Explore Solutions' },
     { title: 'Expert Consultation', subtitle: 'For Better Results', cta: 'Get Expert Help' },
     { title: 'Modern Technology', subtitle: 'Traditional Values', cta: 'See Innovation' },
@@ -181,7 +181,7 @@ export default function Home() {
             <div className="col col-md-5">
               <div id="intro-heading" className={`animate-on-scroll ${isVisible['intro-heading'] ? 'visible' : ''}`}>
                 <h1 className="modern-heading">
-                  GreenLand Zone<br/>
+                  Green Land Zone PVT LTD<br/>
                   <span className="mobile-break">From Grass to Glass</span>
                 </h1>
                 <div className="accent-bar" />

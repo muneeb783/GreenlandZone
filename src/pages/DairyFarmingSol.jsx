@@ -10,7 +10,7 @@ const DairyFarmingSol = () => {
   const products = [
     {
       id: 1,
-      name: "Cooling Fans",
+      name: "Dairy Shed Fans",
       category: "Climate",
       shortDesc: "High-efficiency cooling systems for optimal cow comfort",
       fullDesc: "Combat heat stress with our advanced cooling fan systems. Energy-efficient operation combined with strategic airflow design creates the perfect barn environment. Proven to reduce heat stress and improve milk production during hot months.",

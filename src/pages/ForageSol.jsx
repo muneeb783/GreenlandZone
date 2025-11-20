@@ -67,7 +67,7 @@ const ForageSol = () => {
     },
     {
       id: 4,
-      name: "Small Silage Baler and Wrapper",
+      name: "SS Silage Baler and Wrapper",
       category: "Baling",
       shortDesc: "Fully automated baling and wrapping system for premium silage production",
       fullDesc: "Revolutionize your silage making with our state-of-the-art automated baler and wrapper. Featuring ABB motors and Siemens PLC control system, this machine represents the cutting edge of agricultural automation. The inverter-equipped wrapping table ensures smooth, consistent wrapping with minimal film breakage. Adjustable chamber accommodates various bale sizes, making it perfect for farms of all scales.",
@@ -83,40 +83,6 @@ const ForageSol = () => {
       ],
       image: baler,
       tag: "Automated"
-    },
-    {
-      id: 5,
-      name: "Silage Compactor",
-      category: "Processing",
-      shortDesc: "Heavy-duty compaction equipment for optimal silage density",
-      fullDesc: "Achieve maximum silage quality with our professional silage compactor. Proper compaction is crucial for anaerobic fermentation and long-term storage stability. This equipment ensures optimal density, eliminating air pockets that can cause spoilage. The robust construction handles heavy-duty use, making it ideal for large-scale silage operations.",
-      features: [
-        "Heavy-duty compaction for optimal density",
-        "Eliminates air pockets for better fermentation",
-        "Compatible with standard farm tractors",
-        "Durable steel construction",
-        "Adjustable weight distribution",
-        "Reduces silage spoilage and waste"
-      ],
-      image: "/api/placeholder/600/400",
-      tag: "Quality"
-    },
-    {
-      id: 6,
-      name: "Forage Tedder",
-      category: "Processing",
-      shortDesc: "Professional tedding equipment for faster, more uniform drying",
-      fullDesc: "Speed up your hay and forage drying process with our high-efficiency tedder. By lifting and spreading cut forage, it exposes more surface area to air and sunlight, dramatically reducing drying time. The result is better quality hay with preserved nutrients and reduced risk of weather damage. Adjustable settings allow customization for different crop types and field conditions.",
-      features: [
-        "Accelerates forage drying time by 40-50%",
-        "Lifts and spreads forage for uniform drying",
-        "Preserves nutritional value",
-        "Reduces weather damage risk",
-        "Adjustable tine settings for different crops",
-        "Compatible with standard tractors"
-      ],
-      image: "/api/placeholder/600/400",
-      tag: "Efficiency"
     }
   ];
 

@@ -1,6 +1,11 @@
 import { useState } from 'react';
 import { ChevronRight } from 'lucide-react';
 import "../styles/cowmonitsol.css";
+import s1 from "../assets/s1.jpeg";
+import s2 from "../assets/s2.jpeg";
+import s3 from "../assets/s3.jpeg";
+import rfid from "../assets/rfid.jpeg";
+import rfid2 from "../assets/rfid2.jpeg";
 
 const SenseTimePage = () => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -31,8 +36,8 @@ const SenseTimePage = () => {
   const products = [
     {
       id: 1,
-      name: "cSenseTM Flex",
-      category: "Neck Tag",
+      name: "Cow Monitoring System",
+      category: "Monitoring",
       shortDesc: "Advanced neck-mounted monitoring system for comprehensive cow health tracking",
       fullDesc: "The cSenseTM Flex neck tag is based on the proven SCR neck tag technology already in use on thousands of farms worldwide. This advanced system delivers precise monitoring of heat detection, health status, and rumination patterns. The comfortable, durable design ensures accurate data collection while maintaining cow comfort throughout lactation.",
       features: [
@@ -43,12 +48,12 @@ const SenseTimePage = () => {
         "Weatherproof and durable construction",
         "Long battery life with easy replacement"
       ],
-      image: "/api/placeholder/600/400",
+      image: s2,
       tag: "Neck Tag"
     },
     {
       id: 2,
-      name: "eSenseTM Flex",
+      name: "RFID Z-Tag",
       category: "Ear Tag",
       shortDesc: "The most advanced ear tag monitoring system available on the market",
       fullDesc: "The eSenseTM Flex ear tag represents the newest breakthrough in cow monitoring technology. As the most advanced ear tag on the market, it provides comprehensive health insights, heat detection, and activity monitoring in a compact, lightweight design. Perfect for farmers who prefer ear tag systems or mixed-use operations.",
@@ -60,11 +65,28 @@ const SenseTimePage = () => {
         "Easy application and management",
         "Seamless integration with farm systems"
       ],
-      image: "/api/placeholder/600/400",
+      image: rfid,
       tag: "Ear Tag"
     },
     {
       id: 3,
+      name: "RFID Tag",
+      category: "Ear Tag",
+      shortDesc: "The most advanced ear tag monitoring system available on the market",
+      fullDesc: "The eSenseTM Flex ear tag represents the newest breakthrough in cow monitoring technology. As the most advanced ear tag on the market, it provides comprehensive health insights, heat detection, and activity monitoring in a compact, lightweight design. Perfect for farmers who prefer ear tag systems or mixed-use operations.",
+      features: [
+        "Most advanced ear tag technology available",
+        "Superior heat detection capability",
+        "Comprehensive health insight monitoring",
+        "Lightweight and comfortable for cows",
+        "Easy application and management",
+        "Seamless integration with farm systems"
+      ],
+      image: rfid2,
+      tag: "Ear Tag"
+    },
+    {
+      id: 4,
       name: "SenseHub System",
       category: "Data Platform",
       shortDesc: "Central hub for actionable farm management insights and data analytics",
@@ -77,7 +99,7 @@ const SenseTimePage = () => {
         "Historical data tracking and reports",
         "Integration with farm management software"
       ],
-      image: "/api/placeholder/600/400",
+      image: s3,
       tag: "Platform"
     }
   ];

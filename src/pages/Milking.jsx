@@ -13,7 +13,7 @@ const Milking = () => {
   const products = [
     {
       id: 1,
-      name: "Mikline Mobile Milking System",
+      name: "Bucket Milking System",
       category: "Mobile",
       shortDesc: "Efficient group milking system for flexible farm operations",
       fullDesc: "Our Mikline mobile milking system delivers professional-grade milking performance with the flexibility to move between locations. Featuring electronic pulsators and a reliable oil-type vacuum pump, this system ensures gentle, efficient milking while maintaining the highest hygiene standards. The stainless steel bucket with automatic cut-off system prevents overflow and simplifies operation.",
