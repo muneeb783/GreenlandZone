@@ -2,6 +2,12 @@ import { useState } from 'react';
 import { ChevronRight, Award, Users, TrendingUp, Sparkles } from 'lucide-react';
 import '../styles/common-styles.css';
 import '../styles/foragesol.css';
+import harvester from "../assets/Grass_Harvester.png";
+import drum from "../assets/drum_mover.png";
+import srfh from "../assets/SRFH.png";
+import baler from "../assets/baler.png";
+
+
 
 const ForageSol = () => {
   const [selectedProduct, setSelectedProduct] = useState(null);
@@ -22,7 +28,7 @@ const ForageSol = () => {
         "Durable steel construction for long service life",
         "Easy maintenance and blade replacement"
       ],
-      image: "/api/placeholder/600/400",
+      image: harvester,
       tag: "Professional"
     },
     {
@@ -39,7 +45,7 @@ const ForageSol = () => {
         "Adjustable cutting height",
         "Weather-resistant durable construction"
       ],
-      image: "/api/placeholder/600/400",
+      image: drum,
       tag: "Precision"
     },
     {
@@ -56,7 +62,7 @@ const ForageSol = () => {
         "Easy to attach and detach from tractor",
         "Low maintenance requirements"
       ],
-      image: "/api/placeholder/600/400",
+      image: srfh,
       tag: "Efficient"
     },
     {
@@ -75,7 +81,7 @@ const ForageSol = () => {
         "Digital control interface for precision operation",
         "High-quality airtight wrapping for superior fermentation"
       ],
-      image: "/api/placeholder/600/400",
+      image: baler,
       tag: "Automated"
     },
     {

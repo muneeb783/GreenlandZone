@@ -2,6 +2,10 @@ import { useState } from 'react';
 import { ChevronRight, Award, Users, TrendingUp, Sparkles } from 'lucide-react';
 import '../styles/common-styles.css';
 import '../styles/teathealth.css';
+import iodip from "../assets/iodip.png";
+import herbafilm from "../assets/herbafilm.png";
+import iofilm from "../assets/iofilm.png";
+import iobar from "../assets/iobar.png";
 
 const TeatHealthSol = () => {
   const [selectedProduct, setSelectedProduct] = useState(null);
@@ -22,7 +26,7 @@ const TeatHealthSol = () => {
         "Gentle foam application reduces stress on teats",
         "Prepares teats for clean, efficient milking"
       ],
-      image: "/api/placeholder/600/400",
+      image: iobar,
       tag: "Essential"
     },
     {
@@ -39,7 +43,7 @@ const TeatHealthSol = () => {
         "Effective antibacterial protection between milkings",
         "Gentle on teat skin while providing robust defense"
       ],
-      image: "/api/placeholder/600/400",
+      image: iofilm,
       tag: "Advanced"
     },
     {
@@ -56,7 +60,7 @@ const TeatHealthSol = () => {
         "Moisturizing cosmetic properties maintain udder health",
         "Film barrier provides extended protection period"
       ],
-      image: "/api/placeholder/600/400",
+      image: herbafilm,
       tag: "Premium"
     },
     {
@@ -73,7 +77,7 @@ const TeatHealthSol = () => {
         "Dries on teat surface to create lasting protective barrier",
         "Available in both dip and convenient spray application"
       ],
-      image: "/api/placeholder/600/400",
+      image: iodip,
       tag: "Professional"
     }
   ];

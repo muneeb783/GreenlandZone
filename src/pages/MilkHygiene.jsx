@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { ChevronRight, Award, Users, TrendingUp, Sparkles } from 'lucide-react';
 import '../styles/common-styles.css';
 import '../styles/milkhygiene.css';
+import acid from "../assets/acid.png";
+import alkali from "../assets/alkali.png"
 
 const MilkHygiene = () => {
   const [selectedProduct, setSelectedProduct] = useState(null);
@@ -22,7 +24,7 @@ const MilkHygiene = () => {
         "Prevents biofilm formation and bacterial growth",
         "Compatible with all standard CIP systems"
       ],
-      image: "/api/placeholder/600/400",
+      image: alkali,
       tag: "Professional"
     },
     {
@@ -39,7 +41,7 @@ const MilkHygiene = () => {
         "Neutralizes alkaline residues from previous cleaning",
         "Extends equipment life by preventing scale buildup"
       ],
-      image: "/api/placeholder/600/400",
+      image: acid,
       tag: "Essential"
     },
     {

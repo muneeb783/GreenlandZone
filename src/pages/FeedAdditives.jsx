@@ -2,6 +2,20 @@ import { useState } from 'react';
 import { ChevronRight, Award, Users, TrendingUp, Sparkles } from 'lucide-react';
 import '../styles/common-styles.css';
 import '../styles/feedadditives.css';
+import methionine from "../assets/methionine.jpeg";
+import lysine from "../assets/lysine.jpeg";
+import choline from "../assets/choline_chloride.jpeg";
+import niacin from "../assets/niacin.jpeg";
+import globalmpg from "../assets/globalmpg.jpeg";
+import ztox from "../assets/ztox.jpeg";
+import globafix from "../assets/globafix.jpeg";
+import greenstart84 from "../assets/greenstar84.jpeg";
+import greenstar99 from "../assets/greenstar99.jpeg";
+import biotin from "../assets/biotin.jpeg";
+import vc from "../assets/ascorbic_acid.jpeg";
+import greensp from "../assets/green_sp.jpeg";
+import greenpremix from "../assets/green_premix.jpeg";
+
 
 const FeedAdditivesPage = () => {
   const [selectedProduct, setSelectedProduct] = useState(null);
@@ -22,7 +36,7 @@ const FeedAdditivesPage = () => {
         "Enhances reproductive efficiency and fertility",
         "Supports optimal metabolic function and health"
       ],
-      image: "/api/placeholder/600/400",
+      image: methionine,
       tag: "Essential"
     },
     {
@@ -39,7 +53,7 @@ const FeedAdditivesPage = () => {
         "Significantly improves milk yield and output",
         "Increases milk protein rate and quality"
       ],
-      image: "/api/placeholder/600/400",
+      image: lysine,
       tag: "Performance"
     },
     {
@@ -56,7 +70,7 @@ const FeedAdditivesPage = () => {
         "Helps in significant reduction of NEFA and BHBA levels",
         "Reduces fatty liver syndrome and extends dairy cow lifespan"
       ],
-      image: "/api/placeholder/600/400",
+      image: choline,
       tag: "Health"
     },
     {
@@ -73,7 +87,7 @@ const FeedAdditivesPage = () => {
         "Significantly increases milk yield and production",
         "Improves reproductive performance and fertility"
       ],
-      image: "/api/placeholder/600/400",
+      image: niacin,
       tag: "Metabolic"
     },
     {
@@ -90,7 +104,7 @@ const FeedAdditivesPage = () => {
         "Synergistic association of glucose precursors and liver protectors",
         "Significantly lowers energy deficit during transition period"
       ],
-      image: "/api/placeholder/600/400",
+      image: globalmpg,
       tag: "Transition"
     },
     {
@@ -124,7 +138,7 @@ const FeedAdditivesPage = () => {
         "Enhances overall cow health and well-being",
         "Does not bind essential vitamins and minerals"
       ],
-      image: "/api/placeholder/600/400",
+      image: ztox,
       tag: "Protection"
     },
     {
@@ -141,7 +155,7 @@ const FeedAdditivesPage = () => {
         "Effective against T-2 and H-2 Toxins",
         "Helps reduce mastitis, lameness, and repeat breeding issues"
       ],
-      image: "/api/placeholder/600/400",
+      image: globafix,
       tag: "Immunity"
     },
     {
@@ -158,7 +172,7 @@ const FeedAdditivesPage = () => {
         "Natural mixture of palm oil and calcium salts",
         "Improves milk yield, Body Condition Score, and reproduction"
       ],
-      image: "/api/placeholder/600/400",
+      image: greenstart84,
       tag: "Energy"
     },
     {
@@ -175,7 +189,7 @@ const FeedAdditivesPage = () => {
         "Ultra-high purity for maximum effectiveness",
         "Ideal for enhancing milk quality and composition"
       ],
-      image: "/api/placeholder/600/400",
+      image: greenstar99,
       tag: "Premium"
     },
     {
@@ -192,7 +206,7 @@ const FeedAdditivesPage = () => {
         "Significantly reduces lameness incidence",
         "Increases productivity through better mobility"
       ],
-      image: "/api/placeholder/600/400",
+      image: biotin,
       tag: "Mobility"
     },
     {
@@ -209,7 +223,7 @@ const FeedAdditivesPage = () => {
         "Recommended dosage: 10g per cow per day",
         "For calves: 1g per calf per day"
       ],
-      image: "/api/placeholder/600/400",
+      image: vc,
       tag: "Antioxidant"
     },
     {
@@ -226,7 +240,7 @@ const FeedAdditivesPage = () => {
         "Specifically formulated for 25-35 liter producers",
         "Complete nutritional support for high-yielding cows"
       ],
-      image: "/api/placeholder/600/400",
+      image: greensp,
       tag: "Complete"
     },
     {
@@ -243,7 +257,7 @@ const FeedAdditivesPage = () => {
         "Suitable for heifers and dry cows",
         "Complete nutritional support for all production stages"
       ],
-      image: "/api/placeholder/600/400",
+      image: greenpremix,
       tag: "Standard"
     }
   ];
