@@ -6,6 +6,7 @@ import Home from './pages/Home'
 import AboutUs from './pages/AboutUs'
 import Footer from './pages/Footer'
 import ContactUS from './pages/ContactUs'
+import ProductsLanding from './pages/ProductsLanding'
 import DairySols from './pages/DairyFarmingSol'
 import DairyParts from './pages/DairyParts'
 import Forage from './pages/ForageSol'
@@ -43,6 +44,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path='/about' element={<AboutUs />} />
         <Route path='/contact' element={<ContactUS />} />
+        <Route path="/products" element={<ProductsLanding />} />
         <Route path="/products/dairy"       element={<DairySols />} />
         <Route path="/products/parts"     element={<DairyParts />} />
         <Route path="/products/forage"      element={<Forage />} />
