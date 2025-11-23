@@ -21,8 +21,8 @@ export default function Footer() {
                 <Col md={5} className="mb-4 mb-md-0">
                     <p className='footer-text'>
                     <strong>HEAD OFFICE:</strong><br/>
-                    783 Quaid Block, Bahria Town, Lahore<br/>
-                    Phone: 92-345-843-2667<br/>
+                    Ghaznavi Block Plot # 29 commercial Area, Bahria Town Lahore<br/>
+                    Phone: 0345-8432667<br/>
                     Email: info@greenlandzone.com
                     </p>
                     <p className="footer-text">

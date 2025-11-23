@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
+import { SEO } from '../components/SEO';
 import '../styles/contactus.css';
 
 export default function ContactUs() {
@@ -130,6 +131,12 @@ export default function ContactUs() {
 
   return (
     <div className="contact-page-wrapper" data-navbar-theme="light">
+      <SEO
+        title="Contact Us - Get in Touch"
+        description="Contact Greenland Zone for dairy farming solutions, equipment inquiries, and farm consultancy. Visit our head office in Bahria Town Lahore or site office in Sahiwal."
+        keywords="contact Greenland Zone, dairy farming inquiry, farm consultation, dairy equipment support, Pakistan dairy solutions"
+        url="https://greenlandzone.com/contact"
+      />
       <div className="contact-page">
         <div className="contact-background">
           <div className="contact-shape shape1"></div>

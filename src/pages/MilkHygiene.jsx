@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { ChevronRight, Award, Users, TrendingUp, Sparkles } from 'lucide-react';
+import { SEO } from '../components/SEO';
 import '../styles/common-styles.css';
 import '../styles/milkhygiene.css';
 import acid from "../assets/acid.png";
@@ -94,6 +95,12 @@ const MilkHygiene = () => {
 
   return (
     <div className="hygiene-container">
+      <SEO
+        title="Milk Hygiene Solutions - Cleaning & Sanitization"
+        description="Professional milk hygiene solutions including acid and alkaline cleaning products, sanitizers, and detergents for dairy equipment. Maintain the highest milk quality standards."
+        keywords="milk hygiene, dairy cleaning products, acid cleaning, alkaline cleaning, dairy sanitizers, milk quality, equipment cleaning"
+        url="https://greenlandzone.com/products/hygiene"
+      />
       {/* Hero Section */}
       <header className="hygiene-hero-section" data-navbar-theme="dark">
         <div className="hygiene-hero-overlay"></div>

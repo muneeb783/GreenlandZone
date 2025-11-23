@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { ChevronRight, Award, Users, TrendingUp, Sparkles } from 'lucide-react';
+import { SEO } from '../components/SEO';
 import '../styles/common-styles.css';
 import '../styles/feedadditives.css';
 import methionine from "../assets/methionine.jpeg";
@@ -293,6 +294,12 @@ const FeedAdditivesPage = () => {
 
   return (
     <div className="feedadd-container">
+      <SEO
+        title="Feed Additives - Premium Nutritional Supplements"
+        description="High-quality feed additives including DL-Methionine, L-Lysine, Choline Chloride, Niacin, Global MPG, and Z-Tox. Enhance herd health and productivity with our nutritional supplements."
+        keywords="feed additives, methionine, lysine, choline chloride, niacin, dairy nutrition, cattle feed supplements, animal nutrition"
+        url="https://greenlandzone.com/products/feed"
+      />
       {/* Hero Section */}
       <header className="feedadd-hero-section" data-navbar-theme="dark">
         <div className="feedadd-hero-overlay"></div>

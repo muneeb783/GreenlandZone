@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { ChevronRight, Award, Users, TrendingUp, Sparkles } from 'lucide-react';
+import { SEO } from '../components/SEO';
 import '../styles/common-styles.css';
 import "../styles/dairyfarmingsol.css";
 import fanImage from "../assets/fan.JPG";
@@ -58,6 +59,12 @@ const DairyFarmingSol = () => {
 
   return (
     <div className="dairy-container">
+      <SEO
+        title="Dairy Farming Solutions - Equipment & Machinery"
+        description="Comprehensive dairy farm equipment solutions including cooling systems, shed fans, and climate control. Improve cow comfort by 98% and increase milk yield by 35% with our proven solutions."
+        keywords="dairy farming equipment, dairy shed fans, cow cooling systems, dairy climate control, farm equipment Pakistan, cow comfort solutions"
+        url="https://greenlandzone.com/products/dairy"
+      />
       {/* Hero Section */}
       <header className="dairy-hero-section" data-navbar-theme="dark">
         <div className="dairy-hero-overlay"></div>

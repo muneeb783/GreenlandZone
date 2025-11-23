@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { ChevronRight, Award, Users, TrendingUp, Sparkles } from 'lucide-react';
+import { SEO } from '../components/SEO';
 import '../styles/common-styles.css';
 import '../styles/dairyParts.css';
 import feeder from '../assets/feeder.JPG';
@@ -151,6 +152,26 @@ const DairyParts = () => {
       ],
       image: meter,
       tag: "Precision"
+    },
+    {
+      id: 10,
+      name: "Gia",
+      category: "Parts",
+      shortDesc: "Genuine OEM spare parts for Gia dairy machinery",
+      fullDesc: "Maintain peak performance of your Gia dairy equipment with our comprehensive range of genuine OEM spare parts. Each component is manufactured to exact factory specifications, ensuring perfect compatibility and reliable operation",
+      features: [
+        "100% genuine OEM Gia parts - guaranteed authenticity",
+        "Manufactured to exact factory specifications",
+        "Complete compatibility with all Gia machinery models",
+        "Extensive inventory for quick availability",
+        "Manufacturer warranty on all parts",
+        "Expert technical support and installation guidance",
+        "Reduces equipment downtime significantly",
+        "Maintains optimal machine performance and longevity"
+       ],
+
+      image: meter,
+      tag: "Parts"
     }
   ];
 
@@ -185,6 +206,12 @@ const DairyParts = () => {
 
   return (
     <div className="feeding-container">
+      <SEO
+        title="Dairy Parts & Accessories"
+        description="Essential dairy equipment parts including milk feeder buckets, cleaning brushes, pulsators, milk meters, and tubing. Quality dairy accessories for efficient farm operations."
+        keywords="dairy parts, milk feeder bucket, dairy cleaning brush, milk pulsators, milk meters, dairy tubing, farm equipment accessories"
+        url="https://greenlandzone.com/products/parts"
+      />
       {/* Hero Section */}
       <header className="feeding-hero-section" data-navbar-theme="dark">
         <div className="feeding-hero-overlay"></div>

@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { SEO } from '../components/SEO';
 import '../styles/home.css';
 
 export default function Home() {
@@ -15,15 +16,17 @@ export default function Home() {
     'https://images.unsplash.com/photo-1560493676-04071c5f467b?w=1600',
     'https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=1600',
     'https://images.unsplash.com/photo-1574482620811-1aa16ffe3c82?w=1600',
-    'https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?w=1600'
+    'https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?w=1600',
+    'https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?w=1600'
   ];
-  
+
   const heroContent = [
     { title: 'Green Land Zone PVT LTD', subtitle: 'From Grass to Glass', cta: 'Discover Our Story' },
     { title: 'Quality Farming', subtitle: 'Sustainable Solutions', cta: 'Explore Solutions' },
     { title: 'Expert Consultation', subtitle: 'For Better Results', cta: 'Get Expert Help' },
     { title: 'Modern Technology', subtitle: 'Traditional Values', cta: 'See Innovation' },
-    { title: 'Nationwide Service', subtitle: 'Local Expertise', cta: 'Find Locations' }
+    { title: 'Nationwide Service', subtitle: 'Local Expertise', cta: 'Find Locations' },
+    { title: 'Geographic Footprint', subtitle: 'Serving Farms Across Pakistan', cta: 'See Our Reach' }
   ];
 
   // Enhanced products data
@@ -133,6 +136,12 @@ export default function Home() {
 
   return (
     <div className="home-page">
+      <SEO
+        title="Greenland Zone - From Grass to Glass"
+        description="Leading dairy farming solutions provider in Pakistan with 20 years of experience. Offering dairy machinery, agriculture equipment, feed additives, cow health monitoring, and farm consultancy services."
+        keywords="dairy farming Pakistan, agriculture machinery, dairy equipment, feed additives, farm consultancy, cow health, herd management, sustainable farming"
+        url="https://greenlandzone.com"
+      />
       {/* Hero Section with Auto Scroll */}
       <div 
         ref={heroRef} 

@@ -1,1 +1,75 @@
+# Cloudflare Pages _redirects file
+# This file handles URL redirects from your old WordPress site to the new structure
+#
+# Format: old-path new-path [status-code]
+# Status codes: 301 (permanent), 302 (temporary)
+# Use 301 for SEO-friendly permanent redirects
+
+# ============================================
+# REDIRECT EXAMPLES - Customize these based on your actual WordPress URLs
+# ============================================
+
+# Example: If WordPress used /about-us/, redirect to /about
+# /about-us /about 301
+
+# Example: WordPress product pages
+# /product/dairy-equipment /products/dairy 301
+# /product/feed-supplements /products/feed 301
+
+# ============================================
+# COMMON WORDPRESS PATTERNS TO REDIRECT
+# ============================================
+
+# Homepage variations
+/index.php / 301
+/home / 301
+
+# Contact page variations
+/contact-us /contact 301
+/get-in-touch /contact 301
+
+# About page variations
+/about-us /about 301
+/company /about 301
+
+# Team page variations
+/our-team /team 301
+/the-team /team 301
+/team-members /team 301
+
+# Products page variations
+/shop /products 301
+/our-products /products 301
+
+# Specific product redirects (customize based on your WordPress URL structure)
+/dairy-farming-solutions /products/dairy 301
+/feed-additives-products /products/feed 301
+/milking-equipment /products/milking 301
+/forage-solutions /products/forage 301
+/dairy-parts-accessories /products/parts 301
+/milk-hygiene-products /products/hygiene 301
+/teat-health-solutions /products/teat 301
+/cow-monitoring-system /products/monitoring 301
+
+# ============================================
+# WORDPRESS SYSTEM PAGES (typically redirect to home)
+# ============================================
+
+/wp-admin / 301
+/wp-login.php / 301
+/wp-content/* / 301
+/wp-includes/* / 301
+
+# ============================================
+# CATCH-ALL REDIRECT (uncomment if needed)
+# ============================================
+
+# Redirect all other pages to homepage (use with caution)
+# /* / 301
+
+# ============================================
+# SPA FALLBACK (for React Router)
+# ============================================
+
+# Ensure React Router handles all routes (this should be last)
 /* /index.html 200

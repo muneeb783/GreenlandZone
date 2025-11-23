@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { ChevronRight, Award, Users, TrendingUp, Sparkles } from 'lucide-react';
+import { SEO } from '../components/SEO';
 import '../styles/common-styles.css';
 import '../styles/milking.css';
 import dbdc from "../assets/dbdc.JPG";
@@ -13,23 +14,6 @@ const Milking = () => {
   const products = [
     {
       id: 1,
-      name: "Bucket Milking System",
-      category: "Mobile",
-      shortDesc: "Efficient group milking system for flexible farm operations",
-      fullDesc: "Our Mikline mobile milking system delivers professional-grade milking performance with the flexibility to move between locations. Featuring electronic pulsators and a reliable oil-type vacuum pump, this system ensures gentle, efficient milking while maintaining the highest hygiene standards. The stainless steel bucket with automatic cut-off system prevents overflow and simplifies operation.",
-      features: [
-        "Electronic pulsator for gentle, consistent milking",
-        "Oil-type vacuum pump with two years warranty",
-        "40 Kg stainless steel bucket with automatic cut-off system",
-        "Can milk 16-20 animals per hour",
-        "Mobile design for flexible positioning",
-        "Easy to clean and maintain"
-      ],
-      image: "/api/placeholder/600/400",
-      tag: "Mobile"
-    },
-    {
-      id: 2,
       name: "Single Bucket Single Cluster",
       category: "Group",
       shortDesc: "Compact and efficient single-cluster milking solution",
@@ -46,7 +30,7 @@ const Milking = () => {
       tag: "Efficient"
     },
     {
-      id: 3,
+      id: 2,
       name: "Single Bucket Double Cluster",
       category: "Mobile",
       shortDesc: "High-capacity mobile system for increased productivity",
@@ -63,7 +47,7 @@ const Milking = () => {
       tag: "Productive"
     },
     {
-      id: 4,
+      id: 3,
       name: "Double Bucket Double Cluster",
       category: "Mobile",
       shortDesc: "Maximum capacity mobile milking solution for large herds",
@@ -80,7 +64,41 @@ const Milking = () => {
       tag: "High-Capacity"
     },
     {
+      id: 4,
+      name: "Bucket Milking System",
+      category: "Mobile",
+      shortDesc: "Efficient group milking system for flexible farm operations",
+      fullDesc: "Our Mikline mobile milking system delivers professional-grade milking performance with the flexibility to move between locations. Featuring electronic pulsators and a reliable oil-type vacuum pump, this system ensures gentle, efficient milking while maintaining the highest hygiene standards. The stainless steel bucket with automatic cut-off system prevents overflow and simplifies operation.",
+      features: [
+        "Electronic pulsator for gentle, consistent milking",
+        "Oil-type vacuum pump with two years warranty",
+        "40 Kg stainless steel bucket with automatic cut-off system",
+        "Can milk 16-20 animals per hour",
+        "Mobile design for flexible positioning",
+        "Easy to clean and maintain"
+      ],
+      image: "/api/placeholder/600/400",
+      tag: "Mobile"
+    },
+    {
       id: 5,
+      name: "Milkline",
+      category: "Mobile",
+      shortDesc: "Efficient mobile milking system for flexible farm operations",
+      fullDesc: "Our Milkline mobile milking system delivers professional-grade performance with the flexibility to move easily between locations. Equipped with an electronic pulsator and a reliable oil-type vacuum pump, it ensures gentle, efficient milking while maintaining superior hygiene standards. The 40 kg stainless steel bucket features an automatic cut-off system to prevent overflow and simplify operation.",
+      features: [
+        "Electronic pulsator for gentle, consistent milking",
+        "Durable oil-type vacuum pump with a two-year warranty",
+        "40 kg stainless steel bucket with automatic cut-off system",
+        "Milks 16–20 animals per hour",
+        "Mobile design for flexible positioning",
+        "Easy to clean and maintain"
+      ],
+      image: "/api/placeholder/600/400",
+      tag: "Mobile"
+    },
+    {
+      id: 6,
       name: "Herringbone Milking Parlor",
       category: "Parlour",
       shortDesc: "Professional parlor design with integrated herd management",
@@ -97,7 +115,7 @@ const Milking = () => {
       tag: "Professional"
     },
     {
-      id: 6,
+      id: 7,
       name: "Fast Exit Milking Parlor",
       category: "Parlour",
       shortDesc: "Advanced parlor with rapid turnover and health monitoring",
@@ -147,6 +165,12 @@ const Milking = () => {
 
   return (
     <div className="milking-container">
+      <SEO
+        title="Milking Solutions - Professional Milking Equipment"
+        description="Professional milking equipment including bucket milking systems, single stall single cow systems, and double bucket double cow systems. Efficient milking solutions for modern dairy farms."
+        keywords="milking equipment, bucket milking system, milking parlor, dairy milking solutions, cow milking machines, professional milking systems"
+        url="https://greenlandzone.com/products/milking"
+      />
       {/* Hero Section */}
       <header className="milking-hero-section" data-navbar-theme="dark">
         <div className="milking-hero-overlay"></div>

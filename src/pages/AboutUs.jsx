@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, Image } from 'react-bootstrap';
 import { motion } from 'framer-motion';
+import { SEO } from '../components/SEO';
 import '../styles/aboutus.css';
 
 export default function AboutUs() {
@@ -35,6 +36,12 @@ export default function AboutUs() {
 
   return (
     <div className="about-page about-full-width">
+      <SEO
+        title="About Us - Leadership Message"
+        description="Learn about Greenland Zone's leadership and vision for sustainable farming in Pakistan. From Grass to Glass - serving farmers with 20 years of expertise in dairy and agriculture."
+        keywords="about Greenland Zone, dairy farming leadership, Pakistan agriculture, farm solutions, sustainable farming vision"
+        url="https://greenlandzone.com/about"
+      />
       <motion.div
         className="about-hero"
         initial={{ opacity: 0 }}

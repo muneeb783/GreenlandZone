@@ -120,6 +120,13 @@ export default function GlobalNavBar() {
             </Nav.Link>
             <Nav.Link
               as={Link}
+              to="/team"
+              className={location.pathname === '/team' ? 'active' : ''}
+            >
+              Our Team
+            </Nav.Link>
+            <Nav.Link
+              as={Link}
               to="/products"
               className={location.pathname.startsWith('/products') ? 'active' : ''}
             >

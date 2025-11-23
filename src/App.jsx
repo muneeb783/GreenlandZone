@@ -1,6 +1,7 @@
 import './App.css'
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
 import { useEffect, useLayoutEffect } from 'react'
+import { HelmetProvider } from './components/SEO'
 import GlobalNavBar from './components/GlobalNavBar'
 import Home from './pages/Home'
 import AboutUs from './pages/AboutUs'
@@ -15,6 +16,7 @@ import Hygiene from './pages/MilkHygiene'
 import Teat from './pages/TeatHealthSol'
 import Monitoring from './pages/CowMonitSol'
 import Feed from "./pages/FeedAdditives"
+import OurTeam from './pages/OurTeam'
 
 // ScrollToTop component to handle page navigation
 function ScrollToTop() {
@@ -37,25 +39,28 @@ function ScrollToTop() {
 
 export default function App() {
   return (
-    <BrowserRouter>
-      <ScrollToTop />
-      <GlobalNavBar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path='/about' element={<AboutUs />} />
-        <Route path='/contact' element={<ContactUS />} />
-        <Route path="/products" element={<ProductsLanding />} />
-        <Route path="/products/dairy"       element={<DairySols />} />
-        <Route path="/products/parts"     element={<DairyParts />} />
-        <Route path="/products/forage"      element={<Forage />} />
-        <Route path="/products/milking"     element={<Milking />} />
-        <Route path="/products/hygiene"     element={<Hygiene />} />
-        <Route path="/products/teat"        element={<Teat />} />
-        <Route path="/products/monitoring"  element={<Monitoring />} />
-        <Route path='/products/feed' element={<Feed />} />
-      </Routes>
+    <HelmetProvider>
+      <BrowserRouter>
+        <ScrollToTop />
+        <GlobalNavBar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path='/about' element={<AboutUs />} />
+          <Route path='/team' element={<OurTeam />} />
+          <Route path='/contact' element={<ContactUS />} />
+          <Route path="/products" element={<ProductsLanding />} />
+          <Route path="/products/dairy"       element={<DairySols />} />
+          <Route path="/products/parts"     element={<DairyParts />} />
+          <Route path="/products/forage"      element={<Forage />} />
+          <Route path="/products/milking"     element={<Milking />} />
+          <Route path="/products/hygiene"     element={<Hygiene />} />
+          <Route path="/products/teat"        element={<Teat />} />
+          <Route path="/products/monitoring"  element={<Monitoring />} />
+          <Route path='/products/feed' element={<Feed />} />
+        </Routes>
 
-      <Footer />
-    </BrowserRouter>
+        <Footer />
+      </BrowserRouter>
+    </HelmetProvider>
   )
 }

@@ -1,8 +1,20 @@
 import { Link } from 'react-router-dom';
-import { ChevronRight, Wrench, Leaf, Heart } from 'lucide-react';
+import { ChevronRight, Wrench, Leaf, Heart, Download } from 'lucide-react';
+import { SEO } from '../components/SEO';
 import '../styles/productsLanding.css';
 
 const ProductsLanding = () => {
+  // Handle catalogue download
+  const handleDownloadCatalogue = () => {
+    // Create a link element and trigger download
+    const link = document.createElement('a');
+    link.href = '/catalogue.pdf'; // Place your catalogue PDF in the public folder
+    link.download = 'Greenland-Zone-Product-Catalogue.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   const categories = [
     {
       id: 1,
@@ -75,6 +87,12 @@ const ProductsLanding = () => {
 
   return (
     <div className="products-landing-container">
+      <SEO
+        title="Products - Complete Dairy Farming Solutions"
+        description="Explore our comprehensive range of dairy farming products including mechanization equipment, feed additives, and cow comfort solutions. Advanced milking systems, forage solutions, and health monitoring."
+        keywords="dairy farming products, milking solutions, forage equipment, feed additives, cow monitoring, dairy mechanization, milk hygiene, udder health"
+        url="https://greenlandzone.com/products"
+      />
       {/* Hero Section */}
       <section className="products-hero" data-navbar-theme="dark">
         <div className="products-hero-overlay"></div>
@@ -87,6 +105,10 @@ const ProductsLanding = () => {
           <p className="products-hero-description">
             Explore our comprehensive range of products and services designed to optimize your dairy farming operations
           </p>
+          <button onClick={handleDownloadCatalogue} className="products-download-catalogue-btn">
+            <Download size={20} />
+            Download Product Catalogue
+          </button>
         </div>
       </section>
 
@@ -138,10 +160,16 @@ const ProductsLanding = () => {
           <p className="products-cta-description">
             Our experts are ready to help you find the perfect products for your dairy farm
           </p>
-          <Link to="/contact" className="products-cta-button">
-            Contact Us
-            <ChevronRight size={20} />
-          </Link>
+          <div className="products-cta-buttons">
+            <Link to="/contact" className="products-cta-button primary">
+              Contact Us
+              <ChevronRight size={20} />
+            </Link>
+            <button onClick={handleDownloadCatalogue} className="products-cta-button secondary">
+              <Download size={20} />
+              Download Catalogue
+            </button>
+          </div>
         </div>
       </section>
     </div>
