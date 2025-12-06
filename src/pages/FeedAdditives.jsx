@@ -16,6 +16,9 @@ import biotin from "../assets/biotin.jpeg";
 import vc from "../assets/ascorbic_acid.jpeg";
 import greensp from "../assets/green_sp.jpeg";
 import greenpremix from "../assets/green_premix.jpeg";
+import uly from "../assets/ultra_live_yeast.jpeg";
+import uay from "../assets/ultra_auto_yeast.jpeg";
+import otm from "../assets/organic_trace_mins.jpeg";
 
 
 const FeedAdditivesPage = () => {
@@ -260,6 +263,74 @@ const FeedAdditivesPage = () => {
       ],
       image: greenpremix,
       tag: "Standard"
+    },
+    {
+      id: 15,
+      name: "DeMet Cr (Chromium Methionine)",
+      category: "Organic Minerals",
+      shortDesc: "The 'Stress Shield' for high-producing dairy cows",
+      fullDesc: "DeMet Cr is a specialized organic Chromium Methionine supplement that acts as a stress shield for dairy cattle. It plays a critical role in insulin sensitivity and glucose metabolism, which is essential during transition periods and heat stress. By enhancing glucose efficiency, it helps reduce cortisol levels, boosts overall performance, and ensures better metabolic stability in high-producing herds.",
+      features: [
+        "Chromium Methionine (Cr) content ≥ 0.1%",
+        "Acts as a 'Stress Shield' for high-producing cows",
+        "Improves insulin sensitivity and glucose metabolism",
+        "Enhances performance during transition and heat stress",
+        "Recommended Dosage: 3.6 - 4.8g/head/day",
+        "Low moisture content (≤ 5%) for stability"
+      ],
+      image: greenpremix,
+      tag: "Stress Relief"
+    },
+    {
+      id: 16,
+      name: "Ultra Autolysed Yeast",
+      category: "Yeast Culture",
+      shortDesc: "Bioengineered yeast rich in nucleotides for gut health",
+      fullDesc: "Ultra Autolysed Yeast is derived from molasses or brewer's yeast using modern bioengineering techniques like autolysis and enzymatic hydrolysis. Rich in proteins, amino acids, peptides, and nucleotides, it functions as a powerful prebiotic. It improves nutrient digestibility, increases intestinal villi height, and balances immune function, leading to a healthier and more productive herd.",
+      features: [
+        "Crude Protein ≥ 42% and Amino Acid Nitrogen ≥ 2%",
+        "Improves beneficial bacteria via prebiotic activity",
+        "Increases intestinal villi height and density",
+        "Balances immune function and antioxidant activity",
+        "Rich in nucleotides, peptides, and polypeptides",
+        "Dose Rate: 7 to 10gm/cow/day"
+      ],
+      image: uay,
+      tag: "Gut Health"
+    },
+    {
+      id: 17,
+      name: "Ultra Live Yeast",
+      category: "Probiotics",
+      shortDesc: "99% pure active yeast for rumen fermentation optimization",
+      fullDesc: "Ultra Live Yeast is a pure active yeast product (99% purity) designed to optimize the rumen environment. It helps maintain anaerobic conditions, promotes roughage fermentation, and improves cellulolytic microflora. By reducing acidosis and increasing dry matter intake, it directly supports improved milk yield, total solids, and growth rates in both cows and calves.",
+      features: [
+        "Pure active yeast product with 99% purity",
+        "Maintains anaerobic environment of the rumen",
+        "Promotes roughage fermentation and reduces acidosis",
+        "Increases feed intake and dry matter intake",
+        "Improves milk yield and total solids production",
+        "Dose Rate (Lactation): 3-5 grams per head per day"
+      ],
+      image: uly,
+      tag: "Digestion"
+    },
+    {
+      id: 18,
+      name: "Organic Trace Minerals",
+      category: "Minerals",
+      shortDesc: "Chelated mineral blend for reproductive and hoof health",
+      fullDesc: "Organic Trace Minerals is a premium blend of chelated trace minerals (Zinc, Manganese, Copper, Iron) and organic selenium designed to meet the precise requirements of lactating dairy cows. This formulation improves structural proteins and enzymes, enhances reproductive performance through endocrine modulation, and strengthens hoof integrity to reduce lameness.",
+      features: [
+        "Complex blend of Zinc, Manganese, Copper, and Selenium",
+        "Improves reproductive performance via endocrine modulation",
+        "Organic Zinc enhances hoof tissue integrity and hardness",
+        "Organic Manganese boosts antioxidant defense mechanisms",
+        "Copper stimulates growth hormone secretion pathways",
+        "Dose Rate: 5-7 grams/head/day"
+      ],
+      image: otm,
+      tag: "Performance"
     }
   ];
 

@@ -32,21 +32,21 @@ export default function Home() {
   // Enhanced products data
   const products = [
     { 
-      title: 'Dairy Farming Solutions', 
-      description: 'Complete dairy management systems',
-      icon: '🥛',
+      title: 'Mechanization Solutions', 
+      description: 'Advanced equipment and machinery solutions for modern dairy farming operations',
+      icon: '🔧',
       features: ['Automated Milking', 'Herd Management', 'Quality Control']
     },
     { 
-      title: 'Feeding Solutions', 
-      description: 'Optimized nutrition programs',
+      title: 'Feeding Additives', 
+      description: 'Premium nutritional supplements to enhance herd health and productivity',
       icon: '🌾',
       features: ['Custom Feed Mix', 'Nutrition Analysis', 'Cost Optimization']
     },
     { 
-      title: 'Silage Making Solutions', 
-      description: 'Advanced preservation techniques',
-      icon: '🌱',
+      title: 'Cow Comfort & Udder Health', 
+      description: 'Comprehensive solutions for animal welfare and udder health management',
+      icon: '❤️',
       features: ['Modern Equipment', 'Quality Testing', 'Storage Solutions']
     }
   ];
@@ -124,7 +124,7 @@ export default function Home() {
       if (heroSection) {
         const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
         const scrollPosition = window.scrollY + 100; // 100px offset for better UX
-        
+
         setHideHeroDots(scrollPosition > heroBottom);
       }
     };

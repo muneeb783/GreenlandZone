@@ -159,7 +159,7 @@ html {
 
 /* Enhanced Navigation Dots */
 .hero-dots {
-  position: fixed;
+  position: absolute;
   right: 3rem;
   top: 50%;
   transform: translateY(-50%);
