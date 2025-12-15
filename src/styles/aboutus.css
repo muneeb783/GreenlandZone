@@ -225,8 +225,8 @@
 .leader-image-col::before {
   content: '';
   position: absolute;
-  width: 220px;
-  height: 220px;
+  width: 320px;
+  height: 320px;
   border-radius: 50%;
   background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
   opacity: 0;
@@ -244,8 +244,8 @@
 }
 
 .leader-img {
-  width: 200px !important;
-  height: 200px !important;
+  width: 300px !important;
+  height: 300px !important;
   object-fit: cover;
   border: 4px solid transparent !important;
   background: linear-gradient(white, white) padding-box,

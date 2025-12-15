@@ -3,13 +3,15 @@ import { Container, Row, Col, Image } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
 import '../styles/aboutus.css';
+import muneeb from "../assets/muneeb.jpg";
+import asif from "../assets/asif.png.png";
 
 export default function AboutUs() {
   const leadership = [
     {
       name: 'Dr. Muhammad Asif Gill',
       role: 'Chief Executive Officer',
-      imgSrc: '/assets/logo.png',
+      imgSrc: asif,
       text: `Greenland Zone was established to serve all possible needs of Pakistani farmers. Our concept
         "FROM GRASS TO GLASS" represents the scope of our products and services that we are offering to
         facilitate farmers and other stakeholders in each step of value chain by bringing it under one umbrella.
@@ -20,17 +22,20 @@ export default function AboutUs() {
         professionalism and service orientation.`
     },
     {
-      name: 'Laiq Ur Rehman',
+      name: 'Muneeb Ali Asif',
       role: 'Director',
-      imgSrc: '/assets/logo.png',
-      text: `Nutrition is what every human being requires in everyday life and it comes from Nature.
-        From decades our farmers are committed to take care of Nature and so is Greenland Zone.
-        Thinking about taking care of the challenges faced by farmers and responding to their problems,
-        is the very spirit of Greenland Zone. Since the farmers main problems and challenges are really
-        diverse and no solution exists in Dairy and Agriculture industry which can respond to all of them
-        under one umbrella, Greenland Zone is there to do the job with high standards of Quality in a very
-        efficient and effective manner. We invite our farmers to share their dreams and let Greenland Zone
-        help turning them into realities.`
+      imgSrc: muneeb,
+      text: `Nutrition, sustainability, and innovation are at the heart of our modern world, and 
+      technology plays a vital role in strengthening this connection. With a passion for solving real-world 
+      problems and creating meaningful impact, I bring a forward-thinking approach to Greenland Zone. 
+      Understanding the challenges farmers face today—and recognizing how essential agriculture is to 
+      society—drives my commitment to blend technology with tradition.
+
+      I believe that every farmer deserves access to reliable, efficient, and modern solutions. As 
+      agriculture evolves and the needs of farmers become more diverse, he works to ensure that Greenland Zone 
+      continues to bridge the gap between nature, innovation, and practicality. By focusing on quality, 
+      efficiency, and user-friendly systems, he aims to empower farmers with tools that simplify their work 
+      and enhance productivity.`
     }
   ];
 
