@@ -1,6 +1,12 @@
 import { useEffect, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { SEO } from '../components/SEO';
 import '../styles/home.css';
+import '../styles/roadmap.css';
+import hero_1 from "../assets/hero1.jpeg";
+import hero_3 from "../assets/hero3.png";
+import hero_4 from "../assets/hero4.png";
+import hero_5 from "../assets/hero5.png";
 
 export default function Home() {
   const [activeSlide, setActiveSlide] = useState(0);
@@ -9,45 +15,45 @@ export default function Home() {
   const heroRef = useRef(null);
   const observerRef = useRef(null);
   const autoScrollRef = useRef(null);
-  
+  const roadmapRef = useRef(null);
+  const contactRef = useRef(null);
+
   // Array of hero image paths
   const heroImages = [
+    hero_1,
     'https://images.unsplash.com/photo-1500595046743-cd271d694d30?w=1600',
-    'https://images.unsplash.com/photo-1560493676-04071c5f467b?w=1600',
-    'https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=1600',
-    'https://images.unsplash.com/photo-1574482620811-1aa16ffe3c82?w=1600',
-    'https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?w=1600',
-    'https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?w=1600'
+    hero_3,
+    hero_4,
+    hero_5
   ];
 
   const heroContent = [
     { title: 'Green Land Zone PVT LTD', subtitle: 'From Grass to Glass', cta: 'Discover Our Story' },
-    { title: 'Quality Farming', subtitle: 'Sustainable Solutions', cta: 'Explore Solutions' },
+    { title: 'Efficient Operations', subtitle: 'Sustainable Solutions', cta: 'Explore Solutions' },
     { title: 'Expert Consultation', subtitle: 'For Better Results', cta: 'Get Expert Help' },
-    { title: 'Modern Technology', subtitle: 'Traditional Values', cta: 'See Innovation' },
-    { title: 'Nationwide Service', subtitle: 'Local Expertise', cta: 'Find Locations' },
+    { title: 'Farming Mechanization', subtitle: 'Next-gen Farming', cta: 'See Innovation' },
     { title: 'Geographic Footprint', subtitle: 'Serving Farms Across Pakistan', cta: 'See Our Reach' }
   ];
 
   // Enhanced products data
   const products = [
     { 
-      title: 'Mechanization Solutions', 
-      description: 'Advanced equipment and machinery solutions for modern dairy farming operations',
+      title: 'Mechanization', 
+      description: 'Advanced equipment and machinery solutions for modern farming operations',
       icon: '🔧',
-      features: ['Automated Milking', 'Herd Management', 'Quality Control']
+      features: ['Automated Harvesting & Feeding', 'Automated Milking',  'Spare Parts']
     },
     { 
-      title: 'Feeding Additives', 
+      title: 'Feed Additives', 
       description: 'Premium nutritional supplements to enhance herd health and productivity',
       icon: '🌾',
-      features: ['Custom Feed Mix', 'Nutrition Analysis', 'Cost Optimization']
+      features: ['Metabolic Support', 'Nutritional Supplements', 'Rumen Bypass Nutrients']
     },
     { 
-      title: 'Cow Comfort & Udder Health', 
+      title: 'Cow Comfort & Udder Hygiene', 
       description: 'Comprehensive solutions for animal welfare and udder health management',
       icon: '❤️',
-      features: ['Modern Equipment', 'Quality Testing', 'Storage Solutions']
+      features: ['Animal Comfort', 'Smart Monitoring', 'Hygiene Chemicals']
     }
   ];
 
@@ -115,6 +121,14 @@ export default function Home() {
     // Add your form submission logic here
   };
 
+  const scrollToRoadmap = () => {
+    roadmapRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+
+  const scrollToContact = () => {
+    contactRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+
   const [hideHeroDots, setHideHeroDots] = useState(false);
 
   // Add this useEffect to detect when hero section is scrolled past
@@ -158,7 +172,26 @@ export default function Home() {
             <div className="hero-content">
               <h1>{heroContent[index].title}</h1>
               <p>{heroContent[index].subtitle}</p>
-              <button className="cta-button">{heroContent[index].cta}</button>
+              {index === 1 ? (
+                <Link to="/products" className="cta-button">
+                  {heroContent[index].cta}
+                </Link>
+              ) : index === 3 ? (
+                <Link to="/team" className="cta-button">
+                  {heroContent[index].cta}
+                </Link>
+              ) : (
+                <button
+                  className="cta-button"
+                  onClick={
+                    index === 0 ? scrollToRoadmap :
+                    index === 2 ? scrollToContact :
+                    undefined
+                  }
+                >
+                  {heroContent[index].cta}
+                </button>
+              )}
             </div>
           </div>
         ))}
@@ -256,8 +289,8 @@ export default function Home() {
           <div className="row products-row">
             {products.map((product, index) => (
               <div className="col col-md-4" key={index}>
-                <div 
-                  id={`product-${index}`} 
+                <div
+                  id={`product-${index}`}
                   className={`animate-on-scroll ${isVisible[`product-${index}`] ? 'visible' : ''}`}
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
@@ -278,8 +311,165 @@ export default function Home() {
         </div>
       </div>
 
+      {/* Roadmap Section */}
+      <div ref={roadmapRef} className="roadmap-section" data-navbar-theme="light">
+        <div className="roadmap-container">
+          <div className="roadmap-header">
+            <div className="roadmap-badge">Our Journey</div>
+            <h2 className="roadmap-title">From Grass to Glass: Our Story</h2>
+            <p className="roadmap-subtitle">
+              Two decades of dedication to transforming Pakistani agriculture through innovation,
+              expertise, and sustainable solutions
+            </p>
+          </div>
+
+          <div className="timeline-container">
+            <div className="timeline-path">
+              <div className="timeline-line" />
+
+              <div className="timeline-items">
+                {/* 2005 - Foundation */}
+                <div className="timeline-item left">
+                  <div className="timeline-content">
+                    <div className="timeline-year">2005</div>
+                    <h3 className="timeline-title">The Beginning</h3>
+                    <p className="timeline-description">
+                      Greenland Zone was founded with a vision to revolutionize dairy farming in Pakistan.
+                      Starting with basic farm consultancy services, we identified the gaps in the local market.
+                    </p>
+                  </div>
+                  <div className="timeline-dot" />
+                </div>
+
+                {/* 2008 - First Major Expansion */}
+                <div className="timeline-item right">
+                  <div className="timeline-content">
+                    <div className="timeline-year">2008</div>
+                    <h3 className="timeline-title">Mechanization Era</h3>
+                    <p className="timeline-description">
+                      Introduced our first line of dairy machinery and equipment, bringing international
+                      technology to Pakistani farms. Established partnerships with global manufacturers.
+                    </p>
+                  </div>
+                  <div className="timeline-dot" />
+                </div>
+
+                {/* 2012 - Feed Solutions */}
+                <div className="timeline-item left">
+                  <div className="timeline-content">
+                    <div className="timeline-year">2012</div>
+                    <h3 className="timeline-title">Feed Innovation</h3>
+                    <p className="timeline-description">
+                      Launched our premium feed additives division, focusing on animal nutrition and
+                      health. Developed specialized formulations for Pakistani livestock needs.
+                    </p>
+                  </div>
+                  <div className="timeline-dot" />
+                </div>
+
+                {/* 2016 - Complete Solutions */}
+                <div className="timeline-item right">
+                  <div className="timeline-content">
+                    <div className="timeline-year">2016</div>
+                    <h3 className="timeline-title">From Grass to Glass</h3>
+                    <p className="timeline-description">
+                      Achieved our vision of providing end-to-end solutions. From farm mechanization
+                      to milk production, we became a one-stop solution for dairy farmers.
+                    </p>
+                  </div>
+                  <div className="timeline-dot featured" />
+                </div>
+
+                {/* 2020 - Technology Integration */}
+                <div className="timeline-item left">
+                  <div className="timeline-content">
+                    <div className="timeline-year">2020</div>
+                    <h3 className="timeline-title">Smart Farming</h3>
+                    <p className="timeline-description">
+                      Introduced smart monitoring systems and IoT-based solutions for cow health tracking
+                      and herd management. Embraced digital transformation in agriculture.
+                    </p>
+                  </div>
+                  <div className="timeline-dot" />
+                </div>
+
+                {/* 2025 - Present */}
+                <div className="timeline-item right">
+                  <div className="timeline-content">
+                    <div className="timeline-year">2025</div>
+                    <h3 className="timeline-title">Leading the Future</h3>
+                    <p className="timeline-description">
+                      Today, we serve hundreds of farms across Pakistan with comprehensive solutions,
+                      continuing to innovate and expand our reach to empower every farmer.
+                    </p>
+                  </div>
+                  <div className="timeline-dot featured" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Vision Section */}
+          <div className="vision-section">
+            <div className="vision-content">
+              <div className="vision-text">
+                <h2 className="vision-title">Our Approach to Creating Value</h2>
+                <p className="vision-description">
+                  We believe that sustainable success comes from the perfect integration of
+                  quality products, expert services, and cutting-edge technology. This holistic
+                  approach enables us to create continuous shared value for Pakistani farmers.
+                </p>
+
+                <div className="vision-pillars">
+                  <div className="vision-pillar">
+                    <div className="vision-pillar-icon">🔧</div>
+                    <div className="vision-pillar-text">
+                      <div className="vision-pillar-title">Premium Products</div>
+                      <div className="vision-pillar-desc">
+                        World-class machinery and feed additives sourced globally
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="vision-pillar">
+                    <div className="vision-pillar-icon">👥</div>
+                    <div className="vision-pillar-text">
+                      <div className="vision-pillar-title">Expert Services</div>
+                      <div className="vision-pillar-desc">
+                        20 years of experience in farm consultancy and support
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="vision-pillar">
+                    <div className="vision-pillar-icon">💡</div>
+                    <div className="vision-pillar-text">
+                      <div className="vision-pillar-title">Smart Technology</div>
+                      <div className="vision-pillar-desc">
+                        IoT-based monitoring and data-driven farm management
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="vision-diagram">
+                <div className="vision-circles">
+                  <div className="vision-circle product">Premium Products</div>
+                  <div className="vision-circle service">Expert Services</div>
+                  <div className="vision-circle technology">Smart Technology</div>
+                </div>
+                <div className="vision-result">
+                  <div className="vision-result-text">Continuous Shared Value</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Contact Section */}
-      <div className="contact-section" data-navbar-theme="light">
+      <div ref={contactRef} className="contact-section" data-navbar-theme="light">
         <div className="container">
           <div className="row contact-row">
             <div className="col col-md-4">

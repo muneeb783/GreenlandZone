@@ -155,6 +155,15 @@ html {
   transform: translateY(-3px);
   box-shadow: 0 15px 40px rgba(0,0,0,0.3);
   background: #f0f0f0;
+  color: #000;
+  text-decoration: none;
+}
+
+.cta-button:active,
+.cta-button:focus,
+.cta-button:visited {
+  color: #000;
+  text-decoration: none;
 }
 
 /* Enhanced Navigation Dots */
