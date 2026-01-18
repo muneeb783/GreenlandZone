@@ -52,7 +52,7 @@ export default function Home() {
     { 
       title: 'Cow Comfort & Udder Hygiene', 
       description: 'Comprehensive solutions for animal welfare and udder health management',
-      icon: '❤️',
+      icon: '🐄',
       features: ['Animal Comfort', 'Smart Monitoring', 'Hygiene Chemicals']
     }
   ];
@@ -177,7 +177,11 @@ export default function Home() {
                   {heroContent[index].cta}
                 </Link>
               ) : index === 3 ? (
-                <Link to="/team" className="cta-button">
+                <Link to="/products/mechanization" className="cta-button">
+                  {heroContent[index].cta}
+                </Link>
+              ) : index === 4 ? (
+                <Link to="/footprint" className="cta-button">
                   {heroContent[index].cta}
                 </Link>
               ) : (

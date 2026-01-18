@@ -566,6 +566,37 @@ body {
   margin-top: var(--spacing-xl);
 }
 
+/* Brochure Download Button */
+.feedadd-brochure-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 2rem;
+  padding: 0.875rem 2rem;
+  background: linear-gradient(135deg, #16a34a 0%, #22c55e 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(22, 163, 74, 0.25);
+}
+
+.feedadd-brochure-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(22, 163, 74, 0.35);
+  gap: 1rem;
+  color: white;
+}
+
+.feedadd-brochure-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(22, 163, 74, 0.2);
+}
+
 .feedadd-modal-title {
   font-size: var(--font-size-xl);
   font-weight: var(--font-weight-bold);

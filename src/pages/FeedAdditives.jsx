@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ChevronRight, Award, Users, TrendingUp, Sparkles } from 'lucide-react';
+import { ChevronRight, Award, Users, TrendingUp, Sparkles, Download } from 'lucide-react';
 import { SEO } from '../components/SEO';
 import '../styles/common-styles.css';
 import '../styles/feedadditives.css';
@@ -19,7 +19,20 @@ import greenpremix from "../assets/green_premix.jpeg";
 import uly from "../assets/ultra_live_yeast.jpeg";
 import uay from "../assets/ultra_auto_yeast.jpeg";
 import otm from "../assets/organic_trace_mins.jpeg";
+import glycostar from "../assets/Glycostar.png";
 
+// Brochure PDFs
+import biotinPDF from "../assets/Biotin -2025.pdf";
+import bypassFatPDF from "../assets/Bypass Fat -2025.pdf";
+import globafixPDF from "../assets/GlobaFix Plus -2025.pdf";
+import globalMPGPDF from "../assets/Global MPG-2025.pdf";
+import glycostarPDF from "../assets/Glycostar-2025.pdf";
+import premixesPDF from "../assets/Premixes-2025.pdf";
+import traceMineralPDF from "../assets/Trace Mineral.pdf";
+import ultraAutolysedYeastPDF from "../assets/Ultra Autolysed Yeast -2025.pdf";
+import ultraLiveYeastPDF from "../assets/Ultra live yeast -2025.pdf";
+import vitaminCPDF from "../assets/Vitamin C -2025.pdf";
+import zToxPDF from "../assets/Z Tox -2025.pdf";
 
 const FeedAdditivesPage = () => {
   const [selectedProduct, setSelectedProduct] = useState(null);
@@ -109,7 +122,8 @@ const FeedAdditivesPage = () => {
         "Significantly lowers energy deficit during transition period"
       ],
       image: globalmpg,
-      tag: "Transition"
+      tag: "Transition",
+      brochure: globalMPGPDF
     },
     {
       id: 6,
@@ -125,8 +139,9 @@ const FeedAdditivesPage = () => {
         "Effectively prevents ketosis and metabolic disorders",
         "Reduces heat stress and vaccination stress impacts"
       ],
-      image: "/api/placeholder/600/400",
-      tag: "Advanced"
+      image: glycostar,
+      tag: "Advanced",
+      brochure: glycostarPDF
     },
     {
       id: 7,
@@ -143,7 +158,8 @@ const FeedAdditivesPage = () => {
         "Does not bind essential vitamins and minerals"
       ],
       image: ztox,
-      tag: "Protection"
+      tag: "Protection",
+      brochure: zToxPDF
     },
     {
       id: 8,
@@ -160,7 +176,8 @@ const FeedAdditivesPage = () => {
         "Helps reduce mastitis, lameness, and repeat breeding issues"
       ],
       image: globafix,
-      tag: "Immunity"
+      tag: "Immunity",
+      brochure: globafixPDF
     },
     {
       id: 9,
@@ -177,7 +194,8 @@ const FeedAdditivesPage = () => {
         "Improves milk yield, Body Condition Score, and reproduction"
       ],
       image: greenstart84,
-      tag: "Energy"
+      tag: "Energy",
+      brochure: bypassFatPDF
     },
     {
       id: 10,
@@ -194,7 +212,8 @@ const FeedAdditivesPage = () => {
         "Ideal for enhancing milk quality and composition"
       ],
       image: greenstar99,
-      tag: "Premium"
+      tag: "Premium",
+      brochure: bypassFatPDF
     },
     {
       id: 11,
@@ -211,7 +230,8 @@ const FeedAdditivesPage = () => {
         "Increases productivity through better mobility"
       ],
       image: biotin,
-      tag: "Mobility"
+      tag: "Mobility",
+      brochure: biotinPDF
     },
     {
       id: 12,
@@ -228,7 +248,8 @@ const FeedAdditivesPage = () => {
         "For calves: 1g per calf per day"
       ],
       image: vc,
-      tag: "Antioxidant"
+      tag: "Antioxidant",
+      brochure: vitaminCPDF
     },
     {
       id: 13,
@@ -245,7 +266,8 @@ const FeedAdditivesPage = () => {
         "Complete nutritional support for high-yielding cows"
       ],
       image: greensp,
-      tag: "Complete"
+      tag: "Complete",
+      brochure: premixesPDF
     },
     {
       id: 14,
@@ -262,7 +284,8 @@ const FeedAdditivesPage = () => {
         "Complete nutritional support for all production stages"
       ],
       image: greenpremix,
-      tag: "Standard"
+      tag: "Standard",
+      brochure: premixesPDF
     },
     {
       id: 15,
@@ -279,7 +302,8 @@ const FeedAdditivesPage = () => {
         "Low moisture content (≤ 5%) for stability"
       ],
       image: greenpremix,
-      tag: "Stress Relief"
+      tag: "Stress Relief",
+      brochure: traceMineralPDF
     },
     {
       id: 16,
@@ -296,7 +320,8 @@ const FeedAdditivesPage = () => {
         "Dose Rate: 7 to 10gm/cow/day"
       ],
       image: uay,
-      tag: "Gut Health"
+      tag: "Gut Health",
+      brochure: ultraAutolysedYeastPDF
     },
     {
       id: 17,
@@ -313,7 +338,8 @@ const FeedAdditivesPage = () => {
         "Dose Rate (Lactation): 3-5 grams per head per day"
       ],
       image: uly,
-      tag: "Digestion"
+      tag: "Digestion",
+      brochure: ultraLiveYeastPDF
     },
     {
       id: 18,
@@ -330,7 +356,8 @@ const FeedAdditivesPage = () => {
         "Dose Rate: 5-7 grams/head/day"
       ],
       image: otm,
-      tag: "Performance"
+      tag: "Performance",
+      brochure: traceMineralPDF
     }
   ];
 
@@ -492,6 +519,19 @@ const FeedAdditivesPage = () => {
                     ))}
                   </ul>
                 </div>
+
+                {/* Download Brochure Button */}
+                {selectedProduct.brochure && (
+                  <a
+                    href={selectedProduct.brochure}
+                    download
+                    className="feedadd-brochure-button"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    <Download size={20} />
+                    <span>Download Product Brochure</span>
+                  </a>
+                )}
               </div>
             </div>
             <div className="feedadd-close-bar" onClick={() => setSelectedProduct(null)}>

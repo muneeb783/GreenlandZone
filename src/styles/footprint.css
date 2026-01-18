@@ -1,0 +1,501 @@
+/* Footprint Page Styles */
+
+.footprint-container {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Hero Section */
+.footprint-hero {
+  position: relative;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1a2332 0%, #2d3e50 50%, #1a2332 100%);
+  overflow: hidden;
+}
+
+.footprint-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 50%, rgba(22, 163, 74, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 50%, rgba(22, 163, 74, 0.08) 0%, transparent 50%);
+}
+
+.footprint-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 4rem 2rem;
+  max-width: 900px;
+}
+
+.footprint-hero-badge {
+  display: inline-block;
+  background: rgba(22, 163, 74, 0.2);
+  color: #16a34a;
+  padding: 0.5rem 1.5rem;
+  border-radius: 2rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(22, 163, 74, 0.3);
+}
+
+.footprint-hero-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.footprint-hero-accent {
+  display: block;
+  background: linear-gradient(135deg, #16a34a 0%, #22c55e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.footprint-hero-description {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 700px;
+  margin: 0 auto 3rem;
+  line-height: 1.6;
+}
+
+.footprint-hero-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.footprint-stat-item {
+  text-align: center;
+}
+
+.footprint-stat-number {
+  font-size: 2.5rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #16a34a 0%, #22c55e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.5rem;
+}
+
+.footprint-stat-label {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Categories Section */
+.footprint-categories-section {
+  background: #f8fafc;
+  padding: 5rem 2rem;
+}
+
+.footprint-categories-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.footprint-section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.footprint-section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+}
+
+.footprint-section-subtitle {
+  font-size: 1.125rem;
+  color: #6b7280;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Cards Grid */
+.footprint-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.footprint-card {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  min-height: 700px;
+}
+
+.footprint-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+.footprint-card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.95) 0%,
+    rgba(255, 255, 255, 0.92) 50%,
+    rgba(255, 255, 255, 0.88) 100%
+  );
+  z-index: 1;
+}
+
+.footprint-card-content-wrapper {
+  position: relative;
+  z-index: 2;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.footprint-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.footprint-card-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footprint-card-badge {
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.footprint-card-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 0.75rem;
+}
+
+.footprint-card-description {
+  font-size: 1rem;
+  color: #6b7280;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+/* Card Stats */
+.footprint-card-stats {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1.25rem;
+  background: #f8fafc;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+}
+
+.footprint-card-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footprint-card-stat-value {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #16a34a;
+}
+
+.footprint-card-stat-label {
+  font-size: 0.875rem;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 0.25rem;
+}
+
+.footprint-card-stat-divider {
+  width: 1px;
+  height: 40px;
+  background: #e5e7eb;
+}
+
+/* Locations Section */
+.footprint-locations {
+  flex: 1;
+  margin-bottom: 1.5rem;
+}
+
+.footprint-locations-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 1rem;
+}
+
+.footprint-pins-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  max-height: 200px;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+}
+
+/* Custom Scrollbar */
+.footprint-pins-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.footprint-pins-container::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 10px;
+}
+
+.footprint-pins-container::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+}
+
+.footprint-pins-container::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+.footprint-pin {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.4rem 0.75rem;
+  border: 1.5px solid;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  background: white;
+  transition: all 0.2s ease;
+}
+
+.footprint-pin:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Card Footer */
+.footprint-card-footer {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  margin: 0 -2.5rem -2.5rem -2.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+/* CTA Section */
+.footprint-cta-section {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.footprint-cta-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.footprint-cta-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+}
+
+.footprint-cta-description {
+  font-size: 1.25rem;
+  color: #6b7280;
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+}
+
+.footprint-cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2.5rem;
+  background: linear-gradient(135deg, #16a34a 0%, #22c55e 100%);
+  color: white;
+  border-radius: 12px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(22, 163, 74, 0.3);
+}
+
+.footprint-cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(22, 163, 74, 0.4);
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .footprint-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .footprint-hero-title {
+    font-size: 2.5rem;
+  }
+
+  .footprint-hero-description {
+    font-size: 1.125rem;
+  }
+
+  .footprint-hero-stats {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .footprint-stat-number {
+    font-size: 2rem;
+  }
+
+  .footprint-categories-section {
+    padding: 3rem 1rem;
+  }
+
+  .footprint-section-title {
+    font-size: 2rem;
+  }
+
+  .footprint-card {
+    padding: 1.5rem;
+  }
+
+  .footprint-card-title {
+    font-size: 1.5rem;
+  }
+
+  .footprint-pins-container {
+    max-height: 150px;
+  }
+
+  .footprint-card {
+    min-height: 600px;
+  }
+
+  .footprint-card-content-wrapper {
+    padding: 1.5rem;
+  }
+
+  .footprint-card-footer {
+    margin: 0 -1.5rem -1.5rem -1.5rem;
+  }
+
+  .footprint-cta-section {
+    padding: 3rem 1.5rem;
+  }
+
+  .footprint-cta-title {
+    font-size: 2rem;
+  }
+
+  .footprint-cta-description {
+    font-size: 1.125rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .footprint-hero-title {
+    font-size: 2rem;
+  }
+
+  .footprint-hero-content {
+    padding: 3rem 1.5rem;
+  }
+
+  .footprint-section-header {
+    margin-bottom: 2rem;
+  }
+
+  .footprint-card {
+    padding: 1.25rem;
+  }
+
+  .footprint-card-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .footprint-card-title {
+    font-size: 1.25rem;
+  }
+
+  .footprint-card-stats {
+    padding: 1rem;
+  }
+
+  .footprint-card-stat-value {
+    font-size: 1.5rem;
+  }
+
+  .footprint-card {
+    min-height: 550px;
+  }
+
+  .footprint-card-content-wrapper {
+    padding: 1.25rem;
+  }
+
+  .footprint-card-footer {
+    margin: 0 -1.25rem -1.25rem -1.25rem;
+  }
+
+  .footprint-cta-title {
+    font-size: 1.75rem;
+  }
+
+  .footprint-cta-button {
+    padding: 0.875rem 2rem;
+    font-size: 1rem;
+  }
+}

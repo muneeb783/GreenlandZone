@@ -48,11 +48,11 @@ export default function ContactUs() {
   const faqData = [
     {
       question: "What types of dairy equipment do you offer?",
-      answer: "We offer a comprehensive range of dairy solutions including cooling systems, milking parlors, feeding equipment, and hygiene products to enhance farm productivity and animal welfare."
+      answer: "We offer a comprehensive range of dairy farming operation management solutions including farm environment, animal performance, and feeding efficiency enhancers. We provide cooling systems, milking parlors, feeding equipment, and hygiene products to enhance farm productivity and animal welfare."
     },
     {
       question: "Do you provide installation and support?",
-      answer: "Yes, we provide full installation services for all our equipment. Our team also offers ongoing technical support and maintenance to ensure your systems run smoothly."
+      answer: "Yes, we provide full installation services for all dairy operation equipment. Our team also offers ongoing technical support and periodic maintenance to ensure your mechanization meets excellence always."
     },
     {
       question: "Can I get a customized solution for my farm?",

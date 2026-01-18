@@ -2,6 +2,15 @@ import { useState } from 'react';
 import { X, MapPin, Calendar } from 'lucide-react';
 import { SEO } from '../components/SEO';
 import '../styles/ourteam.css';
+import pic1 from "../assets/pic1.png";
+import pic2 from "../assets/pic2.png";
+import pic3 from "../assets/pic3.png";
+import pic4 from "../assets/pic4.png";
+import pic5 from "../assets/pic5.png";
+import pic6 from "../assets/pic6.png";
+import pic7 from "../assets/pic7.png";
+import pic8 from "../assets/pic8.png";
+import pic9 from "../assets/pic9.png";
 
 const OurTeam = () => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -10,7 +19,7 @@ const OurTeam = () => {
   const galleryItems = [
     {
       id: 1,
-      image: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800',
+      image: pic1,
       title: 'Dairy Farm Installation - Lahore',
       location: 'Lahore, Punjab',
       date: 'March 2024',
@@ -18,7 +27,7 @@ const OurTeam = () => {
     },
     {
       id: 2,
-      image: 'https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800',
+      image: pic2,
       title: 'Forage Harvesting Equipment Setup',
       location: 'Sahiwal, Punjab',
       date: 'February 2024',
@@ -26,7 +35,7 @@ const OurTeam = () => {
     },
     {
       id: 3,
-      image: 'https://images.unsplash.com/photo-1560493676-04071c5f467b?w=800',
+      image: pic3,
       title: 'Cow Monitoring System Deployment',
       location: 'Multan, Punjab',
       date: 'January 2024',
@@ -34,7 +43,7 @@ const OurTeam = () => {
     },
     {
       id: 4,
-      image: 'https://images.unsplash.com/photo-1500595046743-cd271d694d30?w=800',
+      image: pic4,
       title: 'Farm Modernization Project',
       location: 'Faisalabad, Punjab',
       date: 'December 2023',
@@ -42,7 +51,7 @@ const OurTeam = () => {
     },
     {
       id: 5,
-      image: 'https://images.unsplash.com/photo-1574482620811-1aa16ffe3c82?w=800',
+      image: pic5,
       title: 'Milking Parlor Upgrade',
       location: 'Okara, Punjab',
       date: 'November 2023',
@@ -50,7 +59,7 @@ const OurTeam = () => {
     },
     {
       id: 6,
-      image: 'https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?w=800',
+      image: pic6,
       title: 'Feed Additives Training Session',
       location: 'Kasur, Punjab',
       date: 'October 2023',
@@ -58,7 +67,7 @@ const OurTeam = () => {
     },
     {
       id: 7,
-      image: 'https://images.unsplash.com/photo-1490578474895-699cd4e2cf59?w=800',
+      image: pic7,
       title: 'Silage Making Equipment Installation',
       location: 'Gujranwala, Punjab',
       date: 'September 2023',
@@ -66,7 +75,7 @@ const OurTeam = () => {
     },
     {
       id: 8,
-      image: 'https://images.unsplash.com/photo-1516192518150-0d8fee5425e3?w=800',
+      image: pic8,
       title: 'Farm Consultation & Planning',
       location: 'Sheikhupura, Punjab',
       date: 'August 2023',
@@ -74,7 +83,7 @@ const OurTeam = () => {
     },
     {
       id: 9,
-      image: 'https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=800',
+      image: pic9,
       title: 'Climate Control System Setup',
       location: 'Bahawalnagar, Punjab',
       date: 'July 2023',
