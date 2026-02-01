@@ -11,6 +11,8 @@ import pic6 from "../assets/pic6.png";
 import pic7 from "../assets/pic7.png";
 import pic8 from "../assets/pic8.png";
 import pic9 from "../assets/pic9.png";
+import pic10 from "../assets/gc2.png";
+import pic11 from "../assets/gc1.png";
 
 const OurTeam = () => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -20,17 +22,17 @@ const OurTeam = () => {
     {
       id: 1,
       image: pic1,
-      title: 'Dairy Farm Installation - Lahore',
+      title: 'Lahore Dairy Farm Expo - 2020',
       location: 'Lahore, Punjab',
-      date: 'March 2024',
-      description: 'Successfully installed complete milking parlor system with automated cleaning and cooling solutions for a 200-cow operation.'
+      date: 'March 2020',
+      description: 'Successfull participation in one of the biggest dairy expos in Pakistan, increasing reach.'
     },
     {
       id: 2,
       image: pic2,
       title: 'Forage Harvesting Equipment Setup',
       location: 'Sahiwal, Punjab',
-      date: 'February 2024',
+      date: 'February 2020',
       description: 'Delivered and commissioned advanced forage harvesting equipment, significantly improving feed quality and reducing labor costs.'
     },
     {
@@ -38,7 +40,7 @@ const OurTeam = () => {
       image: pic3,
       title: 'Cow Monitoring System Deployment',
       location: 'Multan, Punjab',
-      date: 'January 2024',
+      date: 'January 2019',
       description: 'Implemented SenseTime monitoring system across 300+ cows, enabling real-time health tracking and heat detection.'
     },
     {
@@ -46,48 +48,64 @@ const OurTeam = () => {
       image: pic4,
       title: 'Farm Modernization Project',
       location: 'Faisalabad, Punjab',
-      date: 'December 2023',
+      date: 'December 2019',
       description: 'Complete farm transformation including cooling systems, feeding equipment, and hygiene solutions.'
     },
     {
       id: 5,
       image: pic5,
-      title: 'Milking Parlor Upgrade',
+      title: 'Baler Setup',
       location: 'Okara, Punjab',
-      date: 'November 2023',
-      description: 'Upgraded existing milking infrastructure with herringbone parlor design and herd management integration.'
+      date: 'November 2021',
+      description: 'Installed complete silage making equipment line including balers and drum movers for optimal feed preservation.'
     },
     {
       id: 6,
       image: pic6,
-      title: 'Feed Additives Training Session',
+      title: 'Milking Parlor Setup',
       location: 'Kasur, Punjab',
       date: 'October 2023',
-      description: 'Conducted comprehensive training on proper feed additive usage and nutritional optimization strategies.'
+      description: 'Upgraded existing milking infrastructure with herringbone parlor design and herd management integration.'
     },
     {
       id: 7,
       image: pic7,
-      title: 'Silage Making Equipment Installation',
-      location: 'Gujranwala, Punjab',
-      date: 'September 2023',
-      description: 'Installed complete silage making equipment line including balers and drum movers for optimal feed preservation.'
+      title: 'Dairy Machinery Expo',
+      location: 'Beijing, China',
+      date: 'September 2019',
+      description: 'Sucessfully attended one of the biggest dairy machinery expos of the world.'
     },
     {
       id: 8,
       image: pic8,
       title: 'Farm Consultation & Planning',
       location: 'Sheikhupura, Punjab',
-      date: 'August 2023',
+      date: 'August 2024',
       description: 'Provided expert consultation for new dairy farm setup, including layout design and equipment selection.'
     },
     {
       id: 9,
       image: pic9,
-      title: 'Climate Control System Setup',
+      title: 'Dairy Expo',
       location: 'Bahawalnagar, Punjab',
-      date: 'July 2023',
-      description: 'Deployed advanced climate control and cooling fan systems to combat heat stress in dairy sheds.'
+      date: 'July 2024',
+      description: 'Represented GreenlandZone in one of the biggest expos of South Punjab, as one of the leading comapnies serving dairy sector of Pakistan.'
+    },
+    {
+      id: 10,
+      image: pic10,
+      title: 'Annual Training',
+      location: 'Lahore, Punjab',
+      date: 'January 2026',
+      description: 'Sales training and yearly performance reviews.'
+    },
+    {
+      id: 11,
+      image: pic11,
+      title: 'Award Ceremony',
+      location: 'Lahore, Punjab',
+      date: 'January 2026',
+      description: 'Award ceremony and celebration for amazing annual performance.'
     }
   ];
 

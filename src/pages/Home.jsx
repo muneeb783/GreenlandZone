@@ -335,7 +335,7 @@ export default function Home() {
                 {/* 2005 - Foundation */}
                 <div className="timeline-item left">
                   <div className="timeline-content">
-                    <div className="timeline-year">2005</div>
+                    <div className="timeline-year">2016</div>
                     <h3 className="timeline-title">The Beginning</h3>
                     <p className="timeline-description">
                       Greenland Zone was founded with a vision to revolutionize dairy farming in Pakistan.
@@ -348,7 +348,7 @@ export default function Home() {
                 {/* 2008 - First Major Expansion */}
                 <div className="timeline-item right">
                   <div className="timeline-content">
-                    <div className="timeline-year">2008</div>
+                    <div className="timeline-year">2017</div>
                     <h3 className="timeline-title">Mechanization Era</h3>
                     <p className="timeline-description">
                       Introduced our first line of dairy machinery and equipment, bringing international
@@ -358,10 +358,23 @@ export default function Home() {
                   <div className="timeline-dot" />
                 </div>
 
-                {/* 2012 - Feed Solutions */}
+                {/* 2020 - Technology Integration */}
                 <div className="timeline-item left">
                   <div className="timeline-content">
-                    <div className="timeline-year">2012</div>
+                    <div className="timeline-year">2018</div>
+                    <h3 className="timeline-title">Smart Farming</h3>
+                    <p className="timeline-description">
+                      Introduced smart monitoring systems and IoT-based solutions for cow health tracking
+                      and herd management. Embraced digital transformation in agriculture.
+                    </p>
+                  </div>
+                  <div className="timeline-dot" />
+                </div>
+
+                {/* 2012 - Feed Solutions */}
+                <div className="timeline-item right">
+                  <div className="timeline-content">
+                    <div className="timeline-year">2022</div>
                     <h3 className="timeline-title">Feed Innovation</h3>
                     <p className="timeline-description">
                       Launched our premium feed additives division, focusing on animal nutrition and
@@ -372,9 +385,9 @@ export default function Home() {
                 </div>
 
                 {/* 2016 - Complete Solutions */}
-                <div className="timeline-item right">
+                <div className="timeline-item left">
                   <div className="timeline-content">
-                    <div className="timeline-year">2016</div>
+                    <div className="timeline-year">2023</div>
                     <h3 className="timeline-title">From Grass to Glass</h3>
                     <p className="timeline-description">
                       Achieved our vision of providing end-to-end solutions. From farm mechanization
@@ -384,23 +397,11 @@ export default function Home() {
                   <div className="timeline-dot featured" />
                 </div>
 
-                {/* 2020 - Technology Integration */}
-                <div className="timeline-item left">
-                  <div className="timeline-content">
-                    <div className="timeline-year">2020</div>
-                    <h3 className="timeline-title">Smart Farming</h3>
-                    <p className="timeline-description">
-                      Introduced smart monitoring systems and IoT-based solutions for cow health tracking
-                      and herd management. Embraced digital transformation in agriculture.
-                    </p>
-                  </div>
-                  <div className="timeline-dot" />
-                </div>
 
                 {/* 2025 - Present */}
                 <div className="timeline-item right">
                   <div className="timeline-content">
-                    <div className="timeline-year">2025</div>
+                    <div className="timeline-year">2026</div>
                     <h3 className="timeline-title">Leading the Future</h3>
                     <p className="timeline-description">
                       Today, we serve hundreds of farms across Pakistan with comprehensive solutions,

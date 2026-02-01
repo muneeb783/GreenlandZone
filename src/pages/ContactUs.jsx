@@ -182,7 +182,7 @@ export default function ContactUs() {
                 <div className="map-container">
                   <iframe 
                     className="map-iframe"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3401.0274147462097!2d74.3587!3d31.5204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzHCsDMxJzEzLjQiTiA3NMKwMjEnMzEuMyJF!5e0!3m2!1sen!2s" 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d529.8259672753991!2d74.17129288585336!3d31.35335800649205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391855b693a67967%3A0xfe5faf5691431764!2sGREENLAND%20ZONE%20HEAD%20OFFICE!5e0!3m2!1sen!2sus!4v1769966478921!5m2!1sen!2sus" 
                     loading="lazy"
                     title="Head Office Location"
                   ></iframe>

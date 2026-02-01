@@ -11,6 +11,10 @@ import dbdc from "../assets/dbdc.JPG";
 import sbsc from "../assets/sbsc.JPG";
 import sbdc from "../assets/sbdc.JPG";
 import meter from "../assets/Collector.JPG";
+import milkline from "../assets/milkline.png";
+import hmp from "../assets/hmp.png";
+import femp from "../assets/femp.png";
+import parts from "../assets/parts.png";
 
 const Mechanization = () => {
   const [selectedProduct, setSelectedProduct] = useState(null);
@@ -170,7 +174,7 @@ const Mechanization = () => {
         "Mobile design for flexible positioning",
         "Easy to clean and maintain"
       ],
-      image: "/api/placeholder/600/400",
+      image: milkline,
       tag: "Mobile"
     },
     {
@@ -187,7 +191,7 @@ const Mechanization = () => {
         "Real-time milk monitoring per cow",
         "Professional installation and training included"
       ],
-      image: "/api/placeholder/600/400",
+      image: hmp,
       tag: "Professional"
     },
     {
@@ -205,12 +209,12 @@ const Mechanization = () => {
         "Integration with farm management software",
         "Automated data logging and reporting"
       ],
-      image: "/api/placeholder/600/400",
+      image: femp,
       tag: "Advanced"
     },
     {
       id: 12,
-      name: "Gia Spare Parts",
+      name: "Gea Spare Parts",
       category: "Machinery Parts",
       shortDesc: "Genuine OEM spare parts for Gia dairy machinery",
       fullDesc: "Maintain peak performance of your Gia dairy equipment with our comprehensive range of genuine OEM spare parts. Each component is manufactured to exact factory specifications, ensuring perfect compatibility and reliable operation. Our extensive inventory ensures quick availability when you need it most.",
@@ -224,7 +228,7 @@ const Mechanization = () => {
         "Reduces equipment downtime significantly",
         "Maintains optimal machine performance and longevity"
       ],
-      image: meter,
+      image: parts,
       tag: "Parts"
     }
   ];

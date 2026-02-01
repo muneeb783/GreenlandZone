@@ -18,8 +18,9 @@ import greensp from "../assets/green_sp.jpeg";
 import greenpremix from "../assets/green_premix.jpeg";
 import uly from "../assets/ultra_live_yeast.jpeg";
 import uay from "../assets/ultra_auto_yeast.jpeg";
-import otm from "../assets/organic_trace_mins.jpeg";
+import otm from "../assets/otm.png";
 import glycostar from "../assets/Glycostar.png";
+import demet from "../assets/organic_trace_mins.jpeg";
 
 // Brochure PDFs
 import biotinPDF from "../assets/Biotin -2025.pdf";
@@ -301,7 +302,7 @@ const FeedAdditivesPage = () => {
         "Recommended Dosage: 3.6 - 4.8g/head/day",
         "Low moisture content (≤ 5%) for stability"
       ],
-      image: greenpremix,
+      image: demet,
       tag: "Stress Relief",
       brochure: traceMineralPDF
     },
