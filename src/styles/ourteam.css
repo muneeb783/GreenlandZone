@@ -273,23 +273,35 @@
   top: 1rem;
   right: 1rem;
   z-index: 10;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
   border: none;
-  color: white;
-  width: 40px;
-  height: 40px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.ourteam-modal-close svg {
+  width: 44px;
+  height: 44px;
+  stroke: #dc2626;
+  stroke-width: 3;
 }
 
 .ourteam-modal-close:hover {
-  background: rgba(0, 0, 0, 0.9);
+  background: #dc2626;
   transform: rotate(90deg);
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.4);
+}
+
+.ourteam-modal-close:hover svg {
+  stroke: white;
 }
 
 .ourteam-modal-grid {

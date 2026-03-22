@@ -13,6 +13,10 @@ import pic8 from "../assets/pic8.png";
 import pic9 from "../assets/pic9.png";
 import pic10 from "../assets/gc2.png";
 import pic11 from "../assets/gc1.png";
+import dairyExpo1 from "../assets/dairy-expo-2026-team-celebration.jpeg";
+import dairyExpo2 from "../assets/dairy-expo-2026-glz-booth.jpeg";
+import dairyExpo3 from "../assets/dairy-expo-2026-industry-leaders.jpeg";
+import dairyExpo4 from "../assets/dairy-expo-2026-grand-entrance.jpeg";
 
 const OurTeam = () => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -21,91 +25,123 @@ const OurTeam = () => {
   const galleryItems = [
     {
       id: 1,
+      image: dairyExpo1,
+      title: '4th Dairy Asia Expo 2026 - Team Celebration',
+      location: 'Expo Center, Lahore',
+      date: 'February 2026',
+      description: 'Our team celebrating a successful exhibition at the 4th Dairy Asia Expo alongside our international partners including DeBon, Timaz, Nuance, Datamars Livestock, CYB, and Kurtsan.'
+    },
+    {
+      id: 2,
+      image: dairyExpo2,
+      title: '4th Dairy Asia Expo 2026 - GLZ Booth',
+      location: 'Expo Center, Lahore',
+      date: 'February 2026',
+      description: 'Greenland Zone team at our "From Grass To Glass" exhibition booth, showcasing comprehensive dairy farming solutions to visitors from across Pakistan.'
+    },
+    {
+      id: 3,
+      image: dairyExpo3,
+      title: '4th Dairy Asia Expo 2026 - Industry Leaders',
+      location: 'Expo Center, Lahore',
+      date: 'February 2026',
+      description: 'Proud to stand among leading dairy industry companies at Pakistan\'s premier dairy exhibition, representing innovation and excellence in dairy farming solutions.'
+    },
+    {
+      id: 4,
+      image: dairyExpo4,
+      title: '4th Dairy Asia Expo 2026 - Grand Entrance',
+      location: 'Expo Center, Lahore',
+      date: 'February 2026',
+      description: 'The Greenland Zone delegation at the main entrance of the 4th Dairy Asia Expo (13-15 Feb 2026), one of the largest dairy industry events in the region.'
+    },
+    {
+      id: 5,
+      image: pic10,
+      title: 'Annual Sales Training 2026',
+      location: 'Lahore, Punjab',
+      date: 'January 2026',
+      description: 'Comprehensive sales training session for our team, focusing on product knowledge, customer engagement strategies, and yearly performance reviews to drive excellence in dairy solutions delivery.'
+    },
+    {
+      id: 6,
+      image: pic11,
+      title: 'Annual Awards & Recognition Ceremony',
+      location: 'Lahore, Punjab',
+      date: 'January 2026',
+      description: 'Celebrating our team\'s outstanding achievements at the annual awards ceremony, recognizing top performers and milestones that contributed to another successful year of serving Pakistan\'s dairy industry.'
+    },
+    {
+      id: 7,
       image: pic1,
       title: 'Lahore Dairy Farm Expo - 2020',
       location: 'Lahore, Punjab',
       date: 'March 2020',
-      description: 'Successfull participation in one of the biggest dairy expos in Pakistan, increasing reach.'
+      description: 'Greenland Zone made a strong presence at one of Pakistan\'s largest dairy exhibitions, connecting with farmers and industry professionals while showcasing our comprehensive range of dairy farming solutions and building valuable partnerships.'
     },
     {
-      id: 2,
+      id: 8,
       image: pic2,
       title: 'Forage Harvesting Equipment Setup',
       location: 'Sahiwal, Punjab',
       date: 'February 2020',
-      description: 'Delivered and commissioned advanced forage harvesting equipment, significantly improving feed quality and reducing labor costs.'
+      description: 'Successfully delivered and commissioned state-of-the-art forage harvesting equipment, enabling the farm to significantly improve feed quality, reduce harvesting time, and lower overall labor costs for more efficient operations.'
     },
     {
-      id: 3,
+      id: 9,
       image: pic3,
       title: 'Cow Monitoring System Deployment',
       location: 'Multan, Punjab',
       date: 'January 2019',
-      description: 'Implemented SenseTime monitoring system across 300+ cows, enabling real-time health tracking and heat detection.'
+      description: 'Deployed advanced SenseTime cow monitoring technology across a herd of 300+ cattle, providing real-time health tracking, automated heat detection, and early disease alerts to maximize herd productivity and animal welfare.'
     },
     {
-      id: 4,
+      id: 10,
       image: pic4,
       title: 'Farm Modernization Project',
       location: 'Faisalabad, Punjab',
       date: 'December 2019',
-      description: 'Complete farm transformation including cooling systems, feeding equipment, and hygiene solutions.'
+      description: 'Executed a complete dairy farm transformation project, integrating modern cooling systems to combat heat stress, automated feeding equipment for consistent nutrition, and comprehensive hygiene solutions to ensure milk quality standards.'
     },
     {
-      id: 5,
+      id: 11,
       image: pic5,
       title: 'Baler Setup',
       location: 'Okara, Punjab',
       date: 'November 2021',
-      description: 'Installed complete silage making equipment line including balers and drum movers for optimal feed preservation.'
+      description: 'Installed a complete silage production line featuring high-capacity balers and efficient drum movers, enabling the farm to preserve quality feed year-round and reduce dependency on external feed sources during lean seasons.'
     },
     {
-      id: 6,
+      id: 12,
       image: pic6,
       title: 'Milking Parlor Setup',
       location: 'Kasur, Punjab',
       date: 'October 2023',
-      description: 'Upgraded existing milking infrastructure with herringbone parlor design and herd management integration.'
+      description: 'Designed and installed a modern herringbone milking parlor with integrated herd management software, improving milking efficiency, reducing labor requirements, and enabling precise tracking of individual cow performance and milk yields.'
     },
     {
-      id: 7,
+      id: 13,
       image: pic7,
-      title: 'Dairy Machinery Expo',
+      title: 'Dairy Machinery Expo - Beijing',
       location: 'Beijing, China',
       date: 'September 2019',
-      description: 'Sucessfully attended one of the biggest dairy machinery expos of the world.'
+      description: 'Attended one of the world\'s premier dairy machinery exhibitions in Beijing, exploring cutting-edge technologies and strengthening relationships with international equipment manufacturers to bring the latest innovations to Pakistani farms.'
     },
     {
-      id: 8,
+      id: 14,
       image: pic8,
       title: 'Farm Consultation & Planning',
       location: 'Sheikhupura, Punjab',
       date: 'August 2024',
-      description: 'Provided expert consultation for new dairy farm setup, including layout design and equipment selection.'
+      description: 'Provided comprehensive farm consultation services including site assessment, optimal layout design, equipment selection guidance, and a detailed implementation roadmap tailored to the client\'s production goals and budget requirements.'
     },
     {
-      id: 9,
+      id: 15,
       image: pic9,
-      title: 'Dairy Expo',
+      title: 'South Punjab Dairy Expo',
       location: 'Bahawalnagar, Punjab',
       date: 'July 2024',
-      description: 'Represented GreenlandZone in one of the biggest expos of South Punjab, as one of the leading comapnies serving dairy sector of Pakistan.'
-    },
-    {
-      id: 10,
-      image: pic10,
-      title: 'Annual Training',
-      location: 'Lahore, Punjab',
-      date: 'January 2026',
-      description: 'Sales training and yearly performance reviews.'
-    },
-    {
-      id: 11,
-      image: pic11,
-      title: 'Award Ceremony',
-      location: 'Lahore, Punjab',
-      date: 'January 2026',
-      description: 'Award ceremony and celebration for amazing annual performance.'
+      description: 'Represented Greenland Zone at one of South Punjab\'s largest dairy exhibitions, engaging with local farmers, demonstrating our solutions, and reinforcing our commitment to supporting dairy development across all regions of Pakistan.'
     }
   ];
 

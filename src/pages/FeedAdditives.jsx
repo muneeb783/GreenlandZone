@@ -19,7 +19,7 @@ import greenpremix from "../assets/green_premix.jpeg";
 import uly from "../assets/ultra_live_yeast.jpeg";
 import uay from "../assets/ultra_auto_yeast.jpeg";
 import otm from "../assets/otm.png";
-import glycostar from "../assets/Glycostar.png";
+import glycostar from "../assets/glycostar.png";
 import demet from "../assets/organic_trace_mins.jpeg";
 
 // Brochure PDFs
