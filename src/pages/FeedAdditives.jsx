@@ -28,6 +28,8 @@ import bypassFatPDF from "../assets/Bypass Fat -2025.pdf";
 import globafixPDF from "../assets/GlobaFix Plus -2025.pdf";
 import globalMPGPDF from "../assets/Global MPG-2025.pdf";
 import glycostarPDF from "../assets/Glycostar-2025.pdf";
+import greenSuperPlusPDF from "../assets/gspl.pdf";
+import greenSuperPremixPDF from "../assets/gsp.pdf";
 import premixesPDF from "../assets/Premixes-2025.pdf";
 import traceMineralPDF from "../assets/Trace Mineral.pdf";
 import ultraAutolysedYeastPDF from "../assets/Ultra Autolysed Yeast -2025.pdf";
@@ -268,7 +270,7 @@ const FeedAdditivesPage = () => {
       ],
       image: greensp,
       tag: "Complete",
-      brochure: premixesPDF
+      brochure: greenSuperPlusPDF
     },
     {
       id: 14,
@@ -286,7 +288,7 @@ const FeedAdditivesPage = () => {
       ],
       image: greenpremix,
       tag: "Standard",
-      brochure: premixesPDF
+      brochure: greenSuperPremixPDF
     },
     {
       id: 15,
