@@ -1,7 +1,7 @@
 /* Roadmap Section Styles */
 
 .roadmap-section {
-  background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+  background: linear-gradient(150deg, #f4f1eb 0%, #faf8f4 100%);
   padding: 5rem 2rem;
   position: relative;
   overflow: hidden;
@@ -44,8 +44,9 @@
 }
 
 .roadmap-title {
-  font-size: 2.5rem;
-  font-weight: 800;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 2.75rem;
+  font-weight: 700;
   color: #1a1a1a;
   margin-bottom: 1rem;
 }
@@ -151,6 +152,7 @@
 }
 
 .timeline-title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
   font-size: 1.5rem;
   font-weight: 700;
   color: #1a1a1a;
@@ -215,7 +217,8 @@
 }
 
 .vision-title {
-  font-size: 2rem;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 2.25rem;
   font-weight: 700;
   color: #1a1a1a;
   margin-bottom: 1rem;

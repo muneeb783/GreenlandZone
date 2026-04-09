@@ -1,3 +1,7 @@
+/* ============================================================
+   FOOTER — Refined Agricultural Premium
+   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=Cormorant+Garamond:wght@600;700&display=swap');
 
 .footer-section {
   position: relative;
@@ -7,55 +11,213 @@
   margin-right: -50vw;
   width: 100vw;
   margin-bottom: -15vw;
+  background-color: #111c14;
+  color: #e8ece9;
+  border-top: 3px solid #16a34a;
+  font-family: 'DM Sans', -apple-system, sans-serif;
 }
 
-.footer-section {
-  background-color: #213543;
-  color: #fff;
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem 2.5rem;
 }
 
-.footer-text {
-  text-align: left;
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr 1fr;
+  gap: 2.5rem;
+  margin-bottom: 3rem;
 }
 
-.footer-text-2 {
-  padding-left: 0cm;
+/* Brand column */
+.footer-brand img {
+  max-height: 110px;
+  margin-bottom: 1rem;
+  filter: brightness(1.1);
+}
+
+.footer-tagline {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.05rem;
+  font-style: italic;
+  color: #4ade80;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.footer-brand-desc {
+  font-size: 0.875rem;
+  color: rgba(232, 236, 233, 0.58);
+  line-height: 1.7;
+  max-width: 240px;
+}
+
+/* Section headings */
+.footer-heading {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #4ade80;
+  margin-bottom: 1.25rem;
+}
+
+/* Quick Links */
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.6rem;
+}
+
+.footer-links a {
+  color: rgba(232, 236, 233, 0.7);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.25s ease, padding-left 0.25s ease;
+  display: inline-block;
+}
+
+.footer-links a:hover {
+  color: #4ade80;
+  padding-left: 6px;
+}
+
+/* Office info */
+.footer-office {
+  margin-bottom: 1.5rem;
+}
+
+.footer-office-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(232, 236, 233, 0.45);
+  margin-bottom: 0.4rem;
+}
+
+.footer-office p {
+  font-size: 0.875rem;
+  color: rgba(232, 236, 233, 0.65);
+  line-height: 1.65;
+  margin: 0;
+}
+
+.footer-office a {
+  color: rgba(232, 236, 233, 0.65);
+  text-decoration: none;
+  transition: color 0.25s;
+}
+
+.footer-office a:hover {
+  color: #4ade80;
+}
+
+/* Social icons */
+.footer-social {
+  margin-top: 0.5rem;
+}
+
+.social-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
 }
 
 .social-buttons .social-btn {
-  display: inline-flex;              /* center the icon */
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 40px;                       /* adjust to taste */
-  height: 40px;
-  margin-right: 1rem;                /* space between buttons */
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
-  background-color: transparent;         /* box color */
-  transition: background-color 0.3s; /* if you ever want to animate bg */
+  background-color: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.1);
+  transition: background-color 0.3s, border-color 0.3s, transform 0.2s;
 }
 
-/* Make your SVG inherit currentColor */
+.social-buttons .social-btn:hover {
+  background-color: rgba(22, 163, 74, 0.2);
+  border-color: rgba(22, 163, 74, 0.4);
+  transform: translateY(-2px);
+}
+
 .social-buttons .social-btn svg {
-  width: 24px;
-  height: 24px;
+  width: 18px;
+  height: 18px;
   fill: currentColor;
-  color: #FFFFFF;                    /* default icon color */
-  transition: color 0.3s ease;       /* animate icon color */
+  color: rgba(232, 236, 233, 0.75);
+  transition: color 0.3s ease;
 }
 
-/* On hover, only the icon (i.e. SVG) changes color */
-.social-buttons .social-btn.twitter:hover svg {
-  color: #1DA1F2;                    /* your hover color (e.g. Twitter blue) */
+.social-buttons .social-btn.twitter:hover svg  { color: #1DA1F2; }
+.social-buttons .social-btn.facebook:hover svg { color: #4267B2; }
+.social-buttons .social-btn.linkedin:hover svg { color: #0A66C2; }
+.social-buttons .social-btn.youtube:hover svg  { color: #FF0000; }
+
+/* Divider */
+.footer-divider {
+  border: none;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  margin: 0 0 1.5rem;
 }
 
-.social-buttons .social-btn.facebook:hover svg {
-  color: #1DA1F2;                    /* your hover color (e.g. Twitter blue) */
+/* Bottom bar */
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
-.social-buttons .social-btn.linkedin:hover svg {
-  color: #1DA1F2;                    /* your hover color (e.g. Twitter blue) */
+.footer-copyright {
+  font-size: 0.8rem;
+  color: rgba(232, 236, 233, 0.38);
 }
 
-.social-buttons .social-btn.youtube:hover svg {
-  color: #FF0000;                    /* your hover color (e.g. Twitter blue) */
+.footer-bottom-tagline {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 0.875rem;
+  font-style: italic;
+  color: rgba(74, 222, 128, 0.55);
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer-inner {
+    padding: 3rem 1.25rem 2rem;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* Legacy: keep old class names working if referenced elsewhere */
+.footer-text {
+  font-size: 0.875rem;
+  color: rgba(232, 236, 233, 0.65);
+  line-height: 1.65;
+}
+
+.footer-text-2 {
+  font-size: 0.8rem;
+  color: rgba(232, 236, 233, 0.38);
 }
