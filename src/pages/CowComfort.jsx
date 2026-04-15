@@ -182,7 +182,7 @@ const CowComfort = () => {
         "Data logging capabilities",
         "Battery or line-powered options"
       ],
-      image: meter,
+      image: acid, // TODO: replace with a dedicated digital milk meter product image
       tag: "Precision"
     },
     // From Milk Hygiene Solutions (3 products)
