@@ -118,12 +118,7 @@
    2. GLOBAL RESETS & BASE STYLES
    ============================================================================ */
 
-/* Prevent horizontal scrollbar on mobile (critical for the scrolling fix) */
-body {
-  overflow-x: hidden;
-  margin: 0;
-  padding: 0;
-}
+/* overflow-x: hidden and margin/padding resets live in index.css — no duplicate here */
 
 /* Base container for all pages */
 .page-container {
@@ -139,12 +134,11 @@ body {
    3. LAYOUT UTILITIES
    ============================================================================ */
 
-/* Full-width section utility - Desktop transform method, Mobile reset */
+/* Full-width section utility — breaks out of a constrained container without
+   relying on position/transform, so it is safe with overflow-x: hidden on body */
 .full-width-section {
-  position: relative;
+  margin-left: calc(50% - 50vw);
   width: 100vw;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 /* Content container with max-width constraint */

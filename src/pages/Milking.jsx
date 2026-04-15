@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { ChevronRight, Award, Users, TrendingUp, Sparkles } from 'lucide-react';
-import { SEO } from '../components/SEO';
+import { SEO, siteUrl } from '../components/SEO';
 import '../styles/common-styles.css';
 import '../styles/milking.css';
 import dbdc from "../assets/dbdc.JPG";
@@ -169,7 +169,7 @@ const Milking = () => {
         title="Milking Solutions - Professional Milking Equipment"
         description="Professional milking equipment including bucket milking systems, single stall single cow systems, and double bucket double cow systems. Efficient milking solutions for modern dairy farms."
         keywords="milking equipment, bucket milking system, milking parlor, dairy milking solutions, cow milking machines, professional milking systems"
-        url="https://greenlandzone.com/products/milking"
+        url={siteUrl + '/products/milking'}
       />
       {/* Hero Section */}
       <header className="milking-hero-section" data-navbar-theme="dark">

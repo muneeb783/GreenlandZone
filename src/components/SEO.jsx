@@ -1,11 +1,13 @@
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 
+export const siteUrl = import.meta.env.VITE_SITE_URL || 'https://greenlandzone.com';
+
 const SEO = ({
   title = 'Greenland Zone - Dairy Farming Solutions',
   description = 'Leading provider of advanced dairy farming equipment, mechanization solutions, feed additives, and cow health monitoring systems.',
   keywords = 'dairy farming, milk production, cow monitoring, feed additives, dairy equipment, milking solutions, forage solutions',
   image = '/og-image.jpg',
-  url = 'https://greenlandzone.com',
+  url = siteUrl,
   type = 'website'
 }) => {
   const fullTitle = title.includes('Greenland Zone') ? title : `${title} | Greenland Zone`;

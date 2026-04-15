@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { X, MapPin, Calendar } from 'lucide-react';
-import { SEO } from '../components/SEO';
+import { SEO, siteUrl } from '../components/SEO';
 import '../styles/ourteam.css';
 import pic1 from "../assets/pic1.png";
 import pic2 from "../assets/pic2.png";
@@ -151,7 +151,7 @@ const OurTeam = () => {
         title="Our Team - Field Operations & Projects"
         description="See Greenland Zone in action across Pakistan. Our team delivers and installs dairy farming solutions at farms nationwide. View our project gallery and field operations."
         keywords="dairy team Pakistan, farm installations, dairy projects, field operations, farm equipment installation, dairy consultancy team"
-        url="https://greenlandzone.com/team"
+        url={siteUrl + '/team'}
       />
 
       {/* Hero Section */}

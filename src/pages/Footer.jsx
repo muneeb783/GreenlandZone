@@ -60,13 +60,13 @@ export default function Footer() {
               <a href="https://twitter.com" target="_blank" rel="noreferrer" className="social-btn twitter" aria-label="Twitter">
                 <FaTwitter size={18} />
               </a>
-              <a href="https://facebook.com" target="_blank" rel="noreferrer" className="social-btn facebook" aria-label="Facebook">
+              <a href="https://www.facebook.com/greenlandzone/" target="_blank" rel="noreferrer" className="social-btn facebook" aria-label="Facebook">
                 <FaFacebookF size={18} />
               </a>
-              <a href="https://youtube.com" target="_blank" rel="noreferrer" className="social-btn youtube" aria-label="YouTube">
+              <a href="https://www.youtube.com/@greenlandzone/videos" target="_blank" rel="noreferrer" className="social-btn youtube" aria-label="YouTube">
                 <FaYoutube size={18} />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="social-btn linkedin" aria-label="LinkedIn">
+              <a href="https://www.linkedin.com/company/greenland-zone/?originalSubdomain=pk" target="_blank" rel="noreferrer" className="social-btn linkedin" aria-label="LinkedIn">
                 <FaLinkedinIn size={18} />
               </a>
             </div>

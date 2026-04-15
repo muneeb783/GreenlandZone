@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { ChevronRight } from 'lucide-react';
-import { SEO } from '../components/SEO';
+import { SEO, siteUrl } from '../components/SEO';
 import "../styles/cowmonitsol.css";
 import s1 from "../assets/s1.jpeg";
 import s2 from "../assets/s2.jpeg";
@@ -111,7 +111,7 @@ const SenseTimePage = () => {
         title="SenseTime Cow Monitoring System"
         description="Revolutionary cow monitoring technology with 95% heat detection rate, 24/7 real-time health monitoring. Choose between ear tags or neck tags. Proven on 1000+ farms worldwide."
         keywords="cow monitoring, heat detection, dairy health monitoring, ear tags, neck tags, SenseTime, real-time monitoring, farm management, reproductive monitoring"
-        url="https://greenlandzone.com/products/monitoring"
+        url={siteUrl + '/products/monitoring'}
       />
       {/* Hero Section */}
       <section className="hero-section" data-navbar-theme="dark">

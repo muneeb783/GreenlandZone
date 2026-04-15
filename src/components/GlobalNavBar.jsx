@@ -32,28 +32,34 @@ export default function GlobalNavBar() {
       const isMobile = window.matchMedia("(max-width: 991px)").matches;
 
       let currentTheme = 'light'; // Default theme
-      let closestSection = null;
-      let closestDistance = Infinity;
+      let coveringSection = null;
+      let approachingSection = null;
+      let closestApproachDistance = Infinity;
 
       for (let section of sections) {
         const rect = section.getBoundingClientRect();
-        const distance = Math.abs(rect.top);
 
+        // Priority 1: section whose bounds currently cover the navbar
         if (rect.top <= 0 && rect.bottom > 0) {
-          if (distance < closestDistance) {
-            closestDistance = distance;
-            closestSection = section;
+          // When multiple sections cover the navbar, prefer the one whose
+          // top is closest to 0 (i.e. the one we most recently scrolled into)
+          if (coveringSection === null ||
+              Math.abs(rect.top) < Math.abs(coveringSection.getBoundingClientRect().top)) {
+            coveringSection = section;
           }
         } else if (rect.top > 0 && rect.top < 200) {
-          if (distance < closestDistance) {
-            closestDistance = distance;
-            closestSection = section;
+          // Priority 2: section approaching from below — only used when
+          // nothing is currently covering the navbar
+          if (rect.top < closestApproachDistance) {
+            closestApproachDistance = rect.top;
+            approachingSection = section;
           }
         }
       }
 
-      if (closestSection) {
-        currentTheme = closestSection.dataset.navbarTheme;
+      const activeSection = coveringSection || approachingSection;
+      if (activeSection) {
+        currentTheme = activeSection.dataset.navbarTheme;
       }
 
       if (isMobile) {

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { ChevronRight, Award, Users, TrendingUp, Sparkles } from 'lucide-react';
-import { SEO } from '../components/SEO';
+import { SEO, siteUrl } from '../components/SEO';
 import '../styles/common-styles.css';
 import '../styles/dairyParts.css';
 import feeder from '../assets/feeder.JPG';
@@ -210,7 +210,7 @@ const DairyParts = () => {
         title="Dairy Parts & Accessories"
         description="Essential dairy equipment parts including milk feeder buckets, cleaning brushes, pulsators, milk meters, and tubing. Quality dairy accessories for efficient farm operations."
         keywords="dairy parts, milk feeder bucket, dairy cleaning brush, milk pulsators, milk meters, dairy tubing, farm equipment accessories"
-        url="https://greenlandzone.com/products/parts"
+        url={siteUrl + '/products/parts'}
       />
       {/* Hero Section */}
       <header className="feeding-hero-section" data-navbar-theme="dark">

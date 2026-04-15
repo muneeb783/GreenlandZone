@@ -58,6 +58,7 @@ html {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  padding-top: 80px;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -234,12 +235,7 @@ html {
   }
 }
 
-/* Modern Layout Components */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
-}
+/* .container is defined in common-styles.css — no duplicate here */
 
 .row {
   display: flex;
@@ -400,19 +396,7 @@ html {
   display: block;
 }
 
-.product-title {
-  font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: 1.75rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  color: #1a1a1a;
-}
-
-.product-description {
-  color: #666;
-  margin-bottom: 1.5rem;
-  font-size: 1rem;
-}
+/* .product-title and .product-description are defined in common-styles.css */
 
 .product-features {
   list-style: none;

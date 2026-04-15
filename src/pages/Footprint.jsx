@@ -1,7 +1,7 @@
 import { MapPin, Wrench, Leaf, Droplet, Sparkles } from 'lucide-react';
-import { SEO } from '../components/SEO';
+import { SEO, siteUrl } from '../components/SEO';
 import '../styles/footprint.css';
-import map1 from '..//assets/mech-map.jpeg';
+import map1 from '../assets/mech-map.jpeg';
 
 const Footprint = () => {
   const serviceCategories = [
@@ -77,7 +77,7 @@ const Footprint = () => {
         title="Geographic Footprint - Serving Farms Across Pakistan"
         description="Explore our nationwide presence in mechanization, nutrition, hygiene, and customized solutions. Serving dairy farms across all major regions of Pakistan."
         keywords="geographic footprint, Pakistan dairy farms, nationwide presence, farm services Pakistan, dairy solutions coverage"
-        url="https://greenlandzone.com/footprint"
+        url={siteUrl + '/footprint'}
       />
 
       {/* Hero Section */}

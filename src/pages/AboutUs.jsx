@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, Image } from 'react-bootstrap';
 import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
+import { SEO, siteUrl } from '../components/SEO';
 import '../styles/aboutus.css';
 import muneeb from "../assets/muneeb.jpg";
 import asif from "../assets/asif.png.png";
@@ -45,7 +45,7 @@ export default function AboutUs() {
         title="About Us - Leadership Message"
         description="Learn about Greenland Zone's leadership and vision for sustainable farming in Pakistan. From Grass to Glass - serving farmers with 20 years of expertise in dairy and agriculture."
         keywords="about Greenland Zone, dairy farming leadership, Pakistan agriculture, farm solutions, sustainable farming vision"
-        url="https://greenlandzone.com/about"
+        url={siteUrl + '/about'}
       />
       <motion.div
         className="about-hero"

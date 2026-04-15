@@ -1,7 +1,12 @@
 import './App.css'
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
-import { useEffect, useLayoutEffect } from 'react'
+import { useEffect } from 'react'
 import { HelmetProvider } from './components/SEO'
+
+// Disable browser scroll restoration globally so ScrollToTop controls it
+if ('scrollRestoration' in window.history) {
+  window.history.scrollRestoration = 'manual';
+}
 import GlobalNavBar from './components/GlobalNavBar'
 import Home from './pages/Home'
 import AboutUs from './pages/AboutUs'
@@ -25,13 +30,7 @@ import Footprint from './pages/Footprint'
 function ScrollToTop() {
   const { pathname } = useLocation();
 
-  useLayoutEffect(() => {
-    // Prevent browser from restoring scroll position
-    if ('scrollRestoration' in window.history) {
-      window.history.scrollRestoration = 'manual';
-    }
-
-    // Scroll to top synchronously before paint
+  useEffect(() => {
     window.scrollTo(0, 0);
     document.documentElement.scrollTop = 0;
     document.body.scrollTop = 0;

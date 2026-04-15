@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { SEO } from '../components/SEO';
+import { SEO, siteUrl } from '../components/SEO';
 import '../styles/home.css';
 import '../styles/roadmap.css';
 import hero_1 from "../assets/hero1.jpeg";
@@ -19,6 +19,7 @@ export default function Home() {
   const contactRef = useRef(null);
 
   // Array of hero image paths
+  // TODO: replace the Unsplash URL with a local hero_2 asset when available
   const heroImages = [
     hero_1,
     'https://images.unsplash.com/photo-1500595046743-cd271d694d30?w=1600',
@@ -154,7 +155,7 @@ export default function Home() {
         title="Greenland Zone - From Grass to Glass"
         description="Leading dairy farming solutions provider in Pakistan with 20 years of experience. Offering dairy machinery, agriculture equipment, feed additives, cow health monitoring, and farm consultancy services."
         keywords="dairy farming Pakistan, agriculture machinery, dairy equipment, feed additives, farm consultancy, cow health, herd management, sustainable farming"
-        url="https://greenlandzone.com"
+        url={siteUrl}
       />
       {/* Hero Section with Auto Scroll */}
       <div 

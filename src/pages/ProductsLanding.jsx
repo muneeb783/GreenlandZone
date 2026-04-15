@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { ChevronRight, Wrench, Leaf, Download } from 'lucide-react';
-import { SEO } from '../components/SEO';
+import { SEO, siteUrl } from '../components/SEO';
 import '../styles/productsLanding.css';
 import cataloguePdf from '../assets/catalogue.pdf';
 import balerImage from '../assets/baler.png';
@@ -88,7 +88,7 @@ const ProductsLanding = () => {
         title="Products - Complete Dairy Farming Solutions"
         description="Explore our comprehensive range of dairy farming products including mechanization equipment, feed additives, and cow comfort solutions. Advanced milking systems, forage solutions, and health monitoring."
         keywords="dairy farming products, milking solutions, forage equipment, feed additives, cow monitoring, dairy mechanization, milk hygiene, udder health"
-        url="https://greenlandzone.com/products"
+        url={siteUrl + '/products'}
       />
       {/* Hero Section */}
       <section className="products-hero" data-navbar-theme="dark">

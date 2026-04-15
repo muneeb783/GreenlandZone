@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { ChevronRight, Award, Users, TrendingUp, Sparkles } from 'lucide-react';
-import { SEO } from '../components/SEO';
+import { SEO, siteUrl } from '../components/SEO';
 import '../styles/common-styles.css';
-import '../styles/dairyfarmingsol.css';
+import '../styles/dairy-page-layout.css';
 // Dairy Parts images
 import feeder from '../assets/feeder.JPG';
 import brush from '../assets/cleaning_brush.JPG';
@@ -12,7 +12,6 @@ import ePulsator from '../assets/ePulsator.JPG';
 import nPulsator from '../assets/nPulsator.JPG';
 import tubing from '../assets/tubing.JPG';
 import zTag from '../assets/zTag.JPG';
-import meter from '../assets/Collector.JPG';
 // Milk Hygiene images
 import acid from "../assets/acid.png";
 import alkali from "../assets/alkali.png";
@@ -235,7 +234,7 @@ const CowComfort = () => {
         "Prevents cross-contamination between animals",
         "No harmful residues - safe for milk quality"
       ],
-      image: "/api/placeholder/600/400",
+      image: acid, // TODO: replace with a dedicated peracetic acid product image
       tag: "Advanced"
     },
     // From Teat & Udder Health (4 products)
@@ -413,7 +412,7 @@ const CowComfort = () => {
         title="Cow Comfort & Udder Health - Complete Care Solutions"
         description="Comprehensive cow comfort and udder health solutions including dairy parts, hygiene products, teat health care, and smart cow monitoring systems. Complete range of products for optimal animal welfare and milk quality."
         keywords="cow comfort, udder health, dairy parts, milk hygiene, teat health, cow monitoring, dairy accessories, milking equipment, farm hygiene, animal welfare"
-        url="https://greenlandzone.com/products/cowcomfort"
+        url={siteUrl + '/products/cowcomfort'}
       />
       {/* Hero Section */}
       <header className="dairy-hero-section" data-navbar-theme="dark">

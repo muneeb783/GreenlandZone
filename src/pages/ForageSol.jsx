@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { ChevronRight, Award, Users, TrendingUp, Sparkles } from 'lucide-react';
-import { SEO } from '../components/SEO';
+import { SEO, siteUrl } from '../components/SEO';
 import '../styles/common-styles.css';
 import '../styles/foragesol.css';
 import harvester from "../assets/Grass_Harvester.png";
@@ -122,7 +122,7 @@ const ForageSol = () => {
         title="Forage & Silage Making Solutions"
         description="Advanced forage harvesting equipment including grass harvesters, drum movers, rotary fodder harvesters, and round balers. Efficient silage making solutions for optimal feed preservation."
         keywords="forage harvester, grass harvester, silage making equipment, round baler, drum mover, rotary fodder harvester, feed preservation"
-        url="https://greenlandzone.com/products/forage"
+        url={siteUrl + '/products/forage'}
       />
       {/* Hero Section */}
       <header className="forage-hero-section forage-full-width" data-navbar-theme="dark">

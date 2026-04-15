@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { ChevronRight, Award, Users, TrendingUp, Sparkles } from 'lucide-react';
-import { SEO } from '../components/SEO';
+import { SEO, siteUrl } from '../components/SEO';
 import '../styles/common-styles.css';
-import '../styles/dairyfarmingsol.css';
+import '../styles/dairy-page-layout.css';
 import harvester from "../assets/Grass_Harvester.png";
 import drum from "../assets/drum_mover.png";
 import srfh from "../assets/SRFH.png";
@@ -10,7 +10,6 @@ import baler from "../assets/baler.png";
 import dbdc from "../assets/dbdc.JPG";
 import sbsc from "../assets/sbsc.JPG";
 import sbdc from "../assets/sbdc.JPG";
-import meter from "../assets/Collector.JPG";
 import milkline from "../assets/milkline.png";
 import hmp from "../assets/hmp.png";
 import femp from "../assets/femp.png";
@@ -157,7 +156,7 @@ const Mechanization = () => {
         "Mobile design for flexible positioning",
         "Easy to clean and maintain"
       ],
-      image: "/api/placeholder/600/400",
+      image: milkline, // TODO: replace with a dedicated bucket milking machine image
       tag: "Mobile"
     },
     {
@@ -268,7 +267,7 @@ const Mechanization = () => {
         title="Mechanization - Dairy Equipment & Machinery Solutions"
         description="Complete range of dairy farming mechanization equipment including milking systems, forage harvesters, silage making equipment, and climate control solutions. Advanced machinery for modern dairy operations."
         keywords="dairy mechanization, milking equipment, forage harvester, silage baler, dairy farm machinery, milking parlor, climate control, dairy automation"
-        url="https://greenlandzone.com/products/mechanization"
+        url={siteUrl + '/products/mechanization'}
       />
       {/* Hero Section */}
       <header className="dairy-hero-section" data-navbar-theme="dark">

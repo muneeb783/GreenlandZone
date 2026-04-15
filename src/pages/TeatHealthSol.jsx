@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { ChevronRight, Award, Users, TrendingUp, Sparkles } from 'lucide-react';
-import { SEO } from '../components/SEO';
+import { SEO, siteUrl } from '../components/SEO';
 import '../styles/common-styles.css';
 import '../styles/teathealth.css';
 import iodip from "../assets/iodip.png";
@@ -118,7 +118,7 @@ const TeatHealthSol = () => {
         title="Teat & Udder Health Solutions"
         description="Specialized teat and udder health products including Iodip, Herbafilm, Iofilm barrier film, and Iobar. Protect udder health and prevent mastitis with our proven solutions."
         keywords="teat health, udder health, mastitis prevention, teat dip, iodip, barrier film, dairy cow health, udder care"
-        url="https://greenlandzone.com/products/teat"
+        url={siteUrl + '/products/teat'}
       />
       {/* Hero Section */}
       <header className="teathealth-hero-section" data-navbar-theme="dark">
