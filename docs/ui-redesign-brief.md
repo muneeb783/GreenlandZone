@@ -61,3 +61,25 @@ Off-palette colors to remove: blue/orange gradient orbs (Home "Our Approach"), t
 - Done: audit, screenshots of every page, verbatim text extraction, compressed images (121 MB → 4.7 MB), Figma file created.
 - Blocked: image uploads to Figma failed because the session network blocked `mcp.figma.com`. A personal environment named `greenlandzone` now allows that host (plus delaval.com, lely.com, gea.com and alltech.com for competitor research). Start the next session on that environment, with the Figma connector connected.
 - Next: build the style guide and components in Figma, then the nine page designs, then review with the owner.
+
+## Figma progress (2026-11-26)
+
+- **Done in Figma:**
+  - Color, spacing and radius variables, matching the palette above.
+  - 17 text styles in Cormorant Garamond and DM Sans (Inter dropped).
+  - 4 elevation styles.
+  - A Foundations board.
+  - 31 icon components (lucide plus the cow glyph).
+  - 68 compressed real photos on the Assets page.
+  - 21 components: Button, Eyebrow, Filter chip, Stat, Stat strip, Form field, Section header, Feature card, Product card (default and hover), FAQ item (open and closed), Contact info card, Team gallery tile (default and hover), Leadership card, Timeline item, Location pin, Footprint region card, Category card, Nav link, Nav (transparent and solid), Products dropdown, Footer.
+- **Blocked:** the Figma Starter plan's MCP tool-call limit stopped all calls, reads included, partway through.
+- **Not yet built:**
+  - The Page hero and Product detail modal components.
+  - The nine page designs.
+  - A fix for the translucent-fill bug on the footer and nav indicators.
+- **Resume:** see `docs/figma/build-notes.md`. It has the node IDs, known defects and next steps. `docs/figma/product-data.json` holds the verbatim product and page copy, and `docs/figma/image-hashes.json` maps uploaded photos to Figma image hashes.
+- **Competitor research (Lely and GEA readable; DeLaval and Alltech pages render client-side and returned no content):**
+  - Header "Contact" plus "Get a quote" CTA, and the "Find Dealer" CTA repeated after each feature block: https://www.gea.com/en/dairy-farming/, https://www.gea.com/en/products/milking-farming-barn/milking-solutions/automatic-milking/dairyrobot-r9500/
+  - Hero with one primary and one secondary CTA, icon + heading + short-text benefit blocks, and a brochure list with per-item Download buttons: https://www.lely.com/, https://www.lely.com/solutions/milking/
+  - Inquiry-type selector on the contact form: https://www.gea.com/en/contact/
+  - Dealer and location counts as trust signals: https://www.lely.com/about-lely/contact/

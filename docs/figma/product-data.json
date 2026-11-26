@@ -1,0 +1,1028 @@
+{
+ "Mechanization": {
+  "stats": [
+   {
+    "value": "12",
+    "label": "Equipment Solutions"
+   },
+   {
+    "value": "35%",
+    "label": "Productivity Increase"
+   },
+   {
+    "value": "50%",
+    "label": "Labor Reduction"
+   }
+  ],
+  "features": [
+   {
+    "icon": "Award",
+    "title": "Premium Quality",
+    "description": "Professional-grade equipment built to withstand the demands of modern dairy farming operations"
+   },
+   {
+    "icon": "Users",
+    "title": "Complete Solutions",
+    "description": "From climate control to milking parlors - everything you need for efficient dairy operations"
+   },
+   {
+    "icon": "TrendingUp",
+    "title": "Proven Results",
+    "description": "Our mechanization solutions have helped farms increase productivity by an average of 35% while reducing labor costs"
+   },
+   {
+    "icon": "Sparkles",
+    "title": "Advanced Technology",
+    "description": "Latest automation and control systems for efficient farm management and superior results"
+   }
+  ],
+  "pageText": [
+   "COMPLETE MECHANIZATION SOLUTIONS",
+   "Dairy Farming",
+   "Mechanization",
+   "Complete range of equipment from climate control to milking parlors - everything for modern dairy operations",
+   "Why Choose Our Mechanization Solutions?",
+   "Our Product Range",
+   "Comprehensive mechanization equipment for every aspect of your dairy farming operation",
+   "View Details",
+   "Key Features",
+   "Close"
+  ],
+  "products": [
+   {
+    "id": 1,
+    "name": "Forage Harvester For Grass",
+    "category": "Harvesting",
+    "shortDesc": "High-performance grass harvesting equipment for all grass types",
+    "fullDesc": "Our premium forage harvester is engineered to handle all types of grasses with precision and efficiency. Featuring adjustable chop size technology, this powerful machine ensures optimal forage quality for your livestock. Built with robust construction and designed to work seamlessly with standard farm tractors, it delivers consistent performance season after season.",
+    "features": [
+     "Cuts all kinds of grasses (Lucern, Rai grass, Rhodes grass, Jodal)",
+     "Adjustable chop size for optimal feed quality",
+     "High-capacity cutting system for faster harvesting",
+     "Compatible with 40 HP tractor",
+     "Durable steel construction for long service life",
+     "Easy maintenance and blade replacement"
+    ],
+    "image": "Grass_Harvester.png",
+    "tag": "Professional"
+   },
+   {
+    "id": 2,
+    "name": "Drum Mower",
+    "category": "Cutting",
+    "shortDesc": "Efficient drum-type grass cutting solution for clean, precise cuts",
+    "fullDesc": "Our drum mower represents the pinnacle of grass cutting technology. Designed specifically for delicate grasses like Barseem, Lucern, and Rhodes grass, it delivers clean cuts that promote faster regrowth and better forage quality. The drum design ensures even cutting across the entire width, minimizing crop loss and maintaining nutritional value.",
+    "features": [
+     "Ideal for cutting Barseem, Lucern, and Rhodes grass",
+     "Drum-type cutting system for clean, precise cuts",
+     "Minimal crop loss and maximum yield",
+     "Compatible with 40 HP tractor",
+     "Adjustable cutting height",
+     "Weather-resistant durable construction"
+    ],
+    "image": "drum_mover.png",
+    "tag": "Precision"
+   },
+   {
+    "id": 3,
+    "name": "Single Row Forage Harvester",
+    "category": "Harvesting",
+    "shortDesc": "Efficient single-row harvesting solution for targeted crop collection",
+    "fullDesc": "Perfect for operations requiring precise row-by-row harvesting, our single row forage harvester delivers exceptional performance and versatility. The adjustable chop size feature allows you to customize the output to match your silage or feed requirements. Engineered for efficiency and ease of use, this harvester maximizes productivity while minimizing fuel consumption.",
+    "features": [
+     "Designed for single-row field harvesting",
+     "Adjustable chop size for customized output",
+     "High-efficiency cutting and chopping system",
+     "Requires 40 HP tractor for operation",
+     "Easy to attach and detach from tractor",
+     "Low maintenance requirements"
+    ],
+    "image": "SRFH.png",
+    "tag": "Efficient"
+   },
+   {
+    "id": 4,
+    "name": "SS Silage Baler and Wrapper",
+    "category": "Baling",
+    "shortDesc": "Fully automated baling and wrapping system for premium silage production",
+    "fullDesc": "Revolutionize your silage making with our state-of-the-art automated baler and wrapper. Featuring ABB motors and Siemens PLC control system, this machine represents the cutting edge of agricultural automation. The inverter-equipped wrapping table ensures smooth, consistent wrapping with minimal film breakage. Adjustable chamber accommodates various bale sizes, making it perfect for farms of all scales.",
+    "features": [
+     "Fully automatic operation with ABB motors and Siemens PLC system",
+     "Inverter-equipped wrapping table for smooth operation",
+     "Minimized film breakdown and consistent wrapping quality",
+     "Adjustable baler chamber for flexible bale sizing",
+     "Produces bales from 60kg to 100kg",
+     "Significantly reduces labor requirements",
+     "Digital control interface for precision operation",
+     "High-quality airtight wrapping for superior fermentation"
+    ],
+    "image": "baler.png",
+    "tag": "Automated"
+   },
+   {
+    "id": 5,
+    "name": "Single Bucket Single Cluster (SBSC)",
+    "category": "Milking Systems",
+    "shortDesc": "Compact and efficient single-cluster milking solution",
+    "fullDesc": "Perfect for small to medium-sized dairy operations, our Single Bucket Single Cluster system provides reliable, efficient milking performance. The electronic pulsator ensures cow comfort and optimal milk letdown, while the oil-type vacuum pump delivers consistent performance season after season. The 30 Kg stainless steel bucket with cut-off system makes operation simple and safe.",
+    "features": [
+     "Electronic pulsator for optimal milking rhythm",
+     "Oil-type vacuum pump with two years warranty",
+     "30 Kg stainless steel bucket with cut-off system",
+     "Can milk 16-20 animals per hour",
+     "Compact footprint for smaller operations",
+     "Durable construction for long service life"
+    ],
+    "image": "sbsc.JPG",
+    "tag": "Efficient"
+   },
+   {
+    "id": 6,
+    "name": "Single Bucket Double Cluster (SBDC)",
+    "category": "Milking Systems",
+    "shortDesc": "High-capacity mobile system for increased productivity",
+    "fullDesc": "Double your milking speed with our Single Bucket Double Cluster system. Designed for operations requiring flexibility and high throughput, this mobile system can milk two cows simultaneously while maintaining excellent milk quality. The direct-to-chiller pumping capability ensures milk stays fresh from cow to storage.",
+    "features": [
+     "Dual cluster design - milk 2 cows simultaneously",
+     "Can milk 8 animals at one time total",
+     "Mobile design - move to your desired milking location",
+     "Pumps milk directly to chiller after milking",
+     "Easy to operate and maintain",
+     "Efficient workflow optimization"
+    ],
+    "image": "sbdc.JPG",
+    "tag": "Productive"
+   },
+   {
+    "id": 7,
+    "name": "Double Bucket Double Cluster (DBDC)",
+    "category": "Milking Systems",
+    "shortDesc": "Maximum capacity mobile milking solution for large herds",
+    "fullDesc": "Our most powerful mobile milking system, the Double Bucket Double Cluster combines the flexibility of mobile equipment with the capacity needed for larger herds. Two independent buckets with dual clusters allow continuous milking operation, maximizing efficiency while maintaining the mobility to position equipment exactly where needed.",
+    "features": [
+     "Dual electronic pulsators for synchronized milking",
+     "Oil-type vacuum pump with two years warranty",
+     "Two 30 Kg stainless steel buckets with cut-off systems",
+     "Can milk 16-20 animals per hour",
+     "Maximum flexibility with mobile design",
+     "Premium build quality for demanding operations"
+    ],
+    "image": "dbdc.JPG",
+    "tag": "High-Capacity"
+   },
+   {
+    "id": 8,
+    "name": "Bucket Milking System",
+    "category": "Milking Systems",
+    "shortDesc": "Efficient group milking system for flexible farm operations",
+    "fullDesc": "Our Bucket mobile milking system delivers professional-grade milking performance with the flexibility to move between locations. Featuring electronic pulsators and a reliable oil-type vacuum pump, this system ensures gentle, efficient milking while maintaining the highest hygiene standards. The stainless steel bucket with automatic cut-off system prevents overflow and simplifies operation.",
+    "features": [
+     "Electronic pulsator for gentle, consistent milking",
+     "Oil-type vacuum pump with two years warranty",
+     "40 Kg stainless steel bucket with automatic cut-off system",
+     "Can milk 16-20 animals per hour",
+     "Mobile design for flexible positioning",
+     "Easy to clean and maintain"
+    ],
+    "image": "milkline.png",
+    "tag": "Mobile"
+   },
+   {
+    "id": 9,
+    "name": "Milkline",
+    "category": "Milking Systems",
+    "shortDesc": "Efficient mobile milking system for flexible farm operations",
+    "fullDesc": "Our Milkline mobile milking system delivers professional-grade performance with the flexibility to move easily between locations. Equipped with an electronic pulsator and a reliable oil-type vacuum pump, it ensures gentle, efficient milking while maintaining superior hygiene standards. The 40 kg stainless steel bucket features an automatic cut-off system to prevent overflow and simplify operation.",
+    "features": [
+     "Electronic pulsator for gentle, consistent milking",
+     "Durable oil-type vacuum pump with a two-year warranty",
+     "40 kg stainless steel bucket with automatic cut-off system",
+     "Milks 16–20 animals per hour",
+     "Mobile design for flexible positioning",
+     "Easy to clean and maintain"
+    ],
+    "image": "milkline.png",
+    "tag": "Mobile"
+   },
+   {
+    "id": 10,
+    "name": "Herringbone Milking Parlor",
+    "category": "Milking Parlors",
+    "shortDesc": "Professional parlor design with integrated herd management",
+    "fullDesc": "Transform your dairy operation with our complete Herringbone Milking Parlor system. This industry-leading design optimizes cow flow and milker efficiency while the integrated herd management system tracks individual cow performance, health, and productivity. Fast, hygienic milking combined with data-driven herd management makes this the ultimate solution for modern dairy farms.",
+    "features": [
+     "Complete parlor with herd management system",
+     "Individual cow identification and tracking",
+     "Ensures fast and hygienic milking",
+     "Optimized cow flow design",
+     "Real-time milk monitoring per cow",
+     "Professional installation and training included"
+    ],
+    "image": "hmp.png",
+    "tag": "Professional"
+   },
+   {
+    "id": 11,
+    "name": "Fast Exit Milking Parlor",
+    "category": "Milking Parlors",
+    "shortDesc": "Advanced parlor with rapid turnover and health monitoring",
+    "fullDesc": "Our Fast Exit Milking Parlor represents the cutting edge of dairy technology. Beyond efficient milking, this system provides comprehensive herd health monitoring including heat detection, rumination analysis, and health alerts. The rapid exit design maximizes throughput while the advanced sensors ensure no detail about your herd's health goes unnoticed.",
+    "features": [
+     "Complete parlor with advanced herd management system",
+     "Heat detection for optimized breeding",
+     "Rumination monitoring for health insights",
+     "Comprehensive health management alerts",
+     "Rapid cow turnover design",
+     "Integration with farm management software",
+     "Automated data logging and reporting"
+    ],
+    "image": "femp.png",
+    "tag": "Advanced"
+   },
+   {
+    "id": 12,
+    "name": "Gea Spare Parts",
+    "category": "Machinery Parts",
+    "shortDesc": "Genuine OEM spare parts for Gia dairy machinery",
+    "fullDesc": "Maintain peak performance of your Gia dairy equipment with our comprehensive range of genuine OEM spare parts. Each component is manufactured to exact factory specifications, ensuring perfect compatibility and reliable operation. Our extensive inventory ensures quick availability when you need it most.",
+    "features": [
+     "100% genuine OEM Gia parts - guaranteed authenticity",
+     "Manufactured to exact factory specifications",
+     "Complete compatibility with all Gia machinery models",
+     "Extensive inventory for quick availability",
+     "Manufacturer warranty on all parts",
+     "Expert technical support and installation guidance",
+     "Reduces equipment downtime significantly",
+     "Maintains optimal machine performance and longevity"
+    ],
+    "image": "parts.png",
+    "tag": "Parts"
+   }
+  ]
+ },
+ "CowComfort": {
+  "stats": [
+   {
+    "value": "20",
+    "label": "Product Solutions"
+   },
+   {
+    "value": "99%",
+    "label": "Hygiene Standard"
+   },
+   {
+    "value": "95%",
+    "label": "Heat Detection Accuracy"
+   }
+  ],
+  "features": [
+   {
+    "icon": "Award",
+    "title": "Premium Quality",
+    "description": "Professional-grade products from dairy parts to health monitoring systems for complete cow care"
+   },
+   {
+    "icon": "Users",
+    "title": "Comprehensive Solutions",
+    "description": "Everything from hygiene chemicals to smart monitoring - all your cow comfort and udder health needs covered"
+   },
+   {
+    "icon": "TrendingUp",
+    "title": "Improved Productivity",
+    "description": "Better cow health and comfort directly translates to higher milk production and herd performance"
+   },
+   {
+    "icon": "Sparkles",
+    "title": "Advanced Technology",
+    "description": "Smart monitoring systems and premium health products using the latest dairy technology"
+   }
+  ],
+  "pageText": [
+   "COMPLETE COW CARE SOLUTIONS",
+   "Cow Comfort &",
+   "Udder Health",
+   "Complete range of dairy parts, hygiene solutions, teat health products, and smart monitoring systems",
+   "Why Choose Our Cow Comfort Solutions?",
+   "Our Product Range",
+   "Complete solutions for cow comfort, udder health, hygiene, and monitoring",
+   "View Details",
+   "Key Features",
+   "Close"
+  ],
+  "products": [
+   {
+    "id": 1,
+    "name": "Dairy Shed Fans",
+    "category": "Climate Control",
+    "shortDesc": "High-efficiency cooling systems for optimal cow comfort",
+    "fullDesc": "Combat heat stress with our advanced cooling fan systems. Energy-efficient operation combined with strategic airflow design creates the perfect barn environment. Proven to reduce heat stress and improve milk production during hot months.",
+    "features": [
+     "Energy efficient operation",
+     "Reduces heat stress by up to 40%",
+     "Improves milk production 15-20%",
+     "Variable speed control",
+     "Weatherproof construction",
+     "Low maintenance design"
+    ],
+    "image": "fan.JPG",
+    "tag": "Climate"
+   },
+   {
+    "id": 2,
+    "name": "Milk Feeder Bucket",
+    "category": "Feeding",
+    "shortDesc": "Durable milk feeding bucket designed for efficient calf feeding",
+    "fullDesc": "Our premium milk feeder buckets are engineered for durability and ease of use. Made from food-grade materials, they ensure safe and hygienic feeding for your calves. The ergonomic design makes handling simple, while the robust construction guarantees years of reliable service.",
+    "features": [
+     "Food-grade, BPA-free construction",
+     "Ensures even feed distribution",
+     "Reduces wastage and spillage",
+     "Easy storage, handling and cleaning",
+     "Graduated measurement markings",
+     "UV-resistant for outdoor use"
+    ],
+    "image": "feeder.JPG",
+    "tag": "Essential"
+   },
+   {
+    "id": 3,
+    "name": "Cleaning Brush Set",
+    "category": "Hygiene",
+    "shortDesc": "Professional-grade cleaning equipment for dairy equipment maintenance",
+    "fullDesc": "Maintain the highest hygiene standards with our specialized cleaning brush sets. Designed specifically for dairy equipment, these brushes feature durable, safe bristles that effectively clean without damaging surfaces. Essential for maintaining milk quality and equipment longevity.",
+    "features": [
+     "Durable and food-safe bristles",
+     "Ensures complete cleanliness",
+     "Ergonomic non-slip handles",
+     "Suitable for all bucket types",
+     "Heat-resistant up to 80°C",
+     "Easy to sanitize and store"
+    ],
+    "image": "cleaning_brush.JPG",
+    "tag": "Hygiene"
+   },
+   {
+    "id": 4,
+    "name": "Milk Collector Jar",
+    "category": "Milking",
+    "shortDesc": "Precision milk collection and measurement system",
+    "fullDesc": "Our milk collector jars are essential for accurate milk measurement during milking operations. Featuring durable, hygienic construction and reliable graduated scales, they provide precise measurements for individual cow monitoring and milk quality control.",
+    "features": [
+     "Durable and hygienic food-grade construction",
+     "Accurate graduated measurement scale",
+     "Clear visibility for easy reading",
+     "Delivers measured quantity via flow meter nozzle",
+     "Easy-clean smooth interior",
+     "Compatible with standard milking systems"
+    ],
+    "image": "Collector.JPG",
+    "tag": "Precision"
+   },
+   {
+    "id": 5,
+    "name": "Electronic Pulsator",
+    "category": "Milking",
+    "shortDesc": "Advanced electronic pulsation system for gentle, efficient milking",
+    "fullDesc": "Our electronic pulsators represent the latest in milking technology. Providing precise control over pulsation rates and ratios, they ensure gentle milking that improves udder health while maximizing milk yield. The digital interface allows for easy adjustments to match individual cow needs.",
+    "features": [
+     "Precise digital control of pulsation rate",
+     "Programmable pulsation ratios (60:40, 65:35, 70:30)",
+     "Improves udder health and milking efficiency",
+     "LED display for easy monitoring",
+     "Low maintenance and highly durable",
+     "Energy-efficient operation"
+    ],
+    "image": "ePulsator.JPG",
+    "tag": "Technology"
+   },
+   {
+    "id": 6,
+    "name": "Pneumatic Pulsator",
+    "category": "Milking",
+    "shortDesc": "Reliable air-driven pulsation system for consistent milking",
+    "fullDesc": "Our pneumatic pulsators offer time-tested reliability for dairy operations. Using air pressure to create consistent pulsation, they provide gentle, effective milking without the need for complex electronics. Simple design ensures easy maintenance and long service life.",
+    "features": [
+     "Reliable air-driven pulsation for gentle milking",
+     "Simple mechanical design, minimal maintenance",
+     "Compatible with most vacuum systems",
+     "Adjustable pulsation rate",
+     "Proven durability in harsh environments",
+     "No electrical components to fail"
+    ],
+    "image": "nPulsator.JPG",
+    "tag": "Reliable"
+   },
+   {
+    "id": 7,
+    "name": "Milk Line Tubing",
+    "category": "Accessories",
+    "shortDesc": "Premium food-grade tubing for safe milk transport",
+    "fullDesc": "Our specialized milk line tubing is manufactured to the highest standards for dairy operations. Made from food-grade materials that resist bacterial growth, it ensures your milk stays clean and fresh from cow to tank. Flexible yet durable construction makes installation and replacement simple.",
+    "features": [
+     "Food-grade, FDA-approved material",
+     "Flexible and highly durable",
+     "Resistant to milk fats and cleaning chemicals",
+     "Easy to clean and replace",
+     "Various diameter options available",
+     "Smooth interior prevents bacterial buildup"
+    ],
+    "image": "tubing.JPG",
+    "tag": "Quality"
+   },
+   {
+    "id": 8,
+    "name": "Z-Tag Identification System",
+    "category": "Management",
+    "shortDesc": "Advanced cattle identification and herd management solution",
+    "fullDesc": "Our Z-Tag identification system provides reliable, long-lasting cattle identification essential for modern herd management. Weather-resistant tags ensure visibility in all conditions, while the easy application system minimizes stress on animals. Perfect for tracking health, breeding, and production records.",
+    "features": [
+     "Long-lasting and weather resistant construction",
+     "Highly visible number printing",
+     "Easy application with tag applicator",
+     "Helps track health, breeding, and production",
+     "Tamper-resistant design",
+     "Available in multiple colors for categorization"
+    ],
+    "image": "zTag.JPG",
+    "tag": "Management"
+   },
+   {
+    "id": 9,
+    "name": "Digital Milk Meter",
+    "category": "Monitoring",
+    "shortDesc": "Accurate digital measurement system for individual cow milk yield",
+    "fullDesc": "Track individual cow performance with our precision digital milk meters. Real-time measurement of milk yield helps you identify high and low producers, monitor health issues, and optimize feeding strategies. The digital display provides instant, accurate readings that integrate seamlessly with farm management software.",
+    "features": [
+     "Highly accurate digital measurement of milk quantity",
+     "Real-time yield monitoring per cow",
+     "Helps monitor cow productivity and health",
+     "Easy integration with milking and management systems",
+     "Data logging capabilities",
+     "Battery or line-powered options"
+    ],
+    "image": "acid.png",
+    "tag": "Precision"
+   },
+   {
+    "id": 10,
+    "name": "Cleaning Alkaline CIP",
+    "category": "CIP Cleaning",
+    "shortDesc": "Industrial-grade alkaline cleaning solution for complete system hygiene",
+    "fullDesc": "Our premium alkaline CIP (Clean-In-Place) cleaning solution is specifically formulated for the dairy industry. Featuring powerful degreasing action with peracetic acid content below 5%, this solution ensures thorough cleaning of milking machines, cooling tanks, pipes, and all dairy equipment. The advanced formula removes protein deposits, fats, and organic residues while maintaining equipment integrity.",
+    "features": [
+     "Peracetic Acid content < 5% for safe yet effective cleaning",
+     "Designed for cleaning & hygiene of milking machines and cooling tanks",
+     "Powerful degreasing action removes stubborn residues",
+     "Effective on pipes, brushes, and all dairy contact surfaces",
+     "Prevents biofilm formation and bacterial growth",
+     "Compatible with all standard CIP systems"
+    ],
+    "image": "alkali.png",
+    "tag": "Professional"
+   },
+   {
+    "id": 11,
+    "name": "Cleaning Acidic CIP",
+    "category": "CIP Cleaning",
+    "shortDesc": "Acidic cleaning solution for mineral deposits and milk stone removal",
+    "fullDesc": "Our acidic CIP cleaning solution is engineered to tackle the toughest challenges in dairy operations. Specifically designed for cleaning milking machines and milk containers, this powerful formula dissolves milk stone, removes mineral deposits, and prevents bacterial growth. The balanced acidity ensures thorough cleaning without damaging equipment surfaces, maintaining optimal hygiene standards for all milk contact surfaces.",
+    "features": [
+     "Designed for cleaning of milking machines and milk containers",
+     "Effectively removes milk stone and hard water deposits",
+     "Prevents bacterial growth and biofilm formation",
+     "Safe for all surfaces in contact with milk",
+     "Neutralizes alkaline residues from previous cleaning",
+     "Extends equipment life by preventing scale buildup"
+    ],
+    "image": "acid.png",
+    "tag": "Essential"
+   },
+   {
+    "id": 12,
+    "name": "Acid Per Acetic (Peracetic Acid)",
+    "category": "Disinfectant",
+    "shortDesc": "Fast-acting disinfectant solution for pre-milking cluster cleaning",
+    "fullDesc": "Our Peracetic Acid disinfectant represents the gold standard in dairy hygiene. This powerful antimicrobial solution is specifically formulated for cleaning milking clusters between animals, ensuring zero cross-contamination. The rapid-action formula provides immediate disinfection while being completely safe for equipment and leaving no harmful residues. Essential for maintaining the highest milk quality standards and preventing mastitis transmission.",
+    "features": [
+     "Powerful disinfectant for milking cluster sanitization",
+     "Used to clean clusters just before moving to the next animal",
+     "Rapid antimicrobial action - kills 99.9% of pathogens",
+     "Safe for equipment with no corrosive effects",
+     "Prevents cross-contamination between animals",
+     "No harmful residues - safe for milk quality"
+    ],
+    "image": "acid.png",
+    "tag": "Advanced"
+   },
+   {
+    "id": 13,
+    "name": "Pre Dip Teat Foam",
+    "category": "Pre-Milking Care",
+    "shortDesc": "Premium pre-milking foam for optimal teat hygiene and preparation",
+    "fullDesc": "Our Pre Dip Teat Foam is a professional-grade pre-milking solution that combines powerful antibacterial action with exceptional skin care properties. Available in both acetic acid and iodine-based formulations, this gentle foam cleanses and prepares teats for milking while maintaining skin health and comfort. The enriched formula with provitamin B5, glycerine, and lanolin ensures your cows' udders stay soft, hydrated, and healthy throughout the milking process.",
+    "features": [
+     "Available in acetic acid based & iodine based formulations",
+     "Enriched with provitamin B5 for skin health and regeneration",
+     "Contains glycerine & lanolin for deep moisturization",
+     "Softens the udder skin and maintains hydration during milking",
+     "Gentle foam application reduces stress on teats",
+     "Prepares teats for clean, efficient milking"
+    ],
+    "image": "iobar.png",
+    "tag": "Essential"
+   },
+   {
+    "id": 14,
+    "name": "Post Dip Solution",
+    "category": "Post-Milking Protection",
+    "shortDesc": "Advanced post-milking solution with thin waxy barrier protection",
+    "fullDesc": "Our Post Dip Solution provides the same powerful active properties and ingredients as our premium Herbafilm product, but in a convenient non-film forming solution. This advanced formula creates a very thin waxy barrier on the teat skin that provides immediate protection against bacterial invasion while remaining easy to remove. Perfect for farms seeking effective protection without the need for peelable film removal.",
+    "features": [
+     "Contains same active properties & ingredients as premium Herbafilm",
+     "Does not create a peelable film for easier management",
+     "Creates a thin waxy barrier on teat skin for immediate protection",
+     "Barrier comes off easily when wiped before next milking",
+     "Effective antibacterial protection between milkings",
+     "Gentle on teat skin while providing robust defense"
+    ],
+    "image": "iofilm.png",
+    "tag": "Advanced"
+   },
+   {
+    "id": 15,
+    "name": "Post Dip Film (Herbafilm)",
+    "category": "Post-Milking Protection",
+    "shortDesc": "Premium film-forming post-dip with fly repellent and skin conditioning",
+    "fullDesc": "Our Post Dip Film (Herbafilm) represents the gold standard in teat protection technology. This advanced antibacterial post-dip creates a protective barrier that seals the teat orifice between milkings, preventing bacterial invasion and mastitis. The enriched formula includes fly repellent properties to reduce pest-related stress, while glycerine and lanolin prevent irritation and maintain optimal skin condition. Cosmetic-grade moisturizing substances ensure long-term udder health and comfort.",
+    "features": [
+     "Post-dip antibacterial protection seals teat orifice between milkings",
+     "Integrated fly repellent reduces pest stress and contamination risk",
+     "Enriched with glycerine and lanolin to prevent irritation",
+     "Contains premium skin softeners for optimal teat condition",
+     "Moisturizing cosmetic properties maintain udder health",
+     "Film barrier provides extended protection period"
+    ],
+    "image": "herbafilm.png",
+    "tag": "Premium"
+   },
+   {
+    "id": 16,
+    "name": "Pre Dip Solution/Spray",
+    "category": "Pre-Milking Protection",
+    "shortDesc": "Ready-to-use iodine-based disinfectant with barrier protection",
+    "fullDesc": "Our Pre Dip Solution/Spray is a powerful ready-to-use post-milking disinfectant specifically formulated to eliminate mastitis-causing bacteria. With 5.5% active iodine content, this professional-grade solution provides immediate and lasting protection. The enriched formula with glycerine and lanolin prevents irritation while protecting the integrity of teat tissue. Upon application, the solution dries to form a protective barrier that guards against bacterial invasion until the next milking session.",
+    "features": [
+     "Ready to use post-milking disinfectant - no mixing required",
+     "Kills bacteria that causes mastitis with 5.5% active iodine",
+     "Enriched with glycerine and lanolin to prevent irritation",
+     "Protects integrity of teat tissue and promotes healing",
+     "Dries on teat surface to create lasting protective barrier",
+     "Available in both dip and convenient spray application"
+    ],
+    "image": "iodip.png",
+    "tag": "Professional"
+   },
+   {
+    "id": 17,
+    "name": "Cow Monitoring System (cSenseTM Flex Neck Tag)",
+    "category": "Monitoring",
+    "shortDesc": "Advanced neck-mounted monitoring system for comprehensive cow health tracking",
+    "fullDesc": "The cSenseTM Flex neck tag is based on the proven SCR neck tag technology already in use on thousands of farms worldwide. This advanced system delivers precise monitoring of heat detection, health status, and rumination patterns. The comfortable, durable design ensures accurate data collection while maintaining cow comfort throughout lactation.",
+    "features": [
+     "Best-in-class heat detection accuracy (95%+)",
+     "Real-time health monitoring and alerts",
+     "Rumination and eating behavior tracking",
+     "Based on proven SCR technology",
+     "Weatherproof and durable construction",
+     "Long battery life with easy replacement"
+    ],
+    "image": "s2.jpeg",
+    "tag": "Neck Tag"
+   },
+   {
+    "id": 18,
+    "name": "RFID Z-Tag (eSenseTM Flex Ear Tag)",
+    "category": "Ear Tag",
+    "shortDesc": "The most advanced ear tag monitoring system available on the market",
+    "fullDesc": "The eSenseTM Flex ear tag represents the newest breakthrough in cow monitoring technology. As the most advanced ear tag on the market, it provides comprehensive health insights, heat detection, and activity monitoring in a compact, lightweight design. Perfect for farmers who prefer ear tag systems or mixed-use operations.",
+    "features": [
+     "Most advanced ear tag technology available",
+     "Superior heat detection capability",
+     "Comprehensive health insight monitoring",
+     "Lightweight and comfortable for cows",
+     "Easy application and management",
+     "Seamless integration with farm systems"
+    ],
+    "image": "rfid.jpeg",
+    "tag": "Ear Tag"
+   },
+   {
+    "id": 19,
+    "name": "RFID Tag (eSenseTM Flex - Alternative)",
+    "category": "Ear Tag",
+    "shortDesc": "The most advanced ear tag monitoring system available on the market",
+    "fullDesc": "The eSenseTM Flex ear tag represents the newest breakthrough in cow monitoring technology. As the most advanced ear tag on the market, it provides comprehensive health insights, heat detection, and activity monitoring in a compact, lightweight design. Perfect for farmers who prefer ear tag systems or mixed-use operations.",
+    "features": [
+     "Most advanced ear tag technology available",
+     "Superior heat detection capability",
+     "Comprehensive health insight monitoring",
+     "Lightweight and comfortable for cows",
+     "Easy application and management",
+     "Seamless integration with farm systems"
+    ],
+    "image": "rfid2.jpeg",
+    "tag": "Ear Tag"
+   },
+   {
+    "id": 20,
+    "name": "SenseHub System",
+    "category": "Data Platform",
+    "shortDesc": "Central hub for actionable farm management insights and data analytics",
+    "fullDesc": "The SenseHub data platform serves as the brain of the SenseTime monitoring system. It collects, analyzes, and presents real-time data from all monitored cows, providing actionable insights on reproductive status, health conditions, nutritional needs, and overall wellbeing. The intuitive interface makes complex data simple to understand and act upon.",
+    "features": [
+     "Real-time data analytics and insights",
+     "Actionable alerts for heat, health, and nutrition",
+     "Individual and group monitoring capabilities",
+     "Mobile and desktop access",
+     "Historical data tracking and reports",
+     "Integration with farm management software"
+    ],
+    "image": "s3.jpeg",
+    "tag": "Platform"
+   }
+  ]
+ },
+ "FeedAdditives": {
+  "stats": [
+   {
+    "value": "30%",
+    "label": "Higher Milk Yield"
+   },
+   {
+    "value": "95%",
+    "label": "Better Health"
+   },
+   {
+    "value": "40%",
+    "label": "ROI Increase"
+   }
+  ],
+  "features": [
+   {
+    "icon": "Award",
+    "title": "Targeted Nutrition",
+    "description": "Specific formulations designed for different production stages and nutritional requirements"
+   },
+   {
+    "icon": "Users",
+    "title": "Health Protection",
+    "description": "Prevent metabolic disorders and improve overall animal health and well-being"
+   },
+   {
+    "icon": "TrendingUp",
+    "title": "High Bioavailability",
+    "description": "Rumen bypass technology ensures maximum nutrient absorption and utilization"
+   },
+   {
+    "icon": "Sparkles",
+    "title": "Proven Results",
+    "description": "Research-backed formulations with demonstrated performance improvements and ROI"
+   }
+  ],
+  "pageText": [
+   "PREMIUM FEED ADDITIVES",
+   "Feed Additive",
+   "Solutions",
+   "Advanced nutrition supplements for optimal animal health, productivity and profitability",
+   "Why Choose Our Feed Additives?",
+   "Our Product Range",
+   "Comprehensive feed additive solutions for every nutritional requirement and production stage",
+   "View Details",
+   "Key Features",
+   "Download Product Brochure",
+   "Close"
+  ],
+  "products": [
+   {
+    "id": 1,
+    "name": "CYB-G Methionine 70%",
+    "category": "Amino Acids",
+    "shortDesc": "1st Limiting Amino Acid for optimal dairy nutrition and milk quality",
+    "fullDesc": "CYB-G Methionine 70% is a premium rumen-protected methionine supplement designed to meet the critical amino acid requirements of high-producing dairy cows. With superior bypass rate and intestinal release, this product ensures optimal availability of methionine for milk protein synthesis and overall metabolic health. The advanced coating technology protects the amino acid from rumen degradation while ensuring maximum absorption in the small intestine.",
+    "features": [
+     "DL-Methionine content > 70% with superior purity",
+     "Rumen Bypass Rate > 84% for maximum protection",
+     "Intestinal Release Rate > 97% ensuring optimal absorption",
+     "Improves milk quality, especially milk protein percentage",
+     "Enhances reproductive efficiency and fertility",
+     "Supports optimal metabolic function and health"
+    ],
+    "image": "methionine.jpeg",
+    "tag": "Essential"
+   },
+   {
+    "id": 2,
+    "name": "CYB-G Lysine 70%",
+    "category": "Amino Acids",
+    "shortDesc": "2nd Limiting Amino Acid for enhanced milk production and protein synthesis",
+    "fullDesc": "CYB-G Lysine 70% delivers essential lysine nutrition with advanced rumen protection technology. As the second limiting amino acid in dairy rations, lysine plays a crucial role in milk production and protein synthesis. This premium product ensures optimal lysine availability to support high milk yields and superior milk protein content, maximizing the genetic potential of your dairy herd.",
+    "features": [
+     "L-Lysine HCl content > 70% for maximum efficacy",
+     "Rumen Bypass Rate > 86% with advanced coating",
+     "Intestinal Release Rate > 93% for optimal absorption",
+     "Enhances lysine availability to meet production requirements",
+     "Significantly improves milk yield and output",
+     "Increases milk protein rate and quality"
+    ],
+    "image": "lysine.jpeg",
+    "tag": "Performance"
+   },
+   {
+    "id": 3,
+    "name": "CYB-G Choline 30%",
+    "category": "Vitamins",
+    "shortDesc": "Essential nutrient for metabolic health and liver function support",
+    "fullDesc": "CYB-G Choline 30% is a rumen-protected choline supplement specifically formulated to support metabolic health during the critical transition period. Choline plays a vital role in fat metabolism, liver health, and prevention of metabolic disorders. This advanced formulation ensures maximum bioavailability and effectiveness in reducing ketosis and maintaining optimal perinatal health in dairy cows.",
+    "features": [
+     "Choline Chloride content > 30% in protected form",
+     "Bypass Rate > 84% for rumen protection",
+     "Intestinal Release Rate > 99% ensuring complete absorption",
+     "Effectively reduces ketosis and maintains perinatal health",
+     "Helps in significant reduction of NEFA and BHBA levels",
+     "Reduces fatty liver syndrome and extends dairy cow lifespan"
+    ],
+    "image": "choline_chloride.jpeg",
+    "tag": "Health"
+   },
+   {
+    "id": 4,
+    "name": "CYB-G Niacin 50%",
+    "category": "Vitamins",
+    "shortDesc": "B-vitamin for energy metabolism and ketosis prevention",
+    "fullDesc": "CYB-G Niacin 50% provides essential B-vitamin nutrition with superior rumen protection technology. Niacin (Vitamin B3) is critical for energy metabolism, helping to prevent ketosis and improve overall metabolic efficiency. This rumen-protected formulation ensures optimal delivery of niacin to the small intestine where it can be effectively absorbed and utilized for maximum benefit.",
+    "features": [
+     "Niacinamide content: 50% in protected form",
+     "Rumen Bypass Rate: 86% for maximum protection",
+     "Intestinal Release Rate: 97% ensuring optimal absorption",
+     "Effectively prevents ketone disease in dairy cows",
+     "Significantly increases milk yield and production",
+     "Improves reproductive performance and fertility"
+    ],
+    "image": "niacin.jpeg",
+    "tag": "Metabolic"
+   },
+   {
+    "id": 5,
+    "name": "Global MPG",
+    "category": "Energy",
+    "shortDesc": "Powder form energy booster for transition period support",
+    "fullDesc": "Global MPG is a sophisticated powder-form energy supplement specifically designed for transition dairy cows. This synergistic blend of glucose precursors and liver protectors provides essential energy support during the critical periparturient period. The advanced formulation helps reduce energy deficit, prevent metabolic disorders, and support optimal transition into lactation.",
+    "features": [
+     "Monopropyleneglycol: 31% for energy provision",
+     "Glycerol: 10% as glucose precursor",
+     "Calcium Propionate: 4% for additional energy",
+     "Niacin: 0.6% for metabolic support",
+     "Synergistic association of glucose precursors and liver protectors",
+     "Significantly lowers energy deficit during transition period"
+    ],
+    "image": "globalmpg.jpeg",
+    "tag": "Transition",
+    "brochure": "Global MPG-2025.pdf"
+   },
+   {
+    "id": 6,
+    "name": "Glycostar",
+    "category": "Energy",
+    "shortDesc": "Liquid form energy booster with comprehensive metabolic support",
+    "fullDesc": "Glycostar is a premium liquid energy supplement formulated to provide comprehensive metabolic support during stress periods. This advanced blend combines multiple energy sources with essential amino acids and vitamins to prevent ketosis, reduce stress, and maintain optimal metabolic function. The liquid form ensures rapid absorption and immediate availability of nutrients when cows need them most.",
+    "features": [
+     "Monopropyleneglycol: 40% for rapid energy",
+     "Glycerol content > 14% as energy source",
+     "Contains Isomaltose for sustained energy release",
+     "Includes Sodium propionates, Niacin, Methionine, and Lysine",
+     "Effectively prevents ketosis and metabolic disorders",
+     "Reduces heat stress and vaccination stress impacts"
+    ],
+    "image": "glycostar.png",
+    "tag": "Advanced",
+    "brochure": "Glycostar-2025.pdf"
+   },
+   {
+    "id": 7,
+    "name": "Z-Tox",
+    "category": "Toxin Binder",
+    "shortDesc": "Clay-based toxin binder with selective mycotoxin adsorption",
+    "fullDesc": "Z-Tox represents the third generation of clinoptilolite-based toxin binders, offering superior selective adsorption of mycotoxins while preserving essential nutrients. This advanced clay-based formulation effectively binds harmful mycotoxins, preventing their absorption and reducing their negative impact on animal health, reproduction, and productivity.",
+    "features": [
+     "3rd Generation Clinoptilolite technology",
+     "Selective adsorption for mycotoxins, preserving nutrients",
+     "Significantly lowers cases of mastitis",
+     "Improves reproductive performance and fertility",
+     "Enhances overall cow health and well-being",
+     "Does not bind essential vitamins and minerals"
+    ],
+    "image": "ztox.jpeg",
+    "tag": "Protection",
+    "brochure": "Z Tox -2025.pdf"
+   },
+   {
+    "id": 8,
+    "name": "Globafix Plus",
+    "category": "Toxin Binder",
+    "shortDesc": "Yeast-based toxin binder with broad-spectrum mycotoxin binding",
+    "fullDesc": "Globafix Plus is a premium yeast cell wall-based toxin binder offering comprehensive protection against multiple mycotoxins. With high concentrations of Beta-Glucans and Mannan-oligosaccharides (MOS), this product provides dual action: mycotoxin binding and immune system support. The unique formulation helps reduce the negative effects of mycotoxins on health and productivity.",
+    "features": [
+     "35% Yeast cell wall with superior binding capacity",
+     "Contains 22.5% Beta-Glucans for immune support",
+     "Includes 12.5% MOS for gut health",
+     "Binds Aflatoxins, Zearalenone, Fumonisin, Ochratoxin",
+     "Effective against T-2 and H-2 Toxins",
+     "Helps reduce mastitis, lameness, and repeat breeding issues"
+    ],
+    "image": "globafix.jpeg",
+    "tag": "Immunity",
+    "brochure": "GlobaFix Plus -2025.pdf"
+   },
+   {
+    "id": 9,
+    "name": "Greenstar 84%",
+    "category": "Bypass Fat",
+    "shortDesc": "Rumen bypass fat 84% for energy supplementation and milk production",
+    "fullDesc": "Greenstar 84% is a premium rumen bypass fat formulated from a natural blend of palm oil and calcium. Rich in palmitic acid (C16), this energy-dense supplement provides essential fatty acids while bypassing rumen fermentation. The optimal fatty acid profile supports increased milk yield, improved body condition score, and enhanced reproductive performance in high-producing dairy cows.",
+    "features": [
+     "Palmitic acid (C16): 48% for optimal milk fat",
+     "Lauric acid (C12): 3% for energy",
+     "Myristic acid (C14): 12% for health benefits",
+     "Calcium content: 9% for mineral support",
+     "Natural mixture of palm oil and calcium salts",
+     "Improves milk yield, Body Condition Score, and reproduction"
+    ],
+    "image": "greenstar84.jpeg",
+    "tag": "Energy",
+    "brochure": "Bypass Fat -2025.pdf"
+   },
+   {
+    "id": 10,
+    "name": "Greenstar 99%",
+    "category": "Bypass Fat",
+    "shortDesc": "Premium rumen bypass fat 99% for maximum milk fat percentage",
+    "fullDesc": "Greenstar 99% represents the pinnacle of bypass fat technology, offering ultra-high purity and concentration. Available in two specialized formulations (85% and 90% palmitic acid), this premium product is designed for high-producing dairy cows requiring maximum energy supplementation and milk fat enhancement. The superior purity ensures optimal bioavailability and effectiveness.",
+    "features": [
+     "Available in 85% Palmitic acid formulation",
+     "Also available in 90% Palmitic acid variant",
+     "Specifically formulated to improve milk fat percentage",
+     "Premium quality bypass fat for high-producing cows",
+     "Ultra-high purity for maximum effectiveness",
+     "Ideal for enhancing milk quality and composition"
+    ],
+    "image": "greenstar99.jpeg",
+    "tag": "Premium",
+    "brochure": "Bypass Fat -2025.pdf"
+   },
+   {
+    "id": 11,
+    "name": "Biotin 2%",
+    "category": "Vitamins",
+    "shortDesc": "Essential vitamin for hoof health and integrity",
+    "fullDesc": "Biotin 2% is a high-potency vitamin supplement specifically formulated to support hoof health and integrity in dairy cattle. Biotin plays a crucial role in keratin synthesis, directly impacting horn quality and hoof structure. Regular supplementation significantly reduces lameness incidence, improves mobility, and enhances overall productivity by maintaining optimal hoof health.",
+    "features": [
+     "Biotin composition: 20mg per gram (2%)",
+     "Premium white crystalline powder form",
+     "Crucial role in hoof health and horn quality",
+     "Maintains hoof integrity and structure",
+     "Significantly reduces lameness incidence",
+     "Increases productivity through better mobility"
+    ],
+    "image": "biotin.jpeg",
+    "tag": "Mobility",
+    "brochure": "Biotin -2025.pdf"
+   },
+   {
+    "id": 12,
+    "name": "Vitamin C",
+    "category": "Vitamins",
+    "shortDesc": "Powerful antioxidant and stress reducer for dairy cattle",
+    "fullDesc": "Premium Vitamin C (L-Ascorbic acid) provides essential antioxidant support for dairy cattle facing various stress conditions. This high-purity supplement protects cells from oxidative damage, supports immune function, and assists liver detoxification processes. Particularly beneficial during heat stress, transition periods, and when dealing with environmental toxins or mycotoxins.",
+    "features": [
+     "99% Pure L-Ascorbic acid in crystalline powder form",
+     "Reduces heat stress and protects from oxidative damage",
+     "Assists liver cells in detoxifying mycotoxins and heavy metals",
+     "Supports immune system function and health",
+     "Recommended dosage: 10g per cow per day",
+     "For calves: 1g per calf per day"
+    ],
+    "image": "ascorbic_acid.jpeg",
+    "tag": "Antioxidant",
+    "brochure": "Vitamin C -2025.pdf"
+   },
+   {
+    "id": 13,
+    "name": "Green Super Plus",
+    "category": "Premix",
+    "shortDesc": "Premium mineral-vitamin premix for high-producing dairy cows",
+    "fullDesc": "Green Super Plus is a comprehensive mineral-vitamin premix specifically formulated for high-producing dairy cows yielding 25-35 liters per day. This premium blend combines both organic and inorganic minerals with essential vitamins to support optimal production, health, and reproductive performance. The balanced formulation ensures all nutritional requirements are met for maximum productivity.",
+    "features": [
+     "Contains balanced organic and inorganic minerals",
+     "Stimulates optimal growth rate and weight gain",
+     "Significantly improves milk production and quality",
+     "Enhances reproductive performance and fertility",
+     "Specifically formulated for 25-35 liter producers",
+     "Complete nutritional support for high-yielding cows"
+    ],
+    "image": "green_sp.jpeg",
+    "tag": "Complete",
+    "brochure": "gspl.pdf"
+   },
+   {
+    "id": 14,
+    "name": "Green Premix",
+    "category": "Premix",
+    "shortDesc": "Complete mineral-vitamin premix for standard production levels",
+    "fullDesc": "Green Premix is a comprehensive mineral-vitamin supplement designed for dairy cows producing 20-25 liters per day, as well as heifers and dry cows. This complete formulation includes all essential macro and micro minerals, along with critical vitamins, to support optimal health, growth, and production. The balanced blend ensures nutritional adequacy across all production stages.",
+    "features": [
+     "Contains Ca, Mg, Na, Cl, and Soda bicarbonate",
+     "Includes trace minerals: Co, Cu, I, Fe, Mn, Se, Zn",
+     "Fortified with Vitamins A, D, E, Niacin, and Biotin",
+     "Ideal for animals with 20-25 liter milk production",
+     "Suitable for heifers and dry cows",
+     "Complete nutritional support for all production stages"
+    ],
+    "image": "green_premix.jpeg",
+    "tag": "Standard",
+    "brochure": "gsp.pdf"
+   },
+   {
+    "id": 15,
+    "name": "DeMet Cr (Chromium Methionine)",
+    "category": "Organic Minerals",
+    "shortDesc": "The 'Stress Shield' for high-producing dairy cows",
+    "fullDesc": "DeMet Cr is a specialized organic Chromium Methionine supplement that acts as a stress shield for dairy cattle. It plays a critical role in insulin sensitivity and glucose metabolism, which is essential during transition periods and heat stress. By enhancing glucose efficiency, it helps reduce cortisol levels, boosts overall performance, and ensures better metabolic stability in high-producing herds.",
+    "features": [
+     "Chromium Methionine (Cr) content ≥ 0.1%",
+     "Acts as a 'Stress Shield' for high-producing cows",
+     "Improves insulin sensitivity and glucose metabolism",
+     "Enhances performance during transition and heat stress",
+     "Recommended Dosage: 3.6 - 4.8g/head/day",
+     "Low moisture content (≤ 5%) for stability"
+    ],
+    "image": "organic_trace_mins.jpeg",
+    "tag": "Stress Relief",
+    "brochure": "Trace Mineral.pdf"
+   },
+   {
+    "id": 16,
+    "name": "Ultra Autolysed Yeast",
+    "category": "Yeast Culture",
+    "shortDesc": "Bioengineered yeast rich in nucleotides for gut health",
+    "fullDesc": "Ultra Autolysed Yeast is derived from molasses or brewer's yeast using modern bioengineering techniques like autolysis and enzymatic hydrolysis. Rich in proteins, amino acids, peptides, and nucleotides, it functions as a powerful prebiotic. It improves nutrient digestibility, increases intestinal villi height, and balances immune function, leading to a healthier and more productive herd.",
+    "features": [
+     "Crude Protein ≥ 42% and Amino Acid Nitrogen ≥ 2%",
+     "Improves beneficial bacteria via prebiotic activity",
+     "Increases intestinal villi height and density",
+     "Balances immune function and antioxidant activity",
+     "Rich in nucleotides, peptides, and polypeptides",
+     "Dose Rate: 7 to 10gm/cow/day"
+    ],
+    "image": "ultra_auto_yeast.jpeg",
+    "tag": "Gut Health",
+    "brochure": "Ultra Autolysed Yeast -2025.pdf"
+   },
+   {
+    "id": 17,
+    "name": "Ultra Live Yeast",
+    "category": "Probiotics",
+    "shortDesc": "99% pure active yeast for rumen fermentation optimization",
+    "fullDesc": "Ultra Live Yeast is a pure active yeast product (99% purity) designed to optimize the rumen environment. It helps maintain anaerobic conditions, promotes roughage fermentation, and improves cellulolytic microflora. By reducing acidosis and increasing dry matter intake, it directly supports improved milk yield, total solids, and growth rates in both cows and calves.",
+    "features": [
+     "Pure active yeast product with 99% purity",
+     "Maintains anaerobic environment of the rumen",
+     "Promotes roughage fermentation and reduces acidosis",
+     "Increases feed intake and dry matter intake",
+     "Improves milk yield and total solids production",
+     "Dose Rate (Lactation): 3-5 grams per head per day"
+    ],
+    "image": "ultra_live_yeast.jpeg",
+    "tag": "Digestion",
+    "brochure": "Ultra live yeast -2025.pdf"
+   },
+   {
+    "id": 18,
+    "name": "Organic Trace Minerals",
+    "category": "Minerals",
+    "shortDesc": "Chelated mineral blend for reproductive and hoof health",
+    "fullDesc": "Organic Trace Minerals is a premium blend of chelated trace minerals (Zinc, Manganese, Copper, Iron) and organic selenium designed to meet the precise requirements of lactating dairy cows. This formulation improves structural proteins and enzymes, enhances reproductive performance through endocrine modulation, and strengthens hoof integrity to reduce lameness.",
+    "features": [
+     "Complex blend of Zinc, Manganese, Copper, and Selenium",
+     "Improves reproductive performance via endocrine modulation",
+     "Organic Zinc enhances hoof tissue integrity and hardness",
+     "Organic Manganese boosts antioxidant defense mechanisms",
+     "Copper stimulates growth hormone secretion pathways",
+     "Dose Rate: 5-7 grams/head/day"
+    ],
+    "image": "otm.png",
+    "tag": "Performance",
+    "brochure": "Trace Mineral.pdf"
+   }
+  ]
+ }
+}
