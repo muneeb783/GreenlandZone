@@ -584,10 +584,10 @@
    },
    {
     "id": 17,
-    "name": "Cow Monitoring System (cSenseTM Flex Neck Tag)",
+    "name": "Cow Monitoring System (cSense™ Flex Neck Tag)",
     "category": "Monitoring",
     "shortDesc": "Advanced neck-mounted monitoring system for comprehensive cow health tracking",
-    "fullDesc": "The cSenseTM Flex neck tag is based on the proven SCR neck tag technology already in use on thousands of farms worldwide. This advanced system delivers precise monitoring of heat detection, health status, and rumination patterns. The comfortable, durable design ensures accurate data collection while maintaining cow comfort throughout lactation.",
+    "fullDesc": "The cSense™ Flex neck tag is based on the proven SCR neck tag technology already in use on thousands of farms worldwide. This advanced system delivers precise monitoring of heat detection, health status, and rumination patterns. The comfortable, durable design ensures accurate data collection while maintaining cow comfort throughout lactation.",
     "features": [
      "Best-in-class heat detection accuracy (95%+)",
      "Real-time health monitoring and alerts",
@@ -601,10 +601,10 @@
    },
    {
     "id": 18,
-    "name": "RFID Z-Tag (eSenseTM Flex Ear Tag)",
+    "name": "RFID Z-Tag (eSense™ Flex Ear Tag)",
     "category": "Ear Tag",
     "shortDesc": "The most advanced ear tag monitoring system available on the market",
-    "fullDesc": "The eSenseTM Flex ear tag represents the newest breakthrough in cow monitoring technology. As the most advanced ear tag on the market, it provides comprehensive health insights, heat detection, and activity monitoring in a compact, lightweight design. Perfect for farmers who prefer ear tag systems or mixed-use operations.",
+    "fullDesc": "The eSense™ Flex ear tag represents the newest breakthrough in cow monitoring technology. As the most advanced ear tag on the market, it provides comprehensive health insights, heat detection, and activity monitoring in a compact, lightweight design. Perfect for farmers who prefer ear tag systems or mixed-use operations.",
     "features": [
      "Most advanced ear tag technology available",
      "Superior heat detection capability",
@@ -618,10 +618,10 @@
    },
    {
     "id": 19,
-    "name": "RFID Tag (eSenseTM Flex - Alternative)",
+    "name": "RFID Tag (eSense™ Flex - Alternative)",
     "category": "Ear Tag",
     "shortDesc": "The most advanced ear tag monitoring system available on the market",
-    "fullDesc": "The eSenseTM Flex ear tag represents the newest breakthrough in cow monitoring technology. As the most advanced ear tag on the market, it provides comprehensive health insights, heat detection, and activity monitoring in a compact, lightweight design. Perfect for farmers who prefer ear tag systems or mixed-use operations.",
+    "fullDesc": "The eSense™ Flex ear tag represents the newest breakthrough in cow monitoring technology. As the most advanced ear tag on the market, it provides comprehensive health insights, heat detection, and activity monitoring in a compact, lightweight design. Perfect for farmers who prefer ear tag systems or mixed-use operations.",
     "features": [
      "Most advanced ear tag technology available",
      "Superior heat detection capability",

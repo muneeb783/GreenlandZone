@@ -99,12 +99,12 @@ Off-palette colors to remove: blue/orange gradient orbs (Home "Our Approach"), t
 
 **Rendering note.** Translucent colours (white at 6–85%) are stored as raw paints, not variable bindings. Bound paints with opacity rendered as solid in Figma.
 
-**New UI labels needing approval:**
-- "Get a Quote" (nav)
-- "Enquire about this product" and "WhatsApp" (product modal and Contact)
-- "All" (filter chip)
-- "View" (gallery hover)
-- Slide and lightbox counters
+**Owner decisions (2026-11-26):**
+- New labels approved: "Get a Quote", "Enquire about this product", "WhatsApp", "All", "View", and the slide/lightbox counters. The WhatsApp number is still to be confirmed.
+- "Geographic Footprint" added to the footer Quick Links (links to `/footprint`).
+- "cSenseTM"/"eSenseTM" corrected to "cSense™"/"eSense™". Apply the same fix in `src/pages/CowComfort.jsx` when implementing.
+- No enquiry-type selector on the contact form for now.
+- The owner will re-export `gc1`/`gc2` as JPEG. Placeholders stay until then.
 
 **Competitor research.** Lely and GEA were readable. DeLaval and Alltech pages render client-side and returned no content.
 - Header "Contact" plus "Get a quote" CTA, and the "Find Dealer" CTA repeated after each feature block: https://www.gea.com/en/dairy-farming/, https://www.gea.com/en/products/milking-farming-barn/milking-solutions/automatic-milking/dairyrobot-r9500/
