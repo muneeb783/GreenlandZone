@@ -50,21 +50,33 @@ File: https://www.figma.com/design/t9gHflMrU3hU2I7Yo9m5s7 (pages: Style Guide & 
 
 Icon IDs: arrow-right `7:161`, chevron-right `7:166`, chevron-down `7:171`, download `7:178`, check `7:183`, map-pin `7:189`, calendar `7:197`, phone `7:202`, mail `7:208`, x `7:214`, message-circle `7:219`, wrench `7:224`, leaf `7:230`, award `7:236`, users `7:244`, trending-up `7:250`, sparkles `7:255`, droplet `7:260`, factory `7:265`, plus `7:271`, minus `7:276`, lightbulb `7:283`, package `7:291`, clock `7:297`, file-text `7:306`, image-off `7:316`, facebook `7:321`, twitter `7:326`, youtube `7:332`, linkedin `7:339`, cow `7:344`.
 
-## Known defects to fix first
+## Added after the plan upgrade
 
-1. **Translucent fills render solid on some components.** The affected nodes are the footer social buttons and divider (`13:297`) and the nav-link Indicator bars (`13:109`). The fills on these auto-layout frames lost their paint `opacity`. A paint built with `opacity` inside the input object kept it when assigned to an existing node, which is how the Eyebrow and Stat strip fix worked. Re-assign `{...paint, opacity}` on those nodes.
-2. **Nav link Indicator.** Set `visible = false` on the Default and Hover variants instead of relying on opacity 0.
-3. **Resizing auto-layout frames.** After `resize()` on an auto-layout frame, set `layoutSizingVertical = 'HUG'`, or the height freezes. That froze the Team tile and Category card captions, which are already fixed.
+**More components:**
 
-## Remaining work
+| Component | Node |
+|---|---|
+| Page hero | `16:185` |
+| Feature item | `16:194` |
+| Product detail modal | `16:293` (brochure link sits in the body) |
 
-1. **Components still to build:**
-   - Page hero: photo + gradient, eyebrow, title + green accent line, description, actions, and an exposed Stat strip.
-   - Product detail modal: 1120×760. A cream image panel on the left. On the right, a sticky header (category, tag, name, × close) and a scrolling body with fullDesc and every feature in a 2-column check list. A footer with "Enquire about this product", WhatsApp, and, on Feed Additives only, "Download Product Brochure".
-   - Feature item.
-2. **Page designs.** Build one Section per page on Page Designs: Home, About, Team (plus the gallery lightbox), Contact, Products, Mechanization (plus the open modal for "SS Silage Baler and Wrapper"), Cow Comfort, Feed Additives and Footprint. All copy comes from `product-data.json` and the page JSX. Product pages get filter chips with category counts.
-3. **QA.** Screenshot each page and check for clipped text and overlaps.
+**Page sections on Page Designs:**
 
-## Rate limit
+| Page | Section | Page frame |
+|---|---|---|
+| Home | `17:207` | `17:208` |
+| About | `18:436` | `18:437` |
+| Team | `19:546` | `19:547` (lightbox `19:984`) |
+| Contact | `21:1134` | `21:1135` |
+| Products | `20:920` | `20:921` |
+| Mechanization | `22:1313` | `22:1314` (modal `22:1930`) |
+| Cow Comfort | `23:1905` | `23:1906` (modal `23:2802`) |
+| Feed Additives | `24:2753` | `24:2754` (modal `24:3569`) |
+| Footprint | `25:3544` | `25:3545` |
 
-The Figma Starter plan stopped all MCP calls, including reads, after about 25 calls in this session. Finishing needs a plan or seat with a higher MCP limit, or a wait for the limit to reset. Batch the work into a few large `use_figma` calls (up to 50 KB each).
+## Gotchas learned
+
+- Paints bound to a color variable with opacity below 1 rendered solid. Store translucent colours as raw `{type:'SOLID', color, opacity}` paints.
+- `setBoundVariableForPaint` keeps the input paint's base colour. Pass the variable's resolved colour, or some renders show black.
+- After `resize()` on an auto-layout frame, set `layoutSizingVertical = 'HUG'`.
+- `isExposedInstance` can only be set after the parent has become a component.

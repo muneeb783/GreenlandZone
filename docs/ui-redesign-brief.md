@@ -64,22 +64,52 @@ Off-palette colors to remove: blue/orange gradient orbs (Home "Our Approach"), t
 
 ## Figma progress (2026-11-26)
 
-- **Done in Figma:**
-  - Color, spacing and radius variables, matching the palette above.
-  - 17 text styles in Cormorant Garamond and DM Sans (Inter dropped).
+**Status: complete for review.** File: https://www.figma.com/design/t9gHflMrU3hU2I7Yo9m5s7
+
+**Style Guide & Components page:**
+- 01 Foundations:
+  - 18 color variables, plus spacing and radius variables.
+  - 18 text styles in Cormorant Garamond and DM Sans.
   - 4 elevation styles.
-  - A Foundations board.
-  - 31 icon components (lucide plus the cow glyph).
-  - 68 compressed real photos on the Assets page.
-  - 21 components: Button, Eyebrow, Filter chip, Stat, Stat strip, Form field, Section header, Feature card, Product card (default and hover), FAQ item (open and closed), Contact info card, Team gallery tile (default and hover), Leadership card, Timeline item, Location pin, Footprint region card, Category card, Nav link, Nav (transparent and solid), Products dropdown, Footer.
-- **Blocked:** the Figma Starter plan's MCP tool-call limit stopped all calls, reads included, partway through.
-- **Not yet built:**
-  - The Page hero and Product detail modal components.
-  - The nine page designs.
-  - A fix for the translucent-fill bug on the footer and nav indicators.
-- **Resume:** see `docs/figma/build-notes.md`. It has the node IDs, known defects and next steps. `docs/figma/product-data.json` holds the verbatim product and page copy, and `docs/figma/image-hashes.json` maps uploaded photos to Figma image hashes.
-- **Competitor research (Lely and GEA readable; DeLaval and Alltech pages render client-side and returned no content):**
-  - Header "Contact" plus "Get a quote" CTA, and the "Find Dealer" CTA repeated after each feature block: https://www.gea.com/en/dairy-farming/, https://www.gea.com/en/products/milking-farming-barn/milking-solutions/automatic-milking/dairyrobot-r9500/
-  - Hero with one primary and one secondary CTA, icon + heading + short-text benefit blocks, and a brochure list with per-item Download buttons: https://www.lely.com/, https://www.lely.com/solutions/milking/
-  - Inquiry-type selector on the contact form: https://www.gea.com/en/contact/
-  - Dealer and location counts as trust signals: https://www.lely.com/about-lely/contact/
+- 02 Icons: 31 lucide icons plus the cow glyph.
+- 03 Components, 25 in total:
+  - Button, Eyebrow, Filter chip, Stat, Stat strip, Form field (4 states × input/textarea).
+  - Section header, Feature card, Product card (default/hover), FAQ item (open/closed), Contact info card.
+  - Team gallery tile (default/hover), Leadership card, Timeline item, Location pin, Footprint region card, Category card.
+  - Nav link, Nav (transparent/solid), Products dropdown, Footer.
+  - Page hero, Feature item, Product detail modal.
+
+**Page Designs page.** One Section per page, each with a 1440px design and a "what changed" notes card:
+1. Home
+2. About Us
+3. Our Team, plus the gallery lightbox open state
+4. Contact Us, plus form states
+5. Products, plus the nav dropdown open state
+6. Mechanization, plus the product modal open state
+7. Cow Comfort & Udder Health, plus the modal state
+8. Feed Additives, plus the modal state with brochure
+9. Geographic Footprint
+
+**Assets page.** 68 compressed photos in a labelled grid, plus placeholders for the gc1/gc2 HEIC files.
+
+**QA:**
+- No text overflows its clipping container.
+- Only Cormorant Garamond and DM Sans are used.
+- All page copy was checked against the JSX. Strings that are not in the JSX are only the new UI labels listed below and design annotations.
+
+**Rendering note.** Translucent colours (white at 6–85%) are stored as raw paints, not variable bindings. Bound paints with opacity rendered as solid in Figma.
+
+**New UI labels needing approval:**
+- "Get a Quote" (nav)
+- "Enquire about this product" and "WhatsApp" (product modal and Contact)
+- "All" (filter chip)
+- "View" (gallery hover)
+- Slide and lightbox counters
+
+**Competitor research.** Lely and GEA were readable. DeLaval and Alltech pages render client-side and returned no content.
+- Header "Contact" plus "Get a quote" CTA, and the "Find Dealer" CTA repeated after each feature block: https://www.gea.com/en/dairy-farming/, https://www.gea.com/en/products/milking-farming-barn/milking-solutions/automatic-milking/dairyrobot-r9500/
+- Hero with one primary and one secondary CTA, icon + heading + short-text benefit blocks, and a brochure list with per-item Download buttons: https://www.lely.com/, https://www.lely.com/solutions/milking/
+- Inquiry-type selector on the contact form: https://www.gea.com/en/contact/
+- Dealer and location counts as trust signals: https://www.lely.com/about-lely/contact/
+
+**Next.** Owner review in Figma, then implement in React. Node IDs are in `docs/figma/build-notes.md`.
